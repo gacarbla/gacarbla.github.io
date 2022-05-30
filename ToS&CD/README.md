@@ -1,4 +1,4 @@
-[VOLVER](https://github.com/gacarbla/documents)
+[↩️ VOLVER](https://github.com/gacarbla/documents)
 
 
 ### [Directrices de comunidad de Discord](https://discord.com/guidelines)
