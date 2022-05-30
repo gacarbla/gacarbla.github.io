@@ -1,7 +1,7 @@
 # GΛCΛRBLΛ [GW](https://discord.gg/gatitos) DOCUMENTS
 ### ÍNDICE
 - STAFF
-  - [Plantillas de texto]()
+  - [Plantillas de texto](https://github.com/gacarbla/documents/blob/main/Plantillas/README.md)
     - [Bienvenida al servidor]()
     - [Bienvenida a Discord]()
     - [Información resumida]()
@@ -24,4 +24,4 @@
       - [Menciones]()
       - [Canales temáticos]()
     - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
-  - [Formato de sanciones]()
+  - [Formato de sanciones](https://github.com/gacarbla/documents/blob/main/Sanciones/README.md)
