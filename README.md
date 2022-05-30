@@ -6,7 +6,7 @@
     - [Bienvenida a Discord]()
     - [Información resumida]()
     - [Información completa]()
-  - [Procedimiento y actuación]()
+  - [Procedimiento y actuación](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/README.md)
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
     - Canales de texto
       - [Faltas de respeto]()
