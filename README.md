@@ -2,10 +2,9 @@
 ### ÍNDICE
 - STAFF
   - [Plantillas de texto](https://github.com/gacarbla/documents/blob/main/Plantillas/README.md)
-    - [Bienvenida al servidor]()
-    - [Bienvenida a Discord]()
-    - [Información resumida]()
-    - [Información completa]()
+    - [Bienvenida al servidor](https://github.com/gacarbla/documents/tree/main/Plantillas#bienvenida-al-servidor)
+    - [Información resumida](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-resumida)
+    - [Información completa](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-completa)
   - [Procedimiento y actuación](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/README.md)
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
     - [Canales de texto](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/TextCH/README.md)
