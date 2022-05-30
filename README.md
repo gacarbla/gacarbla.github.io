@@ -8,19 +8,19 @@
   - Procedimiento y actuación
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
     - [Canales de texto](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/TextCH/README.md)
-      - [Faltas de respeto]
-      - [Temas controversiales]
-      - [Suplantación de identidad]
-      - [Cadenas de texto]
-      - [Flood]
-      - [Spam]
-        - [Directo]
-        - [Indirecto]
-      - [Imágenes y multimedia]
-        - [NSFW]
-        - [Violencia]
-        - [Inictación al odio]
-      - [Menciones]
-      - [Canales temáticos]
+      - Faltas de respeto
+      - Temas controversiales
+      - Suplantación de identidad
+      - Cadenas de texto
+      - Flood
+      - Spam
+        - Directo
+        - Indirecto
+      - Imágenes y multimedia
+        - NSFW
+        - Violencia
+        - Inictación al odio
+      - Menciones
+      - Canales temáticos
     - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
   - 🏗️ Formato de sanciones
