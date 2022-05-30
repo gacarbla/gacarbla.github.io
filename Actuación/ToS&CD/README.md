@@ -11,7 +11,7 @@
 - [NSFW]()
 - [Contenido con copyright]()
 
-### [Términos y condiciones de uso y servicio de Discord](https://discord.com/terms)
+### [Términos y condiciones de uso de Discord](https://discord.com/terms)
 - [Menores de 13 años]()
 - [Macros, hacks y softwares modificados]()
 - ["Humor negro"]()
