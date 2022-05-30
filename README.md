@@ -23,4 +23,4 @@
       - [Menciones]()
       - [Canales temáticos]()
     - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
-  - [Formato de sanciones](https://github.com/gacarbla/documents/blob/main/Sanciones/README.md)
+  - [🏗️ Formato de sanciones](https://github.com/gacarbla/documents/blob/main/Sanciones/README.md)
