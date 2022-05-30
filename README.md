@@ -1,26 +1,26 @@
 # GΛCΛRBLΛ [GW](https://discord.gg/gatitos) DOCUMENTS
 ### ÍNDICE
 - STAFF
-  - [Plantillas de texto](https://github.com/gacarbla/documents/blob/main/Plantillas/README.md)
+  - Plantillas de texto
     - [Bienvenida al servidor](https://github.com/gacarbla/documents/tree/main/Plantillas#bienvenida-al-servidor)
     - [Información resumida](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-resumida)
     - [Información completa](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-completa)
-  - [Procedimiento y actuación](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/README.md)
+  - Procedimiento y actuación
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
     - [Canales de texto](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/TextCH/README.md)
-      - [Faltas de respeto]()
-      - [Temas controversiales]()
-      - [Suplantación de identidad]()
-      - [Cadenas de texto]()
-      - [Flood]()
-      - [Spam]()
-        - [Directo]()
-        - [Indirecto]()
-      - [Imágenes y multimedia]()
-        - [NSFW]()
-        - [Violencia]()
-        - [Inictación al odio]()
-      - [Menciones]()
-      - [Canales temáticos]()
+      - [Faltas de respeto]
+      - [Temas controversiales]
+      - [Suplantación de identidad]
+      - [Cadenas de texto]
+      - [Flood]
+      - [Spam]
+        - [Directo]
+        - [Indirecto]
+      - [Imágenes y multimedia]
+        - [NSFW]
+        - [Violencia]
+        - [Inictación al odio]
+      - [Menciones]
+      - [Canales temáticos]
     - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
-  - [🏗️ Formato de sanciones](https://github.com/gacarbla/documents/blob/main/Sanciones/README.md)
+  - 🏗️ Formato de sanciones
