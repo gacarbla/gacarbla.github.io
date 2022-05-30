@@ -8,7 +8,7 @@
     - [Información completa]()
   - [Procedimiento y actuación](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/README.md)
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
-    - Canales de texto
+    - [Canales de texto](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/TextCH/README.md)
       - [Faltas de respeto]()
       - [Temas controversiales]()
       - [Suplantación de identidad]()
@@ -23,5 +23,5 @@
         - [Inictación al odio]()
       - [Menciones]()
       - [Canales temáticos]()
-    - Canales de voz
+    - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
   - [Formato de sanciones]()
