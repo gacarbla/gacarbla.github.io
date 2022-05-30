@@ -1,4 +1,4 @@
-[↩️ VOLVER AL INICIO](https://github.com/gacarbla/documents)
+[↩️ VOLVER AL INICIO](https://github.com/gacarbla/documents/blob/main/README.md)
 
 
 ### [Directrices de comunidad de Discord](https://discord.com/guidelines)
