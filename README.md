@@ -7,7 +7,7 @@
     - [Información resumida]()
     - [Información completa]()
   - [Procedimiento y actuación]()
-    - [ToS y Directrices de comunidad]([https://github.com/gacarbla/documents/blob/main/ToS&CD/README.md](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md))
+    - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
     - Canales de texto
       - [Faltas de respeto]()
       - [Temas controversiales]()
