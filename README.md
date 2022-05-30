@@ -1,6 +1,6 @@
 # GΛCΛRBLΛ DOCUMENTS
 ### ÍNDICE
-- GW
+- [GW](https://discord.gg/gatitos)
   - [Plantillas de texto]()
     - [Bienvenida al servidor]()
     - [Bienvenida a Discord]()
