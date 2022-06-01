@@ -2,11 +2,11 @@
 ### ÍNDICE
 - STAFF
   - Plantillas de texto
-    - [Bienvenida al servidor](https://github.com/gacarbla/documents/tree/main/Plantillas#bienvenida-al-servidor)
-    - [Información resumida](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-resumida)
-    - [Información completa](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-completa)
+    - [Bienvenida al servidor](https://gacarbla.github.io/Plantillas#bienvenida-al-servidor)
+    - [Información resumida](https://gacarbla.github.io/Plantillas#informaci%C3%B3n-resumida)
+    - [Información completa](https://gacarbla.github.io/Plantillas#informaci%C3%B3n-completa)
   - Procedimiento y actuación
-    - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
+    - [ToS y Directrices de comunidad](https://gacarbla.github.io/Actuaci%C3%B3n/ToS&CD)
     - [Canales de texto](https://gacarbla.github.io/Actuaci%C3%B3n/TextCH)
       - Faltas de respeto
       - Temas controversiales
