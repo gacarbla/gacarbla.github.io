@@ -86,3 +86,52 @@ u!warn <USER/ID> Spam indirecto en el servidor a pesar de las advertencias del s
 <br>
 
 ## Multimedia
+### NSFW
+Eliminación del mensaje y ban directo.
+### Violencia
+Se eliminará el mensaje y se advertirá al usuario. En caso de ser violencia extrema será castigado de forma inminente, mismo si fuese necesario, con un ban. De lo contratio, se actuará con warn a la segunda advertencia.<br>
+Se podrán usar las siguientes plantillas:
+```
+u!warn <USER/ID> Compartir media en el servidor con contenido excesivamente violento [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
+```
+```
+u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas blancas [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
+```
+```
+u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas de fuego en uso [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
+```
+
+### Incitación al odio
+Se eliminará el mensaje y se advertirá al usuario. Se podrá proceder con un warn al **2º** aviso.
+Se podrá usar la siguiente plantilla:
+```
+u!warn <USER/ID> Envío de media que incite al odio en el servidor [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
+```
+
+<br>
+<br>
+<br>
+
+## Menciones
+Eliminación del mensaje. Si se trata de un rol prohibido (Miautuber, Capitán Gato o Mathéo) se procederá con warn instantáneo. De lo contrario simplemente se dará una advertencia y a las **2** o **3** advertencias (a criterio del staff) se procederá con el warn. <br>
+Se podrán usar las siguientes plantillas:
+```
+u!warn <USER/ID> Mención a un usuario con el rol de Miautuber [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
+```
+```
+u!warn <USER/ID> Mención al fundador del servidor [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
+```
+```
+u!warn <USER/ID> Constante mención a un miembro de la administración a pesar de las advertencias del staff [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
+```
+
+<br>
+<br>
+<br>
+
+## Canales temáticos
+Eliminación del mensaje y advertencia al usuario. A las 3 advertencias se procede con la aplicación del warn.
+Se podrá usar la siguiente plantilla:
+```
+u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]
+```
