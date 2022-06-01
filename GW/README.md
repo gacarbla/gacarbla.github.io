@@ -2,8 +2,8 @@
 - STAFF
   - [Plantillas de texto](./Plantillas)
   - Procedimiento y actuación
-    - [ToS y Directrices de comunidad](https://gacarbla.github.io/Actuaci%C3%B3n/ToS&CD)
-    - [Canales de texto](https://gacarbla.github.io/Actuaci%C3%B3n/TextCH)
+    - [ToS y Directrices de comunidad](./Actuaci%C3%B3n/ToS%26CD/)
+    - [Canales de texto](./Actuaci%C3%B3n/TextCH/)
       - Faltas de respeto
       - Temas controversiales
       - Suplantación de identidad
@@ -18,5 +18,5 @@
         - Inictación al odio
       - Menciones
       - Canales temáticos
-    - [Canales de voz](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/VoiceCH/README.md)
+    - [Canales de voz](./Actuaci%C3%B3n/VoiceCH/)
   - 🏗️ Formato de sanciones
