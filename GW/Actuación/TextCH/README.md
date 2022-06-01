@@ -1,3 +1,5 @@
+# PROCEDIMIENTO Y ACTUACIÓN EN CANALES DE TEXTO
+
 [↩️ VOLVER AL INICIO](https://gacarbla.github.io/GW)
 
 <br>
@@ -130,7 +132,7 @@ u!warn <USER/ID> Constante mención a un miembro de la administración a pesar d
 <br>
 
 ## Canales temáticos
-Eliminación del mensaje y advertencia al usuario. A las 3 advertencias se procede con la aplicación del warn.
+Eliminación del mensaje y advertencia al usuario. A las **3** advertencias se procede con la aplicación del warn.
 Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]

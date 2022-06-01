@@ -1,3 +1,5 @@
+# PLANTILLAS DE TEXTO
+
 [↩️ VOLVER AL INICIO](https://gacarbla.github.io/GW)
 
 <br>

@@ -1,8 +1,8 @@
-### ÍNDICE
+# ÍNDICE
 - STAFF
   - [Plantillas de texto](./Plantillas)
   - Procedimiento y actuación
-    - [ToS y Directrices de comunidad](./Actuaci%C3%B3n/ToS%26CD/)
+    - [ToS y Directrices de comunidad](./Actuaci%C3%B3n/ToS%26CG/)
     - [Canales de texto](./Actuaci%C3%B3n/TextCH/)
       - Multimedia
         - NSFW
