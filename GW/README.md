@@ -1,4 +1,3 @@
-# GΛCΛRBLΛ [GW](https://discord.gg/gatitos) DOCUMENTS
 ### ÍNDICE
 - STAFF
   - [Plantillas de texto](./Plantillas)
