@@ -1,9 +1,15 @@
 [↩️ VOLVER AL INICIO](https://github.com/gacarbla/documents/blob/main/README.md)
 
+<br>
+
 ### BIENVENIDA AL SERVIDOR
 ```
 ¡Bienvenid@ <USER>! Te recomiendo hecharle un vistazo a <#803322166459498538>, <#939872552401108992> y escoger tus roles en <#822612130104606761> y <#843502106191200267>. Si tienes cualquier duda, puedes contactarnos en <#822611489370144808> <:GW_PatoLove:817175857306402866>
 ```
+
+<br>
+<br>
+<br>
 
 ### INFORMACIÓN RESUMIDA
 ```
@@ -20,6 +26,10 @@ A continuación le mostraré una pequeña lista con los canales más interesante
 
 También disponemos de canales de voz como <#822611484734652466>, <#822611483849523240>, <#824858206429249566>, <#824858359487397978> o <#824858521429999646> dónde podrá hablar con quién se una.
 ```
+
+<br>
+<br>
+<br>
 
 ### INFORMACIÓN COMPLETA
 ```

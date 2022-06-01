@@ -14,7 +14,7 @@
 
 ## Faltas de respeto
 Ante un caso de faltas de respeto se procederá con la eliminación del mensaje y tras **2** advertencias se podrá proceder con el warn del usuario.
-Se podrá usar la siguiente plantilla:
+<br>Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Faltas de respeto constantes en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº1 refrente a canales de texto del servidor]
 ```
@@ -24,7 +24,7 @@ u!warn <USER/ID> Faltas de respeto constantes en el servidor a pesar de las adve
 <br>
 
 ## Temas controversiales
-Recordemos que se tratan de temas religiosos, políticos, bélicos, etc... Que puedan causar o hayan causado en un pasado cierta discordia en el servidor. El procedimiento a seguir será la eliminación del mensaje y la advertencia. A las **3** advertencias se procederá con el warn.
+El procedimiento a seguir será la eliminación del mensaje y la advertencia. A las **3** advertencias se procederá con el warn.<br>
 Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Tratar temas controversiales en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº2 referente a canales de texto del servidor]
@@ -50,12 +50,39 @@ De transcurrir los 10 minutos y el usuario no cambiar su perfil, se procederá c
 <br>
 
 ## Cadenas de texto
-Transcurridos 3 mensajes en cadena que no aportan sentido, información o coherencia a la conversación, se procederá con la mención de los usuarios involucrados para pedirles amablemente que cesen la actividad. Todo mensaje en cadena, relacionado con el mismo caso, enviado desde ese momento será eliminado directamente y a las **2** o **3** advertencias (A criterio del staff) se podrá proceder con el warn de los usuarios que continúen con la cadena.
+Transcurridos 3 mensajes en cadena que no aportan sentido, información o coherencia a la conversación, se procederá con la mención de los usuarios involucrados para pedirles amablemente que cesen la actividad. Todo mensaje en cadena, relacionado con el mismo caso, enviado desde ese momento será eliminado directamente y a las **2** o **3** advertencias (A criterio del staff) se podrá proceder con el warn de los usuarios que continúen con la cadena.<br>
 Se podrá usar la siguiente plantilla:
 ```
-u!warn <USER/ID> Cadenas de texto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla 4 referente a canales de texto del servidor]
+u!warn <USER/ID> Cadenas de texto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]
 ```
 
 <br>
 <br>
 <br>
+
+## Flood
+Envío del mensaje y advertencia directa, tras **2** o **3** advertencias (a criterio del staff) se procederá con el warn del usuario.<br>
+Se podrá usar la siguiente plantilla:
+```
+u!warn <USER/ID> Flood en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]
+```
+
+<br>
+<br>
+<br>
+
+## SPAM
+### Directo
+Eliminación del mensaje y ban directo.
+### Indirecto
+Eliminación del mensaje y advertencia, transcurridas **2** advertencias se procederá al warn del usuario.<br>
+Se podrá usar la siguiente plantilla:
+```
+u!warn <USER/ID> Spam indirecto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]
+```
+
+<br>
+<br>
+<br>
+
+## Multimedia

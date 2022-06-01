@@ -16,7 +16,7 @@
       - Spam
         - Directo
         - Indirecto
-      - Imágenes y multimedia
+      - Multimedia
         - NSFW
         - Violencia
         - Inictación al odio
