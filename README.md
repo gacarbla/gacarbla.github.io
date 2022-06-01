@@ -7,7 +7,7 @@
     - [Información completa](https://github.com/gacarbla/documents/tree/main/Plantillas#informaci%C3%B3n-completa)
   - Procedimiento y actuación
     - [ToS y Directrices de comunidad](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/ToS&CD/README.md)
-    - [Canales de texto](https://github.com/gacarbla/documents/blob/main/Actuaci%C3%B3n/TextCH/README.md)
+    - [Canales de texto](https://gacarbla.github.io/Actuaci%C3%B3n/TextCH)
       - Faltas de respeto
       - Temas controversiales
       - Suplantación de identidad
