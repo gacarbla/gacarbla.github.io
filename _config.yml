@@ -1,7 +1,3 @@
 remote_theme: gacarbla/styles
-plugins:
-- jekyll-remote-theme
-gem "github-pages", group: :jekyll_plugins
-title: GΛCΛRBLΛ GW DOCUMENTS
+title: GΛCΛRBLΛ DOCUMENTS
 description: GΛCΛRBLΛ GW DOCUMENTS
-show_downloads: false
