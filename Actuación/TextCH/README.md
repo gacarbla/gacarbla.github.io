@@ -55,3 +55,7 @@ Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Cadenas de texto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla 4 referente a canales de texto del servidor]
 ```
+
+<br>
+<br>
+<br>
