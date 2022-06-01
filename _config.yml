@@ -4,3 +4,4 @@ plugins:
 gem "github-pages", group: :jekyll_plugins
 title: GΛCΛRBLΛ GW DOCUMENTS
 description: GΛCΛRBLΛ GW DOCUMENTS
+show_downloads: true
