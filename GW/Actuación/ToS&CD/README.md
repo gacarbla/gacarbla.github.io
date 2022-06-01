@@ -1,4 +1,4 @@
-[↩️ VOLVER AL INICIO](https://gacarbla.github.io)
+[↩️ VOLVER AL INICIO](https://gacarbla.github.io/GW)
 
 
 ### [Directrices de comunidad de Discord](https://discord.com/guidelines)

@@ -1,10 +1,7 @@
 # GΛCΛRBLΛ [GW](https://discord.gg/gatitos) DOCUMENTS
 ### ÍNDICE
 - STAFF
-  - Plantillas de texto
-    - [Bienvenida al servidor](https://gacarbla.github.io/Plantillas#bienvenida-al-servidor)
-    - [Información resumida](https://gacarbla.github.io/Plantillas#informaci%C3%B3n-resumida)
-    - [Información completa](https://gacarbla.github.io/Plantillas#informaci%C3%B3n-completa)
+  - [Plantillas de texto]("./Plantillas")
   - Procedimiento y actuación
     - [ToS y Directrices de comunidad](https://gacarbla.github.io/Actuaci%C3%B3n/ToS&CD)
     - [Canales de texto](https://gacarbla.github.io/Actuaci%C3%B3n/TextCH)
