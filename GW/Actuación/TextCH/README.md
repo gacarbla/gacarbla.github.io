@@ -1,12 +1,14 @@
+<div style = "background:#fff;padding:3rem">
+
 # PROCEDIMIENTO Y ACTUACIÓN EN CANALES DE TEXTO
 
-[↩️ VOLVER AL INICIO](https://gacarbla.github.io/GW)
+<button href=../../ style="border-radius:10px;background:#777;border:0px;padding:6px">↩️ VOLVER AL INICIO</button>
 
 <br>
 <br>
-<div style="background:#42424d;padding:1rem;border-radius:1rem">
-<p style="color:#ff0000;font-weight:bold;text-align:center;">DE DARSE EL CASO EN EL QUE EL USUARIO NO CORRIGE SU COMPORTAMIENTO A PESAR DE HABER SIDO SANCIONADO CON ANTERIORIDAD, SE PROCEDERÁ CON UN MUTE</p>
-<p style="color:#fff;font-weight:bold;font-size:0.925rem;text-align:center;">Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.</p>
+<div style="background:#4538d2;padding:1rem;border-radius:10px">
+<p style="color:#fff;font-weight:bold;text-align:center;">DE DARSE EL CASO EN EL QUE EL USUARIO NO CORRIGE SU COMPORTAMIENTO A PESAR DE HABER SIDO SANCIONADO CON ANTERIORIDAD, SE PROCEDERÁ CON UN MUTE</p>
+<p style="color:#fff;font-weight:bold;font-size:0.85rem;text-align:center;opacity:80%">Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.</p>
 </div>
 <br>
 <br>
@@ -139,3 +141,5 @@ Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]
 ```
+
+</div>
