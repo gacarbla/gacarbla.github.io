@@ -1,4 +1,4 @@
-# PROCEDIMIENTO Y ACTUACIÓN EN CANALES DE TEXTO
+<h1>PROCEDIMIENTO Y ACTUACIÓN EN CANALES DE TEXTO</h1>
 
 <button href=../../ style="border-radius:10px;background:#777;border:0px;padding:6px">↩️ VOLVER AL INICIO</button>
 
