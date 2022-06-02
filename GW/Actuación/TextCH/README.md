@@ -5,10 +5,8 @@
 <br>
 <br>
 
-```diff
--      DE DARSE EL CASO EN EL QUE EL USUARIO NO CESA SU      -
--    ACTIVIDAD A PESAR DEL WARN, SE PODRÁ APLICAR UN MUTE    -
-```
+<a stule="color:#ff0000">PRUEBA DE TEXTO</a>
+
 ###### Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.
 <br>
 <br>
