@@ -5,7 +5,7 @@
 <br>
 <br>
 
-<a stule="color:#ff0000">PRUEBA DE TEXTO</a>
+<p style="color:#ff0000;font-weight:bold;text-align:center;">DE DARSE EL CASO EN EL QUE EL USUARIO NO CORRIGE SU COMPORTAMIENTO A PESAR DE HABER SIDO SANCIONADO CON ANTERIORIDAD, SE PROCEDERÁ CON UN MUTE</p>
 
 ###### Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.
 <br>
