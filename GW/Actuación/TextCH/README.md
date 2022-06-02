@@ -1,5 +1,3 @@
-<div style = "background:#fff;padding:3rem">
-
 # PROCEDIMIENTO Y ACTUACIÓN EN CANALES DE TEXTO
 
 <button href=../../ style="border-radius:10px;background:#777;border:0px;padding:6px">↩️ VOLVER AL INICIO</button>
@@ -141,5 +139,3 @@ Se podrá usar la siguiente plantilla:
 ```
 u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]
 ```
-
-</div>
