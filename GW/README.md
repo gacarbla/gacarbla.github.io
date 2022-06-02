@@ -1,9 +1,33 @@
-<p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNIDICE</p>
+<p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNDICE</p>
 
-- [Plantillas de texto](./Plantillas)
-- Procedimiento y actuación
-  - [ToS y Directrices de comunidad](./Actuaci%C3%B3n/ToS%26CG/)
-  - [Canales de texto](./Actuaci%C3%B3n/TextCH/)
-  - [Canales de voz](./Actuaci%C3%B3n/VoiceCH/)
-- [Formato de sanciones (Oficial)](https://m.gatitos.world/intro/formato-de-sanciones)
-- [Formato de sanciones (GΛCΛRBLΛ remake)]()
+<style>
+  .menu {
+    font-size:1.25rem
+  }
+</style>
+
+<script>
+  var IS1 = false
+  while(true){
+    if (IS1){
+      document.getElementById("IS1").hidden = "false";
+    } else {
+      document.getElementById("IS1").hidden = "true";
+    }
+  }
+  function gotoMatheoPage() {
+    window.location.replace("https://m.gatitos.world/intro/formato-de-sanciones");
+  }
+  function toggleIS1() {
+    IS1?IS1=false:IS1=true
+  }
+</script>
+
+<p id="IT1" class="menu">Plantillas de texto</p>
+<p id="IT2" class="menu" onclick=toggleIS1()>Procedimiento y actuación</p>
+<div id="IS1" hidden="true" class="submenu">
+<p id="IS1-1">ToS y Directrices de comunidad</p>
+<p id="IS1-2">Canales de texto</p>
+<p id="IS1-3">Canales de voz</p>
+</div>
+<p id="IT3" class="menu" onclick=gotoMatheoPage()>Formato de sanciones (Oficial)</p>
