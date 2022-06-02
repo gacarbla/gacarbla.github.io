@@ -1,7 +1,9 @@
-# PROCEDIMIENTO Y ACTUACIÓN (ToS y CG)
+<button style="border-radius:10px;background:#777;border:0px;padding:7px;font-weight:bold">↩️ VOLVER AL INICIO</button>
 
-[↩️ VOLVER AL INICIO](https://gacarbla.github.io/GW)
+<br>
+<br>
 
+<p style="font-weight:bold;font-size:3rem;text-align:center">PROCEDIMIENTO Y ACTUACIÓN<br>(Tos & CG)</p>
 
 ### [Directrices de comunidad de Discord](https://discord.com/guidelines)
 - [Seguridad y privacidad]()
