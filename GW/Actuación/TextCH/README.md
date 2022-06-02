@@ -4,15 +4,16 @@
 
 <br>
 <br>
-
+<div style="background:#42424d;padding:1rem;border-radius:1rem">
 <p style="color:#ff0000;font-weight:bold;text-align:center;">DE DARSE EL CASO EN EL QUE EL USUARIO NO CORRIGE SU COMPORTAMIENTO A PESAR DE HABER SIDO SANCIONADO CON ANTERIORIDAD, SE PROCEDERÁ CON UN MUTE</p>
-
-###### Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.
+<p style="color:#fff;font-weight:bold;font-size:0.925rem;text-align:center;">Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.</p>
+</div>
 <br>
 <br>
 <br>
 
-## Faltas de respeto
+<p style="color:#c62e00;font-weight:bold;font-size:2rem">Faltas de respeto</p>
+
 Ante un caso de faltas de respeto se procederá con la eliminación del mensaje y tras **2** advertencias se podrá proceder con el warn del usuario.
 <br>Se podrá usar la siguiente plantilla:
 ```
@@ -23,7 +24,8 @@ u!warn <USER/ID> Faltas de respeto constantes en el servidor a pesar de las adve
 <br>
 <br>
 
-## Temas controversiales
+<p style="color:#c62e00;font-weight:bold;font-size:2rem">Temas controversiales</p>
+
 El procedimiento a seguir será la eliminación del mensaje y la advertencia. A las **3** advertencias se procederá con el warn.<br>
 Se podrá usar la siguiente plantilla:
 ```
@@ -34,7 +36,8 @@ u!warn <USER/ID> Tratar temas controversiales en el servidor a pesar de las adve
 <br>
 <br>
 
-## Suplantación de identidad
+<p style="color:#c62e00;font-weight:bold;font-size:2rem">Suplantación de identidad</p>
+
 Antes de actuar debemos tener en cuenta si la suplantación es dirigida hacia una figura de impacto directo en el servidor (Capitán Gato & Staff). En estos casos se procederá con la advertencia directa al usuario por MD. De lo contrario, se esperará a que afirme una identidad falsa.
 ```
 Buenas <USER> :smile:
@@ -49,7 +52,8 @@ De transcurrir los 10 minutos y el usuario no cambiar su perfil, se procederá c
 <br>
 <br>
 
-## Cadenas de texto
+<p style="color:#c62e00;font-weight:bold;font-size:2rem">Cadenas de texto</p>
+
 Transcurridos 3 mensajes en cadena que no aportan sentido, información o coherencia a la conversación, se procederá con la mención de los usuarios involucrados para pedirles amablemente que cesen la actividad. Todo mensaje en cadena, relacionado con el mismo caso, enviado desde ese momento será eliminado directamente y a las **2** o **3** advertencias (A criterio del staff) se podrá proceder con el warn de los usuarios que continúen con la cadena.<br>
 Se podrá usar la siguiente plantilla:
 ```
