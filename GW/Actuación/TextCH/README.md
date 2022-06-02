@@ -1,4 +1,4 @@
-<button style="border-radius:10px;background:#777;border:0px;padding:7px;font-weight:bold">↩️ VOLVER AL INICIO</button>
+<button style="border-radius:10px;background:#777;border:0px;padding:7px;font-weight:bold;color:#fff">↩️ VOLVER AL INICIO</button>
 
 <br>
 <br>
@@ -10,7 +10,7 @@
 <br>
 <div style="background:#4538d2;padding:1rem;border-radius:10px">
 <p style="color:#fff;font-weight:bold;text-align:center;">DE DARSE EL CASO EN EL QUE EL USUARIO NO CORRIGE SU COMPORTAMIENTO A PESAR DE HABER SIDO SANCIONADO CON ANTERIORIDAD, SE PROCEDERÁ CON UN MUTE</p>
-<p style="color:#fff;font-weight:bold;font-size:0.85rem;text-align:center;opacity:80%">Los mutes tendrán una duración establecida por el staff que aplique la sanción y su criterio, pero se recomienda seguir el modelo de 3 - 6 - 9 - 12 para evitar problemas, confusiones y malentendidos.</p>
+<p style="color:#fff;font-weight:bold;font-size:0.85rem;text-align:center;opacity:80%">Los mutes tendrán una duración establecida por el staff que aplique la<br>sanción y su criterio, pero se recomienda seguir el siguiente modelo:<br>3 horas - 6 horas - 9 horas - 12 horas</p>
 </div>
 <br>
 <br>

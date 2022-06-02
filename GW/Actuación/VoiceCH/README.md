@@ -1,4 +1,4 @@
-<button style="border-radius:10px;background:#777;border:0px;padding:7px;font-weight:bold">↩️ VOLVER AL INICIO</button>
+<button style="border-radius:10px;background:#777;border:0px;padding:7px;font-weight:bold;color:#fff">↩️ VOLVER AL INICIO</button>
 
 <br>
 <br>
