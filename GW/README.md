@@ -23,11 +23,11 @@
   }
 </script>
 
-<p id="IT1" class="menu">Plantillas de texto</p>
-<p id="IT2" class="menu" onclick=toggleIS1()>Procedimiento y actuación</p>
+<p class="menu"> Plantillas de texto </p>
+<p class="menu" onclick=toggleIS1()> Procedimiento y actuación </p>
 <div id="IS1" hidden="true" class="submenu">
 <p id="IS1-1">ToS y Directrices de comunidad</p>
 <p id="IS1-2">Canales de texto</p>
 <p id="IS1-3">Canales de voz</p>
 </div>
-<p id="IT3" class="menu" onclick=gotoMatheoPage()>Formato de sanciones (Oficial)</p>
+<p class="menu" onclick=gotoMatheoPage()> Formato de sanciones (Oficial) </p>
