@@ -18,7 +18,10 @@
       if(!page){
         window.alert("Se ha producido un error")
       } else {
-        window.location.href(`${window.location}/${page}`);
+        document.getElementById("column3").className = "column3out"
+        document.getElementById("column4").className = "column4out"
+        console.log(page)
+        window.location = (`${page}`);
       }
     }
   </script>
@@ -33,21 +36,21 @@
     <div class="column2">
 
     </div>
-    <div class="column3">
+    <div class="column3" id="column3">
       <p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNDICE</p>
     </div>
-    <div class="column4">
+    <div class="column4" id="column4">
       <div style="border-radius: 5px;">
         <ul class="acorh">
-          <li><a href="#">Plantillas de texto</a></li>
-          <li><a href="#">Procedimiento y actuación</a>
+          <li><a onclick="goPage('https://gacarbla.github.io/GW/Plantillas/')">Plantillas de texto</a></li>
+          <li><a>Procedimiento y actuación</a>
             <ul>
-              <li><a href="#">ToS y Directrices de comunidad</a></li>
-              <li><a href="#">Canales de texto</a></li>
-              <li><a href="#">Canales de voz</a></li>
+              <li><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/ToS%26CG')">ToS y Directrices de comunidad</a></li>
+              <li><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/TextCH')">Canales de texto</a></li>
+              <li><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/VoiceCH')">Canales de voz</a></li>
             </ul>
           </li>
-          <li><a href="https://m.gatitos.world/intro/formato-de-sanciones">Formato de sanciones (Oficial)</a></li>
+          <li><a onclick="goPage(`https://m.gatitos.world/intro/formato-de-sanciones`)">Formato de sanciones (Oficial)</a></li>
         </ul>
       </div>
     </div>
