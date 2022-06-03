@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   
   <script>
     function goPage(page) {
@@ -10,7 +10,6 @@
       } else {
         document.getElementById("column3").className = "column3out"
         document.getElementById("column4").className = "column4out"
-        console.log(page)
         setTimeout(function(){
           window.location = (`${page}`);
         }, 1000)
@@ -32,25 +31,19 @@
         <p class="column subtitle">Repositorio de documentación</p>
       </div>
       <div class="column2">
-
+        <ul class="menu">
+          <li class="proyect"><a onclick="goPage('https://gacarbla.github.io/GW/')">GW</a></li>
+        </ul>
       </div>
     </div>
     <div class="columnright">
       <div class="column3" id="column3">
-        <p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNDICE</p>
+        <p style="font-weight:bold;font-size:3rem;text-align:center">GΛCΛRBLΛ<br>DOCUMENTS</p>
       </div>
       <div class="column4" id="column4">
         <div style="border-radius: 5px;">
           <ul class="acordeon">
-            <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/Plantillas/')">Plantillas de texto</a></li>
-            <li style="cursor:default;"><a>Procedimiento y actuación</a>
-              <ul>
-                <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/ToS%26CG')">ToS y Directrices de comunidad</a></li>
-                <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/TextCH')">Canales de texto</a></li>
-                <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/Actuaci%C3%B3n/VoiceCH')">Canales de voz</a></li>
-              </ul>
-            </li>
-            <li><a style="cursor:pointer;" onclick="goPage(`https://m.gatitos.world/intro/formato-de-sanciones`)">Formato de sanciones (Oficial)</a></li>
+            <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/')">Gatitos World</a></li>
           </ul>
         </div>
       </div>
