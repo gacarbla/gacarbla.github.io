@@ -1,52 +1,55 @@
-<p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNDICE</p>
+<!DOCTYPE html>
+<head>
 
-<style>
-  .menu {
-    font-size: 1.25rem;
-    color: #202020
-  }
-  .submenu {
-    font-size: 1rem;
-    color: #505050
-  }
-  .text {
-    font-family: Arial;
-  }
-</style>
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <script>
+    function gotoMatheoPage() {
+      window.location.replace("https://m.gatitos.world/intro/formato-de-sanciones");
+    }
+/*    function toggleIS1() {
+      if(document.getElementById("IS1").hidden==true){
+        document.getElementById("IS1").hidden = false
+      } else {
+        document.getElementById("IS1").hidden = true
+      }
+    }*/
+    function goPage(page) {
+      if(!page){
+        window.alert("Se ha producido un error")
+      } else {
+        window.location.href(`${window.location}/${page}`);
+      }
+    }
+  </script>
 
-<script>
-  var IS1 = false
-  var IS2 = false
-  while(true){
-    console.log(IS1, IS2)
-    if (IS1){
-      document.getElementById("IS1").hidden = "false";
-    } else {
-      document.getElementById("IS1").hidden = "true";
-    }
-    if (IS2){
-      document.getElementById("IS2").hidden = "false";
-    } else {
-      document.getElementById("IS2").hidden = "true";
-    }
-  }
-  function gotoMatheoPage() {
-    window.location.replace("https://m.gatitos.world/intro/formato-de-sanciones");
-  }
-  function toggleIS1() {
-    if(IS1){
-      IS1=false
-    } else {
-      IS1=true
-    }
-  }
-</script>
+</head>
+<body>
+  <div class="page">
+    <div class="column1">
+      <p class="column title">GΛCΛRBLΛ<br>DOCUMENTS</p>
+      <p class="column subtitle">Repositorio de documentación</p>
+    </div>
+    <div class="column2">
 
-<p class="menu text"> Plantillas de texto </p>
-<p class="menu text" onclick=toggleIS1()> Procedimiento y actuación </p>
-<div id="IS1" class="submenu text" hidden="true">
-  <p>ToS y Directrices de comunidad</p>
-  <p>Canales de texto</p>
-  <p>Canales de voz</p>  
-</div>
-<p class="menu text" onclick=gotoMatheoPage()> Formato de sanciones (Oficial) </p>
+    </div>
+    <div class="column3">
+      <p style="font-weight:bold;font-size:3rem;text-align:center">GATITOS WORLD<br>ÍNDICE</p>
+    </div>
+    <div class="column4">
+      <div style="border-radius: 5px;">
+        <ul class="acorh">
+          <li><a href="#">Plantillas de texto</a></li>
+          <li><a href="#">Procedimiento y actuación</a>
+            <ul>
+              <li><a href="#">ToS y Directrices de comunidad</a></li>
+              <li><a href="#">Canales de texto</a></li>
+              <li><a href="#">Canales de voz</a></li>
+            </ul>
+          </li>
+          <li><a href="https://m.gatitos.world/intro/formato-de-sanciones">Formato de sanciones (Oficial)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
