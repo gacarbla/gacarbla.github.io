@@ -21,7 +21,9 @@
         document.getElementById("column3").className = "column3out"
         document.getElementById("column4").className = "column4out"
         console.log(page)
-        window.location = (`${page}`);
+        setTimeout(function(){
+          window.location = (`${page}`);
+        }, 1000)
       }
     }
   </script>
