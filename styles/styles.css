@@ -147,6 +147,10 @@
 .column4out {grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
 /* ------------------------------------------------------------------------------ */
 
+.body {
+    line-height: normal;
+}
+
 .head {
     font-family: var(--font-titles);
     font-size: 35px;
