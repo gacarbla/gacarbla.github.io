@@ -17,6 +17,9 @@
     grid-area: 2 / 2 / 3 / 3; 
     line-height: 0px
 }
+.column2static {
+    grid-area: 3 / 2 / 4 / 3;
+}
 .column2out {
     grid-area: 3 / 2 / 4 / 3;
     -webkit-animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;
