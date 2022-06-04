@@ -230,12 +230,14 @@ ul.acordeon li:hover ul {
     border-radius: 10px;
 }
 .document .card .textarea {
-    font-family:sans-serif;
+    font-family: var(--font);
+    font-size: small;
     resize: vertical;
     border: 0px;
     border-radius: 10px;
     margin: 5px;
     width: 95%;
+    height: 90px;
     max-height: 25rem;
     min-height: 50px;
     vertical-align: baseline;
@@ -248,7 +250,22 @@ ul.acordeon li:hover ul {
     align-items: center;
     margin: 5px;
     margin-left: auto;
-    cursor: pointer
+    cursor: pointer;
+}
+.document .card .codebox .copycode:hover{
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.493);
+}
+.document .card .codebox .copycode:hover img{
+    -webkit-animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0, 0, 0) both;
+        animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0.0, 0, 0) both;
+}
+.document .card .title {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.document .card {
+    padding: 20px;
 }
 .container-btn-mode{
     position: absolute;
@@ -284,13 +301,6 @@ ul.acordeon li:hover ul {
     background-color:black;
     color:#ffcd5c !important;
 }
-.document .card .title {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-.document .card {
-    padding: 20px;
-}
 
 
 
@@ -299,6 +309,28 @@ ul.acordeon li:hover ul {
 /* ----------------------------------------------------------------- */
 /*                            ANIMACIONES                            */
 /* ----------------------------------------------------------------- */
+
+@-webkit-keyframes aumentar-boton-copy {
+    0% {
+        height: 30px;
+        width: 30px;
+    }
+    100% {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@keyframes aumentar-boton-copy {
+    0% {
+        height: 30px;
+        width: 30px;
+    }
+    100% {
+        height: 35px;
+        width: 35px;
+    }
+}
 
 @-webkit-keyframes borroso-entrada-abajo {
     0% {
