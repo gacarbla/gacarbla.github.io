@@ -17,7 +17,7 @@
     grid-area: 2 / 2 / 3 / 3; 
     line-height: 0px
 }
-.column2 {
+.column2out {
     grid-area: 3 / 2 / 4 / 3;
     -webkit-animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;
         animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;
@@ -33,7 +33,7 @@
     -webkit-animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
         animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
 }
-.column2out {
+.column2 {
     grid-area: 3 / 2 / 4 / 3;
     -webkit-animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
         animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
