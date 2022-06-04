@@ -17,7 +17,7 @@
              <i class="fas fa-moon"></i>
           </div>
         </div>
-        <p class="column head"><a onclick="goPage('../../')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
+        <p class="column head"><a onclick="goPage('../../../')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
         <p class="column description">Repositorio de documentación</p>
       </div>
       <div class="column2static">
@@ -85,31 +85,78 @@ Lamento las molestias, tenga un buen día.</textarea>
             <p class="document description">Envío del mensaje y advertencia directa, tras 2 o 3 advertencias (a criterio del staff) se procederá con el warn del usuario.
               Se podrá usar la siguiente plantilla:</p>
             <div class="document codebox">
-              <textarea readonly="true" id="" class="document textarea">u!warn <USER/ID>Flood en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]</textarea>
+              <textarea readonly="true" id="flood" class="document textarea">u!warn <USER/ID>Flood en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('flood')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <p class="document title">SPAM</p>
+            <p class="document subtitle">Directo</p>
+            <p class="document description">Eliminación del mensaje y ban directo.</p>
+            <p class="document subtitle">Indirecto</p>
+            <p class="document description">Eliminación del mensaje y advertencia, transcurridas 2 advertencias se procederá al warn del usuario. Se podrá hacer uso de la siguiente plantilla:</p>
+            <div class="document codebox">
+              <textarea readonly="true" id="spam" class="document textarea">u!warn <USER/ID> Spam indirecto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('spam')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <p class="document title">Multimedia</p>
+            <p class="document subtitle">NSFW</p>
+            <p class="document description">Eliminación del mensaje y ban directo.</p>
+            <p class="document subtitle">Violencia</p>
+            <p class="document description">Se eliminará el mensaje y se advertirá al usuario. En caso de ser violencia extrema será castigado de forma inminente, mismo si fuese necesario, con un ban. De lo contratio, se actuará con warn a la segunda advertencia. Se podrán usar las siguientes plantillas:</p>
+            <div class="document codebox">
+              <textarea readonly="true" id="violencia1" class="document textarea">u!warn <USER/ID> Compartir media en el servidor con contenido excesivamente violento [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('violencia1')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+            <div class="document codebox">
+              <textarea readonly="true" id="violencia2" class="document textarea">u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas blancas [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('violencia2')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+            <div class="document codebox">
+              <textarea readonly="true" id="violencia3" class="document textarea">u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas de fuego en uso [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('violencia3')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+            <p class="document subtitle">Incitación al odio</p>
+            <p class="document description">Se eliminará el mensaje y se advertirá al usuario. Se podrá proceder con un warn al 2º aviso. Se podrá hacer uso de la siguiente plantilla:</p>
+            <div class="document codebox">
+              <textarea readonly="true" id="" class="document textarea">u!warn <USER/ID> Envío de media que incite al odio en el servidor [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]</textarea>
               <button class="copycode" onclick="copyCode('')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
             </div>
           </div>
 
 
           <div class="card">
-            <p class="document title"></p>
-            <p class="document description"></p>
+            <p class="document title">Menciones</p>
+            <p class="document description">Eliminación del mensaje. Si se trata de un rol prohibido (Miautuber, Capitán Gato o Mathéo) se procederá con warn instantáneo. De lo contrario simplemente se dará una advertencia y a las 2 o 3 advertencias (a criterio del staff) se procederá con el warn. Se podrán usar las siguientes plantillas:</p>
             <div class="document codebox">
-              <textarea readonly="true" id="" class="document textarea"></textarea>
-              <button class="copycode" onclick="copyCode('')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+              <textarea readonly="true" id="menciones1" class="document textarea">u!warn <USER/ID> Mención a un usuario con el rol de Miautuber [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('menciones1')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+            <div class="document codebox">
+              <textarea readonly="true" id="menciones2" class="document textarea">u!warn <USER/ID> Mención al fundador del servidor [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('menciones2')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+            </div>
+            <div class="document codebox">
+              <textarea readonly="true" id="menciones3" class="document textarea">u!warn <USER/ID> Constante mención a un miembro de la administración a pesar de las advertencias del staff [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('menciones3')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
             </div>
           </div>
 
 
           <div class="card">
-            <p class="document title"></p>
-            <p class="document description"></p>
+            <p class="document title">Canales temáticos</p>
+            <p class="document description">Eliminación del mensaje y advertencia al usuario. A las 3 advertencias se procede con la aplicación del warn. Se podrá hacer uso de la siguiente plantilla:</p>
             <div class="document codebox">
-              <textarea readonly="true" id="" class="document textarea"></textarea>
-              <button class="copycode" onclick="copyCode('')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
+              <textarea readonly="true" id="canales" class="document textarea">u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]</textarea>
+              <button class="copycode" onclick="copyCode('canales')"><img src="../../../media/copy.png" height ="30" width="30"/></button>
             </div>
           </div>
-
 
           <!--
           <div class="card">
@@ -129,94 +176,3 @@ Lamento las molestias, tenga un buen día.</textarea>
     </div>
   </div>
 </body>
-
-<!--
-
-Envío del mensaje y advertencia directa, tras **2** o **3** advertencias (a criterio del staff) se procederá con el warn del usuario.<br>
-Se podrá usar la siguiente plantilla:
-```
-u!warn <USER/ID> Flood en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]
-```
-
-<br>
-<br>
-<br>
-
-<p style="color:#323232;font-weight:bold;font-size:2rem">SPAM</p>
-
-
-<p style="color:#c62e00;font-weight:180%;font-size:1.5rem">Directo</p>
-
-Eliminación del mensaje y ban directo.
-
-<p style="color:#c62e00;font-weight:180%;font-size:1.5rem">Indirecto</p>
-
-Eliminación del mensaje y advertencia, transcurridas **2** advertencias se procederá al warn del usuario.<br>
-Se podrá usar la siguiente plantilla:
-```
-u!warn <USER/ID> Spam indirecto en el servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº4 referente a canales de texto del servidor]
-```
-
-<br>
-<br>
-<br>
-
-<p style="color:#323232;font-weight:bold;font-size:2rem">Multimedia</p>
-<p style="color:#c62e00;font-weight:180%;font-size:1.5rem">NSFW</p>
-
-Eliminación del mensaje y ban directo.
-
-<p style="color:#c62e00;font-weight:180%;font-size:1.5rem">Violencia</p>
-
-Se eliminará el mensaje y se advertirá al usuario. En caso de ser violencia extrema será castigado de forma inminente, mismo si fuese necesario, con un ban. De lo contratio, se actuará con warn a la segunda advertencia.<br>
-Se podrán usar las siguientes plantillas:
-```
-u!warn <USER/ID> Compartir media en el servidor con contenido excesivamente violento [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
-```
-```
-u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas blancas [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
-```
-```
-u!warn <USER/ID> Compartir media en el servidor en la que se muestran armas de fuego en uso [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
-```
-
-
-<p style="color:#c62e00;font-weight:180%;font-size:1.5rem">Inictación al odio</p>
-
-Se eliminará el mensaje y se advertirá al usuario. Se podrá proceder con un warn al **2º** aviso.
-Se podrá usar la siguiente plantilla:
-```
-u!warn <USER/ID> Envío de media que incite al odio en el servidor [Quebrantamiento de la regla nº5 referente a canales de texto del servidor]
-```
-
-<br>
-<br>
-<br>
-
-<p style="color:#323232;font-weight:bold;font-size:2rem">Menciones</p>
-
-Eliminación del mensaje. Si se trata de un rol prohibido (Miautuber, Capitán Gato o Mathéo) se procederá con warn instantáneo. De lo contrario simplemente se dará una advertencia y a las **2** o **3** advertencias (a criterio del staff) se procederá con el warn. <br>
-Se podrán usar las siguientes plantillas:
-```
-u!warn <USER/ID> Mención a un usuario con el rol de Miautuber [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
-```
-```
-u!warn <USER/ID> Mención al fundador del servidor [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
-```
-```
-u!warn <USER/ID> Constante mención a un miembro de la administración a pesar de las advertencias del staff [Quebrantamiento de la regla nº6 referente a canales de texto del servidor]
-```
-
-<br>
-<br>
-<br>
-
-<p style="color:#323232;font-weight:bold;font-size:2rem">Canales temáticos</p>
-
-Eliminación del mensaje y advertencia al usuario. A las **3** advertencias se procede con la aplicación del warn.
-Se podrá usar la siguiente plantilla:
-```
-u!warn <USER/ID> Uso incorrecto de los canales del servidor a pesar de las advertencias del staff [Quebrantamiento de la regla nº7 referente a canales de texto del servidor]
-```
-
--->

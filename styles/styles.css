@@ -1,15 +1,22 @@
+@font-face {
+    font-family: 'quicksandlight';
+    src: 
+        url('../fonts/quicksand-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../fonts/quicksand-variablefont_wght-webfont.woff') format('woff');
+}
+
 :root {
     --l-fondo: #fff;
     --l-text: rgb(60, 60, 60);
     --l-textHover: #0055dd;
     --l-textDisabled: #666;
     --l-textError: #ed4245;
-    --l-button: rgb(211, 211, 211);;
-    --l-buttonHover: rgb(200, 200, 200);;
-    --l-buttonDisabled: rgb(184, 184, 184);;
+    --l-button: rgb(211, 211, 211);
+    --l-buttonHover: rgb(200, 200, 200);
+    --l-buttonDisabled: rgb(184, 184, 184);
     --l-duttonError: #ff9fa0;
     --d-fondo: #1b1b1b;
-    --d-text: #fff;
+    --d-text: rgb(212, 212, 212);
     --d-textHover: #5865f2;
     --d-textDisabled: #999;
     --d-textError: #ed4245;
@@ -17,7 +24,10 @@
     --d-buttonHover: #272727;
     --d-buttonDisabled: #222;
     --d-duttonError: #ff9fa0;
-    --font: Arial
+    --font-titles: 'Century Gothic';
+    --font-default: Arial;
+    --font-codetext: 'Calibri';
+    --font-menu: 'Calibri'
 }
 
 .light, body {
@@ -130,24 +140,26 @@
 .column1 {grid-area: 2 / 2 / 3 / 3;line-height: 0px}
 .column2static {grid-area: 3 / 2 / 4 / 3;}
 .column2out {grid-area: 3 / 2 / 4 / 3;-webkit-animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;} 
-.column3 {font-family: var(--font);grid-area: 2 / 3 / 3 / 4;-webkit-animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;}
+.column3 {grid-area: 2 / 3 / 3 / 4;-webkit-animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;}
 .column4 {grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;}
 .column2 {grid-area: 3 / 2 / 4 / 3;-webkit-animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;}
-.column3out {font-family: var(--font);grid-area: 2 / 3 / 3 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
-.column4out {font-family: var(--font);grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
-.column {font-family: var(--font);}
+.column3out {grid-area: 2 / 3 / 3 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
+.column4out {grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
 /* ------------------------------------------------------------------------------ */
 
 .head {
+    font-family: var(--font-titles);
     font-size: 35px;
     line-height: 25pt;
-    font-weight: bold;
+    font-weight: 700;
+    margin-bottom: 0px;
 }
 .description {
-    font-size: 15px;
+    font-family: var(--font-titles);
+    font-size: 18px;
     padding-top: 0px;
     line-height: 0px;
-    font-weight: bold;
+    font-weight: 700;
 }
 ul.menu,
 ul.menu * {
@@ -156,7 +168,7 @@ ul.menu * {
     padding-top: 15px;
     padding-right: 15%;
     font-weight: bold;
-    font-family: var(--font);
+    font-family: var(--font-menu);
 }
 ul.menu li {
     list-style: none;
@@ -195,7 +207,7 @@ ul.acordeon * {
     border: 0;
     padding: 0px;
     font-weight: bold;
-    font-family: var(--font);
+    font-family: var(--font-menu);
 }
 ul.acordeon {
     margin: 10px auto;
@@ -235,18 +247,20 @@ ul.acordeon li:hover ul {
     transition: .3s all ease-in;
 }
 .document {
-    font-family: var(--font);
+    font-family: var(--font-default);
 }
 .document .card .codebox {
+    margin-bottom: 7.5px;
     display: flex;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .document .card .textarea {
-    font-family: var(--font);
+    padding: 10px;
+    font-family: var(--font-codetext);
     font-size: 18px;
     resize: vertical;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 3px;
     width: 95%;
     height: 70px;
@@ -255,7 +269,7 @@ ul.acordeon li:hover ul {
     vertical-align: baseline;
 }
 .document .card .codebox .copycode {
-    border-radius: 10px;
+    border-radius: 5px;
     height: auto;
     width: 50px;
     border: 0px;
@@ -265,7 +279,7 @@ ul.acordeon li:hover ul {
     cursor: pointer;
 }
 .document .card .codebox .copycode:hover{
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.493);
 }
 .document .card .codebox .copycode:hover img{
@@ -275,6 +289,7 @@ ul.acordeon li:hover ul {
 .document .card .title {
     font-size: 30px;
     margin-bottom: 5px;
+    font-weight: bold;
     line-height: normal;
 }
 .document .card .subtitle {
@@ -326,23 +341,27 @@ ul.acordeon li:hover ul {
     color:#ffcd5c !important;
 }
 .column3 .parent{
+    font-family: var(--font-titles);
     padding-bottom: 0px;
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
 }
 .column3out .parent{
+    font-family: var(--font-titles);
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
 }
 .column3 .title{
+    font-family: var(--font-titles);
     margin: 0px;
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
 }
 .column3out .title{
+    font-family: var(--font-titles);
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
