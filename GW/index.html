@@ -3,25 +3,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/styles.css">
   <script src="../js/script.js"></script> 
-  <script>
-    function goPage(page) {
-      if(!page){
-        window.alert("Se ha producido un error")
-      } else {
-        document.getElementById("column3").className = "column3out"
-        document.getElementById("column4").className = "column4out"
-        console.log(page)
-        setTimeout(function(){
-          window.location = (`${page}`);
-        }, 1000)
-        setTimeout(function(){
-          document.getElementById("column3").className = "column3out"
-          document.getElementById("column4").className = "column4out"
-          window.location = (`${window.location}`);
-        }, 3000)
-      }
-    }
-  </script>
 
 </head>
 <body class="dark" id="body">
