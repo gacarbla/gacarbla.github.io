@@ -21,6 +21,7 @@
 }
 
 .light, body {
+    line-height: normal;
     background-color: var(--l-fondo);
 }
 .dark, body {
