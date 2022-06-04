@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <head>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="./styles/styles.css">
-  
-  <script>
-    function goPage(page) {
-      if(!page){
-        window.alert("Se ha producido un error")
-      } else {
-        document.getElementById("column2").className = "column2"
-        document.getElementById("column3").className = "column3out"
-        document.getElementById("column4").className = "column4out"
-        setTimeout(function(){
-          window.location = (`${page}`);
-        }, 1000)
-        setTimeout(function(){
-          document.getElementById("column3").className = "column3out"
-          document.getElementById("column4").className = "column4out"
-          window.location = (`${window.location}`);
-        }, 3000)
-      }
-    }
-  </script>
+  <script src="./js/script.js"></script> 
 
 </head>
-<body>
+<body class="light" id="body">
   <div class="page">
     <div class="columnleft">
       <div class="column1">
-        <p class="column title"><a onclick="goPage('https://gacarbla.github.io/')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
-        <p class="column subtitle">Repositorio de documentación</p>
+        <p class="column head"><a onclick="goToPage('https://gacarbla.github.io/')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
+        <p class="column description">Repositorio de documentación</p>
       </div>
       <div class="column2out" id="column2">
+        <div class="container-btn-mode">
+          <div id="id-sun" class="btn-mode sun" onclick="light()">
+             <i class="fas fa-sun"></i>
+          </div>
+          <div id="id-moon" class="btn-mode moon active" onclick="dark()">
+             <i class="fas fa-moon"></i>
+          </div>
+        </div>
         <ul class="menu">
-          <li class="proyect" style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/')">GW</a></li>
+          <li class="proyect" style="cursor:pointer;"><a onclick="goToPage('https://gacarbla.github.io/GW/')">GW</a></li>
         </ul>
       </div>
     </div>
@@ -44,7 +33,7 @@
       <div class="column4" id="column4">
         <div style="border-radius: 5px;">
           <ul class="acordeon">
-            <li style="cursor:pointer;"><a onclick="goPage('https://gacarbla.github.io/GW/')">Gatitos World</a></li>
+            <li style="cursor:pointer;"><a onclick="goToPage('https://gacarbla.github.io/GW/')">Gatitos World</a></li>
           </ul>
         </div>
       </div>

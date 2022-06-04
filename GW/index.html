@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/styles.css">
-  
+  <script src="../js/script.js"></script> 
   <script>
     function goPage(page) {
       if(!page){
@@ -24,14 +24,22 @@
   </script>
 
 </head>
-<body>
+<body class="dark" id="body">
   <div class="page">
     <div class="columnleft">
       <div class="column1">
-        <p class="column title"><a onclick="goPage('https://gacarbla.github.io/')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
-        <p class="column subtitle">Repositorio de documentación</p>
+        <p class="column head"><a onclick="goPage('https://gacarbla.github.io/')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
+        <p class="column description">Repositorio de documentación</p>
       </div>
       <div class="column2static">
+        <div class="container-btn-mode">
+          <div id="id-sun" class="btn-mode sun" onclick="light()">
+             <i class="fas fa-sun"></i>
+          </div>
+          <div id="id-moon" class="btn-mode moon active" onclick="dark()">
+             <i class="fas fa-moon"></i>
+          </div>
+        </div>
         <ul class="menu">
           <li class="proyect" style="cursor:default"><a>GW</a></li>
         </ul>
