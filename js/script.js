@@ -29,3 +29,13 @@ function goPage(page) {
         }, 3000)
     }
 }
+
+function copyCode(id) {
+    if(!id){
+        window.alert("Se ha producido un error copiando el texto")
+    } else {
+        var text = document.getElementById(`${id}`)
+        text.select()
+        document.execCommand("copy")
+    }
+  }

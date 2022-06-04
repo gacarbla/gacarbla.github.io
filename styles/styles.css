@@ -99,10 +99,21 @@
     background-color: var(--d-buttonHover)
 }
 .dark .textarea {
-    background-color: var(--d-fondo);
+    background-color: var(--d-buttonHover);
     color: var(--d-text)
 }
-
+.light .document .card .title {
+    color: var(--l-textHover)
+}
+.dark .document .card .title {
+    color: var(--d-textHover)
+}
+.light .document .card .subtitle {
+    color: var(--l-textError)
+}
+.dark .document .card .subtitle {
+    color: var(--d-textError)
+}
 
 
 /* ---- Distribución de los divs ------------------------------------------------ */
@@ -231,13 +242,13 @@ ul.acordeon li:hover ul {
 }
 .document .card .textarea {
     font-family: var(--font);
-    font-size: small;
+    font-size: 18px;
     resize: vertical;
     border: 0px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 3px;
     width: 95%;
-    height: 90px;
+    height: 70px;
     max-height: 25rem;
     min-height: 50px;
     vertical-align: baseline;
@@ -248,7 +259,7 @@ ul.acordeon li:hover ul {
     width: 50px;
     border: 0px;
     align-items: center;
-    margin: 5px;
+    margin: 3px;
     margin-left: auto;
     cursor: pointer;
 }
@@ -263,9 +274,21 @@ ul.acordeon li:hover ul {
 .document .card .title {
     font-size: 30px;
     margin-bottom: 5px;
+    line-height: normal;
+}
+.document .card .subtitle {
+    font-size: 25px;
+    margin-bottom: 5px;
+    line-height: normal;
+}
+.document .card .description {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-weight: normal;
 }
 .document .card {
-    padding: 20px;
+    padding: 35px;
 }
 .container-btn-mode{
     position: absolute;
@@ -300,6 +323,28 @@ ul.acordeon li:hover ul {
 .active{
     background-color:black;
     color:#ffcd5c !important;
+}
+.column3 .parent{
+    padding-bottom: 0px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.column3out .parent{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.column3 .title{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
+.column3out .title{
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
 }
 
 
