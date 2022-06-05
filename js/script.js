@@ -38,4 +38,4 @@ function copyCode(id) {
         text.select()
         document.execCommand("copy")
     }
-  }
+}
