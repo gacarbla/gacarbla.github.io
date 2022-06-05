@@ -40,16 +40,18 @@ function copyCode(id) {
     }
 }
 
-
-start();
-window.addEventListener('resize', start);
+function load(){
+    start();
+    window.addEventListener('resize', start);
+}
 
 function start(){
     var width = document.documentElement.clientWidth
     var height = document.documentElement.clientHeight
+    console.log(width, height)
     if(height>width){
         document.getElementById("page").className = "pagem"
     } else {
-        document.getElementById("page").className = "pagem"
+        document.getElementById("page").className = "page"
     }
 }
