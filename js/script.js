@@ -48,7 +48,7 @@ function start(){
     var width = document.documentElement.clientWidth
     var height = document.documentElement.clientHeight
     if(height>width){
-        document.getElementsByClassName("page").className = "pagem"
+        document.getElementById("page").className = "pagem"
     } else {
         document.getElementById("page").className = "pagem"
     }
