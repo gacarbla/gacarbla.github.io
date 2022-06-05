@@ -39,3 +39,17 @@ function copyCode(id) {
         document.execCommand("copy")
     }
 }
+
+
+start();
+window.addEventListener('resize', start);
+
+function start(){
+    var width = document.documentElement.clientWidth
+    var height = document.documentElement.clientHeight
+    if(height>width){
+        document.getElementsByClassName("page").className = "pagem"
+    } else {
+        document.getElementById("page").className = "pagem"
+    }
+}
