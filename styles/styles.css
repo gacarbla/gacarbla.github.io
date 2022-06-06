@@ -139,7 +139,7 @@
 .pagem {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 10% 10% 25px 3fr 100% 10%;
+    grid-template-rows: 15px 50px 20px 60px 100% 15px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
@@ -294,7 +294,7 @@ ul.acordeon li:hover ul {
 .document .card .textarea {
     padding: 10px;
     font-family: var(--font-codetext);
-    font-size: 18px;
+    font-size: 27px;
     resize: vertical;
     border: 0px;
     border-radius: 5px;
@@ -302,7 +302,7 @@ ul.acordeon li:hover ul {
     width: 95%;
     height: 70px;
     max-height: 25rem;
-    min-height: 50px;
+    min-height: 100px;
     vertical-align: baseline;
 }
 .pagem .document .card .textarea {
@@ -470,6 +470,27 @@ ul.acordeon li:hover ul {
     100% {
         height: 35px;
         width: 35px;
+    }
+}
+@-webkit-keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
     }
 }
 
