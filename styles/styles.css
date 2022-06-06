@@ -281,7 +281,7 @@ ul.acordeon li:hover ul {
 .document .card .textarea {
     padding: 10px;
     font-family: var(--font-codetext);
-    font-size: 18px;
+    font-size: 27px;
     resize: vertical;
     border: 0px;
     border-radius: 5px;
@@ -289,7 +289,7 @@ ul.acordeon li:hover ul {
     width: 95%;
     height: 70px;
     max-height: 25rem;
-    min-height: 50px;
+    min-height: 100px;
     vertical-align: baseline;
 }
 .document .card .codebox .copycode {
