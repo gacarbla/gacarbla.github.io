@@ -167,6 +167,67 @@
 .page .column4out {grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
 /* ------------------------------------------------------------------------------ */
 
+.window {
+    background: rgba(0, 0, 0, .85);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    font-family: var(--font-titles);
+}
+
+.window .content {
+    background: #000;
+    border-radius: 2px;
+    border: 5px;
+    border-color: #fff;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+    min-width: 320px !important;
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+.window .text {
+    margin: 50px;
+    line-height: normal;
+}
+
+.window .text .description {
+    padding: 0px;
+    margin: 0px;
+    line-height: normal;
+}
+
+.window .text a {
+    font-style:unset;
+    color: var(--d-textHover)
+}
+
+.window .content button {
+    border-radius: 5px;
+    font-family: var(--font-menu);
+    font-size: 22px;
+    color: var(--d-text);
+    background-color: rgba(68, 68, 68);
+    border: 0px;
+    width: 50%;
+    height: 45px;
+    align-self: center;
+}
+.window .content button:hover{
+    -webkit-animation: boton-ventana 0.1s cubic-bezier(0, 0, 0, 0) both;
+        animation: boton-ventana 0.1s cubic-bezier(0, 0.0, 0, 0) both;
+}
+
 .pagem .columnright {
     padding-top: 80px;
 }
@@ -513,6 +574,24 @@ ul.acordeon li:hover ul {
     100% {
         height: 75px;
         width: 75px;
+    }
+}
+
+@-webkit-keyframes boton-ventana {
+    0% {
+        background-color: #444;
+    }
+    100% {
+        background-color: rgba(68, 68, 68, 0.5);
+    }
+}
+
+@keyframes boton-ventana {
+    0% {
+        background-color: #444;
+    }
+    100% {
+        background-color: rgba(68, 68, 68, 0.5);
     }
 }
 

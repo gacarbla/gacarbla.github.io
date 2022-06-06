@@ -80,11 +80,26 @@ function windowSize(){
         }, 1000)
     } else {
         if(!warnedConsole) {
+            console.log("run")
             warnedConsole = true
-            window.alert("Se ha detectado el uso de la consola para la manipulación de la página. Se ruega a los usuarios que utilicen este medio, lean la documentación de uso de la consola.\nSi deseas saber cómo acceder a esta, use en la consola el comando cmdDocs()")
+            page = document.getElementById("page")
+            page.innerHTML = "<div id=\"ventana\"><div class =\"window\" id=\"window\"><div class=\"content\"><div class=\"text\"><p class=\"description\">Se ha detectado el uso de la terminal en la página.\nSi es usted un interesado puede acceder a nuestra <a href=\"https://gacarbla.github.io/cmdDocs\"> documentación de la consola</a>.</p></div><button class=\"btn\" onclick=\"cerrarVentana()\">ACEPTAR</button></div></div></div>"+page.innerHTML
         }
     }
     return "Iniciado sistema automático de detección de cambios de pantalla"
+}
+
+function cerrarVentana() {
+    try{
+        if(document.getElementById("ventana").hidden){
+            return "La ventana ya está cerrada"
+        } else {
+            document.getElementById("ventana").hidden = "true"
+            return "La ventana ha sido cerrada"
+        }
+    } catch {
+        return "La ventana no ha sido creada aún"
+    }
 }
 
 function cmdDosc(page) {
@@ -96,16 +111,17 @@ function cmdDosc(page) {
     }
 
     if(!page){
-        
+        console.error(error_working)
     } else {
-        return error_working
+        console.error(error_working)
     }
+    return 1
 }
 
 function helpCmd(command) {
-
+    console.error(error_working)
 }
 
 function help() {
-
+    console.error(error_working)
 }
