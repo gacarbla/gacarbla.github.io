@@ -79,11 +79,12 @@ function windowSize(){
             carga = false
         }, 1000)
     } else {
-        if(!warnedConsole) {
+        var u = navigator.userAgent;
+        if(!warnedConsole && u.includes("Windows")) {
             console.log("run")
             warnedConsole = true
             page = document.getElementById("page")
-            page.innerHTML = "<div id=\"ventana\"><div class =\"window\" id=\"window\"><div class=\"content\"><div class=\"text\"><p class=\"description\">Se ha detectado el uso de la terminal en la página.\nSi es usted un interesado puede acceder a nuestra <a href=\"https://gacarbla.github.io/cmdDocs\"> documentación de la consola</a>.</p></div><button class=\"btn\" onclick=\"cerrarVentana()\">ACEPTAR</button></div></div></div>"+page.innerHTML
+            page.innerHTML = `<div id="ventana"><div class ="window" id="window"><div class="content"><div class="text"><p class="description">Se ha detectado el uso de la terminal en la página.\nSi es usted un interesado puede acceder a nuestra <a href="https://gacarbla.github.io/cmdDocs"> documentación de la consola</a>.</p></div><button class="btn" onclick="cerrarVentana()">ACEPTAR</button></div></div></div>`+page.innerHTML
         }
     }
     return "Iniciado sistema automático de detección de cambios de pantalla"
