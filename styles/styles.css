@@ -139,13 +139,13 @@
 .pagem {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 10% 3fr 5fr 3fr 10fr 10%;
+    grid-template-rows: 10% 10% 25px 3fr 100% 10%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
     
 .pagem .columnleft { grid-area: 2 / 2 / 4 / 3;line-height: normal}
-.pagem .columnright { grid-area: 4 / 2 / 6 / 3;line-height: normal;margin-top: 150px;}
+.pagem .columnright { grid-area: 4 / 2 / 6 / 3;line-height: normal;}
 .pagem .column1 { grid-area: 2 / 2 / 3 / 3; }
 .pagem .column2static { grid-area: 3 / 2 / 4 / 3; }
 .pagem .column2 { grid-area: 3 / 2 / 4 / 3; ;-webkit-animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;animation: borroso-entrada-izquierda 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;}
@@ -153,6 +153,7 @@
 .pagem .column4 { grid-area: 5 / 2 / 6 / 3;-webkit-animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;animation: borroso-entrada-abajo 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;} 
 .pagem .column3out { grid-area: 4 / 2 / 5 / 3;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
 .pagem .column4out { grid-area: 5 / 2 / 6 / 3;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;} 
+.pagem .column2out {grid-area: 3 / 2 / 4 / 3;-webkit-animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;animation: borroso-salida-izquierda 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.3s both;} 
 
 .page .columnleft{grid-area: 2 / 2 / 4 / 3;line-height: normal}
 .page .columnright {grid-area: 2 / 3 / 4 / 4;line-height: normal}
@@ -166,21 +167,30 @@
 .page .column4out {grid-area: 3 / 3 / 4 / 4;-webkit-animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;animation: borroso-salida-arriba 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;}
 /* ------------------------------------------------------------------------------ */
 
+.pagem .columnright {
+    padding-top: 80px;
+}
+
+.home .pagem .columnright {
+    padding-top: 40px;
+}
+
 .body {
     line-height: normal;
 }
 
 .head {
     font-family: var(--font-titles);
-    font-size: 35px;
-    line-height: 25pt;
+    font-size: 39px;
+    line-height: 35px;
     font-weight: 700;
     margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 .description {
     line-height: normal;
     font-family: var(--font-titles);
-    font-size: 18px;
+    font-size: 100%;
     padding-top: 0px;
     line-height: 0px;
     font-weight: 700;
@@ -239,6 +249,9 @@ ul.acordeon {
     width: 100%;
     font-size: 18px;
 }
+.pagem ul.acordeon {
+    font-size: 45px;
+}
 ul.acordeon li {
     list-style: none;
 }
@@ -292,23 +305,42 @@ ul.acordeon li:hover ul {
     min-height: 50px;
     vertical-align: baseline;
 }
+.pagem .document .card .textarea {
+    min-height: 90px;
+    height: 120px;
+}
 .document .card .codebox .copycode {
     border-radius: 5px;
     height: auto;
-    width: 50px;
+    width: 40px;
     border: 0px;
     align-items: center;
     margin: 3px;
     margin-left: auto;
     cursor: pointer;
 }
+.pagem .document .card .codebox .copycode {
+    width: 80px;
+}
 .document .card .codebox .copycode:hover{
     border-radius: 5px;
     box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.493);
 }
+.document .card .codebox img {
+    width: 30px;
+    height: 30px;
+}
+.pagem .document .card .codebox img {
+    width: 60px;
+    height: 60px;
+}
 .document .card .codebox .copycode:hover img{
     -webkit-animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0, 0, 0) both;
         animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0.0, 0, 0) both;
+}
+.pagem .document .card .codebox .copycode:hover img{
+    -webkit-animation: aumentar-boton-copy-m 0.1s cubic-bezier(0, 0, 0, 0) both;
+        animation: aumentar-boton-copy-m 0.1s cubic-bezier(0, 0.0, 0, 0) both;
 }
 .document .card .title {
     font-size: 30px;
@@ -380,11 +412,17 @@ ul.acordeon li:hover ul {
     font-size: 1.5rem;
     text-align: center;
 }
+.pagem .column3 .parent{
+    font-size: 2.5rem;
+}
 .column3out .parent{
     font-family: var(--font-titles);
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
+}
+.pagem .column3out .parent{
+    font-size: 2.5rem;
 }
 .column3 .title{
     font-family: var(--font-titles);
@@ -393,13 +431,18 @@ ul.acordeon li:hover ul {
     font-size: 3rem;
     text-align: center;
 }
+.pagem .column3 .title {
+    font-size: 6rem;
+}
 .column3out .title{
     font-family: var(--font-titles);
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
 }
-
+.pagem .column3out .title {
+    font-size: 6rem;
+}
 
 
 
@@ -427,6 +470,28 @@ ul.acordeon li:hover ul {
     100% {
         height: 35px;
         width: 35px;
+    }
+}
+
+@-webkit-keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
     }
 }
 
