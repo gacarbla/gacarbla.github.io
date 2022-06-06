@@ -139,7 +139,7 @@
 .pagem {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 10% 3fr 5fr 3fr 10fr 10%;
+    grid-template-rows: 15px 50px 20px 60px 100% 15px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
