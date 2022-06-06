@@ -295,7 +295,7 @@ ul.acordeon li:hover ul {
 .document .card .codebox .copycode {
     border-radius: 5px;
     height: auto;
-    width: 50px;
+    width: 100px;
     border: 0px;
     align-items: center;
     margin: 3px;
@@ -306,9 +306,21 @@ ul.acordeon li:hover ul {
     border-radius: 5px;
     box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.493);
 }
+.document .document .card .codebox img {
+    height: 30px;
+    width: 30px;
+}
+.pagem .document .card .codebox img {
+    height: 60px;
+    width: 60px
+}
 .document .card .codebox .copycode:hover img{
     -webkit-animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0, 0, 0) both;
         animation: aumentar-boton-copy 0.1s cubic-bezier(0, 0.0, 0, 0) both;
+}
+.pagem .document .card .codebox .copycode:hover img {
+    -webkit-animation: aumentar-boton-copy-m 0.1s cubic-bezier(0, 0, 0, 0) both;
+        animation: aumentar-boton-copy-m 0.1s cubic-bezier(0, 0.0, 0, 0) both;
 }
 .document .card .title {
     font-size: 30px;
@@ -427,6 +439,27 @@ ul.acordeon li:hover ul {
     100% {
         height: 35px;
         width: 35px;
+    }
+}
+@-webkit-keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@keyframes aumentar-boton-copy-m {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    100% {
+        height: 75px;
+        width: 75px;
     }
 }
 
