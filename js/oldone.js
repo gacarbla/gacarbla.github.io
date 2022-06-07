@@ -26,15 +26,15 @@ function dark() {
 }
 
 function goPage(page) {
-    if(!page){
+    if (!page) {
         window.alert("Se ha producido un error")
     } else {
         document.getElementById("column3").className = "column3out"
         document.getElementById("column4").className = "column4out"
-        setTimeout(function(){
+        setTimeout(function () {
             window.location = (`${page}`);
         }, 1000)
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById("column3").className = "column3out"
             document.getElementById("column4").className = "column4out"
             window.location = (`${window.location}`);
@@ -43,7 +43,7 @@ function goPage(page) {
 }
 
 function copyCode(id) {
-    if(!id){
+    if (!id) {
         window.alert("Se ha producido un error copiando el texto")
     } else {
         var text = document.getElementById(`${id}`)
@@ -53,50 +53,50 @@ function copyCode(id) {
     }
 }
 
-function load(){
+function load() {
     carga = true
     windowSize();
     window.addEventListener('resize', windowSize);
     return "Recargando la página"
 }
 
-function windowSize(){
+function windowSize() {
     var variable = false
     var width = document.documentElement.clientWidth
     var height = document.documentElement.clientHeight
-    if (oldHeigh==0 || oldWidth==0 || oldHeigh==width || oldWidth==height ) {
-        oldHeigh=height
-        oldWidth=width
+    if (oldHeigh == 0 || oldWidth == 0 || oldHeigh == width || oldWidth == height) {
+        oldHeigh = height
+        oldWidth = width
         variable = true
     }
-    if(carga || warnedConsole || variable){
-        if(height>width){
+    if (carga || warnedConsole || variable) {
+        if (height > width) {
             document.getElementById("page").className = "pagem"
             document.getElementById("header").classList.add("visible")
         } else {
             document.getElementById("page").className = "page"
             document.getElementById("header").classList.remove("visible")
         }
-        setTimeout(function(){
+        setTimeout(function () {
             carga = false
         }, 1000)
     } else {
         var u = navigator.userAgent;
-        if(!warnedConsole && u.includes("Windows")) {
+        if (!warnedConsole && u.includes("Windows")) {
             console.log("run")
             warnedConsole = true
             page = document.getElementById("page")
-            var random = Math.floor(Math.random()*10)
+            var random = Math.floor(Math.random() * 10)
             console.log(random)
-            if (random>6) page.innerHTML = `<div id="ventana"><div class ="window" id="window"><div class="content"><div class="text"><p class="description">¿Sabías que la terminal es una herramienta en esta página?\nSi es usted un interesado puede acceder a nuestra <a href="https://gacarbla.github.io/cmdDocs"> documentación de la consola</a>.</p></div><button onclick="cerrarVentana()">ACEPTAR</button></div></div></div>`+page.innerHTML
+            if (random > 6) page.innerHTML = `<div id="ventana"><div class ="window" id="window"><div class="content"><div class="text"><p class="description">¿Sabías que la terminal es una herramienta en esta página?\nSi es usted un interesado puede acceder a nuestra <a href="https://gacarbla.github.io/cmdDocs"> documentación de la consola</a>.</p></div><button onclick="cerrarVentana()">ACEPTAR</button></div></div></div>` + page.innerHTML
         }
     }
     return "Iniciado sistema automático de detección de cambios de pantalla"
 }
 
 function cerrarVentana() {
-    try{
-        if(document.getElementById("ventana").hidden){
+    try {
+        if (document.getElementById("ventana").hidden) {
             return "La ventana ya está cerrada"
         } else {
             document.getElementById("ventana").hidden = "true"
@@ -115,7 +115,7 @@ function cmdDosc(page) {
         },
     }
 
-    if(!page){
+    if (!page) {
         console.error(error_working)
     } else {
         console.error(error_working)
