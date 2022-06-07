@@ -6,6 +6,15 @@
 
 </head>
 <body class="dark" id="body" onload="load()">
+  <header id="header">
+    <div class="btn">
+      <img src="../media/menu-logo.svg" height="50px" width="50px" onclick="abrirMenu()">
+    </div>
+    <div class="topHead" id="HeaderHead">
+      <p class="head"><a onclick="goPage('../')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
+      <p class="description">Repositorio de documentación</p>
+    </div>
+  </header>
   <div class="page" id="page">
     <div class="columnleft">
       <div class="column1">
@@ -17,8 +26,10 @@
              <i class="fas fa-moon"></i>
           </div>
         </div>
-        <p class="column head"><a onclick="goPage('../')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
-        <p class="column description">Repositorio de documentación</p>
+        <div class="lateral">
+          <p class="column head"><a onclick="goPage('../')" style="cursor:pointer">GΛCΛRBLΛ<br>DOCUMENTS</a></p>
+          <p class="column description">Repositorio de documentación</p>
+        </div>
       </div>
       <div class="column2static">
         <ul class="menu">

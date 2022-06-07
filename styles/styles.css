@@ -144,7 +144,7 @@
     grid-row-gap: 0px;
     }
     
-.pagem .columnleft { grid-area: 2 / 2 / 4 / 3;line-height: normal}
+.pagem .columnleft { /*grid-area: 2 / 2 / 4 / 3;line-height: normal*/ visibility: hidden;}
 .pagem .columnright { grid-area: 4 / 2 / 6 / 3;line-height: normal;}
 .pagem .column1 { grid-area: 2 / 2 / 3 / 3; }
 .pagem .column2static { grid-area: 3 / 2 / 4 / 3; }
@@ -240,7 +240,7 @@
     line-height: normal;
 }
 
-.head {
+.lateral .head {
     font-family: var(--font-titles);
     font-size: 39px;
     line-height: 35px;
@@ -248,13 +248,67 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
-.description {
+.lateral .description {
     line-height: normal;
     font-family: var(--font-titles);
     font-size: 100%;
     padding-top: 0px;
     line-height: 0px;
     font-weight: 700;
+}
+header {
+    visibility: hidden;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    position:fixed;
+    height: 80px;
+}
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    opacity: 75%;
+    height: 70px;
+    width: 70px;
+}
+.btn img{
+    border: 5px #fff;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    align-self: center;
+}
+.dark header {
+    background-color: var(--d-fondo);
+}
+.light header {
+    background-color: var(--l-fondo);
+}
+.topHead {
+    opacity: 75%;
+    align-self: right;
+    width: 40%;
+    font-family: var(--font-titles);
+}
+.topHead .head{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 22px;
+    text-align: right;
+}
+.topHead .description{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    text-align: right;
+    font-size: 15px;
+    margin-top: 0%;
+}
+.visible {
+    visibility: unset;
 }
 ul.menu,
 ul.menu * {
@@ -361,15 +415,16 @@ ul.acordeon li:hover ul {
     border-radius: 5px;
     margin: 3px;
     width: 95%;
-    height: 60px;
+    height: 70px;
     max-height: 25rem;
-    min-height: 100px;
+    min-height: 50px;
     vertical-align: baseline;
 }
 .pagem .document .card .textarea {
     min-height: 90px;
     height: 120px;
     font-size: 27px;
+    min-height: 100px;
 }
 .document .card .codebox .copycode {
     border-radius: 5px;
