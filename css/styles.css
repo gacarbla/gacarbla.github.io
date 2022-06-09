@@ -2,82 +2,87 @@
 
     /* FUENTES */
     --fuente-predeterminada: Arial;
-    --tamaño-h1: 54px;
-    --tamaño-h2: 48px;
-    --tamaño-h3: 40px;
-    --tamaño-h4: 34px;
-    --tamaño-text: 22px;
+
+    /* TAMAÑOS DE FUENTE */
+    --tamaño-h1:     54px;
+    --tamaño-h2:     48px;
+    --tamaño-h3:     40px;
+    --tamaño-h4:     34px;
+    --tamaño-text:   22px;
 
 }
 
 .light {
 
     /* COLOR DE TEXTO */
-    --texto-normal: #333;
+    --texto-normal:              #333333ff;
 
     /* COLOR DE FONDO */
-    --fondo-body-predeterminado: #ddd;
-    --fondo-body-alternativo: #949dff;
-    --fondo-hf-predeterminado: #ddd;
-    --fondo-hf-alternativo: #949dff;
+    --fondo-body-predeterminado: #ddddddff;
+    --fondo-body-alternativo:    #949dffff;
+    --fondo-hf-predeterminado:   #ddddddff;
+    --fondo-hf-alternativo:      #949dffff;
 }
 
 .dark {
 
     /* COLOR DE TEXTO */
-    --texto-normal: #e7dfdd;
-    --texto-resaltado: #a239ca;
+    --texto-normal:              #e7dfddff;
+    --texto-resaltado:           #a239caff;
 
     /* COLOR DE FONDO */
-    --fondo-body-predeterminado: #2B293C;
-    --fondo-body-alternativo: #2c2f33;
-    --fondo-hf-predeterminado: #0e0b16;
-    --fondo-hf-alternativo: #23272a;
+    --fondo-body-predeterminado: #16151eff;
+    --fondo-body-alternativo:    #2d3034ff;
+    --fondo-hf-predeterminado:   #040307ff;
+    --fondo-hf-alternativo:      #23272aff;
 
     /* COLORES DE BOTONES */
 
     /*Deshabilitado*/
-    --btn-disabled: hsl(0, 0%, 35%, 0.5);
+    --btn-disabled:              #59595980;
 
     /*Primarios*/
-    --btn-primary-normal: hsl(193, 39%, 55%);
-    --btn-primary-hover: hsl(193, 39%, 40%);
-    --btn-primary-click: hsl(193, 39%, 35%);
+    --btn-primary-normal:        #5fa6b9ff;
+    --btn-primary-hover:         #3e7d8eff;
+    --btn-primary-click:         #366d7cff;
 
     /*Secundarios*/
-    --btn-secondary-normal: hsl(195, 11%, 55%);
-    --btn-secondary-hover: hsl(195, 11%, 40%);
-    --btn-secondary-click: hsl(195, 11%, 35%);
+    --btn-secondary-normal:      #809399ff;
+    --btn-secondary-hover:       #5b6c71ff;
+    --btn-secondary-click:       #4f5e63ff;
 
     /*Exitosos*/
-    --btn-success-normal: hsl(119, 62%, 55%);
-    --btn-success-hover: hsl(119, 62%, 40%);
-    --btn-success-click: hsl(119, 62%, 35%);
+    --btn-success-normal:        #47d345ff;
+    --btn-success-hover:         #29a527ff;
+    --btn-success-click:         #249122ff;
 
     /*Peligro*/
-    --btn-danger-normal: hsl(359, 83%, 55%);
-    --btn-danger-hover: hsl(359, 83%, 40%);
-    --btn-danger-click: hsl(359, 83%, 35%);
+    --btn-danger-normal:         #eb2d30ff;
+    --btn-danger-hover:          #bb1114ff;
+    --btn-danger-click:          #a30f12ff;
 
     /*Advertencia*/
-    --btn-warning-normal: hsl(57, 98%, 55%);
-    --btn-warning-hover: hsl(57, 98%, 40%);
-    --btn-warning-click: hsl(57, 98%, 35%);
+    --btn-warning-normal:        #fdf11cff;
+    --btn-warning-hover:         #cac002ff;
+    --btn-warning-click:         #b1a802ff;
 
     /*Texto*/
-    --btn-text-primary: #2B293C;
-    --btn-text-secondary: #2B293C;
-    --btn-text-success: #2B293C;
-    --btn-text-danger: #fff;
-    --btn-text-warning: #2B293C;
-    --btn-text-primary-hover: #000;
-    --btn-text-secondary-hover: #000;
-    --btn-text-success-hover: #000;
-    --btn-text-danger-hover: #fff;
-    --btn-text-warning-hover: #000;
-    --btn-text-disabled: #ffffff80;
+    --btn-text-primary:          #2B293Cff;
+    --btn-text-secondary:        #2B293Cff;
+    --btn-text-success:          #2B293Cff;
+    --btn-text-danger:           #ffffffff;
+    --btn-text-warning:          #2B293Cff;
+    --btn-text-primary-hover:    #000000ff;
+    --btn-text-secondary-hover:  #000000ff;
+    --btn-text-success-hover:    #000000ff;
+    --btn-text-danger-hover:     #ffffffff;
+    --btn-text-warning-hover:    #000000ff;
+    --btn-text-disabled:         #ffffff80;
 
     /* COLORES FONDO MENÚS */
+    
+    /* OTROS */
+    --color-001:                 #d9d9d9ff; /* Flecha menú superior PC */
 }
 
 
@@ -85,336 +90,74 @@
 
 
 /* FONDOS BASE */
-header {
-    background-color: var(--fondo-hf-predeterminado);
-}
+body               {   background-color: var( --fondo-body-predeterminado );   cursor: default;  }
+header             {   background-color: var( --fondo-hf-predeterminado   );   cursor: default;  }
+footer             {   background-color: var( --fondo-hf-predeterminado   );   cursor: default;  }
+header img         {   background-color: var( --color-001                 );   cursor: default;  }
 
-body {
-    background-color: var(--fondo-body-predeterminado);
-    cursor: default;
-}
-
-footer {
-    background-color: var(--fondo-hf-predeterminado);
-}
 
 /* TAMAÑOS Y COLOCACIÓN BASE */
-header {
-    height: 120px;
-    position: fixed;
-    left: 1.5%;
-    top: -90px;
-    width: 97%;
-    border-radius: 5px
-}
+.loaded header     {  animation: subirmenu            0.6s   cubic-bezier(0.230, 1.000, 0.320, 1.000)   0.5s   both;  }
+.loaded header img {  animation: girar90-antihorario  0.6s   cubic-bezier(0.230, 1.000, 0.320, 1.000)   0.5s   both;  }
+header:hover       {  animation: bajarmenu            0.6s   cubic-bezier(0.230, 1.000, 0.320, 1.000)   0.25s  both;  }
+header:hover img   {  animation: girar90-horario      0.6s   cubic-bezier(0.230, 1.000, 0.320, 1.000)   0.25s  both;  }
 
-header img {
-    height: 18px;
-    background-color: hsl(0, 0%, 85%);
-    border-radius: 100%;
-    position: relative;
-    left: 50%;
-    bottom: 10px;
-}
+header             {  height: 120px;   position: fixed;      left: 1.5%;   top: -90px;                   width: 97%;   border-radius: 5px;                      }
+header .content    {                   position: relative;                 top: 10px;                                                         margin-left: 5%;  }
+header img         {  height: 18px;    position: relative;   left: 50%;                  bottom: 10px;                 border-radius: 100%;                     }
 
-.loaded header {
-    animation: subirmenu 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both;
-}
+body               {  margin-top: 92px; margin-left: 5%; margin-right: 5%;                                                                                      }
 
-.loaded header img {
-    animation: girar90-antihorario 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both;
-}
+footer             {  height: 24px; position: fixed; bottom: 0px; left: 0px; width: 100%;                                                                       }
 
-header .content {
-    position: relative;
-    margin-left: 5%;
-    top: 10px;
-}
-
-body {
-    margin-top: 92px;
-    height: 200rem;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-footer {
-    height: 24px;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-}
-
-header:hover {
-    animation: bajarmenu 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
-}
-
-header:hover img {
-    animation: girar90-horario 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
-}
-
-@-webkit-keyframes subirmenu {
-    0% {
-        top: -5px
-    }
-
-    100% {
-        top: -90px
-    }
-}
-
-@keyframes subirmenu {
-    0% {
-        top: -5px
-    }
-
-    100% {
-        top: -90px
-    }
-}
-
-@-webkit-keyframes bajarmenu {
-    0% {
-        top: 90px
-    }
-
-    100% {
-        top: -5px
-    }
-}
-
-@keyframes bajarmenu {
-    0% {
-        top: -90px
-    }
-
-    100% {
-        top: -5px
-    }
-}
-
-@-webkit-keyframes girar90-horario {
-    0% {
-        transform: rotate(0deg);
-        bottom: 10px;
-        height: 20px;
-    }
-
-    100% {
-        transform: rotate(180deg);
-        bottom: 2px;
-        height: 34px;
-    }
-}
-
-@keyframes girar90-horario {
-    0% {
-        transform: rotate(0deg);
-        bottom: 10px;
-        height: 20px;
-    }
-
-    100% {
-        transform: rotate(180deg);
-        bottom: 2px;
-        height: 34px;
-    }
-}
-
-@-webkit-keyframes girar90-antihorario {
-    0% {
-        transform: rotate(180deg);
-        bottom: 2px;
-        height: 34px;
-    }
-
-    100% {
-        transform: rotate(0deg);
-        bottom: 10px;
-        height: 20px;
-    }
-}
-
-@keyframes girar90-antihorario {
-    0% {
-        transform: rotate(180deg);
-        bottom: 2px;
-        height: 34px;
-    }
-
-    100% {
-        transform: rotate(0deg);
-        bottom: 10px;
-        height: 20px;
-    }
-}
 
 /* COLORES Y FUENTES BASE */
-header .name {
-    font-size: var(--tamaño-h4);
-    color: var(--texto-normal);
-    font-family: var(--fuente-predeterminada);
-    font-weight: bold;
-}
-
-
-
+header .name       {  font-size: var( --tamaño-h4 );   color: var( --texto-normal );   font-family: var( --fuente-predeterminada );   font-weight: bold;        }
 
 
 /* DISEÑO TEXTOS GENERALES */
 
 
-
-
-
-
-
-
-
-
-
 /* DISEÑO BOTONES GENERALES */
-
-button {
-    font-family: var(--fuente-predeterminada);
-    border-radius: 4px;
-    border: 0px;
-    padding: 10px 15px 10px 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button.primary {
-    background-color: var(--btn-primary-normal);
-    color: var(--btn-text-primary);
-}
-
-button.secondary {
-    background-color: var(--btn-secondary-normal);
-    color: var(--btn-text-secondary);
-}
-
-button.success {
-    background-color: var(--btn-success-normal);
-    color: var(--btn-text-success);
-}
-
-button.danger {
-    background-color: var(--btn-danger-normal);
-    color: var(--btn-text-danger);
-}
-
-button.warning {
-    background-color: var(--btn-warning-normal);
-    color: var(--btn-text-warning);
-}
-
-button.primary:hover {
-    background-color: var(--btn-primary-hover);
-    color: var(--btn-text-primary-hover);
-}
-
-button.secondary:hover {
-    background-color: var(--btn-secondary-hover);
-    color: var(--btn-text-secondary-hover);
-}
-
-button.success:hover {
-    background-color: var(--btn-success-hover);
-    color: var(--btn-text-success-hover);
-}
-
-button.danger:hover {
-    background-color: var(--btn-danger-hover);
-    color: var(--btn-text-danger-hover);
-}
-
-button.warning:hover {
-    background-color: var(--btn-warning-hover);
-    color: var(--btn-text-warning-hover);
-}
-
-button:disabled {
-    background-color: var(--btn-disabled);
-    color: var(--btn-text-disabled);
-}
-
-button:disabled:hover {
-    background-color: var(--btn-disabled);
-    color: var(--btn-text-disabled);
-    cursor: default;
-}
-
-
-
-
-
-
+button {  font-family: var( --fuente-predeterminada );   border-radius: 4px;   border: 0px;   padding: 10px 15px 10px 15px;   font-weight: bold;   cursor: pointer;  }
+ 
+button.primary         {  background-color: var( --btn-primary-normal    );   color: var( --btn-text-primary         );   cursor: pointer;  }
+button.secondary       {  background-color: var( --btn-secondary-normal  );   color: var( --btn-text-secondary       );   cursor: pointer;  }
+button.success         {  background-color: var( --btn-success-normal    );   color: var( --btn-text-success         );   cursor: pointer;  }
+button.danger          {  background-color: var( --btn-danger-normal     );   color: var( --btn-text-danger          );   cursor: pointer;  }
+button.warning         {  background-color: var( --btn-warning-normal    );   color: var( --btn-text-warning         );   cursor: pointer;  }
+button.primary:hover   {  background-color: var( --btn-primary-hover     );   color: var( --btn-text-primary-hover   );   cursor: pointer;  }
+button.secondary:hover {  background-color: var( --btn-secondary-hover   );   color: var( --btn-text-secondary-hover );   cursor: pointer;  }
+button.success:hover   {  background-color: var( --btn-success-hover     );   color: var( --btn-text-success-hover   );   cursor: pointer;  }
+button.danger:hover    {  background-color: var( --btn-danger-hover      );   color: var( --btn-text-danger-hover    );   cursor: pointer;  }
+button.warning:hover   {  background-color: var( --btn-warning-hover     );   color: var( --btn-text-warning-hover   );   cursor: pointer;  }
+button:disabled        {  background-color: var( --btn-disabled          );   color: var( --btn-text-disabled        );   cursor: default;  }
 
 
 /* DISEÑO MENÚS GENERALES */
 
 
-
-
-
-
-
-
-
-
 /* BOTONES MODO OSCURO - CLARO */
-.container-btn-mode {
-    position: absolute;
-    background-color: #fff;
-    padding: 3px;
-    border-radius: 20px;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-    z-index: 2;
-    font-size: 0;
-}
+.container-btn-mode {position: absolute;background-color: #fff;padding: 3px;border-radius: 20px;top: 20px;right: 30px;cursor: pointer;z-index: 2;font-size: 0;}
+.btn-mode {display: inline-block;width: 50px;height: 30px;border: 4px solid black;transition: background-color .5s;}
+.pagem .btn-mode {width: 125px;height: 75px;border: 5px solid black;}
+.btn-mode i {display: block;font-size: 17px;text-align: center;line-height: 30px;}
+.pagem .btn-mode i {font-size: 41px;line-height: 74px;}
+.btn-mode.sun {border-top-left-radius: 20px;border-bottom-left-radius: 20px;border-right: 1px solid transparent;}
+.btn-mode.moon {border-top-right-radius: 20px;border-bottom-right-radius: 20px;}
+.active {background-color: black; color: #ffcd5c !important;}
 
-.btn-mode {
-    display: inline-block;
-    width: 50px;
-    height: 30px;
-    border: 4px solid black;
-    transition: background-color .5s;
-}
 
-.pagem .btn-mode {
-    width: 125px;
-    height: 75px;
-    border: 5px solid black;
-}
+/* ANIMACIONES */
 
-.btn-mode i {
-    display: block;
-    font-size: 17px;
-    text-align: center;
-    line-height: 30px;
-}
+@-webkit-keyframes    subirmenu           {  0% { top: -5px  }   100% { top: -90px } }
+@keyframes            subirmenu           {  0% { top: -5px  }   100% { top: -90px } }
 
-.pagem .btn-mode i {
-    font-size: 41px;
-    line-height: 74px;
-}
+@-webkit-keyframes    bajarmenu           {  0% { top: 90px  }   100% { top: -5px  }  }
+@keyframes            bajarmenu           {  0% { top: -90px }   100% { top: -5px  }  }
 
-.btn-mode.sun {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-right: 1px solid transparent;
-}
+@-webkit-keyframes    girar90-horario     {  0% { transform: rotate(0deg); bottom: 10px;  }   100% { transform: rotate(180deg); bottom: 2px; }  }
+@keyframes            girar90-horario     {  0% { transform: rotate(0deg); bottom: 10px;  }   100% { transform: rotate(180deg); bottom: 2px; }  }
 
-.btn-mode.moon {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.active {
-    background-color: black;
-    color: #ffcd5c !important;
-}
+@-webkit-keyframes    girar90-antihorario {  0% { transform: rotate(180deg); bottom: 2px; }   100% { transform: rotate(0deg); bottom: 10px;  }  }
+@keyframes            girar90-antihorario {  0% { transform: rotate(180deg); bottom: 2px; }   100% { transform: rotate(0deg); bottom: 10px;  }  }
