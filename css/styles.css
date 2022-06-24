@@ -530,6 +530,55 @@ header nav a p {
 }
 
 
+
+
+
+.inicio {
+  display: flex;
+  background-color: #00000055;
+  border-radius: 15px;
+}
+
+.inicio .columna {
+  margin: auto;
+  color: var(--texto-normal);
+  font-family: var(--fuente-predeterminada);
+  font-size: 5rem;
+  align-items: left;
+  font-weight: bold;
+}
+
+.inicio .columna p {
+  margin: 0px;
+}
+
+.inicio .columna img {
+  height: 35rem;
+  width: auto;
+}
+
+.inicio .columna .buttons {
+  display: flex;
+}
+
+.inicio .columna .buttons button {
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ANIMACIONES */
 
 @-webkit-keyframes subirmenu {
