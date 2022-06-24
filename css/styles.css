@@ -543,10 +543,10 @@ header nav a p {
   margin: auto;
   color: var(--texto-normal);
   font-family: var(--fuente-predeterminada);
-  font-size: 5rem;
+  font-size: 4rem;
   align-items: left;
   font-weight: bold;
-  margin: 15px;
+  padding: 15px;
 }
 
 .inicio .columna p {
@@ -554,7 +554,7 @@ header nav a p {
 }
 
 .inicio .columna img {
-  height: 35rem;
+  height: 25rem;
   width: auto;
 }
 
