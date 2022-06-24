@@ -546,6 +546,7 @@ header nav a p {
   font-size: 5rem;
   align-items: left;
   font-weight: bold;
+  margin: 15px;
 }
 
 .inicio .columna p {
