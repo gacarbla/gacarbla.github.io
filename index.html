@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gacarbla.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="GΛCΛRBLΛ documents">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
   <meta property="og:keywords" content="">
 
   <!--  Ajustes meta  -->
@@ -18,11 +18,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--  Título  -->
-  <title>GΛCΛRBLΛ documents</title>
+  <title>GΛCΛRBLΛ</title>
   <link rel="icon" href="media/favicon.PNG">
 
   <!--  Enlaces  -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.scss">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -31,17 +31,27 @@
 
 </head>
 
+<!--  Cuerpo  -->
 <body class="dark" id="body" onload="load()">
+  
+  <!--  Cabecera  -->
   <header>
+
+
     <div class="content">
       <p class="name"><a href="https://gacarbla.github.io/">GΛCΛRBLΛ</a></p>
     </div>
+    
+    <!--  Menú navegación  -->
     <nav>
       <ul>
         <li><a href=""><p>Inicio</p></a></li>
         <li><a href="https://github.com/gacarbla"><p>GitHub</p></a></li>
+        <li><a href="./redes/"><p>Redes</p></a></li>
       </ul>
     </nav>
+
+    <!--  Menú modo oscuro/claro  -->
     <div class="container-btn-mode">
       <div id="id-sun" class="btn-mode sun" onclick="light()">
         <i class="fas fa-sun"></i>
@@ -50,8 +60,28 @@
         <i class="fas fa-moon"></i>
       </div>
     </div>
+    
+    <!--  Imágen flecha menú  -->
     <img src="media/flecha.png">
+  
+  
   </header>
+
+  <div class="contenedor doscolumnas">
+    <div class="columna">
+
+    </div>
+    <div class="columna">
+
+    </div>
+  </div>
+  <img
+    src="./media/teléfono vector.svg"
+    alt="triangle with all three sides equal"
+    height="400"
+    width="300" />
+
+  <!--  Contenido  -->
   <button class="primary">Un botón primario</button>
   <button class="secondary">Un botón secundario</button>
   <button class="success">Un botón de éxito</button>
@@ -62,9 +92,10 @@
   <button class="success" disabled>Un botón de éxito</button>
   <button class="danger" disabled>Un botón de peligro</button>
   <button class="warning" disabled>Un botón de advertencia</button>
+  
   <footer>
     <div class="content">
-      <p>GΛCΛRBLΛ 2022</p>
+      <p>GΛCΛRBLΛ</p>
     </div>
   </footer>
 </body>

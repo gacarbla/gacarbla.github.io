@@ -31,7 +31,7 @@
   --texto-resaltado: #a239caff;
 
   /* COLOR DE FONDO */
-  --fondo-body-predeterminado: #16151eff;
+  --fondo-body-predeterminado: rgb(26, 26, 30);
   --fondo-body-alternativo: #2d3034ff;
   --fondo-hf-predeterminado: #040307ff;
   --fondo-hf-alternativo: #23272aff;
@@ -64,7 +64,7 @@
 
   /*Advertencia*/
   --btn-warning-normal: #fdf11cff;
-  --btn-warning-hover: #cac002ff;
+  --btn-warning-hover: #F7CA18;
   --btn-warning-click: #b1a802ff;
 
   /*Texto*/
@@ -106,6 +106,7 @@ body {
 header {
   background-color: var(--fondo-hf-predeterminado);
   cursor: default;
+  z-index: 999;
 }
 
 footer {
@@ -167,11 +168,17 @@ body {
 }
 
 footer {
-  height: 24px;
+  height: 30px;
   position: fixed;
   bottom: 0px;
   left: 0px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-normal);
+  opacity: 30%;
+  font-family: var(--fuente-predeterminada);
 }
 
 header .name {
@@ -198,82 +205,224 @@ button {
   padding: 10px 15px 10px 15px;
   font-weight: bold;
   cursor: pointer;
+  margin: 5px;
+  text-transform: uppercase;
 }
 
 button.primary {
-  background-color: var(--btn-primary-normal);
-  color: var(--btn-text-primary);
-  cursor: pointer;
+	color: #fff;
+	background-color: var(--fondo-body-predeterminado);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 3px solid var(--btn-primary-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+button.primary:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+button.primary:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button.primary:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: var(--btn-primary-normal);;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 button.secondary {
-  background-color: var(--btn-secondary-normal);
-  color: var(--btn-text-secondary);
-  cursor: pointer;
+	color: #fff;
+	background-color: var(--fondo-body-predeterminado);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 3px solid var(--btn-secondary-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+button.secondary:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+button.secondary:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button.secondary:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: var(--btn-secondary-normal);;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 button.success {
-  background-color: var(--btn-success-normal);
-  color: var(--btn-text-success);
-  cursor: pointer;
+	color: #fff;
+	background-color: var(--fondo-body-predeterminado);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 3px solid var(--btn-success-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+button.success:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+button.success:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button.success:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: var(--btn-success-normal);;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 button.danger {
-  background-color: var(--btn-danger-normal);
-  color: var(--btn-text-danger);
-  cursor: pointer;
+	color: #fff;
+	background-color: var(--fondo-body-predeterminado);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 3px solid var(--btn-danger-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+button.danger:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+button.danger:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button.danger:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: var(--btn-danger-normal);;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 button.warning {
-  background-color: var(--btn-warning-normal);
-  color: var(--btn-text-warning);
-  cursor: pointer;
+	color: #fff;
+	background-color: var(--fondo-body-predeterminado);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 3px solid var(--btn-warning-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
-
-button.primary:hover {
-  background-color: var(--btn-primary-hover);
-  color: var(--btn-text-primary-hover);
-  cursor: pointer;
-}
-
-button.secondary:hover {
-  background-color: var(--btn-secondary-hover);
-  color: var(--btn-text-secondary-hover);
-  cursor: pointer;
-}
-
-button.success:hover {
-  background-color: var(--btn-success-hover);
-  color: var(--btn-text-success-hover);
-  cursor: pointer;
-}
-
-button.danger:hover {
-  background-color: var(--btn-danger-hover);
-  color: var(--btn-text-danger-hover);
-  cursor: pointer;
-}
-
 button.warning:hover {
-  background-color: var(--btn-warning-hover);
-  color: var(--btn-text-warning-hover);
-  cursor: pointer;
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+button.warning:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button.warning:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: var(--btn-warning-normal);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
+
+
+/* BOTONES DESACTIVADOS */
 button:disabled {
-  background-color: var(--btn-disabled);
-  color: var(--btn-text-disabled);
-  cursor: default;
+	color: #ffffff77;
+	background-color: #00000077;
+	cursor: default;
+	display: block;
+	position: relative;
+	border: 2px solid #000;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 button:disabled:hover {
-  background-color: var(--btn-disabled-hover);
-  color: var(--btn-text-disabled);
-  cursor: default;
+	color: #ffffff77 !important;
+	background-color: #00000077;
+	text-shadow: none;
 }
+button:disabled:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
+button:disabled:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #ffffff77 !important;
+	background: #000;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* DISEÑO MENÚS GENERALES */
-nav {
+header nav {
   height: 50%;
   position: relative;
   left: 5%;
@@ -284,15 +433,14 @@ nav {
   font-size:0;
 }
 
-nav ul {
+header nav ul {
   display: inline-flex;
   width: 300%;
   height: 30px;
   justify-content: left;
   align-items: center;
 }
-
-nav a {
+header nav a {
   text-decoration: none;
   color: inherit;
   height: 30px;
@@ -301,7 +449,7 @@ nav a {
   text-align: center;
 }
 
-nav li {
+header nav li {
   display: inline-block;
   height: 30px;
   width: 100px;
@@ -315,21 +463,15 @@ nav li {
   font-family: var(--fuente-predeterminada);
 }
 
-nav li:hover {
+header nav li:hover {
   background-color: #fff;
   color: #000;
 }
 
-nav a p {
+header nav a p {
   position: relative;
   height: 30px;
   bottom: 50%;
-  /*
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  align-content: center;
-  */
 }
 
 /* BOTONES MODO OSCURO - CLARO */
@@ -338,7 +480,7 @@ nav a p {
   background-color: #fff;
   padding: 3px;
   border-radius: 20px;
-  top: 20px;
+  top: 30%;
   right: 30px;
   cursor: pointer;
   z-index: 2;
