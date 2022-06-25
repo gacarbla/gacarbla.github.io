@@ -452,7 +452,7 @@ header nav a {
 header nav li {
   display: inline-block;
   height: 30px;
-  width: 100px;
+  width: 150px;
   padding: 5px 10px;
   background-color: var(--menu-principal-background);
   border: 0px;
@@ -469,6 +469,7 @@ header nav li:hover {
 }
 
 header nav a p {
+  text-transform: uppercase;
   position: relative;
   height: 30px;
   bottom: 50%;
@@ -586,7 +587,7 @@ header nav a p {
 
 .proyectos .cuadricula {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   grid-gap: 20px;
 }
@@ -598,11 +599,20 @@ header nav a p {
   border-radius: 5px;
 }
 
+.proyectos .cuadricula .caja:hover {
+  box-shadow: 0 0 20px -5px #ffffffbb;
+}
+
 .proyectos .title {
   font-family: var(--fuente-predeterminada);
   font-size: 1.5rem;
   color: var(--fondo-body-predeterminado);
   text-align: center;
+  font-weight: bold;
+  width: 75%;
+  height: 100%;
+  align-self: center;
+  margin-bottom: 0px;
 }
 
 .proyectos .description {
