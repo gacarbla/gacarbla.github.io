@@ -40,7 +40,28 @@ function goto(page) {
         console.error("¡Es necesario especificar un destino válido!")
         return "Error"
     } else {
+        if (!page.startsWith("https://gacarbla.github.io") && !page.startsWith("https://github.com/gacarbla")){
+            console.warn("Redirección a una página externa detectada.\n¡Es necesario confirmar la acción!")
+            window.alert("Se ha detectado que un enlace desea llevarte a una página externa.\nSerás redirigid@ a la siguiente url:\n"+page)
+        }
         location.href=page
+        return "Éxito"
+    }
+}
+
+function newTab(page) {
+    if (!page || (typeof page!=="string")) {
+        var win = window.open("https://google.com", "_blank");
+        win.focus();
+        console.error("¡Es necesario especificar un destino válido!")
+        return "Error"
+    } else {
+        if (!page.startsWith("https://gacarbla.github.io") && !page.startsWith("https://github.com/gacarbla")){
+            console.warn("Redirección a una página externa detectada.\n¡Es necesario confirmar la acción!")
+            window.alert("Se ha detectado que un enlace desea llevarte a una página externa.\nSe abrirá una nueva pestaña con la siguiente url:\n"+page)
+        }
+        var win = window.open(page, '_blank');
+        win.focus();
         return "Éxito"
     }
 }
@@ -63,6 +84,7 @@ function help() {
         "enableRightClick() ---- Activa el click derecho en la página",
         "goto(page) ------------ Viaja a una página sin intermediarios",
         "light() --------------- Activa el modo claro",
+        "newTab(page) ---------- Crea una nueva pestaña en el buscador",
         "reload() -------------- Recarga la página",
     ]
     console.clear()
