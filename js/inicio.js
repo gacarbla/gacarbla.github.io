@@ -72,6 +72,10 @@ function load() {
     disableRightClick()
     document.getElementById("body").classList.add("loaded")
     console.log("¡Usa la función help() para obtener ayuda!")
+    setTimeout(function(){
+        document.getElementById("body").classList.remove("loadingBody")
+        document.getElementById("loader").className = "loaderUnabled"
+    }, 500)
 }
 
 function help() {
