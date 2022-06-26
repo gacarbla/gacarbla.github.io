@@ -20,8 +20,66 @@
   /* COLOR DE FONDO */
   --fondo-body-predeterminado: #ddddddff;
   --fondo-body-alternativo: #949dffff;
+  --fondo-body-contraste: #1a1a1e;
   --fondo-hf-predeterminado: #ddddddff;
   --fondo-hf-alternativo: #949dffff;
+
+  /* COLORES DE BOTONES */
+
+  /*Deshabilitado*/
+  --btn-disabled: #59595980;
+  --btn-disabled-hover: #26262680;
+
+  /*Primarios*/
+  --btn-primary-normal: #5fa6b9ff;
+  --btn-primary-hover: #3e7d8eff;
+  --btn-primary-click: #366d7cff;
+
+  /*Secundarios*/
+  --btn-secondary-normal: #809399ff;
+  --btn-secondary-hover: #5b6c71ff;
+  --btn-secondary-click: #4f5e63ff;
+
+  /*Exitosos*/
+  --btn-success-normal: #47d345ff;
+  --btn-success-hover: #29a527ff;
+  --btn-success-click: #249122ff;
+
+  /*Peligro*/
+  --btn-danger-normal: #eb2d30ff;
+  --btn-danger-hover: #bb1114ff;
+  --btn-danger-click: #a30f12ff;
+
+  /*Advertencia*/
+  --btn-warning-normal: #fdf11cff;
+  --btn-warning-hover: #F7CA18;
+  --btn-warning-click: #b1a802ff;
+
+  /*Texto*/
+  --btn-text-primary: #2B293Cff;
+  --btn-text-secondary: #2B293Cff;
+  --btn-text-success: #2B293Cff;
+  --btn-text-danger: #ffffffff;
+  --btn-text-warning: #2B293Cff;
+  --btn-text-primary-hover: #000000ff;
+  --btn-text-secondary-hover: #000000ff;
+  --btn-text-success-hover: #000000ff;
+  --btn-text-danger-hover: #ffffffff;
+  --btn-text-warning-hover: #000000ff;
+  --btn-text-disabled: #ffffff80;
+
+  /* COLORES FONDO MENÚS */
+  --menu-principal-background: hsl(247, 18%, 20%);
+  --menu-principal-text: #e7dfddff;
+  --menu-submenu-background: hsl(247, 18%, 30%);
+  --menu-submenu-text: #000;
+  --menu-hover-background: #000;
+  --menu-hover-text: #000;
+
+  /* OTROS */
+  --color-001: #d9d9d9ff;
+  /* Flecha menú superior PC */
+
 }
 
 .dark {
@@ -31,8 +89,9 @@
   --texto-resaltado: #a239caff;
 
   /* COLOR DE FONDO */
-  --fondo-body-predeterminado: rgb(26, 26, 30);
+  --fondo-body-predeterminado: #1a1a1e;
   --fondo-body-alternativo: #2d3034ff;
+  --fondo-body-contraste: #ddddddff;
   --fondo-hf-predeterminado: #040307ff;
   --fondo-hf-alternativo: #23272aff;
 
@@ -538,9 +597,13 @@ header nav a p {
   display: flex;
   background-color: #00000055;
   border-radius: 15px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  max-height: 30rem;
 }
 
 .inicio .columna {
+  height: 100%;
   margin: auto;
   color: var(--texto-normal);
   font-family: var(--fuente-predeterminada);
@@ -555,8 +618,9 @@ header nav a p {
 }
 
 .inicio .columna img {
-  height: 25rem;
+  height: 20rem;
   width: auto;
+  margin: 2.5rem;
 }
 
 .inicio .columna .buttons {
@@ -575,6 +639,8 @@ header nav a p {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .proyectos .header {
@@ -595,7 +661,7 @@ header nav a p {
 .proyectos .cuadricula .caja {
   display: flex;
   flex-direction: column;
-  background-color: #fffffff0;
+  background-color: var(--fondo-body-contraste);
   border-radius: 5px;
 }
 
@@ -736,7 +802,108 @@ header nav a p {
 }
 
 
+.aboutMe {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.aboutMe .header {
+  display: flex;
+  font-size: 3rem;
+  color: var(--texto-normal);
+  font-family: var(--fuente-predeterminada);
+  font-weight: bold;
+}
+.aboutMe .content {
+  display: flex;
+  width: 100%;
+}
 
+.aboutMe .image {
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 75px;
+}
+
+.aboutMe img {
+  width: 25%;
+  background-color: #000;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 25px -1px #000;
+}
+
+
+
+
+
+
+
+
+
+
+.aboutMe .image {
+  width: 50%;
+  margin: 5px auto;
+  perspective: 1000px;
+  position: relative;
+  left: 30%;
+}
+
+.aboutMe .image span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 3s;
+}
+
+.aboutMe .image:hover span {
+  transform: rotateX(25deg) rotateY(40deg) rotateZ(-20deg) scale(1.25) translateX(5%);
+  transform-origin: bottom;
+}
+.aboutMe .image span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform-origin: bottom;
+}
+
+.aboutMe .image:hover span:before {
+  opacity: 1;
+  transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
+
+.aboutMe .texto {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+}
+
+.aboutMe .texto p{
+  color: var(--texto-normal);
+  font-family: var(--fuente-predeterminada);
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.aboutMe .texto .title{
+  font-weight: bold;
+}
+.aboutMe .texto .longText{
+  font-size: 1.15rem;
+}
 
 
 
