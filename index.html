@@ -135,6 +135,23 @@
     </div>
     <div class="lenguajes">
       <div class="caja">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+        <p class="title">
+          Java
+        </p>
+        <p class="description">
+          Proyectos privados no publicados
+        </p>
+        <div class="progreso">
+          <div class="barra">
+            <hr style="width: 10%;">
+          </div>
+          <p class="level">
+            Principiante
+          </p>
+        </div>
+      </div>
+      <div class="caja">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
         <p class="title">
           JavaScript
@@ -195,29 +212,24 @@
           Principiante
         </p>
       </div>
-      <div class="caja">
-        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
-        <p class="title">
-          Java
-        </p>
-        <p class="description">
-          Proyectos privados no publicados
-        </p>
-        <div class="progreso">
-          <div class="barra">
-            <hr style="width: 10%;">
-          </div>
-          <p class="level">
-            Principiante
-          </p>
-        </div>
-      </div>
+    </div>
+  </div>
+
+  <div class="devMenu" id="devMenu" hidden onclick="developerMenu(true)">
+    <div class="menu">
+      <button onclick="rightClick()">
+        <p id="rightClick">Algo ha fallado</p>
+      </button>
+      <hr>
+      <button onclick="copyOption()">
+        <p id="copy">Algo ha fallado</p>
+      </button>
     </div>
   </div>
 
   <footer>
     <div class="content">
-      <p>GΛCΛRBLΛ</p>
+      <p onclick="developerMenu(false)">GΛCΛRBLΛ</p>
     </div>
   </footer>
 </body>

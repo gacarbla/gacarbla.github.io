@@ -1,5 +1,13 @@
 function copyOption(boolean) {
-    if (boolean == undefined || (typeof boolean !== "boolean")) {
+    if (boolean=="toggle" || boolean == undefined) {
+        if(document.oncopy()==undefined){
+            document.oncopy = function () { return false }
+            return "Se ha desactivado la opción de copiar en la página"
+        } else {
+            document.oncopy = function () { }
+            return "Se ha activado la opción de copiar en la página"
+        }
+    } else if (typeof boolean !== "boolean") {
         console.error("Es necesario introducir un valor booleano")
         return "Error"
     } else if (boolean) {
@@ -12,12 +20,20 @@ function copyOption(boolean) {
 }
 
 function rightClick(boolean) {
-    if (boolean == undefined || (typeof boolean !== "boolean")) {
+    if (boolean=="toggle" || boolean == undefined) {
+        if(document.oncontextmenu()==undefined){
+            document.oncontextmenu = function () { return false }
+            return "Se ha habilitado el click derecho en la página"
+        } else {
+            document.oncontextmenu = function () { }
+            return "Se ha deshabilitado el click derecho en la página"
+        }
+    } else if (boolean == undefined || (typeof boolean !== "boolean")) {
         console.error("Es necesario introducir un valor booleano")
         return "Error"
     } else if (boolean) {
         document.oncontextmenu = function () { }
-        return "Se ha deshabilitado el click derecho en la página"
+        return "Se ha habilitado el click derecho en la página"
     } else {
         document.oncontextmenu = function () { return false }
         return "Se ha deshabilitado el click derecho en la página"
@@ -105,6 +121,20 @@ function load() {
     console.log("¡Usa la función help() para obtener ayuda!")
     setTimeout(function () { loading(false) }, 1000)
 }
+
+function developerMenu(boolean){
+    document.getElementById("devMenu").hidden = boolean
+    if (document.oncontextmenu()==undefined){
+      document.getElementById("rightClick").innerHTML = "Desactivar click derecho"
+    } else {
+      document.getElementById("rightClick").innerHTML = "Activar click derecho"
+    }
+    if (document.oncopy()==undefined){
+      document.getElementById("copy").innerHTML = "Desactivar copiar"
+    } else {
+      document.getElementById("copy").innerHTML = "Activar copiar"
+    }
+  }
 
 function help() {
     var helpText = "¡Bienvenid@!\nTe presento la consola de GΛCΛRBLΛ DOCUMENTS, dónde podrás experimentar una nueva experiencia con posibilidades casi infinitas.\n\n\n"
