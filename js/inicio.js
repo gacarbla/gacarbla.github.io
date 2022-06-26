@@ -18,12 +18,17 @@ function disableCopy() {
 }
 
 function light() {
+    console.log("Error: Permisos insuficientes")
+    window.alert("Por problemas en la vista de la página hemos decidido deshabilitar esta opción temporalmente")
+    return "Error"
+    /*
     window.alert("Esta función es experimental y podría causar errores en la página")
     document.getElementById('body').classList.remove('dark')
     document.getElementById('body').classList.add('light')
     document.getElementById('id-moon').classList.remove('active')
     document.getElementById('id-sun').classList.add('active')
     return "Se ha activado el modo claro en la página"
+    */
 }
 
 function dark() {
@@ -61,8 +66,13 @@ function newTab(page) {
             window.alert("Se ha detectado que un enlace desea llevarte a una página externa.\nSe abrirá una nueva pestaña con la siguiente url:\n"+page)
         }
         var win = window.open(page, '_blank');
-        win.focus();
-        return "Éxito"
+        try{
+            win.focus();
+        } catch {
+            window.alert("Tu navegador ha bloqueado el link y no ha permitido abrir una nueva pestaña.")
+        } finally {
+            return "Éxito"
+        }
     }
 }
 

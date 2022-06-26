@@ -858,97 +858,92 @@ header nav a p {
 }
 .aboutMe .header {
   display: flex;
+  flex-direction: column;
+  color: var(--texto-normal);
+  font-family: var(--fuente-predeterminada);
+  font-weight: bold;
+  align-items: center;
+}
+.aboutMe .header .title {
   font-size: 3rem;
   color: var(--texto-normal);
   font-family: var(--fuente-predeterminada);
   font-weight: bold;
 }
-.aboutMe .content {
-  display: flex;
-  width: 100%;
-}
-
-.aboutMe .image {
-  width: 50%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-right: 75px;
-}
-
-.aboutMe img {
-  width: 25%;
-  background-color: transparent;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 25px -1px #f0f0f011;
-}
-
-
-
-
-
-
-
-
-
-
-.aboutMe .image {
-  width: 50%;
-  margin: 5px auto;
-  perspective: 1000px;
-  position: relative;
-  left: 30%;
-}
-
-.aboutMe .image span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 10s;
-}
-
-.aboutMe .image:hover span {
-  transform: rotateX(25deg) rotateY(40deg) rotateZ(-20deg) scale(1.25) translateX(5%);
-  transform-origin: bottom;
-}
-.aboutMe .image span:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-  opacity: 0.15;
-  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
-  transform-origin: bottom;
-}
-
-.aboutMe .image:hover span:before {
-  opacity: 1;
-  transform: rotateX(0) translateZ(-60px) scale(0.85);
-}
-
-.aboutMe .texto {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 50%;
-}
-
-.aboutMe .texto p{
+.aboutMe .header .description {
+  font-size: 1.5rem;
   color: var(--texto-normal);
   font-family: var(--fuente-predeterminada);
-  font-size: 1.5rem;
-  margin: 10px;
-}
-.aboutMe .texto .title{
   font-weight: bold;
+  width: 100%;
+  margin: 0%;
+  text-align: justify;
+  text-justify:inter-word; 
 }
-.aboutMe .texto .longText{
-  font-size: 1.15rem;
+
+.lenguajes {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 20px;
 }
+
+.lenguajes .caja {
+  box-shadow: 0 0 7px 0px #fff;
+  background-color: var(--fondo-body-contraste);
+  padding: 15px;
+  border-radius: 10px;
+  font-family: var(--fuente-predeterminada);
+}
+
+.lenguajes .caja .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+
+.lenguajes .caja .description {
+  width: 150px;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.lenguajes .caja .barra {
+  border-radius: 5px;
+  background-color: #00000055;
+  display: flex;
+}
+
+.lenguajes .caja .progreso {
+  bottom: 5%;
+}
+
+.lenguajes .caja hr {
+  border-radius: 5px;
+  margin: 0%;
+  height: 10px;
+  align-self: flex-start;
+  background-color: rgb(0, 127, 212);
+}
+
+.lenguajes .caja .level {
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.lenguajes img {
+  width: 150px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  border-radius: 5px;
+}
+
+
 
 
 
