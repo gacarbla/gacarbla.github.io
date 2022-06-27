@@ -1,15 +1,6 @@
 :root {
-
   /* FUENTES */
   --fuente-predeterminada: Arial;
-
-  /* TAMAÑOS DE FUENTE */
-  --tamaño-h1: 54px;
-  --tamaño-h2: 48px;
-  --tamaño-h3: 40px;
-  --tamaño-h4: 34px;
-  --tamaño-text: 22px;
-
 }
 
 .light {
@@ -161,10 +152,10 @@
   width: 100%;
   height: 100%;
   z-index: 999;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
   display: flex;
   align-items: center;
 }
@@ -180,10 +171,10 @@
   width: 100%;
   height: 100%;
   z-index: 999;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
   display: flex;
   align-items: center;
   visibility: hidden;
@@ -209,74 +200,24 @@ body {
 }
 
 header {
-  background-color: var(--fondo-hf-predeterminado);
-  cursor: default;
-  z-index: 100;
+  cursor: default; height: 0%;
 }
 
 footer {
   background-color: var(--fondo-hf-predeterminado);
   cursor: default;
-}
-
-header img {
-  background-color: var(--color-001);
-  cursor: default;
-}
-
-
-/* TAMAÑOS Y COLOCACIÓN BASE */
-.loaded header {
-  animation: subirmenu 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both;
-}
-
-.loaded header img {
-  animation: girar90-antihorario 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both;
-}
-
-header:hover {
-  animation: bajarmenu 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
-}
-
-header:hover img {
-  animation: girar90-horario 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.25s both;
-}
-
-header {
-  height: 120px;
-  position: fixed;
-  left: 1.5%;
-  top: -90px;
-  width: 97%;
-  border-radius: 5px;
-  display: flex;
-}
-
-header .content {
-  position: relative;
-  top: 10px;
-  margin-left: 5%;
-}
-
-header img {
-  height: 18px;
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  border-radius: 100%;
 }
 
 body {
-  margin-top: 92px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 footer {
-  margin-top: 50px;
-  height: 30px;
-  bottom: 0px;
-  left: 0px;
+  margin-top: 25vh;
+  height: 5vh;
+  bottom: 0%;
+  left: 0%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -284,18 +225,6 @@ footer {
   color: var(--texto-normal);
   opacity: 30%;
   font-family: var(--fuente-predeterminada);
-}
-
-header .name {
-  font-size: var(--tamaño-h4);
-  font-family: var(--fuente-predeterminada);
-  font-weight: bold;
-}
-
-header .name a{
-  text-decoration: none;
-  color: var(--texto-normal);
-  cursor: pointer
 }
 
 
@@ -306,11 +235,11 @@ header .name a{
 button {
   font-family: var(--fuente-predeterminada);
   border-radius: 4px;
-  border: 0px;
-  padding: 10px 15px 10px 15px;
+  border: 0%;
+  padding: 1.5vh 3vw 1.5vh 3vw;
   font-weight: bold;
   cursor: pointer;
-  margin: 5px;
+  margin: 1vh;
   text-transform: uppercase;
 }
 
@@ -336,9 +265,9 @@ button.primary:hover:before {
 button.primary:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -369,9 +298,9 @@ button.secondary:hover:before {
 button.secondary:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -402,9 +331,9 @@ button.success:hover:before {
 button.success:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -435,9 +364,9 @@ button.danger:hover:before {
 button.danger:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -468,9 +397,9 @@ button.warning:hover:before {
 button.warning:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -504,9 +433,9 @@ button:disabled:hover:before {
 button:disabled:before {
 	display: block;
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 0px;
+	left: 0%;
+	top: 0%;
+	height: 0%;
 	width: 100%;
 	z-index: -1;
 	content: '';
@@ -515,78 +444,13 @@ button:disabled:before {
 	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* DISEÑO MENÚS GENERALES */
-header nav {
-  height: 50%;
-  position: relative;
-  left: 5%;
-  top: 50px;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-size:0;
-}
-
-header nav ul {
-  display: inline-flex;
-  width: 300%;
-  height: 30px;
-  justify-content: left;
-  align-items: center;
-}
-header nav a {
-  text-decoration: none;
-  color: inherit;
-  height: 30px;
-  font-size: 18px;
-  justify-content: center;
-  text-align: center;
-}
-
-header nav li {
-  display: inline-block;
-  height: 30px;
-  width: 150px;
-  padding: 5px 10px;
-  background-color: var(--menu-principal-background);
-  border: 0px;
-  border-radius: 5px;
-  margin: 2px;
-  text-align: center;
-  color: var(--menu-principal-text);
-  font-family: var(--fuente-predeterminada);
-}
-
-header nav li:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-header nav a p {
-  text-transform: uppercase;
-  position: relative;
-  height: 30px;
-  bottom: 50%;
-}
-
 /* BOTONES MODO OSCURO - CLARO */
 .container-btn-mode {
   position: absolute;
   background-color: #fff;
   padding: 3px;
   border-radius: 20px;
-  top: 30%;
+  top: 1rem;
   right: 30px;
   cursor: pointer;
   z-index: 2;
@@ -639,34 +503,41 @@ header nav a p {
 
 
 
+
+
 .inicio {
   display: flex;
+  height: 50vh;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
   background-color: #00000055;
-  border-radius: 15px;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  max-height: 30rem;
+  border-radius: 0.6rem;
 }
 
 .inicio .columna {
   height: 100%;
   margin: auto;
-  color: var(--texto-normal);
-  font-family: var(--fuente-predeterminada);
-  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: left;
   font-weight: bold;
-  padding: 15px;
+  padding: 3vh;
 }
 
 .inicio .columna p {
-  margin: 0px;
+  width: 30vmin;
+  height: auto;
+  color: var(--texto-normal);
+  font-family: var(--fuente-predeterminada);
+  font-size:7vmin;
+  margin: 0%;
 }
 
 .inicio .columna img {
-  height: 20rem;
+  height: 40vh;
   width: auto;
-  margin: 2.5rem;
+  margin: auto;
 }
 
 .inicio .columna .buttons {
@@ -674,7 +545,8 @@ header nav a p {
 }
 
 .inicio .columna .buttons button {
-  width: 50%;
+  width: 20vw;
+  max-width: 200px;
 }
 
 
@@ -724,7 +596,7 @@ header nav a p {
   width: 75%;
   height: 100%;
   align-self: center;
-  margin-bottom: 0px;
+  margin-bottom: 0%;
 }
 
 .proyectos .description {
@@ -800,7 +672,7 @@ header nav a p {
   width: 75%;
   align-self: center;
   margin-bottom: 15px;
-  border: 0px;
+  border: 0%;
 }
 .proyectos .caja button:disabled::before {
 	content: '';
@@ -891,7 +763,7 @@ header nav a p {
 }
 
 .lenguajes .caja {
-  box-shadow: 0 0 7px 0px #fff;
+  box-shadow: 0 0 7px 0% #fff;
   background-color: var(--fondo-body-contraste);
   padding: 15px;
   border-radius: 10px;
@@ -902,7 +774,7 @@ header nav a p {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0%;
 }
 
 
@@ -955,9 +827,9 @@ header nav a p {
 /* DEV MENU */
 .devMenu {
   position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
   width: 100%;
   height: 100%;
   background-color: #000000aa;
@@ -976,16 +848,16 @@ header nav a p {
 .devMenu button {
   height: auto;
   width: 100%;
-  padding: 0px;
+  padding: 0%;
   padding-left:15px;
-  margin: 0px;
+  margin: 0%;
   text-align: start;
   background-color: transparent;
   color: var(--fondo-body-contraste);
 }
 
 .devMenu hr {
-  margin: 0px;
+  margin: 0%;
 }
 
 

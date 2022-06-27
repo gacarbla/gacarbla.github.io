@@ -120,6 +120,25 @@ function load() {
     rightClick(false)
     console.log("¡Usa la función help() para obtener ayuda!")
     setTimeout(function () { loading(false) }, 1000)
+    window.addEventListener('resize', resize);
+}
+
+function resize() {
+    if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/WebOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
+        if (screen.width<screen.height){
+            if (!document.getElementById("body").classList.contains("mobile")){
+                document.getElementById("body").classList.add("mobile")
+            }
+        } else {
+            if (document.getElementById("body").classList.contains("mobile")){
+                document.getElementById("body").classList.remove("mobile")
+            }
+        }
+    } else {
+        if (document.getElementById("body").classList.contains("mobile")){
+            document.getElementById("body").classList.remove("mobile")
+        }
+    }
 }
 
 function developerMenu(boolean){
@@ -134,7 +153,7 @@ function developerMenu(boolean){
     } else {
       document.getElementById("copy").innerHTML = "Activar copiar"
     }
-  }
+}
 
 function help() {
     var helpText = "¡Bienvenid@!\nTe presento la consola de GΛCΛRBLΛ DOCUMENTS, dónde podrás experimentar una nueva experiencia con posibilidades casi infinitas.\n\n\n"
