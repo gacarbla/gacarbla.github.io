@@ -1,3 +1,20 @@
+var textos = {
+    shorInfo: "Prueba de texto corto"
+}
+
+var trustPage = [
+    "GW",
+    "#AboutMe",
+]
+
+var trustDomain = [
+    "https://gacarbla.github.io",
+    "https://github.com/gacarbla",
+    "https://github.com/gatitosworld"
+]
+
+
+
 function copyOption(boolean) {
     if (boolean=="toggle" || boolean == undefined) {
         if(document.oncopy()==undefined){
@@ -41,17 +58,12 @@ function rightClick(boolean) {
 }
 
 function light() {
-    console.log("Error: Permisos insuficientes")
-    window.alert("Por problemas en la vista de la página hemos decidido deshabilitar esta opción temporalmente")
-    return "Error"
-    /*
-    window.alert("Esta función es experimental y podría causar errores en la página")
+    window.alert("Esta función es experimental y CAUSA ERRORES en la página")
     document.getElementById('body').classList.remove('dark')
     document.getElementById('body').classList.add('light')
     document.getElementById('id-moon').classList.remove('active')
     document.getElementById('id-sun').classList.add('active')
     return "Se ha activado el modo claro en la página"
-    */
 }
 
 function dark() {
@@ -63,12 +75,24 @@ function dark() {
 }
 
 function reload() { location.reload() }
-function goto(page) {
+
+function checkPage(page){
+    if (trustPage.includes(page)) return false
+    var warn = true
+    trustDomain.forEach( (domain) => {
+        if (page.startsWith(domain)){
+            warn = false
+        }
+    })
+    return warn
+}
+
+function go(page) {
     if (!page || (typeof page !== "string")) {
         console.error("¡Es necesario especificar un destino válido!")
         return "Error"
     } else {
-        if (!page.startsWith("https://gacarbla.github.io") && !page.startsWith("https://github.com/gacarbla")) {
+        if (checkPage(page)) {
             console.warn("Redirección a una página externa detectada.\n¡Es necesario confirmar la acción!")
             window.alert("Se ha detectado que un enlace desea llevarte a una página externa.\nSerás redirigid@ a la siguiente url:\n" + page)
         }
@@ -84,7 +108,7 @@ function newTab(page) {
         console.error("¡Es necesario especificar un destino válido!")
         return "Error"
     } else {
-        if (!page.startsWith("https://gacarbla.github.io") && !page.startsWith("https://github.com/gacarbla")) {
+        if (checkPage(page)) {
             console.warn("Redirección a una página externa detectada.\n¡Es necesario confirmar la acción!")
             window.alert("Se ha detectado que un enlace desea llevarte a una página externa.\nSe abrirá una nueva pestaña con la siguiente url:\n" + page)
         }
@@ -159,7 +183,7 @@ function help() {
     var helpText = "¡Bienvenid@!\nTe presento la consola de GΛCΛRBLΛ DOCUMENTS, dónde podrás experimentar una nueva experiencia con posibilidades casi infinitas.\n\n\n"
     var cmdlist = [
         "dark() ---------------- Activa el modo oscuro",
-        "goto(page) ------------ Viaja a una página sin intermediarios",
+        "go(page) ------------ Viaja a una página sin intermediarios",
         "light() --------------- Activa el modo claro",
         "newTab(page) ---------- Crea una nueva pestaña en el buscador",
         "reload() -------------- Recarga la página",
