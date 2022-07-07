@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
+
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gacarbla.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
+  <meta property="og:keywords"
+    content="gacarbla, GΛCΛRBLΛ, documents, gacarbla documents, github, gacarbla github, gacarbla documents github, documentación, gacarbla documentación, gacarbla documentos, documentos">
+
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Título  -->
+  <title>GΛCΛRBLΛ</title>
+  <link rel="icon" href="media/favicon.PNG">
+
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!--  Scripts  -->
+  <script src="js/inicio.js"></script>
+
+</head>
+
+<!--  Cuerpo  -->
+
+<body class="dark loadingBody" id="body" onload="load()">
+
+  <!--  Cabecera  -->
+  <header>
+
+    <!--  Menú modo oscuro/claro  -->
+    <div class="container-btn-mode">
+      <div id="id-sun" class="btn-mode sun" onclick="light()">
+        <i class="fas fa-sun"></i>
+      </div>
+      <div id="id-moon" class="btn-mode moon active" onclick="dark()">
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="loaderEnabled" id="loader">
+    <img src="https://i.pinimg.com/originals/58/4b/60/584b607f5c2ff075429dc0e7b8d142ef.gif">
+  </div>
+
+  <div class="inicio">
+    <div class="columna">
+      <p>GΛCΛRBLΛ<br>DOCUMENTS</p>
+      <div class="buttons">
+        <button class="primary" onclick="location.href='https://github.com/gacarbla'">GitHub</button>
+        <button class="warning" onclick="location.href='#aboutMe'">About me</button>
+      </div>
+    </div>
+    <div class="columna">
+      <img src="./media/teléfono vector.svg" alt="imágen" />
+    </div>
+  </div>
+
+  <div class="proyectos" id="proyectos">
+    <div class="header">
+      <p>Mis proyectos</p>
+    </div>
+    <div class="cuadricula">
+      <div class="caja" id="dori">
+        <p class="title">Dori</p>
+        <p class="description">Mi primer código de JS<br>Bot de Discord</p>
+        <button onclick="newTab('https://github.com/gacarbla/Dori')"><span>Ver proyecto</span></button>
+      </div>
+
+      <div class="caja" id="GWNewsBot">
+        <p class="title">GW NewsBot</p>
+        <p class="description">Bot de publicación de noticias por medio de podcast en Discord.</p>
+        <button disabled><span>En construcción</span></button>
+      </div>
+      <div class="caja" id="registroordenador">
+        <!--<img src="" alt="imágen">-->
+        <p class="title">Computer Analyzer</p>
+        <p class="description">Programa Python para el análisis de datos de un ordenador Windows.</p>
+        <button onclick="newTab('https://github.com/gacarbla/computerAnalyzer')"><span>Ver proyecto</span></button>
+      </div>
+      <div class="caja" id="GWdocuments">
+        <p class="title">GW documents</p>
+        <p class="description">Pequeña recopilación de procedimientos y actuación del staff del servidor.</p>
+        <button onclick="go('GW')"><span>Ver página</span></button>
+      </div>
+      <div class="caja" id="discordv13guide">
+        <p class="title">Discord v13 guide</p>
+        <p class="description">Guía básica para aprender a prgramar un bot desde 0.</p>
+        <button onclick="newTab('https://gacarbla.github.io/discordjsv13guide/')"><span>Ver guía</span></button>
+      </div>
+      <div class="caja" id="gacarbladocuments">
+        <p class="title">GΛCΛRBLΛ documents</p>
+        <p class="description">Repositorio de documentación de proyectos.</p>
+        <button onclick="newTab('https://github.com/gacarbla/gacarbla.github.io')"><span>Ver código</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="aboutMe" id="aboutMe">
+    <div class="header">
+      <p class="title">About me</p>
+      <p class="description">Me llamo Gabriel, tengo 17 años y soy aficcionado a la informática no profesional. No he
+        realizado ningún tipo de estudio o curso que certifique mis conocimientos aunque siempre he sacado a delante todos
+        mis proyectos lo mejor que he podido con mi limitada formación.</p>
+    </div>
+    <div class="lenguajes">
+      <div class="caja">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+        <p class="title">
+          Java
+        </p>
+        <p class="description">
+          Proyectos privados no publicados
+        </p>
+        <div class="progreso">
+          <div class="barra">
+            <hr style="width: calc(10vw*0.1)">
+          </div>
+          <p class="level">
+            Principiante
+          </p>
+        </div>
+      </div>
+      <div class="caja">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+        <p class="title">
+          JavaScript
+        </p>
+        <p class="description">
+          Bots y códigos básicos en html
+        </p>
+        <div class="barra">
+          <hr style="width: calc(65vw*0.1)">
+        </div>
+        <p class="level">
+          Medio
+        </p>
+      </div>
+      <div class="caja">
+        <img src="./media/html5.png">
+        <p class="title">
+          HTML5
+        </p>
+        <p class="description">
+          Esta página y subpáginas de ella
+        </p>
+        <div class="barra">
+          <hr style="width: calc(50vw*0.1)">
+        </div>
+        <p class="level">
+          Medio
+        </p>
+      </div>
+      <div class="caja">
+        <img src="./media/css3.png">
+        <p class="title">
+          CSS3
+        </p>
+        <p class="description">
+          Esta página y subpágina de ella
+        </p>
+        <div class="barra">
+          <hr style="width: calc(30vw*0.1);">
+        </div>
+        <p class="level">
+          Principiante
+        </p>
+      </div>
+      <div class="caja">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
+        <p class="title">
+          Python
+        </p>
+        <p class="description">
+          ComputerAnalyzer y otros proyectos
+        </p>
+        <div class="barra">
+          <hr style="width: calc(25vw*0.1)">
+        </div>
+        <p class="level">
+          Principiante
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="devMenu" id="devMenu" hidden onclick="developerMenu(true)">
+    <div class="menu">
+      <button onclick="rightClick()">
+        <p id="rightClick">Algo ha fallado</p>
+      </button>
+      <hr>
+      <button onclick="copyOption()">
+        <p id="copy">Algo ha fallado</p>
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="content">
+      <p onclick="developerMenu(false)">GΛCΛRBLΛ</p>
+    </div>
+  </footer>
+</body>
+
+</html>
