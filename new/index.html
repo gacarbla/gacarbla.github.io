@@ -36,7 +36,7 @@
 <body>
   <section class="inicio">
     <div class="lateral izquierdo">
-      <div id="izquierda" class="bloque inactivo">
+      <div id="izquierda" class="bloque activo">
         <div class="titulo">
           <p class="gacarbla">GΛCΛRBLΛ</p>
           <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que haces.
@@ -62,44 +62,40 @@
           </div>
           <div class="botones">
             <button class="principal" id="SingUp" type="submit">Crear cuenta</button>
-            <button class="secondary" id="goLeft">Iniciar sesión</button>
+            <button class="secondary" id="goLeft" onclick="logIn()">Iniciar sesión</button>
           </div>
         </form>
       </div>
 
     </div>
     <div class="lateral dereito">
-      <div id="dereita" class="bloque activo">
+      <div id="dereita" class="bloque inactivo">
         <div class="titulo">
           <p class="gacarbla">GΛCΛRBLΛ</p>
           <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que haces.
           </p>
         </div>
-        <form id="SingUp" method="post" onsubmit="return false;">
+        <form id="LogIn" method="post" onsubmit="return false;">
           <div class="campos">
             <div class="campo">
               <input id="user" type="text" autocomplete="off" placeholder="usuario123" required
                 onblur="campoBlur('user')">
-              <label class="label" id="userLabel" for="username">Usuario</label>
+              <label class="label" id="userLabel" for="user">Usuario</label>
             </div>
             <div class="campo">
               <input id="password" type="password" aria-autocomplete="off" placeholder="1a2b3c" required
                 onblur="campoBlur('password')">
-              <label class="label" id="passwordLabel" for="pssw">Contraseña</label>
+              <label class="label" id="passwordLabel" for="password">Contraseña</label>
             </div>
           </div>
           <div class="botones">
-            <button class="secondary" id="SingUp">Crear cuenta</button>
+            <button class="secondary" id="SingUp" onclick="singUp()">Crear cuenta</button>
             <button class="principal" id="goLeft" type="submit">Iniciar sesión</button>
           </div>
         </form>
       </div>
 
     </div>
-  </section>
-
-  <section>
-
   </section>
 </body>
 
