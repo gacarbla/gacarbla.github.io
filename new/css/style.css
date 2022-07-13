@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    cursor: default
+}
+
+h1 {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 5vw;
+    margin: 0px;
+}
+
+button {
+    cursor: pointer
+}
+
+input {
+    cursor: text
+}
