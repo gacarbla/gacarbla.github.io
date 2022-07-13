@@ -1,293 +1,124 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="es"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="GΛCΛRBLΛ, documents, documentos, documentación, gacarbla">
-    <meta name="description" content="">
-    <title>GΛCΛRBLΛ</title>
-    <link rel="stylesheet" href="style.css" media="screen">
-<link rel="stylesheet" href="Inicio.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="scr.js" defer=""></script>
-    <meta property="og:title" content="GΛCΛRBLΛ documents">
-    <meta property="og:url" content="https://gacarbla.github.io/">
-    <link rel="canonical" href="https://gacarbla.github.io/">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"url": "https://gacarbla.github.io/"
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:type" content="website">
-  </head>
-  <body data-home-page="Inicio.html" data-home-page-title="Inicio" class="u-body u-overlap u-overlap-contrast u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-a1c5"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></header> 
-    <section class="inicio u-clearfix u-grey-80 u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-1" id="inicio">
-      <div class="caja-inicio u-align-center-xs u-black u-container-style u-group u-radius-15 u-shape-round u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-          <img class="u-hidden-xs u-image u-image-default u-image-1" src="images/telfonovector.svg" alt="" data-image-width="210" data-image-height="297">
-          <h1 class="title u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-text u-text-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X" data-animation-out="0">
-            <span style="font-weight: 700;">GΛCΛRBLΛ</span>
-          </h1>
-          <a href="" class="boton-github u-align-center u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-6 u-text-body-alt-color u-text-hover-white u-btn-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X" data-animation-delay="500" data-animation-out="0">GITHUB</a>
-          <a href="" class="boton-documents u-align-center u-border-2 u-border-palette-3-base u-btn u-btn-round u-button-style u-hover-palette-3-base u-none u-radius-6 u-text-body-alt-color u-text-hover-white u-btn-2" data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X" data-animation-delay="1000" data-animation-out="0">DOCUMENTS</a>
+<html lang="es">
+
+<head>
+
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
+
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gacarbla.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
+  <meta property="og:keywords"
+    content="gacarbla, GΛCΛRBLΛ, documents, gacarbla documents, github, gacarbla github, gacarbla documents github, documentación, gacarbla documentación, gacarbla documentos, documentos">
+  <link rel="canonical" href="https://gacarbla.github.io/">
+
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Título  -->
+  <title>GΛCΛRBLΛ</title>
+  <link rel="icon" href="media/favicon.PNG">
+
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/inicio.css">
+
+  <!--  Scripts  -->
+  <script src="js/inicio.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function setup() {
+      return {
+        task: '',
+        todos: [],
+        init() {
+          fetch('/api/all')
+            .then(res => res.json())
+            .then(json => this.todos = json);
+        }
+      }
+    }
+
+    function submit() {
+      fetch('/api/create', {
+        method: 'POST',
+        body: JSON.stringify({ title: task })
+      })
+        .then(response => response.json())
+        .then(json => todos = json)
+    }
+  </script>
+
+</head>
+
+<body x-data="setup()" x-init="init()">
+  <section class="inicio">
+    <div class="lateral izquierdo">
+      <div id="izquierda" class="bloque activo">
+        <div class="titulo">
+          <p class="gacarbla">GΛCΛRBLΛ</p>
+          <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que haces.
+          </p>
         </div>
-      </div>
-    </section>
-    <section class="proyectos u-align-center u-clearfix u-grey-80 u-section-2" id="mis-proyectos">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
-        <h2 class="titulo u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="500">Mis proyectos</h2>
-        <div class="caja-animacion u-container-style u-expanded-width u-group u-shape-rectangle u-group-1" data-animation-name="customAnimationIn" data-animation-duration="500">
-          <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-1">
-            <div class="tabla-pestaas u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-tab-links-align-center u-tabs u-tabs-1">
-              <ul class="u-spacing-10 u-tab-list u-unstyled" role="tablist">
-                <li class="u-tab-item u-tab-item-1" role="presentation">
-                  <a class="active u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-body-alt-color u-tab-link-1" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="true">Dori</a>
-                </li>
-                <li class="u-tab-item u-tab-item-2" role="presentation">
-                  <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-body-alt-color u-tab-link-2" id="link-tab-63e4" href="#tab-63e4" role="tab" aria-controls="tab-63e4" aria-selected="false">Computer Analyzer</a>
-                </li>
-                <li class="u-tab-item u-tab-item-3" role="presentation">
-                  <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-body-alt-color u-tab-link-3" id="link-tab-9d39" href="#tab-9d39" role="tab" aria-controls="tab-9d39" aria-selected="false">GW NewsBot</a>
-                </li>
-                <li class="u-tab-item u-tab-item-4" role="presentation">
-                  <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-body-alt-color u-tab-link-4" id="link-tab-201c" href="#tab-201c" role="tab" aria-controls="tab-201c" aria-selected="false">Discordjs v13 guide</a>
-                </li>
-              </ul>
-              <div class="u-tab-content">
-                <div class="u-align-left u-container-style u-grey-10 u-tab-active u-tab-pane u-tab-pane-1" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
-                  <div class="u-container-layout u-container-layout-2">
-                    <h5 class="encabezado u-text u-text-2">DEScripción</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                    <p class="descripcion u-text u-text-default u-text-3">Dori es el primer código de programación que hice, con él me introduje a la programación con JavaScript, y más tarde, al diseño web.<br>Este bot de Discord diseñado para una versión "discord.js v13" ha sufrido grandes reformas y sólo se conserva la versión 5.6, la cuál se encontraba en desarrollo en el momento en el que el proyecto fué abandonado. Sufre de varios errores básicos y un código muy poco optimizado, pero el bot se encuentra casi completo y funcional.<br>
-                    </p>
-                    <h5 class="encabezado u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-4">Información</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-line u-line-horizontal u-line-2"></div>
-                    <div class="tabla u-expanded-width-sm u-expanded-width-xs u-table u-table-responsive u-table-1">
-                      <table class="u-table-entity">
-                        <colgroup>
-                          <col width="48.1%">
-                          <col width="51.9%">
-                        </colgroup>
-                        <tbody class="u-table-body u-table-body-1">
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-1">programado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-2">JavaScript</td>
-                          </tr>
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-3">alojado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-4">GitHub</td>
-                          </tr>
-                          <tr style="height: 57px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-5">última actualización:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-6">9/12/2021</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <a href="https://github.com/gacarbla/Dori" class="boton-proyecto u-border-1 u-border-black u-btn u-btn-round u-button-style u-hidden-xs u-hover-black u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-1" target="_blank">Ver proyecto</a>
-                  </div>
-                </div>
-                <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-2" id="tab-63e4" role="tabpanel" aria-labelledby="link-tab-63e4">
-                  <div class="u-container-layout u-container-layout-3">
-                    <h5 class="encabezado u-text u-text-5">DEScripción</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-3"></div>
-                    <p class="descripcion u-text u-text-default-lg u-text-default-md u-text-default-xl u-text-6">Computer Analyzer es mi primer código de Python.<br>Ha sido desarrollado con el objetivo de que cualquier persona, independientemente de sus conocimientos a cerca de la consola de Windows, pudiese acceder a la información que ésta refleja ante el uso de comandos como "ipconfig /displaydns" o el simple "systeminfo".<br>Lastimosamente aún no he logrado transformar el script de python en un archivo ejecutable de Windows.
-                    </p>
-                    <h5 class="encabezado u-text u-text-default u-text-7">Información</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-line u-line-horizontal u-line-4"></div>
-                    <div class="tabla u-table u-table-responsive u-table-2">
-                      <table class="u-table-entity">
-                        <colgroup>
-                          <col width="48.1%">
-                          <col width="51.9%">
-                        </colgroup>
-                        <tbody class="u-table-body u-table-body-2">
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-7">programado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-8">Python</td>
-                          </tr>
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-9">alojado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-10">GitHub</td>
-                          </tr>
-                          <tr style="height: 56px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-11">última actualización:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-12">5/6/2022</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <a href="https://github.com/gacarbla/computerAnalyzer" class="boton-proyecto u-border-1 u-border-black u-btn u-btn-round u-button-style u-hidden-xs u-hover-black u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2" target="_blank">Ver proyecto</a>
-                  </div>
-                </div>
-                <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-3" id="tab-9d39" role="tabpanel" aria-labelledby="link-tab-9d39">
-                  <div class="u-container-layout u-container-layout-4">
-                    <h5 class="encabezado u-text u-text-8">DEScripción</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-5"></div>
-                    <p class="descripcion u-text u-text-default-lg u-text-default-md u-text-default-xl u-text-9">Con el objetivo de lograr un bot que fuese capaz a organizar eventos de podcasts pre-grabados, he podido trabajar en este proyecto con el propietario de un servidor para alcanzar nuestro objetivo. Este bot de Discord permitiría programar eventos a los que adjuntar audios que serán reproducidos a la hora pre-establecida.<br>Actualmente este proyecto se encuentra en desarrollo.
-                    </p>
-                    <h5 class="encabezado u-text u-text-default u-text-10">Información</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-6"></div>
-                    <div class="tabla u-expanded-width-sm u-expanded-width-xs u-table u-table-responsive u-table-3">
-                      <table class="u-table-entity">
-                        <colgroup>
-                          <col width="48.1%">
-                          <col width="51.9%">
-                        </colgroup>
-                        <tbody class="u-table-body u-table-body-3">
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-13">programado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-14">JavaScript</td>
-                          </tr>
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-15">alojado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-16">GitHub</td>
-                          </tr>
-                          <tr style="height: 56px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-17">última actualización:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-18">En desarrollo</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-4" id="tab-201c" role="tabpanel" aria-labelledby="link-tab-201c">
-                  <div class="u-container-layout u-container-layout-5">
-                    <h5 class="encabezado u-align-left-xs u-text u-text-11">DEScripción</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-7"></div>
-                    <p class="descripcion u-text u-text-default-lg u-text-default-md u-text-default-xl u-text-12">Esta simple página de markdown alojada en GitHub pages intenta disponer de todo lo necesario para iniciarse en el desarrollo de bots de Discord.<br>Lastimosamente, se encuentra en desarrollo, y dadas las constantes actualizaciones de Discord.js, no se podrá dar por finalizado hasta un tiempo después del fin de desarrollo de esta versión.
-                    </p>
-                    <h5 class="encabezado u-text u-text-default u-text-13">Información</h5>
-                    <div class="separador u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-8"></div>
-                    <div class="tabla u-expanded-width-sm u-expanded-width-xs u-table u-table-responsive u-table-4">
-                      <table class="u-table-entity">
-                        <colgroup>
-                          <col width="48.1%">
-                          <col width="51.9%">
-                        </colgroup>
-                        <tbody class="u-table-body u-table-body-4">
-                          <tr style="height: 38px;">
-                            <td class="u-align-justify-xs u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-19">ESCRITO EN:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-20">Markdown</td>
-                          </tr>
-                          <tr style="height: 38px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-21">alojado en:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-22">GitHub pages</td>
-                          </tr>
-                          <tr style="height: 56px;">
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-23">última actualización:</td>
-                            <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-24">25/6/2022</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <a href="https://gacarbla.github.io/discordjsv13guide/" class="boton-proyecto u-border-1 u-border-black u-btn u-btn-round u-button-style u-hidden-xs u-hover-black u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3" target="_blank">Ver página</a>
-                  </div>
-                </div>
-              </div>
+        <form id="SingUp" method="post" onsubmit="submit()">
+          <div class="campos">
+            <div class="campo">
+              <input id="username" type="text" autocomplete="off" placeholder="usuario123" required
+                onblur="campoBlur('username')">
+              <label class="label" id="usernameLabel" for="username">Usuario</label>
+            </div>
+            <div class="campo">
+              <input id="email" type="email" autocomplete="off" placeholder="ejemplo@ejemplo.com" required
+                onblur="campoBlur('email')">
+              <label class="label" id="emailLabel" for="email">E-mail</label>
+            </div>
+            <div class="campo">
+              <input id="pssw" type="password" aria-autocomplete="off" placeholder="1a2b3c" required
+                onblur="campoBlur('pssw')">
+              <label class="label" id="psswLabel" for="pssw">Contraseña</label>
             </div>
           </div>
-        </div>
+          <div class="botones">
+            <button class="principal" id="SingUp" type="submit">Crear cuenta</button>
+            <button class="secondary" id="goLeft" onclick="logIn()">Iniciar sesión</button>
+          </div>
+        </form>
       </div>
-    </section>
-    <section class="aboutme u-clearfix u-grey-80 u-section-3" id="aboutme">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
-        <div class="repetidor u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-style u-list-item u-radius-10 u-repeater-item u-shape-round u-white u-list-item-1">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <img class="imagen u-expanded-width-xs u-image u-image-round u-preserve-proportions u-radius-10 u-image-1" src="images/JavaScript-logo.png" alt="" data-image-width="1052" data-image-height="1052" data-animation-name="customAnimationIn" data-animation-duration="500">
-                <h6 class="nivel u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="500" data-animation-delay="500">
-                  <span class="u-text-body-color">Medio</span>
-                  <span class="u-text-body-color"></span>
-                </h6>
-              </div>
+
+    </div>
+    <div class="lateral dereito">
+      <div id="dereita" class="bloque inactivo">
+        <div class="titulo">
+          <p class="gacarbla">GΛCΛRBLΛ</p>
+          <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que haces.
+          </p>
+        </div>
+        <form id="LogIn" method="post" onsubmit="return false;">
+          <div class="campos">
+            <div class="campo">
+              <input id="user" type="text" autocomplete="off" placeholder="usuario123" required
+                onblur="campoBlur('user')">
+              <label class="label" id="userLabel" for="user">Usuario</label>
             </div>
-            <div class="u-align-center u-container-style u-list-item u-radius-10 u-repeater-item u-shape-round u-white u-list-item-2">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <img class="imagen u-expanded-width-xs u-image u-image-round u-preserve-proportions u-radius-10 u-image-2" src="images/html5.png" alt="" data-image-width="2048" data-image-height="2048" data-animation-name="customAnimationIn" data-animation-duration="500">
-                <h6 class="nivel u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="500" data-animation-delay="500">
-                  <span class="u-text-body-color">Medio</span>
-                  <span class="u-text-body-color"></span>
-                </h6>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-list-item u-radius-10 u-repeater-item u-shape-round u-white u-list-item-3">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <img class="imagen u-expanded-width-xs u-image u-image-round u-preserve-proportions u-radius-10 u-image-3" src="images/css3.png" alt="" data-image-width="2048" data-image-height="2048" data-animation-name="customAnimationIn" data-animation-duration="500">
-                <h6 class="nivel u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="500" data-animation-delay="500">
-                  <span class="u-text-body-color">Principiante</span>
-                  <span class="u-text-body-color"></span>
-                </h6>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-list-item u-radius-10 u-repeater-item u-shape-round u-white u-list-item-4">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <img class="imagen u-expanded-width-xs u-image u-image-round u-preserve-proportions u-radius-10 u-image-4" src="images/2048px-Python-logo-notext.svg.png" alt="" data-image-width="2048" data-image-height="2048" data-animation-name="customAnimationIn" data-animation-duration="500">
-                <h6 class="nivel u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="500" data-animation-delay="500">
-                  <span class="u-text-body-color">Principiante</span>
-                  <span class="u-text-body-color"></span>
-                </h6>
-              </div>
+            <div class="campo">
+              <input id="password" type="password" aria-autocomplete="off" placeholder="1a2b3c" required
+                onblur="campoBlur('password')">
+              <label class="label" id="passwordLabel" for="password">Contraseña</label>
             </div>
           </div>
-        </div>
-        <h1 class="titulo u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="500">About me</h1>
-        <div class="separador u-border-5 u-border-white u-expanded-width-sm u-expanded-width-xs u-line u-line-horizontal u-line-1" data-animation-name="customAnimationIn" data-animation-duration="500"></div>
-        <p class="texto u-align-center-sm u-align-center-xs u-align-justify-xl u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="500">Me llamo Gabriel, tengo 17 años y soy aficcionado a la informática no profesional.<br>No he realizado ningún tipo de estudio o curso que certifique mis conocimientos, no obstante, siempre he logrado finalizar todos mis proyectos de una forma satisfactoria y gratificante al lograr cumplir mis objetivos iniciales.
-        </p>
-      </div>
-    </section>
-    <section class="dev u-clearfix u-grey-80 u-section-4" id="dev" hidden>
-      <div class="u-clearfix u-sheet u-valign-middle-md u-sheet-1">
-        <div class="separador u-border-3 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
-        <a href="" class="devbtn u-border-none u-btn u-btn-round u-button-style u-grey-30 u-hover-white u-radius-6 u-text-body-alt-color u-text-hover-black u-btn-1">Activar click derecho</a>
-        <a href="" class="devbtn u-border-none u-btn u-btn-round u-button-style u-grey-30 u-hover-white u-radius-6 u-text-body-alt-color u-text-hover-black u-btn-2">Activar opción copiar</a>
-        <h3 class="title u-align-center-xs u-align-justify-lg u-align-justify-md u-align-justify-sm u-align-justify-xl u-text u-text-1">Developer hidden menu</h3>
-      </div>
-    </section>
-    
-    
-    <footer class="footer u-align-center u-clearfix u-footer u-grey-80 u-footer" id="pie"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <div class="separador u-border-3 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
-        <h3 class="title u-text u-text-default u-text-1">Otras páginas:</h3>
-        <h3 class="title u-text u-text-default u-text-2">Páginas privadas:</h3>
-        <div class="pages u-layout-grid u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <p class="u-custom-item u-text u-text-default u-text-3">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" href="https://gacarbla.github.io">Inicio</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <p class="u-custom-item u-text u-text-default u-text-4">Documents</p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <p class="u-custom-item u-text u-text-default u-text-5">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2" href="https://github.com/gacarbla" target="_blank">GitHub</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <p class="u-custom-item u-text u-text-default u-text-6">My GW guide</p>
-              </div>
-            </div>
+          <div class="botones">
+            <button class="secondary" id="SingUp" onclick="singUp()">Crear cuenta</button>
+            <button class="principal" id="goLeft" type="submit">Iniciar sesión</button>
           </div>
-        </div>
-      </div></footer>
-  
-</body></html>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
