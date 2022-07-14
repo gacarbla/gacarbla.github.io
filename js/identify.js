@@ -21,3 +21,11 @@ function singUp() {
     document.getElementById("dereita").className = "inactivo"
     document.getElementById("izquierda").className = "activo"
 }
+
+function errorSingUp() {
+    window.alert("No posees los permisos necesarios para crear una cuenta")
+}
+
+function errorLogIn() {
+    window.alert("No se ha encontrado ninguna cuenta con este nombre de usuario")
+}

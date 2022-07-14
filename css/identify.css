@@ -1,3 +1,7 @@
+body {
+    background-color: #333333;
+}
+
 .inicio {
     margin: 0px;
     display: flex;
@@ -48,7 +52,7 @@
     top: 0px;
     height: 100vh;
     width: 50vw;
-    transition: all 1s;
+    transition: all 0.3s;
 }
 
 .inicio .dereito .titulo span {
@@ -56,12 +60,14 @@
 }
 
 .inicio .activo {
+    transition: all 0.3s;
     background-color: #333333;
     height: 100vh;
     width: 50vw;
 }
 
 .inicio .dereito .inactivo {
+    transition: all 0.3s;
     height: 100vh;
     background: rgba(102, 181, 255, 1);
     background: -moz-linear-gradient(45deg, rgba(102, 181, 255, 1) 0%, rgba(107, 255, 174, 1) 100%);
@@ -74,6 +80,7 @@
 }
 
 .inicio .izquierdo .inactivo {
+    transition: all 0.3s;
     height: 100vh;
     background: rgba(216, 252, 126, 1);
     background: -moz-linear-gradient(45deg, rgba(216, 252, 126, 1) 0%, rgba(145, 255, 61, 1) 100%);
@@ -105,7 +112,7 @@
 
 .inicio .campo {
     font-family: Arial;
-    width: 280px;
+    width: 30vw;
     position: relative;
     margin: 8px;
 }
@@ -119,7 +126,7 @@
 .inicio input {
     padding: 0.8rem;
     width: 100%;
-    height: 100%;
+    height: 7vh;
     border: 2px solid #acacac;
     background: #333333;
     border-radius: 5px;
@@ -141,9 +148,9 @@
     z-index: 0;
     position: absolute;
     left: 10px;
-    top: 14px;
+    top: 2.15vh;
     transition: all 0.3s;
-    color: #fff;
+    color: #ffffff55;
 }
 
 
@@ -192,6 +199,7 @@
 
 .inicio .inactivo form {
     opacity: 0;
+    transition: all 0.3s;
     visibility: hidden;
 }
 
@@ -199,13 +207,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 250px;
+    width: calc(20vw + 100px);
 }
 
 .inicio button {
     margin: 5px;
     padding: 5px;
-    width: 100%;
+    width: calc(10vw + 50px);
     height: 100%;
     font-size: 17px;
 }
@@ -218,7 +226,7 @@
     border: 0px
 }
 
-.inicio .dereita .principal {
+.inicio .dereito .principal {
     background-color: #c3cf0a;
 }
 
@@ -234,7 +242,14 @@
     border-color: #4c76e2;
 }
 
-.inicio .dereita .secondary {
+.inicio .dereito .secondary {
     color: #c3cf0a;
     border-color: #c3cf0a;
+}
+
+.inicio form h3 {
+    color: #fff;
+    font-family: Arial;
+    width: 30vw;
+    margin: 1vh;
 }
