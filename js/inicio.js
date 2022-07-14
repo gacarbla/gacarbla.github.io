@@ -8,10 +8,6 @@ function campoBlur(campo){
     }
 }
 
-function click(object) {
-    console.log("1")
-}
-
 function logIn() {
     document.getElementById("SingUp").hidden = true
     document.getElementById("LogIn").hidden = false
