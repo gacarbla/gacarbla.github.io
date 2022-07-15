@@ -9,20 +9,20 @@ function campoBlur(campo){
 }
 
 function logIn() {
-    document.getElementById("SingUp").hidden = true
+    document.getElementById("signUp").hidden = true
     document.getElementById("LogIn").hidden = false
     document.getElementById("dereita").className = "activo"
     document.getElementById("izquierda").className = "inactivo"
 }
 
-function singUp() {
-    document.getElementById("SingUp").hidden = false
+function signUp() {
+    document.getElementById("signUp").hidden = false
     document.getElementById("LogIn").hidden = true
     document.getElementById("dereita").className = "inactivo"
     document.getElementById("izquierda").className = "activo"
 }
 
-function errorSingUp() {
+function errorsignUp() {
     window.alert("No posees los permisos necesarios para crear una cuenta")
 }
 

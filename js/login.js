@@ -8,8 +8,8 @@ function campoBlur(campo){
     }
 }
 
-function singUp() {
-    window.location = ("./singup")
+function signUp() {
+    window.location = ("./signup")
 }
 
 function errorLogIn() {
