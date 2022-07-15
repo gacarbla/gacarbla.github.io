@@ -8,7 +8,7 @@ function campoBlur(campo){
     }
 }
 
-function signUp() {
+function signup() {
     window.location = ("./signup")
 }
 
