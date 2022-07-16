@@ -13,17 +13,21 @@ form {
     width: 100%;
 }
 
+section {
+    width: 100vw;
+}
+
 .campo {
     font-family: Arial;
-    width: 30vw;
+    width: auto;
     position: relative;
     margin: 12px;
 }
 
 input {
-    cursor: pointer;
+    cursor:text;
     padding: 0.8rem;
-    width: 100%;
+    width: auto;
     height: 100%;
     border: 2px solid #acacac;
     background: #333333;
@@ -41,7 +45,7 @@ input:focus {
 label {
     z-index: 0;
     position: absolute;
-    left: 10px;
+    left: 20px;
     top: -10px;
     transition: all 0.3s;
     color: #fff;
@@ -166,6 +170,7 @@ div textarea {
 
 .copy p {
     visibility: visible;
+    margin: 0px;
 }
 
 .copy img {

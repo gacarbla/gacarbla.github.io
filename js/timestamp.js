@@ -1,14 +1,14 @@
 function onload() {
     document.getElementById("date").value = ""
-    document.getElementById("time").value = ""
     document.getElementById("errormsg").hidden = false
     document.getElementById("tabla").hidden = true
     document.getElementById("errormsg2").hidden = true
 }
 
 function calcula() {
-    var data = document.getElementById("date").value
-    var hora = document.getElementById("time").value
+    const d = document.getElementById("date").value.split("T")
+    var data = d[0]
+    var hora = d[1]
     if (!data || !hora) {
         document.getElementById("errormsg").hidden = false
         document.getElementById("tabla").hidden = true
