@@ -210,11 +210,12 @@ div textarea {
     }
 
     #showTime {
-        width: 165px;
+        width: 110px;
     }
 
     #showTime textarea {
         margin: 0px;
+        font-size: 12px;
     }
 
     .copy p {
