@@ -45,7 +45,7 @@ function calcula() {
         ]
 
         let semana = [
-            "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"
+            "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"
         ]
 
         var dia_semana = date.getDay()
@@ -55,6 +55,6 @@ function calcula() {
         document.getElementById("d_try").innerHTML = `${dia}/${mes=="0"?"12":mes}`
         document.getElementById("D_try").innerHTML = `${dia}/${mes=="0"?"12":mes}/${ano}`
         document.getElementById("f_try").innerHTML = `${dia} de ${meses[mes]} de ${ano} ${hora}:${minuto}`
-        document.getElementById("F_try").innerHTML = `${semana[(dia_semana-1)]}, ${dia} de ${meses[mes]} de ${ano} ${hora}:${minuto}`
+        document.getElementById("F_try").innerHTML = `${semana[dia_semana]}, ${dia} de ${meses[mes]} de ${ano} ${hora}:${minuto}`
     }
 }

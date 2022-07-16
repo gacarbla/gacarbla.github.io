@@ -82,6 +82,7 @@ input:focus::placeholder {
     margin: 10px;
     padding: 10px;
     width: calc(100vw - 20px);
+    font-size: 18px;
 }
 
 ul {
@@ -89,6 +90,7 @@ ul {
 }
 
 li {
+    height: 50px;
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -147,4 +149,77 @@ div p {
     margin: 10px;
     padding: 10px;
     width: calc(100vw - 20px);
+}
+
+.copy p {
+    visibility: visible;
+}
+
+.copy img {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .error {
+        font-size: 15px;
+    }
+
+    .tabla {
+        font-size: 12px;
+    }
+
+    li {
+        margin: 0px;
+    }
+
+    .campo {
+        width: 40vw
+    }
+
+    li div {
+        width: 100%;
+    }
+
+    #showTime {
+        width: 165px;
+    }
+
+    #showTime p {
+        margin: 0px;
+    }
+
+    .copy p {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .copy img {
+        position: relative;
+        margin: 0px;
+        visibility: visible;
+        width: 5vw;
+        margin: 0.5vw;
+        max-height: 25px;
+        max-width: 25px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .copy p {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .copy img {
+        position: relative;
+        margin: 0px;
+        visibility: visible;
+        width: 5vw;
+        margin: 0.5vw;
+        max-height: 25px;
+        max-width: 25px;
+    }
 }
