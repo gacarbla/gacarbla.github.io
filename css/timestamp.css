@@ -109,6 +109,19 @@ div p {
     margin-left: 15px;
 }
 
+div textarea {
+    margin-left: 15px;
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial;
+    border: none;
+    height: 50%;
+    width: 170px;
+    resize: none;
+    cursor: default;
+    text-align: center;
+}
+
 .copy {
     width: 10vw;
 }
@@ -187,7 +200,7 @@ div p {
         width: 165px;
     }
 
-    #showTime p {
+    #showTime textarea {
         margin: 0px;
     }
 
@@ -198,9 +211,9 @@ div p {
 
     .copy img {
         position: relative;
-        margin: 0px;
+        margin-left: 2px;
         visibility: visible;
-        width: 5vw;
+        width: 8vw;
         margin: 0.5vw;
         max-height: 25px;
         max-width: 25px;

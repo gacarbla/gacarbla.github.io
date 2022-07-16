@@ -33,7 +33,7 @@ function calcula() {
         document.getElementById("R").innerHTML = `&ltt:${ndate}:R&gt`
 
         var ano = date.getFullYear()
-        var mes = date.getMonth()
+        var mes = date.getMonth()+1
         var dia = date.getDate()
 
         var hora = date.getHours()
@@ -54,7 +54,13 @@ function calcula() {
         document.getElementById("T_try").innerHTML = `${hora}:${minuto}:${segundo}`
         document.getElementById("d_try").innerHTML = `${dia}/${mes=="0"?"12":mes}`
         document.getElementById("D_try").innerHTML = `${dia}/${mes=="0"?"12":mes}/${ano}`
-        document.getElementById("f_try").innerHTML = `${dia} de ${meses[mes]} de ${ano} ${hora}:${minuto}`
-        document.getElementById("F_try").innerHTML = `${semana[dia_semana]}, ${dia} de ${meses[mes]} de ${ano} ${hora}:${minuto}`
+        document.getElementById("f_try").innerHTML = `${dia} de ${meses[mes-1]} de ${ano} ${hora}:${minuto}`
+        document.getElementById("F_try").innerHTML = `${semana[dia_semana]}, ${dia} de ${meses[mes-1]} de ${ano} ${hora}:${minuto}`
     }
+}
+
+function copy(element) {
+    var content = document.getElementById(element)
+    content.select();
+    document.execCommand("copy")
 }
