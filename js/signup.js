@@ -9,7 +9,7 @@ function campoBlur(campo){
 }
 
 function login() {
-    window.location = ("./login")
+    window.location = ("../login")
 }
 
 function errorLogIn() {
