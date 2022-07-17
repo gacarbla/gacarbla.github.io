@@ -23,7 +23,8 @@ function calcula() {
         document.getElementById("tabla").hidden = false
         data = data.split(/-+/g)
         hora = hora.split(/:+/g)
-        if (data[0]<1970) {
+        var date = new Date(data[0], (data[1]-1), data[2], hora[0], hora[1])
+        if (date.getTime()<0) {
             document.getElementById("errormsg2").hidden = false
         } else {
             document.getElementById("errormsg2").hidden = true

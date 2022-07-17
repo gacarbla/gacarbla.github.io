@@ -3,160 +3,212 @@
 
 <head>
 
-    <!--  Etiquetas meta  -->
-    <meta charset="UTF-8">
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
 
-    <!--  SEO meta  -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gacarbla.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="GΛCΛRBLΛ">
-    <link rel="canonical" href="https://gacarbla.github.io/">
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gacarbla.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
+  <link rel="canonical" href="https://gacarbla.github.io/">
 
-    <!--  Ajustes meta  -->
-    <meta property="og:locale" content="es-ES">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--  Título  -->
-    <title>GΛCΛRBLΛ</title>
-    <link rel="icon" href="media/favicon.PNG">
+  <!--  Título  -->
+  <title>GΛCΛRBLΛ</title>
+  <link rel="icon" href="media/favicon.PNG">
 
-    <!--  Enlaces  -->
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/timestamp.scss">
-    <link rel="stylesheet" href="../../css/timestamp.css">
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/timestamp.css">
 
-    <!--  Scripts  -->
-    <script src="../../js/timestamp.js"></script>
-    <script src="../../js/script.js"></script>
+  <!--  Scripts  -->
+  <script src="../../js/timestamp.js"></script>
+  <script src="../../js/script.js"></script>
 
 </head>
 
 <body onload="onload()">
-    <span id="window" hidden>
-        <div class="window">
-            <div class="box">
-                <p>Copiado</p>
-                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-            </div>
-        </div>
-    </span>
+  <span id="window" hidden>
+    <div class="window">
+      <div class="box">
+        <p>Copiado</p>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+        </svg>
+      </div>
+    </div>
+  </span>
+  <div class="navegador">
+    <ul>
+      <li>
+        <a>
+          <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H3l9-9 9 9h-2"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path>
+          </svg>
+          <p>
+            Inicio
+          </p>
+        </a>
+      </li>
+      <li>
+        <a>
+          <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 21h4L20 8a2.829 2.829 0 0 0-4-4L3 17v4Z"></path>
+            <path d="m14.5 5.5 4 4"></path>
+            <path d="M12 8 7 3 3 7l5 5"></path>
+            <path d="M7 8 5.5 9.5"></path>
+            <path d="m16 12 5 5-4 4-5-5"></path>
+            <path d="m16 17-1.5 1.5"></path>
+          </svg>
+          <p>
+            Herramientas
+          </p>
+        </a>
+        <ul>
+          <li>
+            <a>
+              <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+                <path d="M12 7v5l3 3"></path>
+              </svg>
+              <p>
+                Timestamp
+              </p>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="columna">
     <section id="campoSection">
-        <div class="campo">
-            <input id="date" type="datetime-local" min="1970-01-01T00:00:00" required onchange="calcula()">
-            <label class="label" id="dateLabel" for="date">Hora y fecha</label>
-        </div>
+      <div class="campo">
+        <input id="date" type="datetime-local" min="1970-01-01T00:00:00" required onchange="calcula()">
+        <label class="label" id="dateLabel" for="date">Hora y fecha</label>
+      </div>
     </section>
     <section>
-        <div id="errormsg" class="error">
-            <p>¡Rellena los campos para iniciar la página!</p>
-        </div>
-        <div id="errormsg2" class="error" hidden>
-            <p><span style="color:#f00">ADVERTENCIA:</span> Una fecha anterior al 1970 puede ocasionar errores</p>
-        </div>
-        <div id="tabla" class="tabla" hidden>
-            <ul>
-                <li>
-                    <!-- hh:mm -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="t">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="t_try">Error</p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('t')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- hh:mm:ss -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="T">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="T_try">Error</p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('T')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- dd/mm/aa -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="d">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="d_try">Error</p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('d')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- dd de mm de aa -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="D">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="D_try">Error</p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('D')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- dd de mm de aa hh:mm -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="f">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="f_try"><i>No disponible</i></p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('f')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- dd, dd de mm de aa hh:mm -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="F">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="F_try"><i>No disponible</i></p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('F')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <!-- relativo -->
-                    <div id="showTime">
-                        <textarea readonly autocomplete="off" id="R">Error</textarea>
-                    </div>
-                    <div>
-                        <p id="R_try"><i>No disponible</i></p>
-                    </div>
-                    <div class="copy">
-                        <button onclick="copy('R')">
-                            <p>Copiar</p><img src="../../media/copy.png">
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div id="errormsg" class="error">
+        <p>¡Rellena los campos para iniciar la página!</p>
+      </div>
+      <div id="errormsg2" class="error" hidden>
+        <p><span style="color:#f00">ADVERTENCIA:</span> Una fecha anterior al 1 de enero de 1970, 00:00:00 UTC
+          puede ocasionar errores</p>
+      </div>
+      <div id="tabla" class="tabla" hidden>
+        <ul>
+          <li>
+            <!-- hh:mm -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="t">Error</textarea>
+            </div>
+            <div>
+              <p id="t_try">Error</p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('t')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- hh:mm:ss -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="T">Error</textarea>
+            </div>
+            <div>
+              <p id="T_try">Error</p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('T')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- dd/mm/aa -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="d">Error</textarea>
+            </div>
+            <div>
+              <p id="d_try">Error</p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('d')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- dd de mm de aa -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="D">Error</textarea>
+            </div>
+            <div>
+              <p id="D_try">Error</p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('D')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- dd de mm de aa hh:mm -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="f">Error</textarea>
+            </div>
+            <div>
+              <p id="f_try"><i>No disponible</i></p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('f')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- dd, dd de mm de aa hh:mm -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="F">Error</textarea>
+            </div>
+            <div>
+              <p id="F_try"><i>No disponible</i></p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('F')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+          <li>
+            <!-- relativo -->
+            <div id="showTime">
+              <textarea readonly autocomplete="off" id="R">Error</textarea>
+            </div>
+            <div>
+              <p id="R_try"><i>No disponible</i></p>
+            </div>
+            <div class="copy">
+              <button onclick="copy('R')">
+                <p>Copiar</p><img src="../../media/copy.png">
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
+  </div>
 </body>
 
 </html>
