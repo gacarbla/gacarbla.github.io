@@ -46,7 +46,6 @@ body {
 
 .navegador li:hover {
     box-shadow: 0px 0px 5px #ffffffaa;
-
 }
 
 .navegador li ul {
@@ -61,4 +60,13 @@ body {
 .columna {
     width: auto;
     max-width: 750px;
+}
+
+.navegador li .current {
+    cursor: default;
+    color: #aaa
+}
+
+.navegador li .current:hover {
+    box-shadow: none;
 }
