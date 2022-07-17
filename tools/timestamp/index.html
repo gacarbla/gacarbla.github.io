@@ -23,9 +23,11 @@
 
   <!--  Enlaces  -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/tools.css">
   <link rel="stylesheet" href="../../css/timestamp.css">
 
   <!--  Scripts  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../../js/timestamp.js"></script>
   <script src="../../js/script.js"></script>
 
@@ -46,7 +48,7 @@
   <div class="navegador">
     <ul>
       <li>
-        <a>
+        <div class="option" onclick="go(':home', true, false, false)">
           <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12H3l9-9 9 9h-2"></path>
@@ -56,10 +58,10 @@
           <p>
             Inicio
           </p>
-        </a>
+        </div>
       </li>
       <li>
-        <a>
+        <div class="option" onclick="go('tools', true, true)">
           <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 21h4L20 8a2.829 2.829 0 0 0-4-4L3 17v4Z"></path>
@@ -72,19 +74,17 @@
           <p>
             Herramientas
           </p>
-        </a>
+        </div>
         <ul>
-          <li>
-            <a>
-              <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
-                <path d="M12 7v5l3 3"></path>
-              </svg>
-              <p>
-                Timestamp
-              </p>
-            </a>
+          <li class="suboption" onclick="go('tools/timestamp', false, false)">
+            <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+              <path d="M12 7v5l3 3"></path>
+            </svg>
+            <p>
+              Timestamp
+            </p>
           </li>
         </ul>
       </li>

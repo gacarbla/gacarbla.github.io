@@ -4,10 +4,7 @@ function onload() {
     document.getElementById("tabla").hidden = true
     document.getElementById("errormsg2").hidden = true
     if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
-        console.log("Se ha detectado un dispositivo móvil");
         document.getElementById("dateLabel").innerHTML = "Fecha y hora"
-    } else {
-        console.log("Se ha detectado un dispositivo no-móvil");
     }
 }
 
