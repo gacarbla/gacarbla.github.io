@@ -23,6 +23,7 @@
 
     <!--  Enlaces  -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/timestamp.scss">
     <link rel="stylesheet" href="../../css/timestamp.css">
 
     <!--  Scripts  -->
@@ -32,6 +33,14 @@
 </head>
 
 <body onload="onload()">
+    <span id="window" hidden>
+        <div class="window">
+            <div class="box">
+                <p>Copiado</p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+            </div>
+        </div>
+    </span>
     <section id="campoSection">
         <div class="campo">
             <input id="date" type="datetime-local" min="1970-01-01T00:00:00" required onchange="calcula()">

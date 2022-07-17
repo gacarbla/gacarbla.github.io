@@ -68,5 +68,9 @@ function calcula() {
 function copy(element) {
     var content = document.getElementById(element)
     content.select();
-    document.execCommand("copy")
+    document.execCommand("copy");
+    document.getElementById("window").hidden = false;
+    setTimeout(function(){
+        document.getElementById("window").hidden = true;
+    }, 1500)
 }

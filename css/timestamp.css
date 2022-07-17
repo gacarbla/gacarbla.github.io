@@ -3,7 +3,7 @@ body {
     height: 100%;
     width: 100vw;
     font-family: Arial;
-    cursor: default
+    cursor: default;
 }
 
 form {
@@ -33,7 +33,7 @@ section {
 }
 
 input {
-    cursor:text;
+    cursor: text;
     padding: 0.8rem;
     width: auto;
     height: 100%;
@@ -95,10 +95,12 @@ input:focus::placeholder {
     padding: 10px;
     width: calc(100vw - 20px);
     font-size: 18px;
+    animation: all 0.3s;
 }
 
 ul {
     list-style: none;
+    animation: all 0.3s;
 }
 
 li {
@@ -108,6 +110,7 @@ li {
     padding: 5px;
     margin: 5px;
     background-color: #333333;
+    animation: all 0.3s;
 }
 
 li div {
@@ -115,10 +118,12 @@ li div {
     color: #fff;
     display: flex;
     align-items: center;
+    animation: all 0.3s;
 }
 
 div p {
     margin-left: 15px;
+    animation: all 0.3s;
 }
 
 div textarea {
@@ -132,16 +137,20 @@ div textarea {
     resize: none;
     cursor: default;
     text-align: center;
+    animation: all 0.3s;
 }
 
 .copy {
     width: 10vw;
+    display: flex;
+    flex-direction: row-reverse;
+    animation: all 0.3s;
 }
 
 .copy button {
     width: 8vw;
     height: 30px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     background-color: #4c76e2;
     border-radius: 5px;
     border: 0px;
@@ -155,7 +164,7 @@ div textarea {
 .copy button:hover {
     width: 8vw;
     height: 30px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     background-color: #2752be;
     border-radius: 5px;
     border: 0px;
@@ -188,6 +197,112 @@ div textarea {
     visibility: hidden;
 }
 
+.window {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(33, 41, 52, .5);
+    bottom: 0;
+    right: 0;
+    display: flex;
+    z-index: 500;
+}
+
+.box {
+    position: fixed;
+    height: 60px;
+    background-color: rgba(33, 41, 52);
+    width: 300px;
+    border-radius: 10px;
+    top: calc(50vh - 30px);
+    left: calc(50vw - 150px);
+    display: flex;
+    flex-direction: row;
+}
+
+.box p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    margin: auto
+}
+
+
+@import "bourbon";
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+    z-index: 506;
+}
+
+.checkmark {
+    position: relative;
+    right: 10px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    z-index: 505;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .copy {
+        width: 100px;
+    }
+
+    .copy button {
+        font-size: 12px;
+        width: 80px;
+        letter-spacing: 1px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .error {
         font-size: 15px;
@@ -195,10 +310,6 @@ div textarea {
 
     .tabla {
         font-size: 12px;
-    }
-
-    li {
-        margin: 0px;
     }
 
     .campo {
@@ -232,9 +343,14 @@ div textarea {
         max-height: 25px;
         max-width: 25px;
     }
+
 }
 
 @media only screen and (max-width: 769px) {
+    .tabla {
+        font-size: 14px;
+    }
+
     .copy p {
         visibility: hidden;
         position: absolute;
@@ -248,5 +364,9 @@ div textarea {
         margin: 0.5vw;
         max-height: 25px;
         max-width: 25px;
+    }
+
+    .copy button {
+        width: auto;
     }
 }
