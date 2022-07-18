@@ -302,14 +302,6 @@ div textarea {
         width: 80px;
         letter-spacing: 1px;
     }
-
-    .columna {
-        margin-left: auto;
-    }
-
-    .navegador {
-        visibility: hidden;
-    }
 }
 
 @media only screen and (max-width: 600px) {
