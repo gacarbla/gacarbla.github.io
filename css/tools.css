@@ -74,6 +74,11 @@ body {
     color: #aaa;
 }
 
+.navegador p {
+    margin-left: 15px;
+    animation: all 0.3s;
+}
+
 .navegador li .current:hover {
     color: #aaa;
     box-shadow: none;

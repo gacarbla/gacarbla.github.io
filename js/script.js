@@ -1,10 +1,14 @@
 function go(pagina, aviso, newWindow) {
     if (!pagina.startsWith("http")){
-        if(pagina.startsWith(":")){
-            switch (pagina.slice(1).split(/\/+/g)[0]) {
-                case 'home':
-                    pagina = "https://gacarbla.github.io/";
+        if(pagina.startsWith(":tools/")){
+            switch (pagina.slice(7).split(/\/+/g)[0]) {
+                default:
+                    pagina = "https://gacarbla.github.io/tools/404";
                     break;
+            }
+            
+        } else if(pagina.startsWith(":")){
+            switch (pagina.slice(1).split(/\/+/g)[0]) {
                 case 'github':
                     pagina = `https://github.com/${pagina.slice(8)}`;
                     break;

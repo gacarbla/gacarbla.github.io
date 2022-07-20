@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
+
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gacarbla.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
+  <link rel="canonical" href="https://gacarbla.github.io/">
+
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Título  -->
+  <title>GΛCΛRBLΛ</title>
+  <link rel="icon" href="media/favicon.PNG">
+
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/tools.css">
+  <link rel="stylesheet" href="../../css/404t.css">
+
+  <!--  Scripts  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../../js/404t.js"></script>
+  <script src="../../js/script.js"></script>
+
+</head>
+
+<body onload="onload()">
+  <span id="window" hidden>
+    <div class="window">
+      <div class="box">
+        <p>Copiado</p>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+        </svg>
+      </div>
+    </div>
+  </span>
+  <div class="navegador">
+    <ul>
+      <li onclick="go(':home', false, false)">
+        <div class="option">
+          <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H3l9-9 9 9h-2"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path>
+          </svg>
+          <p>
+            Inicio
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="option" onclick="go(':tools', false, false)">
+          <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 21h4L20 8a2.829 2.829 0 0 0-4-4L3 17v4Z"></path>
+            <path d="m14.5 5.5 4 4"></path>
+            <path d="M12 8 7 3 3 7l5 5"></path>
+            <path d="M7 8 5.5 9.5"></path>
+            <path d="m16 12 5 5-4 4-5-5"></path>
+            <path d="m16 17-1.5 1.5"></path>
+          </svg>
+          <p>
+            Herramientas
+          </p>
+        </div>
+        <ul>
+          <li class="suboption">
+            <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+              <path d="M12 7v5l3 3"></path>
+            </svg>
+            <p>
+              Timestamp
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div class="option" onclick="go(':github/gacarbla', false, true)">
+          <svg width="20" height="20" fill="none" stroke="rgb(35, 248, 242)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z"></path>
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+         </svg>
+          <p>
+            GitHub
+          </p>
+        </div>
+        <ul>
+          <li class="suboption" onclick="go(':github/gacarbla/gacarbla.github.io', false, true)">
+            <svg width="20" height="20" fill="none" stroke="#23f8f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
+              <path d="M15.5 8h-7l.5 4h6l-.5 3.5-2.5.75-2.5-.75-.1-.5"></path>
+           </svg>
+            <p>
+              gacarbla.github.io
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="columna">
+    <h1>ERROR 404</h1>
+    <h3>No se ha encontrado o no se encuentra disponible la página deseada.<br>Revise el enlace y vuelva a intentarlo.</h3>
+  </div>
+</body>
+
+</html>
