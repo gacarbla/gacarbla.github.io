@@ -3,7 +3,8 @@ function go(pagina, aviso, newWindow) {
         if(pagina.startsWith(":tools/")){
             switch (pagina.slice(7).split(/\/+/g)[0]) {
                 case 'timestamp':
-                    pagina = "https://gacarbla.github.io/tools/timestamp"
+                    pagina = "https://gacarbla.github.io/tools/timestamp";
+                    break;
                 default:
                     pagina = "https://gacarbla.github.io/tools/404";
                     break;
