@@ -15,6 +15,9 @@ function go(pagina, aviso, newWindow) {
                 case 'github':
                     pagina = `https://github.com/${pagina.slice(8)}`;
                     break;
+                case 'home':
+                    pagina = 'https://gacarbla.github.io';
+                    break;
                 default:
                     pagina = "https://gacarbla.github.io/404";
                     break;
