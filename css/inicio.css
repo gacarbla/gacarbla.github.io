@@ -4,10 +4,11 @@
 
 body {
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 header {
-    background: #dddd;
+    background: #ddd;
     position: sticky;
     height: 100vh;
     min-height: 100%;
@@ -27,10 +28,12 @@ header {
     right: 0px;
     height: 100%;
     min-height: 100vh;
+    z-index: -1;
 }
 
 header:hover {
     width: 250px;
+    background: #ddd;
 }
 
 .nav {
@@ -91,7 +94,7 @@ header:hover {
 .nav div {
     display: flex;
     min-height: 40px;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -115,7 +118,7 @@ header:hover ul {
     width: 200px;
 }
 
-header:hover ul li{
+header:hover ul li {
     width: 200px;
 }
 
@@ -145,28 +148,104 @@ div:hover #md {
 
 
 
-
 /* CONTENIDO */
 
 .inicio {
-    color: #050505;
-    background-image: url("../media/22278.jpg");
+    color: #f5f5f5;
+    background: #000;
     min-height: 100vh;
     background-position: top center;
 }
 
-.inicio .titulo {
-
+.inicio svg {
+    position: absolute;
+    height: 75vh;
+    top: 0px;
+    right: 0px;
 }
+
+.inicio .titulo {}
 
 .inicio .titulo h1 {
     position: relative;
-    top: 10vw;
-    left: -3vw;
-    font-size: 18vw;
+    top: 8vw;
+    left: 3vw;
+    font-size: 15vw;
     color: #ffffff33;
 }
 
 .inicio .titulo p {
+    position: relative;
+    font-size: 2.5vw;
+    top: 7vh;
+    left: 5vw;
+    font-weight: bold;
+}
 
+.inicio .titulo p span {
+    color: #269EE9;
+    animation: colorSpanTitulo 60s linear infinite;
+}
+
+@keyframes colorSpanTitulo {
+    0% {
+        color: #269EE9
+    }
+    25% {
+        color: #29f07c
+    }
+    50% {
+        color: rgb(231, 218, 33);
+    }
+    75% {
+        color: rgb(247, 43, 60);
+    }
+    100% {
+        color: #269EE9;
+    }
+}
+
+
+
+
+.wave {
+    animation: onda 8s linear infinite;
+}
+
+.wave1 {
+    animation: onda1 10s linear infinite;
+}
+
+.wave2 {
+    animation: onda2 12s linear infinite;
+}
+
+@keyframes onda {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes onda1 {
+    0% {
+        transform: scaleY(1.2) translateX(0%);
+    }
+
+    100% {
+        transform: scaleY(1.2) translateX(100%);
+    }
+}
+
+@keyframes onda2 {
+    0% {
+        transform: scaleY(.8) translateX(0%);
+    }
+
+    100% {
+        transform: scaleY(.8) translateX(100%);
+    }
 }
