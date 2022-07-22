@@ -22,7 +22,7 @@ header {
 
 .content {
     position: absolute;
-    left: 50px;
+    left: 60px;
     top: 0px;
     right: 0px;
     height: 100%;
@@ -134,4 +134,39 @@ div:hover #js {
 
 div:hover #py {
     stroke: #306998;
+}
+
+div:hover #md {
+    stroke: #269EE9;
+}
+
+
+
+
+
+
+
+/* CONTENIDO */
+
+.inicio {
+    color: #050505;
+    background-image: url("../media/22278.jpg");
+    min-height: 100vh;
+    background-position: top center;
+}
+
+.inicio .titulo {
+
+}
+
+.inicio .titulo h1 {
+    position: relative;
+    top: 10vw;
+    left: -3vw;
+    font-size: 18vw;
+    color: #ffffff33;
+}
+
+.inicio .titulo p {
+
 }
