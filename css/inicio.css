@@ -262,16 +262,16 @@ header:hover ul li {
     }
 }
 
-/* Proyectos */
+/* Lenguajes */
 
-.proyectos {
+.lenguajes {
     padding: 50px 0px 50px 0px;
     background-color: #ccc;
     display: flex;
     flex-direction: column;
 }
 
-.proyectos svg {
+.lenguajes svg {
     width: 100px;
     height: 100px;
     fill: none;
@@ -287,7 +287,7 @@ header:hover ul li {
     transition: all 0.15s;
 }
 
-.proyectos ul {
+.lenguajes ul {
     list-style: none;
     background-color: transparent;
     display: flex;
@@ -296,7 +296,7 @@ header:hover ul li {
     z-index: 100;
 }
 
-.proyectos li {
+.lenguajes li {
     background-color: #fff;
     position: relative;
     height: 300px;
@@ -305,13 +305,14 @@ header:hover ul li {
     border-radius: 15px;
     margin: 20px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
-.proyectos li:hover {
+.lenguajes li:hover {
     transform: translateY(-15px);
 }
 
-.proyectos li div {
+.lenguajes li div {
     height: 100%;
     width: 100%;
     display: flex;
@@ -320,7 +321,7 @@ header:hover ul li {
     justify-items: center;
 }
 
-.proyectos div .line {
+.lenguajes div .line {
     position:absolute;
     bottom: 50px;
     width: 100px;
@@ -331,34 +332,34 @@ header:hover ul li {
     transition: all 0.3s;
 }
 
-.proyectos div .progress {
+.lenguajes div .progress {
     background-color: #000;
     height: 10px;
     border-radius: 5px 0px 0px 5px;
     transition: all 0.3s;
 }
 
-.proyectos div p {
+.lenguajes div p {
     position: absolute;
     bottom: 50px;
     opacity: 0;
     transition: all 0.3s;
 }
 
-.proyectos div:hover p {
+.lenguajes div:hover p {
     opacity: 1;
     bottom: 75px;
 }
 
-.proyectos .codeColors:hover .line {
+.lenguajes .codeColors:hover .line {
     width: 150px;
 }
 
-.proyectos div h1 {
+.lenguajes div h1 {
     font-size: 24px;
 }
 
-.proyectos .codeColors:hover svg {
+.lenguajes .codeColors:hover svg {
     background-color: #0f0f0f;
 }
 
