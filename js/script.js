@@ -34,7 +34,7 @@ function go(pagina, aviso, newWindow) {
         window.alert("Está a punto de ser redirigido a la siguiente página:\n"+pagina)
     }
     if (newWindow){
-        window.open(`${pagina}`, "GΛCΛRBLΛ", "width=500, height=500")
+        window.open(`${pagina}`, "GΛCΛRBLΛ", "width=1080, height=440")
     } else {
         window.location = `${pagina}`
     }
