@@ -149,7 +149,16 @@ header:hover ul li {
     stroke: #2965f1;
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        visibility: hidden;
+    }
 
+    .content {
+        width: 100vw;
+        left: 0px;
+    }
+}
 
 
 
@@ -178,18 +187,18 @@ header:hover ul li {
 }
 
 .inicio .titulo h1 {
-    position: relative;
+    position: absolute;
     top: 8vw;
     left: 3vw;
     right: 0px;
-    font-size: 15vw;
+    font-size: 220px;
     color: #f5f5f518;
 }
 
 .inicio .titulo p {
     position: relative;
-    font-size: 2.5vw;
-    top: 40px;
+    font-size: 38px;
+    top: 300px;
     left: 5vw;
     font-weight: bold;
 }
@@ -216,9 +225,6 @@ header:hover ul li {
         color: #269EE9;
     }
 }
-
-
-
 
 .wave {
     animation: onda 8s linear infinite;
@@ -261,6 +267,30 @@ header:hover ul li {
         transform: scaleY(.8) translateX(100%);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .inicio {
+        height: 100vh;
+    }
+
+    .inicio svg {
+        height: 550px;
+    }
+
+    .inicio .titulo h1 {
+        font-size: 16vw;
+        top: 225px;
+    }
+    .inicio .titulo p {
+        font-size: 5vw;
+        top: 300px;
+    }
+}
+
+
+
+
+
 
 /* Lenguajes */
 
@@ -362,6 +392,45 @@ header:hover ul li {
 .lenguajes .codeColors:hover svg {
     background-color: #0f0f0f;
 }
+
+@media only screen and (max-width: 600px) {
+    .lenguajes {
+        flex-direction: column;
+    }
+    .lenguajes ul {
+        flex-direction: column;
+    }
+    .lenguajes svg {
+        height: 50px;
+    }
+    .lenguajes div h1 {
+        position: absolute;
+        bottom: 65px;
+        font-size: 18px;
+    }
+    .lenguajes div p {
+        position: absolute;
+        bottom: 35px;
+        visibility: visible;
+        opacity: 0.7;
+    }
+    .lenguajes li {
+        height: 150px;
+    }
+    .lenguajes div .line {
+        bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 body #windows .ventanaEmergente {
     position: fixed;
