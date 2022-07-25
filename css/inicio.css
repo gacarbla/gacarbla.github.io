@@ -499,6 +499,9 @@ header:hover ul li {
 }
 
 @media only screen and (max-width: 600px) {
+    .lenguajes .codeColors:hover svg {
+        background-color: transparent;
+    }
     .lenguajes {
         flex-direction: column;
     }
@@ -524,6 +527,10 @@ header:hover ul li {
     }
     .lenguajes div .line {
         bottom: 20px;
+    }
+    .lenguajes div:hover p {
+        opacity: 1;
+        bottom: 35px;
     }
 }
 
