@@ -165,12 +165,13 @@ header:hover ul li {
 
 @media only screen and (max-width: 600px) {
     header {
-        visibility: hidden;
+        visibility: visible;
+        left: -100vw;
+        width: 100vw;
     }
 
     .visible {
-        visibility: visible;
-        width: 100vw;
+        left: 0px;
     }
 
     header nav {
