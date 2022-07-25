@@ -182,6 +182,12 @@ header:hover ul li {
         left: 0px;
     }
 
+    header  ul p {
+        font-size: 0px;
+        left: 50px;
+        visibility: hidden;
+    }
+
     .visible ul p {
         font-size: 15px;
         left: 50px;
