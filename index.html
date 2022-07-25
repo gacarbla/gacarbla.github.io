@@ -35,7 +35,7 @@
 </head>
 
 <body class="body" onload="load()">
-  <header>
+  <header id="menu">
     <nav>
       <ul class="nav">
         <li class="current">
@@ -133,11 +133,19 @@
     </nav>
   </header>
   <div class="content">
+    <div class="mobileMenu">
+      <input type="checkbox" id="mobileMenu">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
+     </svg>
+    </div>
     <div id="windows"></div>
     <section class="inicio">
       <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <path id='sineWave' fill="#303030" fill-opacity="0.2"
+          <path id='sineWave' fill="#f5f5f5" fill-opacity="0.2"
             d="M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V0 H0" />
         </defs>
         <use class="wave" href="#sineWave" />

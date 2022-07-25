@@ -56,6 +56,15 @@ function load(){
             }
         })
     })
+    var menuCheck = document.getElementById("mobileMenu")
+    var menu = document.getElementById("menu")
+    menuCheck.addEventListener("change", function(){
+        if(menuCheck.checked){
+            menu.className = "visible"
+        } else {
+            menu.className = ""
+        }
+    })
     document.oncontextmenu = function(){return false}
 }
 
