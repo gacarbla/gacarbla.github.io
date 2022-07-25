@@ -1,3 +1,17 @@
+:root {
+    --color-lenguaje-py: #306998;
+    --color-lenguaje-js: #f0db4f;
+    --color-lenguaje-md: #269EE9;
+    --color-lenguaje-html: #f06529;
+    --color-lenguaje-css: #2965f1;
+    --color-lenguaje-java: #000;
+    --color-lenguaje-c: #000;
+    --color-lenguaje-ts: #007acc;
+    --color-lenguaje-json: #f0db4f;
+    --color-lenguaje-react: #61DBFB;
+    --color-lenguaje-scss: #cd6799;
+}
+
 * {
     font-family: Arial;
 }
@@ -130,23 +144,23 @@ header:hover ul li {
 }
 
 .codeColors:hover #html {
-    stroke: #f06529;
+    stroke: var(--color-lenguaje-html);
 }
 
 .codeColors:hover #js {
-    stroke: #f0db4f;
+    stroke: var(--color-lenguaje-js);
 }
 
 .codeColors:hover #py {
-    stroke: #306998;
+    stroke: var(--color-lenguaje-py);
 }
 
 .codeColors:hover #md {
-    stroke: #269EE9;
+    stroke: var(--color-lenguaje-md);
 }
 
 .codeColors:hover #css {
-    stroke: #2965f1;
+    stroke: var(--color-lenguaje-css);
 }
 
 @media only screen and (max-width: 600px) {
@@ -159,9 +173,31 @@ header:hover ul li {
         width: 100vw;
     }
 
+    header nav {
+        margin-top: 100px;
+    }
+
     .content {
         width: 100vw;
         left: 0px;
+    }
+
+    .visible ul p {
+        font-size: 15px;
+        left: 50px;
+        visibility: visible;
+    }
+    
+    .visible ul {
+        width: 200px;
+    }
+    
+    .visible ul li {
+        width: 200px;
+    }
+
+    .visible:hover {
+        width: 100vw;
     }
 }
 
@@ -180,19 +216,19 @@ header:hover ul li {
     border-radius: 100%;
     box-shadow: 0px 0px 15px -10px #000;
     z-index: 800;
-    display: flex;
-    flex-direction: row;
 }
 
 .mobileMenu input {
     position: absolute;
     height: 100%;
     width: 100%;
+    z-index: 999;
 }
 
 .mobileMenu svg {
+    position: absolute;
+    margin: 7.5px;
     stroke: #000;
-    margin: auto auto auto auto;
     width: 30px;
     height: 30px;
     stroke-linecap: round;
@@ -206,7 +242,20 @@ header:hover ul li {
     }
 
     .mobileMenu input {
-        opacity: 0.1;
+        opacity: 0;
+    }
+
+    #menuAccess {
+        visibility: visible;
+    }
+    #menuClose {
+        visibility: hidden;
+    }
+    .visible #menuAccess {
+        visibility: hidden;
+    }
+    .visible #menuClose {
+        visibility: visible;
     }
 }
 

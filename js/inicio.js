@@ -57,6 +57,7 @@ function load(){
         })
     })
     var menuCheck = document.getElementById("mobileMenu")
+    menuCheck.checked = false
     var menu = document.getElementById("menu")
     menuCheck.addEventListener("change", function(){
         if(menuCheck.checked){

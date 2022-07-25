@@ -36,6 +36,18 @@
 
 <body class="body" onload="load()">
   <header id="menu">
+    <div class="mobileMenu">
+      <input type="checkbox" id="mobileMenu">
+      <svg id="menuAccess" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
+      </svg>
+      <svg id="menuClose" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6 6 18"></path>
+        <path d="m6 6 12 12"></path>
+      </svg>
+    </div>
     <nav>
       <ul class="nav">
         <li class="current">
@@ -84,7 +96,7 @@
           </div>
           <ul id='github' hidden>
             <li>
-              <div onclick="go(':github/gacarbla/gacarbla.github.io', false, true)">
+              <div class="codeColors" onclick="go(':github/gacarbla/gacarbla.github.io', false, true)">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="html">
                   <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
                   <path d="M15.5 8h-7l.5 4h6l-.5 3.5-2.5.75-2.5-.75-.1-.5"></path>
@@ -93,7 +105,7 @@
               </div>
             </li>
             <li>
-              <div onclick="go(':github/gacarbla/Dori', false, true)">
+              <div class="codeColors" onclick="go(':github/gacarbla/Dori', false, true)">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="js">
                   <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
                   <path d="M7.5 8h3v8l-2-1"></path>
@@ -104,7 +116,7 @@
               </div>
             </li>
             <li>
-              <div onclick="go(':github/gacarbla/computerAnalyzer', false, true)">
+              <div class="codeColors" onclick="go(':github/gacarbla/computerAnalyzer', false, true)">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="py">
                   <path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path>
                   <path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path>
@@ -118,7 +130,7 @@
               </div>
             </li>
             <li>
-              <div onclick="go(':github/gacarbla/discordjsv13guide', false, true)">
+              <div class="codeColors" onclick="go(':github/gacarbla/discordjsv13guide', false, true)">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="md">
                   <path d="M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"></path>
                   <path d="M7 15V9l2 2 2-2v6"></path>
@@ -133,14 +145,6 @@
     </nav>
   </header>
   <div class="content">
-    <div class="mobileMenu">
-      <input type="checkbox" id="mobileMenu">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 6h16"></path>
-        <path d="M4 12h16"></path>
-        <path d="M4 18h16"></path>
-     </svg>
-    </div>
     <div id="windows"></div>
     <section class="inicio">
       <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +177,9 @@
             </svg>
             <h1>JavaScript</h1>
             <p>Medio</p>
-            <div class="line"><div class="progress"  style="width: 70%;"></div></div>
+            <div class="line">
+              <div class="progress" style="width: 70%;"></div>
+            </div>
           </div>
         </li>
         <li>
@@ -184,7 +190,9 @@
             </svg>
             <h1>HTML5</h1>
             <p>Medio</p>
-            <div class="line"><div class="progress"  style="width: 60%;"></div></div>
+            <div class="line">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
           </div>
         </li>
         <li>
@@ -195,7 +203,9 @@
             </svg>
             <h1>CSS3</h1>
             <p>Básico</p>
-            <div class="line"><div class="progress"  style="width: 40%;"></div></div>
+            <div class="line">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
           </div>
         </li>
         <li>
@@ -207,7 +217,9 @@
             </svg>
             <h1>Markdown</h1>
             <p>Avanzado</p>
-            <div class="line"><div class="progress" style="width: 80%;"></div></div>
+            <div class="line">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
           </div>
         </li>
         <li>
@@ -223,7 +235,9 @@
             </svg>
             <h1>Python</h1>
             <p>Iniciado</p>
-            <div class="line"><div class="progress" style="width: 10%;"></div></div>
+            <div class="line">
+              <div class="progress" style="width: 10%;"></div>
+            </div>
           </div>
         </li>
       </ul>
