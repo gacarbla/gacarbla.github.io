@@ -1,9 +1,24 @@
+:root {
+    --color-lenguaje-py: #306998;
+    --color-lenguaje-js: #f0db4f;
+    --color-lenguaje-md: #269EE9;
+    --color-lenguaje-html: #f06529;
+    --color-lenguaje-css: #2965f1;
+    --color-lenguaje-java: #000;
+    --color-lenguaje-c: #000;
+    --color-lenguaje-ts: #007acc;
+    --color-lenguaje-json: #f0db4f;
+    --color-lenguaje-react: #61DBFB;
+    --color-lenguaje-scss: #cd6799;
+}
+
 * {
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    font-family: Arial;
 }
 
 *,
@@ -16,7 +31,8 @@
 
 body {
     margin: 0px;
-    cursor: default
+    cursor: default;
+    background-color: #ccc;
 }
 
 h1 {
@@ -32,4 +48,258 @@ button {
 
 input {
     cursor: text
+}
+
+
+
+
+
+/* HEADER */
+
+header {
+    background: #ddd;
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    width: 60px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: all 0.2s;
+    z-index: 500;
+    box-shadow: 0px 0px 20px -10px #000;
+}
+
+.content {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    right: 0px;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+header:hover {
+    width: 250px;
+    background: #ddd;
+}
+
+nav {
+    position:fixed;
+}
+
+.nav {
+    height: auto;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+    margin: 5px 5px 5px 5px;
+}
+
+.nav ul {
+    margin: 5px 0px 5px 5px;
+}
+
+.nav li {
+    width: 50px;
+    min-width: 40px;
+    height: auto;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px 0px 0px 0px;
+    transition: all 0.2s;
+}
+
+.nav svg {
+    stroke: #050505;
+    width: 40px !important;
+    height: 40px !important;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    transition: all 0.2s;
+}
+
+.nav ul svg {
+    stroke: #050505;
+    width: 30px !important;
+    height: 30px !important;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    background-color: #aaa;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+}
+
+.nav div {
+    display: flex;
+    min-height: 40px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto 0px auto;
+    cursor: pointer;
+}
+
+.nav p {
+    font-size: 0px;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+header:hover ul p {
+    font-size: 15px;
+    left: 50px;
+    visibility: visible;
+}
+
+header:hover ul {
+    width: 200px;
+}
+
+header:hover ul li {
+    width: 200px;
+}
+
+.nav div:hover svg {
+    stroke: #fff;
+    background-color: #050505;
+}
+
+.codeColors:hover #html {
+    stroke: var(--color-lenguaje-html);
+}
+
+.codeColors:hover #js {
+    stroke: var(--color-lenguaje-js);
+}
+
+.codeColors:hover #py {
+    stroke: var(--color-lenguaje-py);
+}
+
+.codeColors:hover #md {
+    stroke: var(--color-lenguaje-md);
+}
+
+.codeColors:hover #css {
+    stroke: var(--color-lenguaje-css);
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        visibility: visible;
+        left: -100vw;
+        width: 100vw;
+    }
+
+    .visible {
+        left: 0px;
+    }
+
+    header nav {
+        margin-top: 100px;
+    }
+
+    .content {
+        width: 100vw;
+        left: 0px;
+    }
+
+    header  ul p {
+        font-size: 0px;
+        left: 50px;
+        visibility: hidden;
+    }
+
+    .visible ul p {
+        font-size: 15px;
+        left: 50px;
+        visibility: visible;
+    }
+    
+    .visible ul {
+        width: 200px;
+    }
+    
+    .visible ul li {
+        width: 200px;
+    }
+
+    .visible:hover {
+        width: 100vw;
+    }
+}
+
+
+
+
+
+/* MOBILE MENU */
+
+.mobileMenu {
+    visibility: hidden;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #ddd;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px -10px #000;
+    z-index: 800;
+}
+
+.mobileMenu input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+}
+
+.mobileMenu svg {
+    position: absolute;
+    margin: 7.5px;
+    stroke: #000;
+    width: 30px;
+    height: 30px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobileMenu {
+        visibility: visible;
+    }
+
+    .mobileMenu input {
+        opacity: 0;
+    }
+
+    #menuAccess {
+        visibility: visible;
+    }
+    #menuClose {
+        visibility: hidden;
+    }
+    .visible #menuAccess {
+        visibility: hidden;
+    }
+    .visible #menuClose {
+        visibility: visible;
+    }
 }
