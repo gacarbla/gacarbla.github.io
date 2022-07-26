@@ -351,7 +351,8 @@ header:hover ul li {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    z-index: 550;
     bottom: 0px;
     display: flex;
     flex-direction: column;
@@ -407,12 +408,6 @@ footer svg {
 header:hover footer #autor svg {
     stroke: var(--footer-svg-linea)
 }
-
-
-
-
-
-
 
 footer #colorMenu {
     padding: 0px;
@@ -492,4 +487,109 @@ header:hover #colorMenu div {
     width: 50px;
     opacity: 1;
     z-index: 550;
+}
+
+
+@media only screen and (max-width: 600px) {
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer #autor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    footer #autor div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    footer #autor h1 {
+        font-size: 15px;
+        color: var(--footer-texto);
+    }
+    
+    footer #autor p {
+        font-size: 12px;
+        color: var(--footer-texto);
+    }
+    
+    footer svg {
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        background-color: transparent;
+        border-radius: 100%;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        transition: all 0.3s;
+        stroke: var(--footer-svg-linea)
+    }
+
+    footer #colorMenu {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        border: 3px solid var(--menucolor-borde);
+        border-radius: 25px;
+        width: 105px;
+        height: 50px;
+        margin: 5px;
+        transition: all 0.3s;
+        opacity: 1;
+    }
+    
+    footer #colorMenu div {
+        background-color: transparent;
+        height: 50px;
+        width: 50px;
+        width: 50px;
+        transition: all 0.3s;
+        margin: 5px 5px 5px 0px;
+    }
+    
+    footer #colorMenu div svg {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        border-radius: 100%;
+        stroke: var(--menucolor-svg-linea);
+        position: relative;
+        left: -12.5px;
+        top: -17.5px;
+    }
+    
+    .claro footer #colorMenu #sol {
+        stroke: var(--menucolor-svg-sol);
+        transition: all 0.3s;
+        background-color: var(--menucolor-fondo);
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        z-index: 550;
+    }
+    
+    .oscuro footer #colorMenu #luna {
+        stroke: var(--menucolor-svg-luna);
+        transition: all 0.3s;
+        background-color: var(--menucolor-fondo);
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        z-index: 550;
+    }
 }
