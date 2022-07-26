@@ -350,12 +350,16 @@ header:hover ul li {
 /* FOOTER */
 
 footer {
-    width: 100%;
+    width: 60px;
     position: fixed;
     z-index: 550;
     bottom: 0px;
     display: flex;
     flex-direction: column;
+}
+
+header:hover footer {
+    width: 250px;
 }
 
 footer #autor {
