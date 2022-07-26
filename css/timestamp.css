@@ -22,14 +22,6 @@ section {
     transition: all 0.3s;
 }
 
-#campoSection .campo input:focus {
-    border: 2px solid #006e6e;
-}
-
-#campoSection .campo input:focus+label {
-    color: #006e6e;
-}
-
 .campo {
     position: relative;
 }
@@ -107,13 +99,14 @@ section {
 #result {
     width: 100%;
     padding: 25px;
+    transition: all 0.3s;
 }
 
 #tabla ul {
-    display: grid;
-    grid-template-columns: repeat(2, 45vw);
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    width: 90vw;
+    width: 50vw;
     margin: 70px auto 0px auto;
     background-color: #ddd;
     border-radius: 10px;
@@ -121,11 +114,13 @@ section {
 }
 
 #tabla ul li {
-    width: 45vw;
+    width: 90%;
+    position: relative;
+    align-self: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: 40px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
 #tabla ul img {
@@ -134,6 +129,9 @@ section {
 }
 
 #tabla ul textarea {
+    position: relative;
+    left: 100px;
+    font-size: 15px;
     font-family: monospace;
     outline: none;
     border: none;
@@ -143,8 +141,10 @@ section {
     height: 20px;
 }
 
-#tabla button {
-    margin-top: 5px;
+#tabla ul li button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 20px;
     width: 100px;
     border: none;
@@ -152,6 +152,21 @@ section {
     color: #f5f5f5;
     border-radius: 3px;
     transition: all 0.3s;
+}
+
+#tabla ul li p {
+    position: relative;
+    left: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+#tabla ul li button p {
+    position: relative;
+    align-self: center;
+    right: auto;
+    left: auto;
+    width: 100%;
 }
 
 #tabla button:hover {
