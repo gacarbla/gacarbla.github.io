@@ -539,7 +539,7 @@ header:hover #colorMenu div {
     footer #colorMenu {
         position: fixed;
         top: 5px;
-        right: 5px;
+        left: -110px;
         padding: 0px;
         display: flex;
         flex-direction: row;
@@ -550,6 +550,11 @@ header:hover #colorMenu div {
         margin: 5px;
         transition: all 0.3s;
         opacity: 1;
+    }
+
+    .visible footer #colorMenu {
+        right: 5px;
+        left: auto;
     }
     
     footer #colorMenu div {
