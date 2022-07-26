@@ -303,3 +303,63 @@ header:hover ul li {
         visibility: visible;
     }
 }
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer div div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer div h1 {
+    font-size: 0px;
+    transition: all 0.3s;
+}
+
+footer div p {
+    font-size: 0px;
+    transition: all 0.3s;
+}
+
+header:hover footer div h1 {
+    font-size: 15px;
+}
+
+footer:hover div p {
+    font-size: 12px;
+}
+
+footer svg {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 100%;
+    fill: none;
+    stroke: #050505;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transition: all 0.3s;
+}
+
+header:hover footer div svg {
+    background-color: #222;
+    stroke: #eee
+}
