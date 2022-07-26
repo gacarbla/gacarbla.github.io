@@ -49,6 +49,8 @@ function load() {
             }
         })
     })
+
+
     var menuCheck = document.getElementById("mobileMenu")
     menuCheck.checked = false
     var menu = document.getElementById("menu")
@@ -59,6 +61,21 @@ function load() {
             menu.className = ""
         }
     })
+
+
+    var sol = document.getElementById("sol")
+    var luna = document.getElementById("luna")
+    sol.addEventListener("click", function(){
+        console.log("sol")
+        document.getElementById("sol_div").className = "active"
+        document.getElementById("luna_div").className = ""
+    })
+    luna.addEventListener("click", function(){
+        console.log("luna")
+        document.getElementById("sol_div").className = ""
+        document.getElementById("luna_div").className = "active"
+    })
+
     document.oncontextmenu = function () { return false }
 }
 
