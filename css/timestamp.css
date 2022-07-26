@@ -74,6 +74,7 @@ section {
     margin: 15px;
     font-weight: bold;
     color: #000;
+    animation: entrada .5s ease normal;
 }
 
 .windows .error p {
@@ -87,6 +88,15 @@ section {
 
 .windows #errormsg2 {
     background-color: #ff8486c7;
+}
+
+@keyframes entrada {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 
