@@ -1,7 +1,7 @@
 function onload() {
-    //document.getElementById("date").value = ""
+    document.getElementById("date").value = ""
     document.getElementById("errormsg").hidden = false
-    //document.getElementById("tabla").hidden = true
+    document.getElementById("tabla").hidden = true
     document.getElementById("errormsg2").hidden = true
     if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
         document.getElementById("dateLabel").innerHTML = "Fecha y hora"
@@ -50,6 +50,8 @@ function onload() {
             menu.className = ""
         }
     })
+    document.getElementById("sol").addEventListener("click", function(){ document.getElementById("body").className = "claro" })
+    document.getElementById("luna").addEventListener("click", function(){ document.getElementById("body").className = "oscuro" })
     document.oncontextmenu = function(){return false}
 }
 

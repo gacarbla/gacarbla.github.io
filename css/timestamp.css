@@ -106,6 +106,7 @@ section {
     right: 0px;
     bottom: 0px;
     width: 100%;
+    z-index: 500;
 }
 
 .windows .error {
@@ -130,6 +131,16 @@ section {
 
 .windows #errormsg2 {
     background-color: #ff8486c7;
+}
+
+.claro .windows #errormsg3 {
+    visibility: hidden;
+}
+
+.oscuro .windows #errormsg3 {
+    visibility: visible;
+    background-color: #222;
+    color: #fff;
 }
 
 @keyframes entrada {

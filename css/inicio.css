@@ -12,6 +12,38 @@
     --color-lenguaje-scss: #cd6799;
 }
 
+.claro {
+    --lenguajes-fondo: #ccc;
+    --lenguajes-card: #eee;
+    --lenguajes-texto: #000;
+    --lenguajes-svg-linea: #000;
+    --lenguajes-svg-fondo: #000;
+    --lenguajes-progreso-fondo: #ccc;
+    --lenguajes-progreso-completado: #000;
+
+    --ventana-fondo: #eee;
+    --ventana-texto: #000;
+    --ventana-svg: #000;
+    --ventana-boton-color1: #ccc;
+    --ventana-boton-color2: #000;
+}
+
+.oscuro{
+    --lenguajes-fondo: #444;
+    --lenguajes-card: #222;
+    --lenguajes-texto: #fff;
+    --lenguajes-svg-linea: #fff;
+    --lenguajes-svg-fondo: #666;
+    --lenguajes-progreso-fondo: #444;
+    --lenguajes-progreso-completado: #fff;
+
+    --ventana-fondo: #111;
+    --ventana-texto: #fff;
+    --ventana-svg: #fff;
+    --ventana-boton-color1: #444;
+    --ventana-boton-color2: #fff;
+}
+
 
 
 
@@ -148,9 +180,10 @@
 
 .lenguajes {
     padding: 50px 0px 50px 0px;
-    background-color: #ccc;
+    background-color: var(--lenguajes-fondo);
     display: flex;
     flex-direction: column;
+    transition: all 0.3s;
 }
 
 .lenguajes svg {
@@ -158,7 +191,7 @@
     height: 100px;
     fill: none;
     stroke-width: 1.5px;
-    stroke: #050505;
+    stroke: var(--lenguajes-svg-linea);
     stroke-linecap: round;
     stroke-linejoin: round;
     background-color: transparent;
@@ -179,7 +212,7 @@
 }
 
 .lenguajes li {
-    background-color: #fff;
+    background-color: var(--lenguajes-card);
     position: relative;
     height: 300px;
     max-height: 300px;
@@ -207,7 +240,7 @@
     position:absolute;
     bottom: 50px;
     width: 100px;
-    background-color: #ccc;
+    background-color: var(--lenguajes-progreso-fondo);
     height: 10px;
     border-radius: 5px;
     display: inline;
@@ -215,7 +248,7 @@
 }
 
 .lenguajes div .progress {
-    background-color: #000;
+    background-color: var(--lenguajes-progreso-completado);
     height: 10px;
     border-radius: 5px 0px 0px 5px;
     transition: all 0.3s;
@@ -226,6 +259,7 @@
     bottom: 50px;
     opacity: 0;
     transition: all 0.3s;
+    color: var(--lenguajes-texto);
 }
 
 .lenguajes div:hover p {
@@ -239,6 +273,7 @@
 
 .lenguajes div h1 {
     font-size: 24px;
+    color: var(--lenguajes-texto);
 }
 
 .lenguajes .codeColors:hover svg {
@@ -311,7 +346,7 @@ body #windows .ventana {
     left: calc(50vw - 250px);
     display: flex;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: var(--ventana-fondo);
     border-radius: 15px;
     align-items: center;
 }
@@ -321,7 +356,7 @@ body #windows .ventana svg {
     height: 100px;
     fill: none;
     stroke-width: 1.5px;
-    stroke: #050505;
+    stroke: var(--ventana-svg);
     stroke-linecap: round;
     stroke-linejoin: round;
     background-color: transparent;
@@ -339,19 +374,21 @@ body #windows .ventana button {
     width: 150px;
     border-radius: 5px;
     border: 0px;
-    background-color: #ccc;
+    background-color: var(--ventana-boton-color1);
+    color: var(--ventana-boton-color2);
     transition: all 0.3s;
     font-family: monospace;
 }
 
 body #windows .ventana button:hover {
-    background-color: #000;
-    color: #f5f5f5;
+    background-color: var(--ventana-boton-color2);
+    color: var(--ventana-boton-color1);
 }
 
 body #windows .ventana p {
     text-align: justify;
     width: 90%;
+    color: var(--ventana-texto)
 }
 
 @keyframes apareceVentana {
@@ -384,7 +421,7 @@ body #windows .ventana p {
         left: 5vw;
         display: flex;
         flex-direction: column;
-        background-color: #f5f5f5;
+        background-color: var(--ventana-fondo);
         border-radius: 15px;
         align-items: center;
     }
@@ -394,7 +431,7 @@ body #windows .ventana p {
         height: 100px;
         fill: none;
         stroke-width: 1.5px;
-        stroke: #050505;
+        stroke: var(--ventana-svg);
         stroke-linecap: round;
         stroke-linejoin: round;
         background-color: transparent;
@@ -412,19 +449,21 @@ body #windows .ventana p {
         width: 150px;
         border-radius: 5px;
         border: 0px;
-        background-color: #ccc;
+        background-color: var(--ventana-boton-color1);
+        color: var(--ventana-boton-color2);
         transition: all 0.3s;
         font-family: monospace;
     }
     
     body #windows .ventana button:hover {
-        background-color: #000;
-        color: #f5f5f5;
+        background-color: var(--ventana-boton-color2);
+        color: var(--ventana-boton-color1);
     }
     
     body #windows .ventana p {
         text-align: justify;
         width: 90%;
+        color: var(--ventana-texto)
     }
     
     @keyframes apareceVentana {

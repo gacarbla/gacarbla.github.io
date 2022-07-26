@@ -12,6 +12,42 @@
     --color-lenguaje-scss: #cd6799;
 }
 
+.claro {
+    --menu-fondo: #ddd;
+    --menu-botones-fondo: #f5f5f5;
+    --menu-botones-linea: #050505;
+    --menu-texto-color: #050505;
+    --menu-botones-secundario: #aaa;
+    --menu-botones-hover: #222;
+
+    --footer-svg-linea: #000;
+    --footer-texto: #000;
+
+    --menucolor-borde: #111;
+    --menucolor-fondo: #111;
+    --menucolor-svg-linea: #111;
+    --menucolor-svg-sol: #f5973d;
+    --menucolor-svg-luna: #3c688e;
+}
+
+.oscuro {
+    --menu-fondo: #222;
+    --menu-botones-fondo: #444;
+    --menu-botones-linea: #eee;
+    --menu-texto-color: #eee;
+    --menu-botones-secundario: #777;
+    --menu-botones-hover: #000;
+
+    --footer-svg-linea: #eee;
+    --footer-texto: #eee;
+    
+    --menucolor-borde: #ddd;
+    --menucolor-fondo: #ddd;
+    --menucolor-svg-linea: #ddd;
+    --menucolor-svg-sol: #f5973d;
+    --menucolor-svg-luna: #3c688e;
+}
+
 * {
     user-select: none;
     -webkit-user-select: none;
@@ -57,7 +93,7 @@ input {
 /* HEADER */
 
 header {
-    background: #ddd;
+    background: var(--menu-fondo);
     position: fixed;
     height: 100vh;
     top: 0px;
@@ -81,7 +117,7 @@ header {
 
 header:hover {
     width: 250px;
-    background: #ddd;
+    background: var(--menu-fondo);
 }
 
 nav {
@@ -115,14 +151,14 @@ nav {
 }
 
 .nav svg {
-    stroke: #050505;
+    stroke: var(--menu-botones-linea);
     width: 40px !important;
     height: 40px !important;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    background-color: #fff;
+    background-color: var(--menu-botones-fondo);
     border-radius: 100%;
     padding: 5px;
     margin: 5px 5px 5px 5px;
@@ -130,14 +166,14 @@ nav {
 }
 
 .nav ul svg {
-    stroke: #050505;
+    stroke: var(--menu-botones-linea);
     width: 30px !important;
     height: 30px !important;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    background-color: #aaa;
+    background-color: var(--menu-botones-secundario);
     border-radius: 100%;
     padding: 5px;
     margin: 5px 5px 5px 5px;
@@ -152,12 +188,14 @@ nav {
     height: 100%;
     margin: 0px auto 0px auto;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .nav p {
     font-size: 0px;
     visibility: hidden;
     transition: all 0.2s;
+    color: var(--menu-texto-color)
 }
 
 header:hover ul p {
@@ -174,9 +212,13 @@ header:hover ul li {
     width: 200px;
 }
 
+.nav div:hover {
+    transform: translateX(5px);
+}
+
 .nav div:hover svg {
-    stroke: #fff;
-    background-color: #050505;
+    stroke: var(--menu-botones-fondo);
+    background-color: var(--menu-botones-hover);
 }
 
 .codeColors:hover #html {
@@ -257,7 +299,7 @@ header:hover ul li {
     position: fixed;
     top: 10px;
     left: 10px;
-    background-color: #ddd;
+    background-color: var(--menu-fondo);
     border-radius: 100%;
     box-shadow: 0px 0px 15px -10px #000;
     z-index: 800;
@@ -273,7 +315,7 @@ header:hover ul li {
 .mobileMenu svg {
     position: absolute;
     margin: 7.5px;
-    stroke: #000;
+    stroke: var(--menu-botones-linea);
     width: 30px;
     height: 30px;
     stroke-linecap: round;
@@ -339,10 +381,12 @@ footer #autor p {
 
 header:hover footer #autor h1 {
     font-size: 15px;
+    color: var(--footer-texto);
 }
 
 footer #autor:hover p {
     font-size: 12px;
+    color: var(--footer-texto);
 }
 
 footer svg {
@@ -353,7 +397,7 @@ footer svg {
     background-color: transparent;
     border-radius: 100%;
     fill: none;
-    stroke: #050505;
+    stroke: var(--menu-botones-linea);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
@@ -361,8 +405,7 @@ footer svg {
 }
 
 header:hover footer #autor svg {
-    background-color: #222;
-    stroke: #eee
+    stroke: var(--footer-svg-linea)
 }
 
 
@@ -375,12 +418,13 @@ footer #colorMenu {
     padding: 0px;
     display: flex;
     flex-direction: row;
-    border: 3px solid #000;
+    border: 3px solid var(--menucolor-borde);
     border-radius: 25px;
     width: 50px;
     height: 50px;
     margin: 5px;
     transition: all 0.3s;
+    opacity: .5;
 }
 
 footer #colorMenu div {
@@ -393,7 +437,11 @@ footer #colorMenu div {
     margin: 5px 0px 5px 0px;
 }
 
-footer #colorMenu .active {
+.claro footer #colorMenu #sol {
+    visibility: visible;
+}
+
+.oscuro footer #colorMenu #luna {
     visibility: visible;
 }
 
@@ -403,7 +451,7 @@ footer #colorMenu div svg {
     width: 50px;
     background-color: transparent;
     border-radius: 100%;
-    stroke: #000;
+    stroke: var(--menucolor-svg-linea);
     position: relative;
     left: -12.5px;
     top: -17.5px;
@@ -412,6 +460,7 @@ footer #colorMenu div svg {
 
 header:hover #colorMenu {
     width: 105px;
+    opacity: 1;
 }
 
 header:hover #colorMenu div {
@@ -423,8 +472,10 @@ header:hover #colorMenu div {
     transition: all 0.3s;
 }
 
-footer #colorMenu .active svg {
-    background-color: #000;
+.claro footer #colorMenu #sol {
+    stroke: var(--menucolor-svg-sol);
+    transition: all 0.3s;
+    background-color: var(--menucolor-fondo);
     border-radius: 100%;
     height: 50px;
     width: 50px;
@@ -432,12 +483,13 @@ footer #colorMenu .active svg {
     z-index: 550;
 }
 
-footer #colorMenu .active #sol {
-    stroke: #f5973d;
+.oscuro footer #colorMenu #luna {
+    stroke: var(--menucolor-svg-luna);
     transition: all 0.3s;
-}
-
-footer #colorMenu .active #luna {
-    stroke: #3c688e;
-    transition: all 0.3s;
+    background-color: var(--menucolor-fondo);
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    opacity: 1;
+    z-index: 550;
 }
