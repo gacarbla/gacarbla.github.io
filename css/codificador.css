@@ -1,0 +1,181 @@
+:root {}
+
+.claro {}
+
+.oscuro {}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.ajustes {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #666;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    transition: all 0.3s;
+}
+
+.ajustes #gear {
+    height: 40px;
+    width: 40px;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 40px;
+    transition: all .5s;
+}
+
+.ajustes:hover svg {
+    transform: rotateZ(90deg);
+}
+
+.ajustes .modo {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ajustes .clave {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ajustes .modo label {
+    color: #fff;
+    margin: 5px;
+}
+
+.ajustes .modo .switch {
+    border-radius: 15px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50px;
+    position: relative;
+}
+
+.ajustes .modo .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ajustes .modo .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ajustes .modo .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #444;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ajustes .modo input:checked + .slider {
+  background-color: #ccc;
+}
+
+.ajustes .modo input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.ajustes .modo .slider.round {
+  border-radius: 34px;
+}
+
+.ajustes .modo .slider.round:before {
+  border-radius: 50%;
+}
+
+.ajustes .clave svg {
+    position: absolute;
+    left: -40px;
+    height: 40px;
+    stroke: #e65f62;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.clave input {
+    border-radius: 5px;
+    height: 30px;
+    width: 300px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    padding: 2px;
+    transition: all 0.3s;
+}
+
+.clave input:focus {
+    border: 2px solid #fff;
+}
+
+.clave .filled {
+    top: -10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.clave label {
+    z-index: 0;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    transition: all 0.3s;
+    color: #fff5;
+    cursor:text;
+}
+
+.clave input:focus+label {
+    top: -10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.clave label::before {
+    content: '';
+    height: 5px;
+    background: #666;
+    position: absolute;
+    left: -10%;
+    top: 10px;
+    width: 120%;
+    z-index: -1;
+}

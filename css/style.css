@@ -28,6 +28,8 @@
     --menucolor-svg-linea: #111;
     --menucolor-svg-sol: #f5973d;
     --menucolor-svg-luna: #3c688e;
+    
+    --default-background: #ccc;
 }
 
 .oscuro {
@@ -46,6 +48,8 @@
     --menucolor-svg-linea: #ddd;
     --menucolor-svg-sol: #f5973d;
     --menucolor-svg-luna: #3c688e;
+
+    --default-background: #333;
 }
 
 * {
@@ -68,7 +72,7 @@
 body {
     margin: 0px;
     cursor: default;
-    background-color: #ccc;
+    background-color: var(--default-background);
 }
 
 h1 {
@@ -538,7 +542,7 @@ header:hover #colorMenu div {
         stroke-linejoin: round;
         stroke-width: 2px;
         transition: all 0.3s;
-        stroke: var(--footer-svg-linea)
+        stroke: var(--footer-svg-linea);
     }
 
     footer #colorMenu {
