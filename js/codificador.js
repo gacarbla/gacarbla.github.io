@@ -29,9 +29,15 @@ function load() {
         }
 
     })
-    document.getElementById("slider").addEventListener("mousemove", function () { document.getElementById("sliderNumber").value = document.getElementById("slider").value })
-    document.getElementById("sliderNumber").addEventListener("change", function () { document.getElementById("slider").value = document.getElementById("sliderNumber").value })
-    document.getElementById("transformar").addEventListener("click", function () { codificar() })
+
+    document.getElementById("textoEntrada").addEventListener("input", function () { codificar() })
+    document.getElementById("textoEntrada").addEventListener("click", function () { codificar() })
+    document.getElementById("check").addEventListener("change", function () { codificar() })
+    document.getElementById("base").addEventListener("change", function () { codificar() })
+    document.getElementById("salida").addEventListener("change", function () { codificar() })
+    document.getElementById("correr").addEventListener("change", function () { codificar() })
+    document.getElementById("clave").addEventListener("input", function () { codificar() })
+
     document.oncontextmenu = function () { return false }
 }
 
@@ -53,45 +59,53 @@ function hex2a(hexx) {
     return str;
 }
 
+function limpiar() {
+    const resultado = document.getElementById("textoSalida")
+    resultado.value = ""
+}
+
 function codificar() {
 
-    const texto = document.getElementById("textoEntrada").value
-    if (!texto) return window.alert("No se puede proceder sin especificar un texto")
-
     const clave = document.getElementById("clave").value
-    if (!clave) return window.alert("No se puede proceder sin especificar una clave")
-    if (clave.length < 8) return window.alert("Es necesario una clave de 8 o más caracteres")
+    if(!clave || clave=="" || clave==undefined || clave==null) {
+        document.getElementById("textoEntrada").disabled = true
+    } else {
+        document.getElementById("textoEntrada").disabled = false
+    }
+
+    const texto = document.getElementById("textoEntrada").value
+    if (!texto) return limpiar()
+
+    if (!clave) return limpiar()
 
     const deco = document.getElementById("check").checked
-    const capas = document.getElementById("sliderNumber").value
-    const correr = document.getElementById("correr").value
+    var correr = document.getElementById("correr").value
     const base = document.getElementById("base").value
     const salida = document.getElementById("salida").value
 
-    if(base==3 && salida!==3) return window.alert("La conbinación de Base-Salida que has escogino no es compatible con el algoritmo")
+    if (correr>1024) correr = 1024
+    if (correr<1024) correr = 0
 
-    
     var textoProceso = ''
     if (deco) {
-        if(caoas>1) return window.alert("Por el momento la función de descodificación mensajes con capas no está disponible")
         var arrayAscii = []
-        if(salida==1){
+        if (salida == 1) {
             arrayAscii = texto.split(/ +/g)
-        } else if (salida==2){
+        } else if (salida == 2) {
             var x = 0
-            for(x=0;x<texto.length;x++){
+            for (x = 0; x < texto.length; x++) {
                 arrayAscii[x] = texto.charCodeAt(x)
             }
         }
-        if(base==1){
+        if (base == 1) {
             var x = 0
             var n = 0
-            for (x=0;x<arrayAscii.length;x++){
+            for (x = 0; x < arrayAscii.length; x++) {
                 if (n >= clave.length) n = 0
-                arrayAscii[x] = Math.floor((arrayAscii[x]/(clave.length-n))-clave.charCodeAt(n)-parseInt(correr))
+                arrayAscii[x] = Math.floor((arrayAscii[x] / (clave.length - n)) - clave.charCodeAt(n) - parseInt(correr))
                 n++;
             }
-            arrayAscii.forEach(number=>{
+            arrayAscii.forEach(number => {
                 textoProceso = `${textoProceso}${String.fromCharCode(number)}`
             })
         }
@@ -99,30 +113,21 @@ function codificar() {
         var newText = [];
         if (base == 1) {
             var x = 0;
-            var y = 0;
             var n = 0;
             var textoProceso = texto
-            for(y=0;y<capas;y++){
-                var newText = [];
-                for (x = 0; x < textoProceso.length; x++) {
-                    if (n >= clave.length) n = 0
-                    newText.push(Math.floor(textoProceso.charCodeAt(x) + clave.charCodeAt(n) + parseInt(correr)) * (clave.length - n))
-                    n++;
-                }
-                if(Math.floor(capas-y)>1){
-                    var textoProcesoDos = ""
-                    newText.forEach(number => {
-                        textoProcesoDos = textoProcesoDos+String.fromCharCode(number)
-                    })
-                }
+            var newText = [];
+            for (x = 0; x < textoProceso.length; x++) {
+                if (n >= clave.length) n = 0
+                newText.push(Math.floor(textoProceso.charCodeAt(x) + clave.charCodeAt(n) + parseInt(correr)) * (clave.length - n))
+                n++;
             }
         }
-        if ( salida == 1 ) {
+        if (salida == 1) {
             textoProceso = newText.join(" ")
-        } else if ( salida == 2 ) {
+        } else if (salida == 2) {
             var textoProcesoDos = ""
-            newText.forEach( number => {
-                textoProcesoDos = `${ textoProcesoDos }${ String.fromCharCode( number ) }`
+            newText.forEach(number => {
+                textoProcesoDos = `${textoProcesoDos}${String.fromCharCode(number)}`
             })
             textoProceso = textoProcesoDos
         }

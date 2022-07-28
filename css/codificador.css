@@ -219,7 +219,7 @@
 }
 
 .ajustesAvanzados {
-    height: 300px;
+    height: 200px;
     width: 675px;
     background-color: #444;
     border-radius: 10px;
@@ -234,6 +234,7 @@
 }
 
 .ajustesAvanzados.Off .contenido {
+    margin-top: 10px;
     opacity: 0;
     visibility: hidden;
 }
@@ -340,6 +341,11 @@
     -khtml-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
+    margin: 10px 0px;
+}
+
+.textInput::placeholder {
+    opacity: 0;
 }
 
 .texto svg {
@@ -351,27 +357,6 @@
     fill: none;
 }
 
-.texto #transformar {
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-}
-
-.texto #transformar p {
-    margin: 5px;
-}
-
-.texto #transformar svg {
-    height: 15px;
-}
-
 .texto #copy {
     border: 0px;
     background-color: #444;
@@ -379,8 +364,8 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    bottom: 2.5px;
-    right: 2.5px;
+    bottom: 12.5px;
+    right: -17.5px;
 }
 
 .texto #copy svg {
@@ -401,4 +386,26 @@ span.peligro {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.texto div {
+    position: relative;
+    margin: 10px;
+}
+
+.texto label {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    color: #fff
+}
+
+.textInput:disabled {
+    background-color: #fff1;
+    border: 1px solid #fff;
+}
+
+.textInput:disabled::placeholder {
+    color: #fff;
+    opacity: 1;
 }

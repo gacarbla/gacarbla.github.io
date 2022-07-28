@@ -238,19 +238,12 @@
         </div>
         <div id="avanzados" class="ajustesAvanzados Off">
             <div class="contenido">
-                <div class="fila columna capas">
-                    <label>
-                        Capas
-                    </label>
-                    <input id="slider" class="slider peligro" type="range" min="1" max="15">
-                    <input id="sliderNumber" class="sliderNumber" type="number" min="1" max="15">
-                </div>
                 <div class="fila">
                     <div class="columna">
                         <label>
                             Correr letras
                         </label>
-                        <input type="number" id="correr">
+                        <input type="number" id="correr" min="0" max="1024">
                     </div>
                     <div class="columna">
                         <label>
@@ -291,24 +284,24 @@
             </div>
         </div>
         <div class="texto">
-            <textarea class="textInput" id="textoEntrada" maxlength="2048"></textarea>
-            <button id="transformar">
-                <p>
-                    Transformar
-                </p>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z"></path>
-                    <path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                 </svg>
-            </button>
-            <textarea class="textInput" id="textoSalida" readonly></textarea>
-            <button id="copy">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 8h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Z"></path>
-                    <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                 </svg>
-            </button>
+            <div>
+                <textarea class="textInput" id="textoEntrada" maxlength="2048" disabled placeholder="1. Ingresa una clave
+2. Escribe un texto
+3. ¡Observa el resultado!">
+                </textarea>
+                <label for="textoEntrada">Texto:</label>
+            </div>
+            <div>
+                <textarea class="textInput" id="textoSalida" readonly></textarea>
+                <label for="textoSalida">Resultado:</label>
+                <button id="copy">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 8h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Z"></path>
+                        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                    </svg>
+                </button>
+            </div>
+
         </div>
     </div>
 </body>
