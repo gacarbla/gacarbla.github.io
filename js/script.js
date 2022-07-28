@@ -11,7 +11,7 @@ function go(pagina, aviso, newWindow) {
                 case 'timestamp':
                     pagina = "https://gacarbla.github.io/tools/timestamp";
                     break;
-                case 'dcodificador':
+                case 'codificador':
                     pagina = "https://gacarbla.github.io/tools/codificador";
                     break;
                 default:
