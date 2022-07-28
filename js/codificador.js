@@ -37,8 +37,15 @@ function load() {
     document.getElementById("salida").addEventListener("change", function () { codificar() })
     document.getElementById("correr").addEventListener("change", function () { codificar() })
     document.getElementById("clave").addEventListener("input", function () { codificar() })
+    document.getElementById("copy").addEventListener("click", function() {copy()})
 
     document.oncontextmenu = function () { return false }
+}
+
+function copy() {
+    var content = document.getElementById("textoSalida")
+    content.select();
+    document.execCommand("copy");
 }
 
 function campoBlur(campo) {
