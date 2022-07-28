@@ -259,6 +259,7 @@
         cursor: pointer;
         margin-right: 5px;
         transition: all .5s;
+        z-index: 450;
     }
     
     .ajustes:hover #gear {
@@ -364,6 +365,7 @@
         height: 40px;
         opacity: 0;
         transition: all 0.3s;
+        z-index: 440;
     }
     
     .ajustes .clave .claveMode {
@@ -513,19 +515,6 @@
     -ms-user-select: text;
 }
 
-.ajustesAvanzados input.slider {
-    width: 85%;
-}
-
-.ajustesAvanzados .capas {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ajustesAvanzados input.sliderNumber {
-    width: 10%;
-}
-
 .ajustesAvanzados .contenido label {
     color: #fff;
     position: absolute;
@@ -569,6 +558,106 @@
     position: relative;
     align-items: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .ajustesAvanzados {
+        height: 300px;
+        width: 80vw;
+        background-color: #444;
+        border-radius: 10px;
+        position: fixed;
+        top:auto;
+        bottom: 100px;
+        z-index: 300;
+        transition: all 0.1s;
+    }
+    
+    .ajustesAvanzados.Off {
+        height: 10px;
+    }
+    
+    .ajustesAvanzados.Off .contenido {
+        margin-top: 10px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .ajustesAvanzados .contenido {
+        padding: 10px;
+        height: 100%;
+        transition: all 0.1s;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    
+    .ajustesAvanzados input, select {
+        background-color: #fff;
+        border-radius: 3px;
+        border: 0px;
+        outline: none;
+        width: 100%;
+        user-select:text;
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+    }
+    
+    .ajustesAvanzados .contenido label {
+        color: #fff;
+        position: absolute;
+        left: 25px;
+        top: -10px;
+        z-index: 0;
+    }
+    
+    .ajustesAvanzados .contenido label::before {
+        content: '';
+        position: absolute;
+        background-color: #444;
+        height: 3px;
+        left: -10px;
+        top: 9px;
+        width: calc(100% + 20px);
+        z-index: -1;
+    }
+    
+    .ajustesAvanzados .contenido span.beta {
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .ajustesAvanzados .contenido .columna {
+        padding: 15px;
+        border: 1px solid #fff5;
+        margin: 5px;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .ajustesAvanzados .fila {
+        display: flex;
+        flex-direction: column;
+        min-height: 55px;
+    }
+    
+    .ajustesAvanzados .fila .columna {
+        width: 100%;
+        position: relative;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .texto {
     position: relative;
@@ -659,4 +748,98 @@ span.peligro {
 .textInput:disabled::placeholder {
     color: #fff;
     opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .texto {
+        position: relative;
+        top: 50px;
+        width: 100vw;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .texto .textInput {
+        border-radius: 5px;
+        width: 95vw;
+        height: 250px;
+        resize: none;
+        border: 0px;
+        outline: none;
+        padding: 10px;
+        user-select:text;
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        margin: 10px 0px;
+    }
+    
+    .textInput::placeholder {
+        opacity: 0;
+    }
+    
+    .texto svg {
+        stroke: #fff;
+        margin: 5px;
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+    }
+    
+    .texto #copy {
+        border: 0px;
+        background-color: #444;
+        border-radius: 5px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 5px;
+    }
+    
+    .texto #copy svg {
+        height: 35px;
+        width: 35px;
+        stroke: #fff;
+        transition: all 0.3s;
+    }
+    
+    .texto #copy:hover svg {
+        height: 40px;
+        width: 40px;
+        transform: rotateZ(-15deg);
+    }
+    
+    span.peligro {
+        color: #f00;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .texto div {
+        position: relative;
+        margin: 10px;
+    }
+    
+    .texto label {
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        color: #fff
+    }
+    
+    .textInput:disabled {
+        background-color: #fff1;
+        border: 1px solid #fff;
+    }
+    
+    .textInput:disabled::placeholder {
+        color: #fff;
+        opacity: 1;
+    }
 }
