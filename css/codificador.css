@@ -1,8 +1,8 @@
-:root {}
+/*:root {}
 
 .claro {}
 
-.oscuro {}
+.oscuro {}*/
 
 .content {
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 .ajustes {
-    width: fit-content;
+    width: 700px;
     padding: 10px;
     border-radius: 10px;
     background-color: #666;
@@ -22,6 +22,7 @@
     height: 50px;
     position: fixed;
     transition: all 0.3s;
+    z-index: 400;
 }
 
 .ajustes #gear {
@@ -33,10 +34,11 @@
     stroke-linejoin: round;
     fill: none;
     margin-right: 40px;
+    cursor: pointer;
     transition: all .5s;
 }
 
-.ajustes:hover svg {
+.ajustes:hover #gear {
     transform: rotateZ(90deg);
 }
 
@@ -119,16 +121,47 @@
 }
 
 .ajustes .clave svg {
-    position: absolute;
-    left: -40px;
-    height: 40px;
-    stroke: #e65f62;
+    stroke: #fff;
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
+}
+
+.ajustes .clave #errorClave {
+    stroke: #e65f62;
+    position: absolute;
+    left: -40px;
+    height: 40px;
     opacity: 0;
     transition: all 0.3s;
+}
+
+.ajustes .clave .claveMode {
+    position: absolute;
+    right: 10px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #666;
+    border-radius: 100%;
+}
+
+.ajustes .clave .claveMode:hover {
+    position: absolute;
+    right: 10px;
+    stroke: #ccc;
+    height: 25px;
+    cursor: pointer;
+}
+
+.ajustes .clave .claveMode.Off {
+    position: absolute;
+    right: -10px;
+    height: 0px;
+    cursor: default;
+    z-index: -1;
+    opacity: 0;
 }
 
 .clave input {
@@ -141,6 +174,11 @@
     color: #fff;
     padding: 2px;
     transition: all 0.3s;
+    user-select:text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 .clave input:focus {
@@ -178,4 +216,189 @@
     top: 10px;
     width: 120%;
     z-index: -1;
+}
+
+.ajustesAvanzados {
+    height: 300px;
+    width: 675px;
+    background-color: #444;
+    border-radius: 10px;
+    position: fixed;
+    top: 50px;
+    z-index: 300;
+    transition: all 0.1s;
+}
+
+.ajustesAvanzados.Off {
+    height: 10px;
+}
+
+.ajustesAvanzados.Off .contenido {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ajustesAvanzados .contenido {
+    padding: 10px;
+    height: 100%;
+    transition: all 0.1s;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.ajustesAvanzados input, select {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 0px;
+    outline: none;
+    width: 100%;
+    user-select:text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.ajustesAvanzados input.slider {
+    width: 85%;
+}
+
+.ajustesAvanzados .capas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ajustesAvanzados input.sliderNumber {
+    width: 10%;
+}
+
+.ajustesAvanzados .contenido label {
+    color: #fff;
+    position: absolute;
+    left: 25px;
+    top: -10px;
+    z-index: 0;
+}
+
+.ajustesAvanzados .contenido label::before {
+    content: '';
+    position: absolute;
+    background-color: #444;
+    height: 3px;
+    left: -10px;
+    top: 9px;
+    width: calc(100% + 20px);
+    z-index: -1;
+}
+
+.ajustesAvanzados .contenido span.beta {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ajustesAvanzados .contenido .columna {
+    padding: 15px;
+    border: 1px solid #fff5;
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.ajustesAvanzados .fila {
+    display: flex;
+    flex-direction: row;
+    min-height: 55px;
+}
+
+.ajustesAvanzados .fila .columna {
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.texto {
+    position: relative;
+    top: 100px;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto .textInput {
+    border-radius: 5px;
+    width: 600px;
+    height: 150px;
+    resize: none;
+    border: 0px;
+    outline: none;
+    padding: 10px;
+    user-select:text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.texto svg {
+    stroke: #fff;
+    margin: 5px;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.texto #transformar {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.texto #transformar p {
+    margin: 5px;
+}
+
+.texto #transformar svg {
+    height: 15px;
+}
+
+.texto #copy {
+    border: 0px;
+    background-color: #444;
+    border-radius: 5px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 2.5px;
+    right: 2.5px;
+}
+
+.texto #copy svg {
+    height: 35px;
+    width: 35px;
+    stroke: #fff;
+    transition: all 0.3s;
+}
+
+.texto #copy:hover svg {
+    height: 40px;
+    width: 40px;
+    transform: rotateZ(-15deg);
+}
+
+span.peligro {
+    color: #f00;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }

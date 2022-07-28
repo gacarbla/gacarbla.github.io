@@ -199,25 +199,116 @@
     <div class="content">
         <div class="ajustes">
             <svg id="gear" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.723 1.723 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065Z"> </path>
+                <path
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.723 1.723 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065Z">
+                </path>
                 <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
             </svg>
             <div class="modo">
                 <label for="codificar">Codificar</label>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="check">
                     <span class="slider round"></span>
-                  </label>
+                </label>
                 <label for="descodificar">Descodificar</label>
             </div>
             <div class="clave">
-                <input id="clave" type="password" maxlength="16" onblur="campoBlur('clave')">
+                <input id="clave" type="password" maxlength="24" onblur="campoBlur('clave')">
                 <label id="claveLabel" for="clave">Clave</label>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg id="claveOculta" class="claveMode" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m3 3 18 18"></path>
+                    <path d="M10.585 10.586a2 2 0 0 0 2.827 2.83"></path>
+                    <path
+                        d="M17.357 17.35C15.726 18.45 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.34">
+                    </path>
+                    <path
+                        d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488">
+                    </path>
+                </svg>
+                <svg id="claveVisible" class="claveMode Off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                    <path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7Z">
+                    </path>
+                </svg>
+                <svg id="errorClave" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
                     <path d="m14 10-4 4m0-4 4 4-4-4Z"></path>
-                 </svg>
+                </svg>
             </div>
+        </div>
+        <div id="avanzados" class="ajustesAvanzados Off">
+            <div class="contenido">
+                <div class="fila columna capas">
+                    <label>
+                        Capas
+                    </label>
+                    <input id="slider" class="slider peligro" type="range" min="1" max="15">
+                    <input id="sliderNumber" class="sliderNumber" type="number" min="1" max="15">
+                </div>
+                <div class="fila">
+                    <div class="columna">
+                        <label>
+                            Correr letras
+                        </label>
+                        <input type="number" id="correr">
+                    </div>
+                    <div class="columna">
+                        <label>
+                            Base
+                        </label>
+                        <select id="base">
+                            <option value="1" selected>ASCII</option>
+                        </select>
+                    </div>
+                    <div class="columna">
+                        <label>
+                            Salida
+                        </label>
+                        <select id="salida">
+                            <option value="1">ASCII</option>
+                            <option value="2" selected>Texto plano</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fila columna">
+                    <label><span class="beta">En desarrollo:</span> Restricciones</label>
+                    <input type="text" list="so" disabled>
+                    <datalist id="so">
+                        <option value="1">Windows</option>
+                        <option value="2">Android</option>
+                        <option value="3">iOS</option>
+                        <option value="4">MacOs X</option>
+                        <option value="5">UNIX</option>
+                        <option value="6">Linux</option>
+                        <option value="7">webOS</option>
+                        <option value="8">iPhone</option>
+                        <option value="9">iPad</option>
+                        <option value="10">iPod</option>
+                        <option value="11">BlackBerry</option>
+                        <option value="12">Windows Phone</option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+        <div class="texto">
+            <textarea class="textInput" id="textoEntrada" maxlength="2048"></textarea>
+            <button id="transformar">
+                <p>
+                    Transformar
+                </p>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z"></path>
+                    <path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                 </svg>
+            </button>
+            <textarea class="textInput" id="textoSalida" readonly></textarea>
+            <button id="copy">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 8h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Z"></path>
+                    <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                 </svg>
+            </button>
         </div>
     </div>
 </body>
