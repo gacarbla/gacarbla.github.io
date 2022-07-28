@@ -204,36 +204,38 @@
                 </path>
                 <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
             </svg>
-            <div class="modo">
-                <label for="codificar">Codificar</label>
-                <label class="switch">
-                    <input type="checkbox" id="check">
-                    <span class="slider round"></span>
-                </label>
-                <label for="descodificar">Descodificar</label>
-            </div>
-            <div class="clave">
-                <input id="clave" type="password" maxlength="24" onblur="campoBlur('clave')">
-                <label id="claveLabel" for="clave">Clave</label>
-                <svg id="claveOculta" class="claveMode" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m3 3 18 18"></path>
-                    <path d="M10.585 10.586a2 2 0 0 0 2.827 2.83"></path>
-                    <path
-                        d="M17.357 17.35C15.726 18.45 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.34">
-                    </path>
-                    <path
-                        d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488">
-                    </path>
-                </svg>
-                <svg id="claveVisible" class="claveMode Off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-                    <path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7Z">
-                    </path>
-                </svg>
-                <svg id="errorClave" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
-                    <path d="m14 10-4 4m0-4 4 4-4-4Z"></path>
-                </svg>
+            <div class="conjuntoMobil">
+                <div class="modo">
+                    <label for="codificar">Codificar</label>
+                    <label class="switch">
+                        <input type="checkbox" id="check">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="descodificar">Descodificar</label>
+                </div>
+                <div class="clave">
+                    <input id="clave" type="password" maxlength="24" onblur="campoBlur('clave')">
+                    <label id="claveLabel" for="clave">Clave</label>
+                    <svg id="claveOculta" class="claveMode" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m3 3 18 18"></path>
+                        <path d="M10.585 10.586a2 2 0 0 0 2.827 2.83"></path>
+                        <path
+                            d="M17.357 17.35C15.726 18.45 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.34">
+                        </path>
+                        <path
+                            d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488">
+                        </path>
+                    </svg>
+                    <svg id="claveVisible" class="claveMode Off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                        <path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7Z">
+                        </path>
+                    </svg>
+                    <svg id="errorClave" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+                        <path d="m14 10-4 4m0-4 4 4-4-4Z"></path>
+                    </svg>
+                </div>
             </div>
         </div>
         <div id="avanzados" class="ajustesAvanzados Off">
