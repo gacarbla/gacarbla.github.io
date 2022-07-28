@@ -14,6 +14,9 @@ function go(pagina, aviso, newWindow) {
         case 'codificador':
           pagina = "https://gacarbla.github.io/tools/codificador";
           break;
+        case 'pacman':
+          pagina = "https://gacarbla.github.io/pacman";
+          break;
         default:
           pagina = "https://gacarbla.github.io/404";
           break;
