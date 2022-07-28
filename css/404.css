@@ -1,0 +1,63 @@
+body {
+    color: #fff;
+}
+
+h1, h3, p {
+    align-self: center;
+    text-align: center;
+}
+
+h1 {
+
+}
+
+p {
+    margin: 15px;
+}
+
+.botones {
+    align-self: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: calc(50vw - 290px);
+}
+
+button {
+    margin: 5px;
+    height: 60px;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+button#no {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: 0px;
+    outline: none;
+    border-radius: 5px;
+}
+
+button#si {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: 0px;
+    outline: none;
+    border-radius: 5px;
+}
+
+button#no:hover {
+    box-shadow: 0px 0px 20px -5px #000;
+}
+
+button#si:hover {
+    box-shadow: 0px 0px 20px -5px #fff;
+}
+
+@media only screen and (max-width: 1000px) {
+    .botones {
+        visibility: hidden;
+    }
+}
