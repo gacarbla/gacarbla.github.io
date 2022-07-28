@@ -847,7 +847,7 @@ var PACMAN = (function () {
             setState(PAUSE);
             audio.pause();
             map.draw(ctx);
-            dialog("Paused");
+            dialog("Pausado");
         } else if (state !== PAUSE) {   
             return user.keyDown(e);
         }
@@ -968,7 +968,7 @@ var PACMAN = (function () {
         } else if (state === WAITING && stateChanged) {            
             stateChanged = false;
             map.draw(ctx);
-            dialog("Press N to start a New game");            
+            dialog("Pulsa N para iniciar el juego");            
         } else if (state === EATEN_PAUSE && 
                    (tick - timerStart) > (Pacman.FPS / 3)) {
             map.draw(ctx);
@@ -995,7 +995,7 @@ var PACMAN = (function () {
                 if (diff !== lastTime) { 
                     lastTime = diff;
                     map.draw(ctx);
-                    dialog("Starting in: " + diff);
+                    dialog("Empezando en: " + diff);
                 }
             }
         } 
@@ -1053,7 +1053,7 @@ var PACMAN = (function () {
         }
         
         map.draw(ctx);
-        dialog("Loading ...");
+        dialog("Cargando ...");
 
         var extension = Modernizr.audio.ogg ? 'ogg' : 'mp3';
 
@@ -1081,7 +1081,7 @@ var PACMAN = (function () {
         
     function loaded() {
 
-        dialog("Press N to Start");
+        dialog("Presiona N para empezar");
         
         document.addEventListener("keydown", keyDown, true);
         document.addEventListener("keypress", keyPress, true); 

@@ -19,7 +19,7 @@
   <!--  Título  -->
   <title>GΛCΛRBLΛ | PACMAN</title>
   <link rel="icon" href="media/favicon.PNG">
-  
+
   <!--  Scripts y estilos  -->
   <script src="../js/script.js"></script>
   <link rel="stylesheet" href="../css/pacman.css">
@@ -53,9 +53,21 @@
       width: 342px;
       margin: 0px auto;
       font-family: sans-serif;
+      width: 100%;
+      height: 100%;
+      max-width: 100vw;
+      max-height: 100vh;
+      background-color: #222;
+      color: #fff;
     }
 
-    a {
+    body p {
+      text-align: center;
+      justify-self: center;
+    }
+
+    body a {
+      color: cornflowerblue;
       text-decoration: none;
     }
   </style>
@@ -66,7 +78,7 @@
 
   <div id="shim">shim for font face</div>
 
-  <h1>Pacman</h1>
+  <h1>Pacman web</h1>
   <p>Desarrollado por <a onclick="go(':github/daleharvey', true, true)" href="">daleharvey</a></p>
 
   <div id="pacman"></div>
@@ -81,7 +93,7 @@
       Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
       window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
     } else {
-      el.innerHTML = "El navegador no es compatible<br><small>"+"(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+      el.innerHTML = "El navegador no es compatible<br><small>" + "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
     }
   </script>
 
