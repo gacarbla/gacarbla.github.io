@@ -1,47 +1,47 @@
 :root {
-    --color-lenguaje-py: #306998;
-    --color-lenguaje-js: #f0db4f;
-    --color-lenguaje-md: #269EE9;
-    --color-lenguaje-html: #f06529;
-    --color-lenguaje-css: #2965f1;
-    --color-lenguaje-java: #000;
-    --color-lenguaje-c: #000;
-    --color-lenguaje-ts: #007acc;
-    --color-lenguaje-json: #f0db4f;
-    --color-lenguaje-react: #61DBFB;
-    --color-lenguaje-scss: #cd6799;
+  --color-lenguaje-py: #306998;
+  --color-lenguaje-js: #f0db4f;
+  --color-lenguaje-md: #269EE9;
+  --color-lenguaje-html: #f06529;
+  --color-lenguaje-css: #2965f1;
+  --color-lenguaje-java: #000;
+  --color-lenguaje-c: #000;
+  --color-lenguaje-ts: #007acc;
+  --color-lenguaje-json: #f0db4f;
+  --color-lenguaje-react: #61DBFB;
+  --color-lenguaje-scss: #cd6799;
 }
 
 .claro {
-    --lenguajes-fondo: #ccc;
-    --lenguajes-card: #eee;
-    --lenguajes-texto: #000;
-    --lenguajes-svg-linea: #000;
-    --lenguajes-svg-fondo: #000;
-    --lenguajes-progreso-fondo: #ccc;
-    --lenguajes-progreso-completado: #000;
+  --lenguajes-fondo: #ccc;
+  --lenguajes-card: #eee;
+  --lenguajes-texto: #000;
+  --lenguajes-svg-linea: #000;
+  --lenguajes-svg-fondo: #000;
+  --lenguajes-progreso-fondo: #ccc;
+  --lenguajes-progreso-completado: #000;
 
-    --ventana-fondo: #eee;
-    --ventana-texto: #000;
-    --ventana-svg: #000;
-    --ventana-boton-color1: #ccc;
-    --ventana-boton-color2: #000;
+  --ventana-fondo: #eee;
+  --ventana-texto: #000;
+  --ventana-svg: #000;
+  --ventana-boton-color1: #ccc;
+  --ventana-boton-color2: #000;
 }
 
-.oscuro{
-    --lenguajes-fondo: #444;
-    --lenguajes-card: #222;
-    --lenguajes-texto: #fff;
-    --lenguajes-svg-linea: #fff;
-    --lenguajes-svg-fondo: #666;
-    --lenguajes-progreso-fondo: #444;
-    --lenguajes-progreso-completado: #fff;
+.oscuro {
+  --lenguajes-fondo: #444;
+  --lenguajes-card: #222;
+  --lenguajes-texto: #fff;
+  --lenguajes-svg-linea: #fff;
+  --lenguajes-svg-fondo: #666;
+  --lenguajes-progreso-fondo: #444;
+  --lenguajes-progreso-completado: #fff;
 
-    --ventana-fondo: #111;
-    --ventana-texto: #fff;
-    --ventana-svg: #fff;
-    --ventana-boton-color1: #444;
-    --ventana-boton-color2: #fff;
+  --ventana-fondo: #111;
+  --ventana-texto: #fff;
+  --ventana-svg: #fff;
+  --ventana-boton-color1: #444;
+  --ventana-boton-color2: #fff;
 }
 
 
@@ -50,125 +50,130 @@
 /* INICIO */
 
 .inicio {
-    color: #f5f5f5;
-    background: #000;
-    height: 732px;
-    background-position: top center;
+  color: #f5f5f5;
+  background: #000;
+  height: 732px;
+  background-position: top center;
 }
 
 .inicio svg {
-    position: absolute;
-    height: 600px;
-    top: 0px;
-    right: 0px;
+  position: absolute;
+  height: 600px;
+  top: 0px;
+  right: 0px;
 }
 
 .inicio .titulo {
-    max-width: calc(100vw - 60px);
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  max-width: calc(100vw - 60px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .inicio .titulo h1 {
-    position: absolute;
-    top: 8vw;
-    left: 3vw;
-    right: 0px;
-    font-size: 220px;
-    color: #000c;
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+  right: 0px;
+  font-size: 220px;
+  color: #000c;
 }
 
 .inicio .titulo p {
-    position: relative;
-    font-size: 38px;
-    top: 300px;
-    left: 5vw;
-    font-weight: bold;
+  position: relative;
+  font-size: 38px;
+  top: 300px;
+  left: 5vw;
+  font-weight: bold;
 }
 
 .inicio .titulo p span {
-    color: #269EE9;
-    animation: colorSpanTitulo 60s linear infinite;
+  color: #269EE9;
+  animation: colorSpanTitulo 60s linear infinite;
 }
 
 @keyframes colorSpanTitulo {
-    0% {
-        color: #269EE9
-    }
-    25% {
-        color: #29f07c
-    }
-    50% {
-        color: rgb(231, 218, 33);
-    }
-    75% {
-        color: rgb(247, 43, 60);
-    }
-    100% {
-        color: #269EE9;
-    }
+  0% {
+    color: #269EE9
+  }
+
+  25% {
+    color: #29f07c
+  }
+
+  50% {
+    color: rgb(231, 218, 33);
+  }
+
+  75% {
+    color: rgb(247, 43, 60);
+  }
+
+  100% {
+    color: #269EE9;
+  }
 }
 
 .wave {
-    animation: onda 8s linear infinite;
+  animation: onda 8s linear infinite;
 }
 
 .wave1 {
-    animation: onda1 10s linear infinite;
+  animation: onda1 10s linear infinite;
 }
 
 .wave2 {
-    animation: onda2 12s linear infinite;
+  animation: onda2 12s linear infinite;
 }
 
 @keyframes onda {
-    0% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
 
-    100% {
-        transform: translateX(100%);
-    }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes onda1 {
-    0% {
-        transform: scaleY(1.2) translateX(0%);
-    }
+  0% {
+    transform: scaleY(1.2) translateX(0%);
+  }
 
-    100% {
-        transform: scaleY(1.2) translateX(100%);
-    }
+  100% {
+    transform: scaleY(1.2) translateX(100%);
+  }
 }
 
 @keyframes onda2 {
-    0% {
-        transform: scaleY(.8) translateX(0%);
-    }
+  0% {
+    transform: scaleY(.8) translateX(0%);
+  }
 
-    100% {
-        transform: scaleY(.8) translateX(100%);
-    }
+  100% {
+    transform: scaleY(.8) translateX(100%);
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .inicio {
-        height: 100vh;
-    }
+  .inicio {
+    height: 100vh;
+  }
 
-    .inicio svg {
-        height: 550px;
-    }
+  .inicio svg {
+    height: 550px;
+  }
 
-    .inicio .titulo h1 {
-        font-size: 16vw;
-        top: 225px;
-    }
-    .inicio .titulo p {
-        font-size: 5vw;
-        top: 300px;
-    }
+  .inicio .titulo h1 {
+    font-size: 16vw;
+    top: 225px;
+  }
+
+  .inicio .titulo p {
+    font-size: 5vw;
+    top: 300px;
+  }
 }
 
 
@@ -179,141 +184,149 @@
 /* Lenguajes */
 
 .lenguajes {
-    padding: 50px 0px 50px 0px;
-    background-color: var(--lenguajes-fondo);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s;
+  padding: 50px 0px 50px 0px;
+  background-color: var(--lenguajes-fondo);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
 }
 
 .lenguajes svg {
-    width: 100px;
-    height: 100px;
-    fill: none;
-    stroke-width: 1.5px;
-    stroke: var(--lenguajes-svg-linea);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    background-color: transparent;
-    border-radius: 100%;
-    padding: 8px;
-    margin: 20px;
-    align-self: center;
-    transition: all 0.15s;
+  width: 100px;
+  height: 100px;
+  fill: none;
+  stroke-width: 1.5px;
+  stroke: var(--lenguajes-svg-linea);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 8px;
+  margin: 20px;
+  align-self: center;
+  transition: all 0.15s;
 }
 
 .lenguajes ul {
-    list-style: none;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    z-index: 100;
+  list-style: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  z-index: 100;
 }
 
 .lenguajes li {
-    background-color: var(--lenguajes-card);
-    position: relative;
-    height: 300px;
-    max-height: 300px;
-    width: 250px;
-    border-radius: 15px;
-    margin: 20px;
-    transition: all 0.3s;
-    cursor: pointer;
+  background-color: var(--lenguajes-card);
+  position: relative;
+  height: 300px;
+  max-height: 300px;
+  width: 250px;
+  border-radius: 15px;
+  margin: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .lenguajes li:hover {
-    transform: translateY(-15px);
+  transform: translateY(-15px);
 }
 
 .lenguajes li div {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
 
 .lenguajes div .line {
-    position:absolute;
-    bottom: 50px;
-    width: 100px;
-    background-color: var(--lenguajes-progreso-fondo);
-    height: 10px;
-    border-radius: 5px;
-    display: inline;
-    transition: all 0.3s;
+  position: absolute;
+  bottom: 50px;
+  width: 100px;
+  background-color: var(--lenguajes-progreso-fondo);
+  height: 10px;
+  border-radius: 5px;
+  display: inline;
+  transition: all 0.3s;
 }
 
 .lenguajes div .progress {
-    background-color: var(--lenguajes-progreso-completado);
-    height: 10px;
-    border-radius: 5px 0px 0px 5px;
-    transition: all 0.3s;
+  background-color: var(--lenguajes-progreso-completado);
+  height: 10px;
+  border-radius: 5px 0px 0px 5px;
+  transition: all 0.3s;
 }
 
 .lenguajes div p {
-    position: absolute;
-    bottom: 50px;
-    opacity: 0;
-    transition: all 0.3s;
-    color: var(--lenguajes-texto);
+  position: absolute;
+  bottom: 50px;
+  opacity: 0;
+  transition: all 0.3s;
+  color: var(--lenguajes-texto);
 }
 
 .lenguajes div:hover p {
-    opacity: 1;
-    bottom: 75px;
+  opacity: 1;
+  bottom: 75px;
 }
 
 .lenguajes .codeColors:hover .line {
-    width: 150px;
+  width: 150px;
 }
 
 .lenguajes div h1 {
-    font-size: 24px;
-    color: var(--lenguajes-texto);
+  font-size: 24px;
+  color: var(--lenguajes-texto);
 }
 
 .lenguajes .codeColors:hover svg {
-    background-color: #0f0f0f;
+  background-color: #0f0f0f;
 }
 
 @media only screen and (max-width: 600px) {
-    .lenguajes .codeColors:hover svg {
-        background-color: transparent;
-    }
-    .lenguajes {
-        flex-direction: column;
-    }
-    .lenguajes ul {
-        flex-direction: column;
-    }
-    .lenguajes svg {
-        height: 50px;
-    }
-    .lenguajes div h1 {
-        position: absolute;
-        bottom: 65px;
-        font-size: 18px;
-    }
-    .lenguajes div p {
-        position: absolute;
-        bottom: 35px;
-        visibility: visible;
-        opacity: 0.7;
-    }
-    .lenguajes li {
-        height: 150px;
-    }
-    .lenguajes div .line {
-        bottom: 20px;
-    }
-    .lenguajes div:hover p {
-        opacity: 1;
-        bottom: 35px;
-    }
+  .lenguajes .codeColors:hover svg {
+    background-color: transparent;
+  }
+
+  .lenguajes {
+    flex-direction: column;
+  }
+
+  .lenguajes ul {
+    flex-direction: column;
+  }
+
+  .lenguajes svg {
+    height: 50px;
+  }
+
+  .lenguajes div h1 {
+    position: absolute;
+    bottom: 65px;
+    font-size: 18px;
+  }
+
+  .lenguajes div p {
+    position: absolute;
+    bottom: 35px;
+    visibility: visible;
+    opacity: 0.7;
+  }
+
+  .lenguajes li {
+    height: 150px;
+  }
+
+  .lenguajes div .line {
+    bottom: 20px;
+  }
+
+  .lenguajes div:hover p {
+    opacity: 1;
+    bottom: 35px;
+  }
 }
 
 
@@ -327,6 +340,82 @@
 
 
 body #windows .ventanaEmergente {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100%;
+  z-index: 400;
+  background-color: #00000055;
+  animation: apareceVentana 0.3s;
+}
+
+body #windows .ventana {
+  position: fixed;
+  width: 500px;
+  height: 400px;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 250px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ventana-fondo);
+  border-radius: 15px;
+  align-items: center;
+}
+
+body #windows .ventana svg {
+  width: 100px;
+  height: 100px;
+  fill: none;
+  stroke-width: 1.5px;
+  stroke: var(--ventana-svg);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 8px;
+  margin: 20px;
+  align-self: center;
+  transition: all 0.15s;
+}
+
+body #windows .ventana button {
+  position: absolute;
+  bottom: 25px;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: var(--ventana-boton-color1);
+  color: var(--ventana-boton-color2);
+  transition: all 0.3s;
+  font-family: monospace;
+}
+
+body #windows .ventana button:hover {
+  background-color: var(--ventana-boton-color2);
+  color: var(--ventana-boton-color1);
+}
+
+body #windows .ventana p {
+  text-align: justify;
+  width: 90%;
+  color: var(--ventana-texto)
+}
+
+@keyframes apareceVentana {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body #windows .ventanaEmergente {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -336,22 +425,22 @@ body #windows .ventanaEmergente {
     z-index: 400;
     background-color: #00000055;
     animation: apareceVentana 0.3s;
-}
+  }
 
-body #windows .ventana {
+  body #windows .ventana {
     position: fixed;
-    width: 500px;
-    height: 400px;
+    width: 90vw;
+    height: 50vh;
     top: calc(50vh - 200px);
-    left: calc(50vw - 250px);
+    left: 5vw;
     display: flex;
     flex-direction: column;
     background-color: var(--ventana-fondo);
     border-radius: 15px;
     align-items: center;
-}
+  }
 
-body #windows .ventana svg {
+  body #windows .ventana svg {
     width: 100px;
     height: 100px;
     fill: none;
@@ -365,9 +454,9 @@ body #windows .ventana svg {
     margin: 20px;
     align-self: center;
     transition: all 0.15s;
-}
+  }
 
-body #windows .ventana button {
+  body #windows .ventana button {
     position: absolute;
     bottom: 25px;
     height: 50px;
@@ -378,100 +467,26 @@ body #windows .ventana button {
     color: var(--ventana-boton-color2);
     transition: all 0.3s;
     font-family: monospace;
-}
+  }
 
-body #windows .ventana button:hover {
+  body #windows .ventana button:hover {
     background-color: var(--ventana-boton-color2);
     color: var(--ventana-boton-color1);
-}
+  }
 
-body #windows .ventana p {
+  body #windows .ventana p {
     text-align: justify;
     width: 90%;
     color: var(--ventana-texto)
-}
+  }
 
-@keyframes apareceVentana {
+  @keyframes apareceVentana {
     0% {
-        opacity: 0;
+      opacity: 0;
     }
-    100% {
-        opacity: 1;
-    }
-}
 
-@media only screen and (max-width: 600px) {
-    body #windows .ventanaEmergente {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        width: 100vw;
-        height: 100%;
-        z-index: 400;
-        background-color: #00000055;
-        animation: apareceVentana 0.3s;
+    100% {
+      opacity: 1;
     }
-    
-    body #windows .ventana {
-        position: fixed;
-        width: 90vw;
-        height: 50vh;
-        top: calc(50vh - 200px);
-        left: 5vw;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--ventana-fondo);
-        border-radius: 15px;
-        align-items: center;
-    }
-    
-    body #windows .ventana svg {
-        width: 100px;
-        height: 100px;
-        fill: none;
-        stroke-width: 1.5px;
-        stroke: var(--ventana-svg);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        background-color: transparent;
-        border-radius: 100%;
-        padding: 8px;
-        margin: 20px;
-        align-self: center;
-        transition: all 0.15s;
-    }
-    
-    body #windows .ventana button {
-        position: absolute;
-        bottom: 25px;
-        height: 50px;
-        width: 150px;
-        border-radius: 5px;
-        border: 0px;
-        background-color: var(--ventana-boton-color1);
-        color: var(--ventana-boton-color2);
-        transition: all 0.3s;
-        font-family: monospace;
-    }
-    
-    body #windows .ventana button:hover {
-        background-color: var(--ventana-boton-color2);
-        color: var(--ventana-boton-color1);
-    }
-    
-    body #windows .ventana p {
-        text-align: justify;
-        width: 90%;
-        color: var(--ventana-texto)
-    }
-    
-    @keyframes apareceVentana {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+  }
 }

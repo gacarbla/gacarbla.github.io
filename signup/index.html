@@ -3,69 +3,69 @@
 
 <head>
 
-    <!--  Etiquetas meta  -->
-    <meta charset="UTF-8">
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
 
-    <!--  SEO meta  -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gacarbla.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="GΛCΛRBLΛ">
-    <link rel="canonical" href="https://gacarbla.github.io/">
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gacarbla.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GΛCΛRBLΛ">
+  <link rel="canonical" href="https://gacarbla.github.io/">
 
-    <!--  Ajustes meta  -->
-    <meta property="og:locale" content="es-ES">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--  Título  -->
-    <title>GΛCΛRBLΛ</title>
-    <link rel="icon" href="media/favicon.PNG">
+  <!--  Título  -->
+  <title>GΛCΛRBLΛ</title>
+  <link rel="icon" href="media/favicon.PNG">
 
-    <!--  Enlaces  -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/signup.css">
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/signup.css">
 
-    <!--  Scripts  -->
-    <script src="../js/signup.js"></script>
-    <script src="../js/script.js"></script>
+  <!--  Scripts  -->
+  <script src="../js/signup.js"></script>
+  <script src="../js/script.js"></script>
 
 </head>
 
 <body>
-    <section class="inicio">
-        <div class="lateral">
-            <div class="titulo">
-                <p class="gacarbla">GΛCΛRBLΛ</p>
-                <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que
-                    haces.
-                </p>
-            </div>
-            <form id="signUp" method="post" onsubmit="errorsignUp()">
-                <h3>Crear una cuenta</h3>
-                <div class="campos">
-                    <div class="campo">
-                        <input id="user" type="text" autocomplete="off" placeholder="usuario123" required
-                            onblur="campoBlur('user')">
-                        <label class="label" id="userLabel" for="user">Usuario</label>
-                    </div>
-                    <div class="campo">
-                        <input id="email" type="email" autocomplete="off" placeholder="ejemplo@ejemplo.com" required
-                            onblur="campoBlur('email')">
-                        <label class="label" id="emailLabel" for="email">E-mail</label>
-                    </div>
-                    <div class="campo">
-                        <input id="pssw" type="password" aria-autocomplete="off" placeholder="1a2b3c" required
-                            onblur="campoBlur('pssw')">
-                        <label class="label" id="psswLabel" for="pssw">Contraseña</label>
-                    </div>
-                </div>
-                <div class="botones">
-                    <button class="principal" id="signUp" type="submit">Crear cuenta</button>
-                    <button class="secondary" id="goLeft" onclick="login()">Iniciar sesión</button>
-                </div>
-            </form>
+  <section class="inicio">
+    <div class="lateral">
+      <div class="titulo">
+        <p class="gacarbla">GΛCΛRBLΛ</p>
+        <p class="cita">La única forma de hacer un <span>gran trabajo</span>,<br>es <span>amar</span> lo que
+          haces.
+        </p>
+      </div>
+      <form id="signUp" method="post" onsubmit="errorsignUp()">
+        <h3>Crear una cuenta</h3>
+        <div class="campos">
+          <div class="campo">
+            <input id="user" type="text" autocomplete="off" placeholder="usuario123" required
+              onblur="campoBlur('user')">
+            <label class="label" id="userLabel" for="user">Usuario</label>
+          </div>
+          <div class="campo">
+            <input id="email" type="email" autocomplete="off" placeholder="ejemplo@ejemplo.com" required
+              onblur="campoBlur('email')">
+            <label class="label" id="emailLabel" for="email">E-mail</label>
+          </div>
+          <div class="campo">
+            <input id="pssw" type="password" aria-autocomplete="off" placeholder="1a2b3c" required
+              onblur="campoBlur('pssw')">
+            <label class="label" id="psswLabel" for="pssw">Contraseña</label>
+          </div>
         </div>
-    </section>
+        <div class="botones">
+          <button class="principal" id="signUp" type="submit">Crear cuenta</button>
+          <button class="secondary" id="goLeft" onclick="login()">Iniciar sesión</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
 
 </html>

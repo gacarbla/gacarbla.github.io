@@ -1,93 +1,93 @@
 :root {
-    --color-lenguaje-py: #306998;
-    --color-lenguaje-js: #f0db4f;
-    --color-lenguaje-md: #269EE9;
-    --color-lenguaje-html: #f06529;
-    --color-lenguaje-css: #2965f1;
-    --color-lenguaje-java: #000;
-    --color-lenguaje-c: #000;
-    --color-lenguaje-ts: #007acc;
-    --color-lenguaje-json: #f0db4f;
-    --color-lenguaje-react: #61DBFB;
-    --color-lenguaje-scss: #cd6799;
+  --color-lenguaje-py: #306998;
+  --color-lenguaje-js: #f0db4f;
+  --color-lenguaje-md: #269EE9;
+  --color-lenguaje-html: #f06529;
+  --color-lenguaje-css: #2965f1;
+  --color-lenguaje-java: #000;
+  --color-lenguaje-c: #000;
+  --color-lenguaje-ts: #007acc;
+  --color-lenguaje-json: #f0db4f;
+  --color-lenguaje-react: #61DBFB;
+  --color-lenguaje-scss: #cd6799;
 }
 
 .claro {
-    --menu-fondo: #ddd;
-    --menu-botones-fondo: #f5f5f5;
-    --menu-botones-linea: #050505;
-    --menu-texto-color: #050505;
-    --menu-botones-secundario: #aaa;
-    --menu-botones-hover: #222;
+  --menu-fondo: #ddd;
+  --menu-botones-fondo: #f5f5f5;
+  --menu-botones-linea: #050505;
+  --menu-texto-color: #050505;
+  --menu-botones-secundario: #aaa;
+  --menu-botones-hover: #222;
 
-    --footer-svg-linea: #000;
-    --footer-texto: #000;
+  --footer-svg-linea: #000;
+  --footer-texto: #000;
 
-    --menucolor-borde: #111;
-    --menucolor-fondo: #111;
-    --menucolor-svg-linea: #111;
-    --menucolor-svg-sol: #f5973d;
-    --menucolor-svg-luna: #3c688e;
-    
-    --default-background: #ccc;
+  --menucolor-borde: #111;
+  --menucolor-fondo: #111;
+  --menucolor-svg-linea: #111;
+  --menucolor-svg-sol: #f5973d;
+  --menucolor-svg-luna: #3c688e;
+
+  --default-background: #ccc;
 }
 
 .oscuro {
-    --menu-fondo: #222;
-    --menu-botones-fondo: #444;
-    --menu-botones-linea: #eee;
-    --menu-texto-color: #eee;
-    --menu-botones-secundario: #777;
-    --menu-botones-hover: #000;
+  --menu-fondo: #222;
+  --menu-botones-fondo: #444;
+  --menu-botones-linea: #eee;
+  --menu-texto-color: #eee;
+  --menu-botones-secundario: #777;
+  --menu-botones-hover: #000;
 
-    --footer-svg-linea: #eee;
-    --footer-texto: #eee;
-    
-    --menucolor-borde: #ddd;
-    --menucolor-fondo: #ddd;
-    --menucolor-svg-linea: #ddd;
-    --menucolor-svg-sol: #f5973d;
-    --menucolor-svg-luna: #3c688e;
+  --footer-svg-linea: #eee;
+  --footer-texto: #eee;
 
-    --default-background: #333;
+  --menucolor-borde: #ddd;
+  --menucolor-fondo: #ddd;
+  --menucolor-svg-linea: #ddd;
+  --menucolor-svg-sol: #f5973d;
+  --menucolor-svg-luna: #3c688e;
+
+  --default-background: #333;
 }
 
 * {
-    user-select: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    font-family: Arial;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-family: Arial;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    cursor: default;
-    background-color: var(--default-background);
+  margin: 0px;
+  cursor: default;
+  background-color: var(--default-background);
 }
 
 h1 {
-    font-weight: bold;
-    font-family: Arial;
-    font-size: 5vw;
-    margin: 0px;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 5vw;
+  margin: 0px;
 }
 
 button {
-    cursor: pointer
+  cursor: pointer
 }
 
 input {
-    cursor: text
+  cursor: text
 }
 
 
@@ -97,197 +97,197 @@ input {
 /* HEADER */
 
 header {
-    background: var(--menu-fondo);
-    position: fixed;
-    height: 100vh;
-    top: 0px;
-    width: 60px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    transition: all 0.2s;
-    z-index: 500;
-    box-shadow: 0px 0px 20px -10px #000;
+  background: var(--menu-fondo);
+  position: fixed;
+  height: 100vh;
+  top: 0px;
+  width: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all 0.2s;
+  z-index: 500;
+  box-shadow: 0px 0px 20px -10px #000;
 }
 
 .content {
-    position: absolute;
-    left: 60px;
-    top: 0px;
-    right: 0px;
-    min-height: 100vh;
-    z-index: -1;
+  position: absolute;
+  left: 60px;
+  top: 0px;
+  right: 0px;
+  min-height: 100vh;
+  z-index: -1;
 }
 
 header:hover {
-    width: 250px;
-    background: var(--menu-fondo);
+  width: 250px;
+  background: var(--menu-fondo);
 }
 
 nav {
-    position:fixed;
+  position: fixed;
 }
 
 .nav {
-    height: auto;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    align-items: flex-start;
-    margin: 5px 5px 5px 5px;
+  height: auto;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  margin: 5px 5px 5px 5px;
 }
 
 .nav ul {
-    margin: 5px 0px 5px 5px;
+  margin: 5px 0px 5px 5px;
 }
 
 .nav li {
-    width: 50px;
-    min-width: 40px;
-    height: auto;
-    min-height: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 5px 0px 0px 0px;
-    transition: all 0.2s;
+  width: 50px;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px 0px 0px 0px;
+  transition: all 0.2s;
 }
 
 .nav svg {
-    stroke: var(--menu-botones-linea);
-    width: 40px !important;
-    height: 40px !important;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2px;
-    background-color: var(--menu-botones-fondo);
-    border-radius: 100%;
-    padding: 5px;
-    margin: 5px 5px 5px 5px;
-    transition: all 0.2s;
+  stroke: var(--menu-botones-linea);
+  width: 40px !important;
+  height: 40px !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  background-color: var(--menu-botones-fondo);
+  border-radius: 100%;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  transition: all 0.2s;
 }
 
 .nav ul svg {
-    stroke: var(--menu-botones-linea);
-    width: 30px !important;
-    height: 30px !important;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2px;
-    background-color: var(--menu-botones-secundario);
-    border-radius: 100%;
-    padding: 5px;
-    margin: 5px 5px 5px 5px;
+  stroke: var(--menu-botones-linea);
+  width: 30px !important;
+  height: 30px !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  background-color: var(--menu-botones-secundario);
+  border-radius: 100%;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
 }
 
 .nav div {
-    display: flex;
-    min-height: 40px;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0px auto 0px auto;
-    cursor: pointer;
-    transition: all 0.3s;
+  display: flex;
+  min-height: 40px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto 0px auto;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .nav p {
-    font-size: 0px;
-    visibility: hidden;
-    transition: all 0.2s;
-    color: var(--menu-texto-color)
+  font-size: 0px;
+  visibility: hidden;
+  transition: all 0.2s;
+  color: var(--menu-texto-color)
 }
 
 header:hover ul p {
-    font-size: 15px;
-    left: 50px;
-    visibility: visible;
+  font-size: 15px;
+  left: 50px;
+  visibility: visible;
 }
 
 header:hover ul {
-    width: 200px;
+  width: 200px;
 }
 
 header:hover ul li {
-    width: 200px;
+  width: 200px;
 }
 
 .nav div:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .nav div:hover svg {
-    stroke: var(--menu-botones-fondo);
-    background-color: var(--menu-botones-hover);
+  stroke: var(--menu-botones-fondo);
+  background-color: var(--menu-botones-hover);
 }
 
 .codeColors:hover #html {
-    stroke: var(--color-lenguaje-html);
+  stroke: var(--color-lenguaje-html);
 }
 
 .codeColors:hover #js {
-    stroke: var(--color-lenguaje-js);
+  stroke: var(--color-lenguaje-js);
 }
 
 .codeColors:hover #py {
-    stroke: var(--color-lenguaje-py);
+  stroke: var(--color-lenguaje-py);
 }
 
 .codeColors:hover #md {
-    stroke: var(--color-lenguaje-md);
+  stroke: var(--color-lenguaje-md);
 }
 
 .codeColors:hover #css {
-    stroke: var(--color-lenguaje-css);
+  stroke: var(--color-lenguaje-css);
 }
 
 @media only screen and (max-width: 600px) {
-    header {
-        visibility: visible;
-        left: -100vw;
-        width: 100vw;
-    }
+  header {
+    visibility: visible;
+    left: -100vw;
+    width: 100vw;
+  }
 
-    .visible {
-        left: 0px;
-    }
+  .visible {
+    left: 0px;
+  }
 
-    header nav {
-        margin-top: 100px;
-    }
+  header nav {
+    margin-top: 100px;
+  }
 
-    .content {
-        width: 100vw;
-        left: 0px;
-    }
+  .content {
+    width: 100vw;
+    left: 0px;
+  }
 
-    header  ul p {
-        font-size: 0px;
-        left: 50px;
-        visibility: hidden;
-    }
+  header ul p {
+    font-size: 0px;
+    left: 50px;
+    visibility: hidden;
+  }
 
-    .visible ul p {
-        font-size: 15px;
-        left: 50px;
-        visibility: visible;
-    }
-    
-    .visible ul {
-        width: 200px;
-    }
-    
-    .visible ul li {
-        width: 200px;
-    }
+  .visible ul p {
+    font-size: 15px;
+    left: 50px;
+    visibility: visible;
+  }
 
-    .visible:hover {
-        width: 100vw;
-    }
+  .visible ul {
+    width: 200px;
+  }
+
+  .visible ul li {
+    width: 200px;
+  }
+
+  .visible:hover {
+    width: 100vw;
+  }
 }
 
 
@@ -297,108 +297,243 @@ header:hover ul li {
 /* MOBILE MENU */
 
 .mobileMenu {
-    visibility: hidden;
-    height: 45px;
-    width: 45px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: var(--menu-fondo);
-    border-radius: 100%;
-    box-shadow: 0px 0px 15px -10px #000;
-    z-index: 800;
+  visibility: hidden;
+  height: 45px;
+  width: 45px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: var(--menu-fondo);
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px -10px #000;
+  z-index: 800;
 }
 
 .mobileMenu input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
 }
 
 .mobileMenu svg {
-    position: absolute;
-    margin: 7.5px;
-    stroke: var(--menu-botones-linea);
-    width: 30px;
-    height: 30px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2;
+  position: absolute;
+  margin: 7.5px;
+  stroke: var(--menu-botones-linea);
+  width: 30px;
+  height: 30px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 @media only screen and (max-width: 600px) {
-    .mobileMenu {
-        visibility: visible;
-    }
+  .mobileMenu {
+    visibility: visible;
+  }
 
-    .mobileMenu input {
-        opacity: 0;
-    }
+  .mobileMenu input {
+    opacity: 0;
+  }
 
-    #menuAccess {
-        visibility: visible;
-    }
-    #menuClose {
-        visibility: hidden;
-    }
-    .visible #menuAccess {
-        visibility: hidden;
-    }
-    .visible #menuClose {
-        visibility: visible;
-    }
+  #menuAccess {
+    visibility: visible;
+  }
+
+  #menuClose {
+    visibility: hidden;
+  }
+
+  .visible #menuAccess {
+    visibility: hidden;
+  }
+
+  .visible #menuClose {
+    visibility: visible;
+  }
 }
 
 
 /* FOOTER */
 
 footer {
-    width: 60px;
-    position: fixed;
-    z-index: 550;
-    bottom: 0px;
-    display: flex;
-    flex-direction: column;
+  width: 60px;
+  position: fixed;
+  z-index: 550;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 header:hover footer {
-    width: 250px;
+  width: 250px;
 }
 
 footer #autor {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 footer #autor div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 footer #autor h1 {
-    font-size: 0px;
-    transition: all 0.3s;
+  font-size: 0px;
+  transition: all 0.3s;
 }
 
 footer #autor p {
-    font-size: 0px;
-    transition: all 0.3s;
+  font-size: 0px;
+  transition: all 0.3s;
 }
 
 header:hover footer #autor h1 {
-    font-size: 15px;
-    color: var(--footer-texto);
+  font-size: 15px;
+  color: var(--footer-texto);
 }
 
 footer #autor:hover p {
-    font-size: 12px;
-    color: var(--footer-texto);
+  font-size: 12px;
+  color: var(--footer-texto);
 }
 
 footer svg {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 100%;
+  fill: none;
+  stroke: var(--menu-botones-linea);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  transition: all 0.3s;
+}
+
+header:hover footer #autor svg {
+  stroke: var(--footer-svg-linea)
+}
+
+footer #colorMenu {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  border: 3px solid var(--menucolor-borde);
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  transition: all 0.3s;
+  opacity: .5;
+}
+
+footer #colorMenu div {
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s;
+  margin: 5px 0px 5px 0px;
+}
+
+.claro footer #colorMenu #sol {
+  visibility: visible;
+}
+
+.oscuro footer #colorMenu #luna {
+  visibility: visible;
+}
+
+footer #colorMenu div svg {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border-radius: 100%;
+  stroke: var(--menucolor-svg-linea);
+  position: relative;
+  left: -12.5px;
+  top: -17.5px;
+  opacity: 1;
+}
+
+header:hover #colorMenu {
+  width: 105px;
+  opacity: 1;
+}
+
+header:hover #colorMenu div {
+  visibility: visible;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  margin: 5px 5px 5px 0px;
+  transition: all 0.3s;
+}
+
+.claro footer #colorMenu #sol {
+  stroke: var(--menucolor-svg-sol);
+  transition: all 0.3s;
+  background-color: var(--menucolor-fondo);
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  z-index: 550;
+}
+
+.oscuro footer #colorMenu #luna {
+  stroke: var(--menucolor-svg-luna);
+  transition: all 0.3s;
+  background-color: var(--menucolor-fondo);
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  z-index: 550;
+}
+
+
+@media only screen and (max-width: 600px) {
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  footer #autor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  footer #autor div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer #autor h1 {
+    font-size: 15px;
+    color: var(--footer-texto);
+  }
+
+  footer #autor p {
+    font-size: 12px;
+    color: var(--footer-texto);
+  }
+
+  footer svg {
     margin: 10px;
     width: 40px;
     height: 40px;
@@ -406,49 +541,39 @@ footer svg {
     background-color: transparent;
     border-radius: 100%;
     fill: none;
-    stroke: var(--menu-botones-linea);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
     transition: all 0.3s;
-}
+    stroke: var(--footer-svg-linea);
+  }
 
-header:hover footer #autor svg {
-    stroke: var(--footer-svg-linea)
-}
-
-footer #colorMenu {
+  footer #colorMenu {
+    position: relative;
+    bottom: 5px;
     padding: 0px;
     display: flex;
     flex-direction: row;
     border: 3px solid var(--menucolor-borde);
     border-radius: 25px;
-    width: 50px;
+    width: 105px;
     height: 50px;
     margin: 5px;
     transition: all 0.3s;
-    opacity: .5;
-}
+    opacity: 1;
+  }
 
-footer #colorMenu div {
+  footer #colorMenu div {
     background-color: transparent;
     height: 50px;
     width: 50px;
-    visibility: hidden;
-    width: 0px;
+    width: 50px;
     transition: all 0.3s;
-    margin: 5px 0px 5px 0px;
-}
-
-.claro footer #colorMenu #sol {
+    margin: 5px 5px 5px 0px;
     visibility: visible;
-}
+  }
 
-.oscuro footer #colorMenu #luna {
-    visibility: visible;
-}
-
-footer #colorMenu div svg {
+  footer #colorMenu div svg {
     cursor: pointer;
     height: 50px;
     width: 50px;
@@ -458,147 +583,25 @@ footer #colorMenu div svg {
     position: relative;
     left: -12.5px;
     top: -17.5px;
-    opacity: 1;
-}
+  }
 
-header:hover #colorMenu {
-    width: 105px;
-    opacity: 1;
-}
-
-header:hover #colorMenu div {
-    visibility: visible;
-    height: 50px;
-    width: 50px;
-    opacity: 1;
-    margin: 5px 5px 5px 0px;
-    transition: all 0.3s;
-}
-
-.claro footer #colorMenu #sol {
+  .claro footer #colorMenu #sol {
     stroke: var(--menucolor-svg-sol);
     transition: all 0.3s;
     background-color: var(--menucolor-fondo);
     border-radius: 100%;
     height: 50px;
     width: 50px;
-    opacity: 1;
     z-index: 550;
-}
+  }
 
-.oscuro footer #colorMenu #luna {
+  .oscuro footer #colorMenu #luna {
     stroke: var(--menucolor-svg-luna);
     transition: all 0.3s;
     background-color: var(--menucolor-fondo);
     border-radius: 100%;
     height: 50px;
     width: 50px;
-    opacity: 1;
     z-index: 550;
-}
-
-
-@media only screen and (max-width: 600px) {
-    footer {
-        width: 100%;
-        position: fixed;
-        bottom: 0px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-    
-    footer #autor {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    footer #autor div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    footer #autor h1 {
-        font-size: 15px;
-        color: var(--footer-texto);
-    }
-    
-    footer #autor p {
-        font-size: 12px;
-        color: var(--footer-texto);
-    }
-    
-    footer svg {
-        margin: 10px;
-        width: 40px;
-        height: 40px;
-        padding: 5px;
-        background-color: transparent;
-        border-radius: 100%;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2px;
-        transition: all 0.3s;
-        stroke: var(--footer-svg-linea);
-    }
-
-    footer #colorMenu {
-        position: relative;
-        bottom: 5px;
-        padding: 0px;
-        display: flex;
-        flex-direction: row;
-        border: 3px solid var(--menucolor-borde);
-        border-radius: 25px;
-        width: 105px;
-        height: 50px;
-        margin: 5px;
-        transition: all 0.3s;
-        opacity: 1;
-    }
-    
-    footer #colorMenu div {
-        background-color: transparent;
-        height: 50px;
-        width: 50px;
-        width: 50px;
-        transition: all 0.3s;
-        margin: 5px 5px 5px 0px;
-        visibility: visible;
-    }
-    
-    footer #colorMenu div svg {
-        cursor: pointer;
-        height: 50px;
-        width: 50px;
-        background-color: transparent;
-        border-radius: 100%;
-        stroke: var(--menucolor-svg-linea);
-        position: relative;
-        left: -12.5px;
-        top: -17.5px;
-    }
-    
-    .claro footer #colorMenu #sol {
-        stroke: var(--menucolor-svg-sol);
-        transition: all 0.3s;
-        background-color: var(--menucolor-fondo);
-        border-radius: 100%;
-        height: 50px;
-        width: 50px;
-        z-index: 550;
-    }
-    
-    .oscuro footer #colorMenu #luna {
-        stroke: var(--menucolor-svg-luna);
-        transition: all 0.3s;
-        background-color: var(--menucolor-fondo);
-        border-radius: 100%;
-        height: 50px;
-        width: 50px;
-        z-index: 550;
-    }
+  }
 }

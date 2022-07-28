@@ -1,41 +1,90 @@
 section {
-    width: 100%;
+  width: 100%;
 }
 
-#campoSection{
+#campoSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+#campoSection input {
+  outline: none;
+  height: 70px;
+  width: 600px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  background-color: #ccc;
+  font-size: 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.campo {
+  position: relative;
+}
+
+.campo label {
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  font-size: 24px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.campo label::before {
+  content: '';
+  background-color: #ccc;
+  height: 5px;
+  width: 120%;
+  position: absolute;
+  top: 14px;
+  left: -10%;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100%;
+  }
+
+  #campoSection {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 70px;
-}
+  }
 
-#campoSection input {
+  #campoSection input {
     outline: none;
-    height: 70px;
-    width: 600px;
+    height: 50px;
+    width: calc(100vw - 40px);
     border-radius: 10px;
     border: 2px solid #111;
     background-color: #ccc;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     transition: all 0.3s;
-}
+  }
 
-.campo {
+  .campo {
     position: relative;
-}
+  }
 
-.campo label {
+  .campo label {
     position: absolute;
     top: -15px;
     left: 40px;
-    font-size: 24px;
+    font-size: 20px;
     z-index: 1;
     transition: all 0.3s;
-}
+  }
 
-.campo label::before {
+  .campo label::before {
     content: '';
     background-color: #ccc;
     height: 5px;
@@ -44,112 +93,64 @@ section {
     top: 14px;
     left: -10%;
     z-index: -1;
-}
-
-@media only screen and (max-width: 600px) {
-    section {
-        width: 100%;
-    }
-    
-    #campoSection{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 70px;
-    }
-    
-    #campoSection input {
-        outline: none;
-        height: 50px;
-        width: calc(100vw - 40px);
-        border-radius: 10px;
-        border: 2px solid #111;
-        background-color: #ccc;
-        font-size: 20px;
-        text-align: center;
-        transition: all 0.3s;
-    }
-    
-    .campo {
-        position: relative;
-    }
-    
-    .campo label {
-        position: absolute;
-        top: -15px;
-        left: 40px;
-        font-size: 20px;
-        z-index: 1;
-        transition: all 0.3s;
-    }
-    
-    .campo label::before {
-        content: '';
-        background-color: #ccc;
-        height: 5px;
-        width: 120%;
-        position: absolute;
-        top: 14px;
-        left: -10%;
-        z-index: -1;
-    }
+  }
 }
 
 
 /* VENTANAS */
 
 .windows {
-    position: fixed;
-    display: flex;
-    flex-direction: row-reverse;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    z-index: 500;
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 500;
 }
 
 .windows .error {
-    height: auto;
-    width: 380px;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    font-weight: bold;
-    color: #000;
-    animation: entrada .5s ease normal;
+  height: auto;
+  width: 380px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  font-weight: bold;
+  color: #000;
+  animation: entrada .5s ease normal;
 }
 
 .windows .error p {
-    margin: auto 0px auto 0px;
+  margin: auto 0px auto 0px;
 }
 
 .windows #errormsg {
-    background-color: rgba(251, 255, 0, 0.65);
-    text-align: center;
+  background-color: rgba(251, 255, 0, 0.65);
+  text-align: center;
 }
 
 .windows #errormsg2 {
-    background-color: #ff8486c7;
+  background-color: #ff8486c7;
 }
 
 .claro .windows #errormsg3 {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .oscuro .windows #errormsg3 {
-    visibility: visible;
-    background-color: #222;
-    color: #fff;
+  visibility: visible;
+  background-color: #222;
+  color: #fff;
 }
 
 @keyframes entrada {
-    0% {
-        transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 
@@ -158,41 +159,126 @@ section {
 /* TABLA */
 
 #result {
-    width: 100%;
-    padding: 25px;
-    transition: all 0.3s;
+  width: 100%;
+  padding: 25px;
+  transition: all 0.3s;
 }
 
 #tabla ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    width: 800px;
-    margin: 70px auto 0px auto;
-    background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px -10px #000;
-    padding: 20px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 800px;
+  margin: 70px auto 0px auto;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -10px #000;
+  padding: 20px 0px 0px 0px;
 }
 
 #tabla ul li {
+  width: 90%;
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+
+#tabla ul img {
+  height: 0px;
+  visibility: hidden;
+}
+
+#tabla ul textarea {
+  position: relative;
+  left: 100px;
+  font-size: 15px;
+  font-family: monospace;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  text-align: center;
+  height: 20px;
+}
+
+#tabla ul li button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 100px;
+  border: none;
+  background-color: #050505;
+  color: #f5f5f5;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+#tabla ul li p {
+  position: relative;
+  left: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+#tabla ul li button p {
+  position: relative;
+  align-self: center;
+  right: auto;
+  left: auto;
+  width: 100%;
+}
+
+#tabla button:hover {
+  background-color: #222;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+  #result {
+    width: 100%;
+    padding: 25px;
+    transition: all 0.3s;
+  }
+
+  #tabla ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: calc(100vw - 40px);
+    margin: 24px auto 0px auto;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -10px #000;
+    padding: 10px 0px 0px 0px;
+  }
+
+  #tabla ul li {
+    height: 70px;
     width: 90%;
     position: relative;
     align-self: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px 0px 20px 0px;
-}
+    margin: 10px 0px 10px 0px;
+  }
 
-#tabla ul img {
-    height: 0px;
-    visibility: hidden;
-}
-
-#tabla ul textarea {
+  #tabla ul img {
+    height: 20px;
+    visibility: visible;
     position: relative;
-    left: 100px;
+    filter: drop-shadow(0px 0px 3px #fff)
+  }
+
+  #tabla ul textarea {
+    position: absolute;
+    width: calc(100vw - 150px);
+    left: 60px;
+    top: 0px;
     font-size: 15px;
     font-family: monospace;
     outline: none;
@@ -201,130 +287,45 @@ section {
     resize: none;
     text-align: center;
     height: 20px;
-}
+  }
 
-#tabla ul li button {
+  #tabla ul li button {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 20px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border: none;
-    background-color: #050505;
+    background-color: transparent;
     color: #f5f5f5;
-    border-radius: 3px;
+    border-radius: 5px;
     transition: all 0.3s;
-}
+    box-shadow: 0px 0px 5px -2px #000;
+  }
 
-#tabla ul li p {
-    position: relative;
-    left: 100px;
-    width: 100%;
+  #tabla ul li p {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    width: calc(100vw - 150px);
     text-align: center;
-}
+    font-size: 12px;
+  }
 
-#tabla ul li button p {
-    position: relative;
+  #tabla ul li button p {
+    position: absolute;
     align-self: center;
     right: auto;
     left: auto;
     width: 100%;
-}
+    font-size: 0px;
+    visibility: hidden;
+  }
 
-#tabla button:hover {
+  #tabla button:hover {
     background-color: #222;
     color: #ddd;
-}
-
-@media only screen and (max-width: 600px) {
-    #result {
-        width: 100%;
-        padding: 25px;
-        transition: all 0.3s;
-    }
-    
-    #tabla ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        width: calc(100vw - 40px);
-        margin: 24px auto 0px auto;
-        background-color: #ddd;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px -10px #000;
-        padding: 10px 0px 0px 0px;
-    }
-    
-    #tabla ul li {
-        height: 70px;
-        width: 90%;
-        position: relative;
-        align-self: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 10px 0px 10px 0px;
-    }
-    
-    #tabla ul img {
-        height: 20px;
-        visibility: visible;
-        position: relative;
-        filter: drop-shadow(0px 0px 3px #fff)
-    }
-    
-    #tabla ul textarea {
-        position: absolute;
-        width: calc(100vw - 150px);
-        left: 60px;
-        top: 0px;
-        font-size: 15px;
-        font-family: monospace;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        resize: none;
-        text-align: center;
-        height: 20px;
-    }
-    
-    #tabla ul li button {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 50px;
-        width: 50px;
-        border: none;
-        background-color: transparent;
-        color: #f5f5f5;
-        border-radius: 5px;
-        transition: all 0.3s;
-        box-shadow: 0px 0px 5px -2px #000;
-    }
-    
-    #tabla ul li p {
-        position: absolute;
-        left: 60px;
-        top: 20px;
-        width: calc(100vw - 150px);
-        text-align: center;
-        font-size: 12px;
-    }
-    
-    #tabla ul li button p {
-        position: absolute;
-        align-self: center;
-        right: auto;
-        left: auto;
-        width: 100%;
-        font-size: 0px;
-        visibility: hidden;
-    }
-    
-    #tabla button:hover {
-        background-color: #222;
-        color: #ddd;
-    }
+  }
 }
 
 
@@ -332,107 +333,107 @@ section {
 /* Ventana copiado */
 
 .window {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: #050505af;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    z-index: 500;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: #050505af;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  z-index: 500;
 }
 
 .box {
-    position: fixed;
-    height: 60px;
-    background-color: #050505;
-    width: 300px;
-    border-radius: 10px;
-    top: calc(50vh - 30px);
-    left: calc(50vw - 150px);
-    display: flex;
-    flex-direction: row;
+  position: fixed;
+  height: 60px;
+  background-color: #050505;
+  width: 300px;
+  border-radius: 10px;
+  top: calc(50vh - 30px);
+  left: calc(50vw - 150px);
+  display: flex;
+  flex-direction: row;
 }
 
 .box p {
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    margin: auto;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  margin: auto;
 }
 
 
 @import "bourbon";
 
 .checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #7ac142;
-    fill: none;
-    animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
-    z-index: 506;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+  z-index: 506;
 }
 
 .checkmark {
-    position: relative;
-    right: 10px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #fff;
-    stroke-miterlimit: 10;
-    margin: 10% auto;
-    box-shadow: inset 0px 0px 0px #7ac142;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-    z-index: 505;
+  position: relative;
+  right: 10px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  z-index: 505;
 }
 
 .checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
 }
 
 @keyframes stroke {
-    100% {
-        stroke-dashoffset: 0;
-    }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes scale {
 
-    0%,
-    100% {
-        transform: none;
-    }
+  0%,
+  100% {
+    transform: none;
+  }
 
-    50% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
 }
 
 @keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px #7ac142;
-    }
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-    .copy {
-        width: 100px;
-    }
+  .copy {
+    width: 100px;
+  }
 
-    .copy button {
-        font-size: 12px;
-        width: 80px;
-        letter-spacing: 1px;
-    }
+  .copy button {
+    font-size: 12px;
+    width: 80px;
+    letter-spacing: 1px;
+  }
 }
