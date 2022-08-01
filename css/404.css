@@ -20,11 +20,10 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    left: calc(50vw - 290px);
 }
 
 button {
-    margin: 5px;
+    margin: 5px auto 5px auto;
     height: 60px;
     width: 250px;
     transition: all 0.3s;
@@ -54,13 +53,4 @@ button#no:hover {
 
 button#si:hover {
     box-shadow: 0px 0px 20px -5px #fff;
-}
-
-@media only screen and (max-width: 1000px) {
-    button#si {
-        visibility: hidden;
-        width: 0px;
-        position: absolute;
-        top: -1000px;
-    }
 }
