@@ -81,21 +81,16 @@ const pages = (function () {
   var pageName = href[href[href.length - 1].endsWith(".html") ? href.length - 2 : href.length - 1]
   console.log(pageName)
 
-  switch (pageName) {
-    case "gacarbla":
-      inicio(); break;
-    case "gacarbla.github.io":
-      inicio(); break;
-    case "timestamp":
-      timestamp(); break;
-    case "codificador":
-      codificador(); break;
-    case "404":
-      break;
-    case undefined :
-      inicio(); break;
-    default:
-      error();
+  if( pageName == "inicio" || pageName == undefined || pageName == "gacarbla.github.io" ){
+    inicio()
+  } else if( pageName == "timestamp" ){
+    timestamp()
+  } else if( pageName == "codificador" ){
+    codificador()
+  } else if( pageName == "404" ){
+    return
+  } else {
+    error()
   }
 
   function inicio() {
