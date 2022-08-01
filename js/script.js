@@ -90,7 +90,7 @@ const pages = (function () {
   } else if( pageName == "404" ){
     return
   } else {
-    error()
+    inicio()
   }
 
   function inicio() {
