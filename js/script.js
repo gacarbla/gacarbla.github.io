@@ -65,9 +65,9 @@ function CookiesValue(ruta) {
 }
 
 function CookiesRemove(ruta) {
-  document.cookie = `"${ruta}"=;max-age=0`;
-  document.cookie = `'${ruta}'=;max-age=0`;
-  document.cookie = `${ruta}=;max-age=0`;
+  document.cookie = `"${ruta}"=;max-age=0;path="/"`;
+  document.cookie = `'${ruta}'=;max-age=0;path="/"`;
+  document.cookie = `${ruta}=;max-age=0;path="/"`;
   return document.cookie
 }
 
@@ -92,6 +92,8 @@ const pages = (function () {
       codificador(); break;
     case "404":
       break;
+    case undefined :
+      inicio(); break;
     default:
       error();
   }
@@ -212,7 +214,6 @@ function load() {
       document.getElementById("body").className = "claro"
     }
     document.getElementById("sol").addEventListener("click", function () {
-
       document.getElementById("body").className = "claro"
       CookiesAdd("modo", "claro")
 
