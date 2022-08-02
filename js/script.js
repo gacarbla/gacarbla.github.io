@@ -202,7 +202,7 @@ function load() {
     console.error(e);
   }
   try {
-    if (CookiesValue("modo") == undefined || CookiesValue("modo" == "oscuro")) {
+    if (CookiesValue("modo") == undefined || CookiesValue("modo") == "oscuro") {
       CookiesAdd("modo", "oscuro")
       document.getElementById("body").className = "oscuro"
     } else {

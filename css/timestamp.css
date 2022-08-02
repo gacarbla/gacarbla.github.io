@@ -1,3 +1,17 @@
+body.claro {
+  --fondo: #ccc;
+  --campo-borde: #111;
+  --campo-texto: #000;
+  --campo-label: #000;
+}
+
+body.oscuro {
+  --fondo: #333;
+  --campo-borde: #eee;
+  --campo-texto: #eee;
+  --campo-label: #eee;
+}
+
 section {
   width: 100%;
 }
@@ -15,11 +29,12 @@ section {
   height: 70px;
   width: 600px;
   border-radius: 10px;
-  border: 2px solid #111;
-  background-color: #ccc;
+  border: 2px solid var(--campo-borde);
+  background-color: transparent;
   font-size: 24px;
   text-align: center;
   transition: all 0.3s;
+  color: var(--campo-texto)
 }
 
 .campo {
@@ -28,22 +43,12 @@ section {
 
 .campo label {
   position: absolute;
-  top: -15px;
+  top: -27.5px;
   left: 40px;
   font-size: 24px;
   z-index: 1;
   transition: all 0.3s;
-}
-
-.campo label::before {
-  content: '';
-  background-color: #ccc;
-  height: 5px;
-  width: 120%;
-  position: absolute;
-  top: 14px;
-  left: -10%;
-  z-index: -1;
+  color: var(--campo-label);
 }
 
 @media only screen and (max-width: 600px) {
@@ -64,8 +69,6 @@ section {
     height: 50px;
     width: calc(100vw - 40px);
     border-radius: 10px;
-    border: 2px solid #111;
-    background-color: #ccc;
     font-size: 20px;
     text-align: center;
     transition: all 0.3s;
@@ -77,22 +80,11 @@ section {
 
   .campo label {
     position: absolute;
-    top: -15px;
+    top: -27.5px;
     left: 40px;
     font-size: 20px;
     z-index: 1;
     transition: all 0.3s;
-  }
-
-  .campo label::before {
-    content: '';
-    background-color: #ccc;
-    height: 5px;
-    width: 120%;
-    position: absolute;
-    top: 14px;
-    left: -10%;
-    z-index: -1;
   }
 }
 
@@ -131,16 +123,6 @@ section {
 
 .windows #errormsg2 {
   background-color: #ff8486c7;
-}
-
-.claro .windows #errormsg3 {
-  visibility: hidden;
-}
-
-.oscuro .windows #errormsg3 {
-  visibility: visible;
-  background-color: #222;
-  color: #fff;
 }
 
 @keyframes entrada {
@@ -435,5 +417,73 @@ section {
     font-size: 12px;
     width: 80px;
     letter-spacing: 1px;
+  }
+}
+
+
+.waves {
+  position: absolute;
+  z-index: -1;
+}
+
+.wave {
+  animation: onda 8s linear infinite;
+}
+
+.wave1 {
+  animation: onda1 10s linear infinite;
+}
+
+.wave2 {
+  animation: onda2 12s linear infinite;
+}
+
+@keyframes onda {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes onda1 {
+  0% {
+    transform: scaleY(1.2) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(1.2) translateX(100%);
+  }
+}
+
+@keyframes onda2 {
+  0% {
+    transform: scaleY(.8) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(.8) translateX(100%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inicio {
+    height: 100vh;
+  }
+
+  .inicio svg {
+    height: 550px;
+  }
+
+  .inicio .titulo h1 {
+    font-size: 16vw;
+    top: 225px;
+  }
+
+  .inicio .titulo p {
+    font-size: 5vw;
+    top: 300px;
   }
 }

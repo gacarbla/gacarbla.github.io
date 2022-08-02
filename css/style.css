@@ -10,44 +10,45 @@
   --color-lenguaje-json: #f0db4f;
   --color-lenguaje-react: #61DBFB;
   --color-lenguaje-scss: #cd6799;
+
+  --menucolor-svg-sol: #fff;
+  --menucolor-svg-luna: #a6b2ec;
 }
 
 .claro {
-  --menu-fondo: #ddd;
-  --menu-botones-fondo: #f5f5f5;
-  --menu-botones-linea: #050505;
+  --menu-fondo: #d2d3db;
+  --menu-botones-fondo: #4d668b;
+  --menu-botones-linea: #e0e3e4;
   --menu-texto-color: #050505;
-  --menu-botones-secundario: #aaa;
-  --menu-botones-hover: #222;
+  --menu-botones-secundario: #888;
+  --menu-botones-linea-hover: #e0e3e4;
+  --menu-botones-fondo-hover: rgb(40, 60, 70);
 
   --footer-svg-linea: #000;
   --footer-texto: #000;
 
-  --menucolor-borde: #111;
-  --menucolor-fondo: #111;
+  --menucolor-borde: #4e4e56;
+  --menucolor-fondo: #4e4e56;
   --menucolor-svg-linea: #111;
-  --menucolor-svg-sol: #f5973d;
-  --menucolor-svg-luna: #3c688e;
 
   --default-background: #ccc;
 }
 
 .oscuro {
-  --menu-fondo: #222;
-  --menu-botones-fondo: #444;
+  --menu-fondo: #111;
+  --menu-botones-fondo: #ff4c29;
   --menu-botones-linea: #eee;
   --menu-texto-color: #eee;
-  --menu-botones-secundario: #777;
-  --menu-botones-hover: #000;
+  --menu-botones-secundario: #334756;
+  --menu-botones-linea-hover: #ff4c29;
+  --menu-botones-fondo-hover: #082032;
 
   --footer-svg-linea: #eee;
   --footer-texto: #eee;
 
-  --menucolor-borde: #ddd;
-  --menucolor-fondo: #ddd;
-  --menucolor-svg-linea: #ddd;
-  --menucolor-svg-sol: #f5973d;
-  --menucolor-svg-luna: #3c688e;
+  --menucolor-borde: #334756;
+  --menucolor-fondo: #334756;
+  --menucolor-svg-linea: #334756;
 
   --default-background: #333;
 }
@@ -221,8 +222,8 @@ header:hover ul li {
 }
 
 .nav div:hover svg {
-  stroke: var(--menu-botones-fondo);
-  background-color: var(--menu-botones-hover);
+  stroke: var(--menu-botones-linea-hover);
+  background-color: var(--menu-botones-fondo-hover);
 }
 
 .codeColors:hover #html {
@@ -363,6 +364,8 @@ footer {
   bottom: 0px;
   display: flex;
   flex-direction: column;
+  background-color: var(--menu-fondo);
+  transition: all 0.2s;
 }
 
 header:hover footer {
@@ -430,7 +433,6 @@ footer #colorMenu {
   height: 50px;
   margin: 5px;
   transition: all 0.3s;
-  opacity: .5;
 }
 
 footer #colorMenu div {
