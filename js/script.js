@@ -205,16 +205,20 @@ function load() {
     if (CookiesValue("modo") == undefined || CookiesValue("modo") == "oscuro") {
       CookiesAdd("modo", "oscuro")
       document.getElementById("body").className = "oscuro"
+      document.getElementsByName("theme-color")[0].setAttribute('content', '#222')
     } else {
       document.getElementById("body").className = "claro"
+      document.getElementsByName("theme-color")[0].setAttribute('content', '#ddd')
     }
     document.getElementById("sol").addEventListener("click", function () {
       document.getElementById("body").className = "claro"
+      document.getElementsByName("theme-color")[0].setAttribute('content', '#ddd')
       CookiesAdd("modo", "claro")
 
     })
     document.getElementById("luna").addEventListener("click", function () {
       document.getElementById("body").className = "oscuro"
+      document.getElementsByName("theme-color")[0].setAttribute('content', '#222')
       CookiesAdd("modo", "oscuro")
     })
     document.oncontextmenu = function () { return false }
