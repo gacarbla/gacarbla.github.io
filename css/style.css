@@ -35,13 +35,13 @@
 }
 
 .oscuro {
-  --menu-fondo: #111;
+  --menu-fondo: #010409;
   --menu-botones-fondo: #ff4c29;
   --menu-botones-linea: #eee;
   --menu-texto-color: #eee;
   --menu-botones-secundario: #334756;
   --menu-botones-linea-hover: #ff4c29;
-  --menu-botones-fondo-hover: #082032;
+  --menu-botones-fondo-hover: hsl(215, 21%, 20%);
 
   --footer-svg-linea: #eee;
   --footer-texto: #eee;
@@ -412,15 +412,11 @@ footer svg {
   background-color: transparent;
   border-radius: 100%;
   fill: none;
-  stroke: var(--menu-botones-linea);
+  stroke: var(--footer-svg-linea);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2px;
   transition: all 0.3s;
-}
-
-header:hover footer #autor svg {
-  stroke: var(--footer-svg-linea)
 }
 
 footer #colorMenu {
