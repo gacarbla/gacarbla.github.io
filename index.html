@@ -20,13 +20,242 @@
   <meta property="og:locale" content="es-ES">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--  Enlaces  -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/inicio.css">
+
+  <!--  Scripts  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./js/inicio.js"></script>
+  <script src="./js/script.js"></script>
+
   <!--  Título  -->
   <title>GΛCΛRBLΛ</title>
 
 </head>
 
-<body>
-  <h3>Estamos trabajando en esto</h3>
+<body onload="load()" class="oscuro">
+
+
+  <header id="header" class="">
+    <div class="btn" id="mobilemenubutton">
+      <svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
+      </svg>
+      <svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6 6 18"></path>
+        <path d="m6 6 12 12"></path>
+     </svg>
+    </div>
+    <div class="menu">
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H3l9-9 9 9h-2"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>Inicio</p>
+        </div>
+      </div>
+      <div class="separador">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 21h4L20 8a2.829 2.829 0 0 0-4-4L3 17v4Z"></path>
+            <path d="m14.5 5.5 4 4"></path>
+            <path d="M12 8 7 3 3 7l5 5"></path>
+            <path d="M7 8 5.5 9.5"></path>
+            <path d="m16 12 5 5-4 4-5-5"></path>
+            <path d="m16 17-1.5 1.5"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>Herramientas</p>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+            <path d="M12 7v5l3 3"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>Timestamp</p>
+        </div>
+      </div>
+      <div class="separador">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z">
+            </path>
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>GitHub</p>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 8V6a2 2 0 0 1 2-2h2"></path>
+            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
+            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+            <path d="M16 20h2a2 2 0 0 0 2-2v-2"></path>
+            <path d="M9 10h.01"></path>
+            <path d="M15 10h.01"></path>
+            <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path>
+         </svg>
+        </div>
+        <div class="nombre">
+          <p>Perfil</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
+            <path d="M15.5 8h-7l.5 4h6l-.5 3.5-2.5.75-2.5-.75-.1-.5"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>gacarbla.github.io</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
+            <path d="M7.5 8h3v8l-2-1"></path>
+            <path d="M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>Dori</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
+            <path d="M7.5 8h3v8l-2-1"></path>
+            <path d="M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>NewsBot</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path>
+            <path d="M7.5 8h3v8l-2-1"></path>
+            <path d="M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>discord.js v13 Guide</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path>
+            <path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path>
+            <path
+              d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4">
+            </path>
+            <path d="M11 6v.01"></path>
+            <path d="M13 18v.01"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>ComputerAnalyzer</p>
+        </div>
+      </div>
+      <div class="separador">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"></path>
+            <path d="M6 8h.01"></path>
+            <path d="M9 8h.01"></path>
+         </svg>
+        </div>
+        <div class="nombre">
+          <p>Página</p>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.723 1.723 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065Z"></path>
+            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+         </svg>
+        </div>
+        <div class="nombre">
+          <p>Ajustes</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 13v.01"></path>
+            <path d="M12 17v.01"></path>
+            <path d="M12 12v.01"></path>
+            <path d="M16 14v.01"></path>
+            <path d="M11 8v.01"></path>
+            <path d="m13.148 3.478 2.667 1.104a4 4 0 0 0 4.656 6.14l.053.132a3 3 0 0 1 0 2.296c-.497.786-.838 1.404-1.024 1.852-.189.456-.409 1.194-.66 2.216a3 3 0 0 1-1.624 1.623c-1.048.263-1.787.483-2.216.661-.475.197-1.092.538-1.852 1.024a3 3 0 0 1-2.296 0c-.802-.503-1.419-.844-1.852-1.024-.47-.195-1.21-.415-2.216-.66a3 3 0 0 1-1.623-1.624c-.265-1.052-.485-1.79-.66-2.216-.199-.479-.54-1.096-1.025-1.852a3 3 0 0 1 0-2.296c.48-.744.82-1.36 1.024-1.852.171-.413.391-1.152.66-2.216a3 3 0 0 1 1.624-1.623c1.032-.256 1.77-.476 2.216-.66.458-.19 1.075-.532 1.852-1.025a3 3 0 0 1 2.296 0v0Z"></path>
+          </svg>
+        </div>
+        <div class="nombre">
+          <p>Cookies</p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="vector">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 12h6"></path>
+            <path d="M12 9v6"></path>
+            <path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1V7a2 2 0 0 1 2-2"></path>
+            <path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1V7a2 2 0 0 0-2-2"></path>
+         </svg>
+        </div>
+        <div class="nombre">
+          <p>Ajustes dev.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="vector">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="m7 8-4 4 4 4"></path>
+          <path d="m17 8 4 4-4 4"></path>
+          <path d="m14 4-4 16"></path>
+       </svg>
+      </div>
+      <div class="nombre">
+        <p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel Carro Blanco</p>
+      </div>
+    </footer>
+
+  </header>
+  <div class="content">
+    <h1>¡Estoy trabajando en esto!</h1>
+    <p>Actualmente los enlaces se encuentran inhabilitados y la página está siendo reformada constantemente.<br>En pocos días todo volverá a la normalidad.</p>
+  </div>
+
 </body>
 
 </html>
