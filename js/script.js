@@ -91,16 +91,16 @@ const navigation = {
 
 const windowsList = {
     "devSettings": {
-        title: "Ajustes para desarrolladores [BETA]",
+        title: "Ajustes para desarrolladores",
         content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
     },
     "settings": {
         title: "Ajustes",
-        content: `<p>Estamos trabajando en esto</p>`
+        content: `<p>Estoy trabajando en esto</p>`
     },
     "cookies": {
         title: "Cookies",
-        content: `<p>Esta página no hace uso de cookies u otros métodos de almacenamiento de datos personales.</p>`
+        content: `<p>Estoy trabajando en esto</p>`
     }
 }
 
@@ -165,26 +165,26 @@ function load() {
     })
 
     if (!CookiesValue("rightClick")) {
-        CookiesAdd("rightClick", "false")
+        CookiesAdd("rightClick", "false", "cookiesDev")
     } else {
         if (CookiesValue("rightClick") == "false") {
             document.oncontextmenu = function () { return false }
         } else if (CookiesValue("rightClick") == "true") {
             document.oncontextmenu = function () { }
         } else {
-            CookiesAdd("rightClick", "false");
+            CookiesAdd("rightClick", "false", "cookiesDev");
             document.oncontextmenu = function () { return false }
         }
     }
     if (!CookiesValue("select")) {
-        CookiesAdd("select", "false")
+        CookiesAdd("select", "false", "cookiesDev")
     } else {
         if (CookiesValue("select") == "false") {
             document.getElementById("body").classList.remove("select");
         } else if (CookiesValue("select") == "true") {
             document.getElementById("body").classList.add("select");
         } else {
-            CookiesAdd("select", "false");
+            CookiesAdd("select", "false", "cookiesDev");
             document.getElementById("body").classList.remove("select");
         }
     }
@@ -217,26 +217,36 @@ function newWindow(name) {
     if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
     if (!windowsList[`${name}`]) return "No se ha encontrado ninguna ventana con este nombre"
     var divVentanas = document.getElementById("windows")
-    divVentanas.innerHTML = divVentanas.innerHTML + `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${windowsList[`${name}`].title}</p></div><div class="caja">${windowsList[`${name}`].content}</div></div>`
+    divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${windowsList[`${name}`].title}</p></div><div class="caja">${windowsList[`${name}`].content}</div></div>`
     if (name == "devSettings") {
         const rightClickCheck = document.getElementById("rightClickCheck")
         const selectCheck = document.getElementById("selectCheck")
+        if(CookiesValue("rightClick") == "true") {
+            rightClickCheck.checked = true
+        } else {
+            rightClickCheck.checked = false
+        }
+        if(CookiesValue("select") == "true") {
+            selectCheck.checked = true
+        } else {
+            selectCheck.checked = false
+        }
         selectCheck.addEventListener("change", function () {
             if (selectCheck.checked) {
                 document.getElementById("body").classList.add("select");
-                CookiesAdd("select", "true")
+                CookiesAdd("select", "true", "cookiesDev")
             } else {
                 document.getElementById("body").classList.remove("select");
-                CookiesAdd("select", "false")
+                CookiesAdd("select", "false", "cookiesDev")
             }
         })
         rightClickCheck.addEventListener("change", function () {
             if (rightClickCheck.checked) {
                 document.oncontextmenu = function () { }
-                CookiesAdd("rightClick", "true")
+                CookiesAdd("rightClick", "true", "cookiesDev")
             } else {
                 document.oncontextmenu = function () { return false }
-                CookiesAdd("rightClick", "false")
+                CookiesAdd("rightClick", "false", "cookiesDev")
             }
         })
     }
@@ -262,9 +272,20 @@ function modifyWindow() {
 
 /* COOKIES */
 
-function CookiesAdd(nombre, valor, age) {
-    document.cookie = `${nombre}=${valor}; secure; max-age=${parseInt(age) >= 30 ? `${age}` : '604800'}`
-    return document.cookie
+function checkEssentialCookies() {
+    if (!CookiesValue("cookiesConfig")) { document.cookie = `cookiesConfig=true; secure; max-age=604800}` }
+    if (!CookiesValue("cookiesDev")) { document.cookie = `cookiesDev=true; secure; max-age=604800}` }
+}
+
+function CookiesAdd(ruta, valor, type) {
+    checkEssentialCookies()
+    if ((CookiesValue("cookiesDev") == "false" && type == "cookiesDev") || (CookiesValue("cookiesConfig") == "false" && type == "cookiesConfig")) {
+        CookiesRemove(ruta)
+        return console.info(`No se ha guardado la cookie ${ruta} con valor ${valor} debido a la configuración de cookies`)
+    } else {
+        document.cookie = `${ruta.trimStart()}=${valor}; secure; max-age=604800}`
+        return document.cookie
+    }
 }
 
 function CookiesValue(ruta) {
@@ -273,16 +294,32 @@ function CookiesValue(ruta) {
     LocalCookies.forEach(cookie => {
         cookies[`${cookie.split(/=+/g)[0]}`] = cookie.split(/=+/g)[1]
     })
-    return cookies[`${ruta}`]
+    return cookies[`${ruta}`] || cookies[` ${ruta}`]
 }
 
 function CookiesRemove(ruta) {
-    document.cookie = `"${ruta}"=;max-age=0;path="/"`;
-    document.cookie = `'${ruta}'=;max-age=0;path="/"`;
-    document.cookie = `${ruta}=;max-age=0;path="/"`;
-    return document.cookie
+    checkEssentialCookies()
+    if (ruta == true) {
+        let LocalCookies = (document.cookie).split(/;+/g)
+        LocalCookies.forEach(cookie => {
+            document.cookie = `"${cookie.trim().split(/=+/g)[0]}"=;max-age=0;path="/"`;
+            document.cookie = `'${cookie.trim().split(/=+/g)[0]}'=;max-age=0;path="/"`;
+            document.cookie = `${cookie.trim().split(/=+/g)[0]}=;max-age=0;path="/"`;
+        })
+    } else {
+        document.cookie = `"${ruta}"=;max-age=0;path="/"`;
+        document.cookie = `'${ruta}'=;max-age=0;path="/"`;
+        document.cookie = `${ruta}=;max-age=0;path="/"`;
+        return document.cookie
+    }
 }
 
 function CookiesComprobar() {
-    return document.cookie
+    checkEssentialCookies()
+    let cookies = {}
+    let LocalCookies = (document.cookie).split(/;+/g)
+    LocalCookies.forEach(cookie => {
+        cookies[`${cookie.trim().split(/=+/g)[0]}`] = cookie.split(/=+/g)[1]
+    })
+    return cookies
 }

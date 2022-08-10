@@ -159,6 +159,12 @@ div.menu {
         height: 100%;
         margin-top: 60px;
     }
+
+    div.content {
+        left: 0px;
+        width: 100vw;
+        padding-top: 40px;
+    }
 }
 
 /* PÁGINAS DE MENÚ */
@@ -400,20 +406,20 @@ header:hover footer div.nombre p.s {
 
 #windows .window svg.close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 5px;
-    background-color: var(--ventanas-svg-cerrar-fondo);
-    stroke: var(--ventanas-svg-cerrar-linea);
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    top: 10px;
+    right: 10px;
     fill: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    stroke-width: 3px;
     cursor: pointer;
     z-index: 850;
+    width: 40px;
+    height: 40px;
+    stroke: var(--header-menu-pagina-svg-stroke);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    background-color: var(--header-menu-background);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #windows .window .title {
@@ -440,11 +446,76 @@ header:hover footer div.nombre p.s {
     width: 320px;
     top: 120px;
     height: calc(100vh - 150px);
-    margin: 10px 0px;
     padding: 20px;
     color: var(--ventanas-texto-color);
     font-family: Arial;
 }
+
+@media only screen and (max-width: 800px) {
+    #windows .window {
+        width: 100vw;
+        background-color: var(--ventanas-fondo);
+        box-shadow: none;
+        z-index: 800;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #windows .window svg.close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        fill: none;
+        cursor: pointer;
+        z-index: 850;
+        width: 40px;
+        height: 40px;
+        stroke: var(--header-menu-pagina-svg-stroke);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        background-color: var(--header-menu-background);
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    #windows .window .title {
+        position: relative;
+        font-family: monospace;
+        width: 250px;
+        height: 120px;
+        left: calc(50vw - 160px);
+        color: var(--ventanas-titulo-color)
+    }
+    
+    #windows .window .title p {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: 20px;
+        margin: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    #windows .window div.caja {
+        position: absolute;
+        overflow-y: scroll;
+        width: 320px;
+        left: calc(50vw - 160px);
+        top: 120px;
+        height: calc(100vh - 150px);
+        margin: 10px 0px;
+        padding: 20px;
+        color: var(--ventanas-texto-color);
+        font-family: Arial;
+    }
+}
+
+
+
+
+/* DEV SETTINGS */
 
 #devSettings .options {
     overflow: hide;
@@ -456,6 +527,10 @@ header:hover footer div.nombre p.s {
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 20px 0px;
+}
+
+#devSettings p.intro {
+    margin: 0px
 }
 
 #devSettings .option {
