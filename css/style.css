@@ -386,6 +386,7 @@ header:hover footer div.nombre p.s {
     width: 320px;
     background-color: var(--ventanas-fondo);
     box-shadow: -10px 0px 10px var(--ventanas-sombra);
+    z-index: 800;
 }
 
 #windows .window svg.close {
@@ -403,7 +404,7 @@ header:hover footer div.nombre p.s {
     border-radius: 100%;
     stroke-width: 3px;
     cursor: pointer;
-    z-index: 800;
+    z-index: 850;
 }
 
 #windows .window .title {
