@@ -92,7 +92,7 @@ const navigation = {
 const windowsList = {
     "devSettings": {
         title: "Ajustes para desarrolladores",
-        content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
+        content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
     },
     "settings": {
         title: "Ajustes",
@@ -100,7 +100,7 @@ const windowsList = {
     },
     "cookies": {
         title: "Cookies",
-        content: `<p>Estoy trabajando en esto</p>`
+        content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de lapágina.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" disabled></div><div class="option"><label for="cookiesConfig">Ajustes generales</label><input type="checkbox" id="cookiesConfig"></div><div class="option"><label for="cookiesDev">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDev"></div><div class="option"><button onclick="CookiesRemove(true)">Reiniciar todas las cookies</button></div></div>`
     }
 }
 
@@ -249,6 +249,34 @@ function newWindow(name) {
                 CookiesAdd("rightClick", "false", "cookiesDev")
             }
         })
+    } else if (name == "cookies") {
+        const config = document.getElementById("cookiesConfig")
+        const devConfig = document.getElementById("cookiesDev")
+        if(CookiesValue("cookiesConfig") == "true") {
+            config.checked = true
+        } else {
+            config.checked = false
+        }
+        if(CookiesValue("cookiesDev") == "true") {
+            devConfig.checked = true
+        } else {
+            devConfig.checked = false
+        }
+        devConfig.addEventListener("change", function () {
+            if (devConfig.checked) {
+                CookiesAdd("cookiesDev", "true", "essentials")
+            } else {
+                CookiesAdd("cookiesDev", "false", "essentials")
+            }
+        })
+        config.addEventListener("change", function () {
+            if (config.checked) {
+                CookiesAdd("cookiesConfig", "true", "essentials")
+            } else {
+                document.oncontextmenu = function () { return false }
+                CookiesAdd("cookiesConfig", "false", "essentials")
+            }
+        })
     }
 }
 
@@ -306,6 +334,8 @@ function CookiesRemove(ruta) {
             document.cookie = `'${cookie.trim().split(/=+/g)[0]}'=;max-age=0;path="/"`;
             document.cookie = `${cookie.trim().split(/=+/g)[0]}=;max-age=0;path="/"`;
         })
+        window.alert("Todas las cookies han sido reiniciadas.\n¡Es necesario recargar la página!\nPulsa \"Aceptar\" para proceder.")
+        location.reload()
     } else {
         document.cookie = `"${ruta}"=;max-age=0;path="/"`;
         document.cookie = `'${ruta}'=;max-age=0;path="/"`;

@@ -26,6 +26,7 @@
     --ventanas-svg-cerrar-linea: #fff;
     --ventanas-sombra: #0002;
     --ventanas-texto-color: #000;
+    --ventanas-boton-hover-rojo: #cd3235;
 }
 
 .oscuro {
@@ -44,6 +45,7 @@
     --ventanas-svg-cerrar-linea: #000;
     --ventanas-sombra: #0002;
     --ventanas-texto-color: #fff;
+    --ventanas-boton-hover-rojo: #ed3235;
 }
 
 header {
@@ -555,4 +557,66 @@ header:hover footer div.nombre p.s {
 #devSettings .intro span {
     color: aqua;
     cursor: pointer;
+}
+
+/* COOKIES SETTINGS */
+
+#cookies .options {
+    overflow: hide;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    max-height: 250px;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+
+#cookies p.intro {
+    margin: 0px
+}
+
+#cookies .option {
+    position: relative;
+    height: 30px;
+}
+
+#cookies .option label {
+    left: 20px;
+    top: 7.5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#cookies .option input {
+    left: 230px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#cookies .intro span {
+    color: aqua;
+    cursor: pointer;
+}
+
+#cookies .option button {
+    border-radius: 5px;
+    position: absolute;
+    outline: none;
+    border: 2px solid var(--ventanas-texto-color);
+    color: var(--ventanas-texto-color);
+    background-color: transparent;
+    width: 250px;
+    height: 30px;
+    cursor: pointer;
+    top: 10px;
+    left: calc( 50% - 125px );
+    font-weight: bold;
+}
+
+#cookies .option button:hover {
+    border: 2px solid var(--ventanas-boton-hover-rojo);
+    color: var(--ventanas-boton-hover-rojo);
 }
