@@ -91,8 +91,8 @@ const navigation = {
 
 const windowsList = {
     "devSettings": {
-        title: "Ajustes para desarrolladores",
-        content: `<p>Estamos trabajando en esto</p>`
+        title: "Ajustes para desarrolladores [BETA]",
+        content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
     },
     "settings": {
         title: "Ajustes",
@@ -107,7 +107,7 @@ const windowsList = {
 function load() {
     let headerMenu = [];
     var x = 0;
-    for(x=0;x<(Object.keys(navigation)).length; x++){
+    for (x = 0; x < (Object.keys(navigation)).length; x++) {
         if (navigation[`${x}`].class == "separador") {
 
             headerMenu[x] = `
@@ -163,6 +163,32 @@ function load() {
     mmb.addEventListener("click", function () {
         document.getElementById("header").classList.toggle("active")
     })
+
+    if (!CookiesValue("rightClick")) {
+        CookiesAdd("rightClick", "false")
+    } else {
+        if (CookiesValue("rightClick") == "false") {
+            document.oncontextmenu = function () { return false }
+        } else if (CookiesValue("rightClick") == "true") {
+            document.oncontextmenu = function () { }
+        } else {
+            CookiesAdd("rightClick", "false");
+            document.oncontextmenu = function () { return false }
+        }
+    }
+    if (!CookiesValue("select")) {
+        CookiesAdd("select", "false")
+    } else {
+        if (CookiesValue("select") == "false") {
+            document.getElementById("body").classList.remove("select");
+        } else if (CookiesValue("select") == "true") {
+            document.getElementById("body").classList.add("select");
+        } else {
+            CookiesAdd("select", "false");
+            document.getElementById("body").classList.remove("select");
+        }
+    }
+
 }
 
 
@@ -192,6 +218,28 @@ function newWindow(name) {
     if (!windowsList[`${name}`]) return "No se ha encontrado ninguna ventana con este nombre"
     var divVentanas = document.getElementById("windows")
     divVentanas.innerHTML = divVentanas.innerHTML + `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${windowsList[`${name}`].title}</p></div><div class="caja">${windowsList[`${name}`].content}</div></div>`
+    if (name == "devSettings") {
+        const rightClickCheck = document.getElementById("rightClickCheck")
+        const selectCheck = document.getElementById("selectCheck")
+        selectCheck.addEventListener("change", function () {
+            if (selectCheck.checked) {
+                document.getElementById("body").classList.add("select");
+                CookiesAdd("select", "true")
+            } else {
+                document.getElementById("body").classList.remove("select");
+                CookiesAdd("select", "false")
+            }
+        })
+        rightClickCheck.addEventListener("change", function () {
+            if (rightClickCheck.checked) {
+                document.oncontextmenu = function () { }
+                CookiesAdd("rightClick", "true")
+            } else {
+                document.oncontextmenu = function () { return false }
+                CookiesAdd("rightClick", "false")
+            }
+        })
+    }
 }
 
 function closeWindow(name) {
@@ -215,7 +263,7 @@ function modifyWindow() {
 /* COOKIES */
 
 function CookiesAdd(nombre, valor, age) {
-    document.cookie = `${nombre}=${valor}; secure; max-age=${parseInt(age)>=30?`${age}`:'604800'}`
+    document.cookie = `${nombre}=${valor}; secure; max-age=${parseInt(age) >= 30 ? `${age}` : '604800'}`
     return document.cookie
 }
 

@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    user-select: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+}
+
+.select {
+    user-select: auto;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
 }
 
 .claro {
@@ -59,6 +61,12 @@ header {
 body {
     overflow-x: hidden;
     min-height: 90vh;
+    margin: 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 div.content {
@@ -92,7 +100,8 @@ header .btn svg {
 }
 
 div.menu {
-    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -117,25 +126,25 @@ div.menu {
         top: 10px;
     }
 
-    header .btn svg#off{
+    header .btn svg#off {
         opacity: 1;
         position: relative;
         transition: all 0.3s;
     }
 
-    header .btn svg#on{
+    header .btn svg#on {
         opacity: 0;
         position: relative;
         top: -45px;
         transition: all 0.3s;
     }
 
-    header.active .btn svg#off{
+    header.active .btn svg#off {
         opacity: 0;
         position: relative;
     }
 
-    header.active .btn svg#on{
+    header.active .btn svg#on {
         opacity: 1;
         position: relative;
         top: -45px;
@@ -212,12 +221,12 @@ header:hover div.menu div.pagina div.nombre p {
         border-radius: 5px;
         transition: all 0.2s;
     }
-    
+
     header div.menu div.pagina:hover div.vector svg {
         stroke: var(--header-menu-pagina-svg-bakground);
         background-color: var(--header-menu-pagina-svg-stroke);
     }
-    
+
     header div.menu div.pagina div.nombre p {
         text-transform: uppercase;
         color: var(--header-menu-pagina-p-color);
@@ -300,7 +309,7 @@ header:hover div.menu div.separador div.line {
         transform: translateY(10px);
         transition: all 0.3s;
     }
-    
+
     div.menu div.separador div.line {
         position: absolute;
         background-color: var(--header-menu-background);
@@ -362,12 +371,12 @@ header:hover footer div.nombre p.s {
         transition: all 0.3s;
         margin: 0px;
     }
-    
+
     header footer div.nombre p.p {
         font-size: 15px;
         margin: 0px;
     }
-    
+
     header footer div.nombre p.s {
         font-size: 10px;
         margin: 0px;
@@ -435,4 +444,40 @@ header:hover footer div.nombre p.s {
     padding: 20px;
     color: var(--ventanas-texto-color);
     font-family: Arial;
+}
+
+#devSettings .options {
+    overflow: hide;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    max-height: 250px;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+
+#devSettings .option {
+    position: relative;
+    height: 30px;
+}
+
+#devSettings .option label {
+    left: 20px;
+    top: 7.5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#devSettings .option input {
+    left: 230px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#devSettings .intro span {
+    color: aqua;
+    cursor: pointer;
 }
