@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
-    margin: 0px
+    margin: 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .claro {
@@ -12,6 +17,13 @@
     --header-menu-separador-svg-bakground: transparent;
     --header-menu-separador-p-color: #000;
     --header-menu-separador-line-color: #000;
+
+    --ventanas-fondo: #fff;
+    --ventanas-titulo-color: #000;
+    --ventanas-svg-cerrar-fondo: #000;
+    --ventanas-svg-cerrar-linea: #fff;
+    --ventanas-sombra: #0002;
+    --ventanas-texto-color: #000;
 }
 
 .oscuro {
@@ -23,6 +35,13 @@
     --header-menu-separador-svg-bakground: transparent;
     --header-menu-separador-p-color: #fff;
     --header-menu-separador-line-color: #fff;
+
+    --ventanas-fondo: #334756;
+    --ventanas-titulo-color: #fff;
+    --ventanas-svg-cerrar-fondo: #fff;
+    --ventanas-svg-cerrar-linea: #000;
+    --ventanas-sombra: #0002;
+    --ventanas-texto-color: #fff;
 }
 
 header {
@@ -37,11 +56,18 @@ header {
     z-index: 700;
 }
 
+body {
+    overflow-x: hidden;
+    min-height: 90vh;
+}
+
 div.content {
     position: relative;
     left: 60px;
     width: calc(100vw - 60px);
     z-index: -1;
+    font-family: Arial;
+    padding: 20px;
 }
 
 header .btn {
@@ -213,6 +239,7 @@ div.menu div.separador {
     align-items: center;
     cursor: default;
     height: 50px;
+    opacity: .5;
 }
 
 header div.menu div.separador div.vector svg {
@@ -295,7 +322,7 @@ footer {
     align-items: center;
     opacity: .5;
     box-shadow: 0px -10px 10px #0004;
-    cursor: pointer;
+    cursor: default;
 }
 
 footer div.vector svg {
@@ -345,4 +372,66 @@ header:hover footer div.nombre p.s {
         font-size: 10px;
         margin: 0px;
     }
+}
+
+
+
+/* VENTANAS */
+
+#windows .window {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 320px;
+    background-color: var(--ventanas-fondo);
+    box-shadow: -10px 0px 10px var(--ventanas-sombra);
+}
+
+#windows .window svg.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    background-color: var(--ventanas-svg-cerrar-fondo);
+    stroke: var(--ventanas-svg-cerrar-linea);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    stroke-width: 3px;
+    cursor: pointer;
+    z-index: 800;
+}
+
+#windows .window .title {
+    position: relative;
+    font-family: monospace;
+    width: 250px;
+    height: 120px;
+    color: var(--ventanas-titulo-color)
+}
+
+#windows .window .title p {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#windows .window div.caja {
+    position: absolute;
+    overflow-y: scroll;
+    width: 320px;
+    top: 120px;
+    height: calc(100vh - 150px);
+    margin: 10px 0px;
+    padding: 20px;
+    color: var(--ventanas-texto-color);
+    font-family: Arial;
 }
