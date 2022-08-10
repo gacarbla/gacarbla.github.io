@@ -379,7 +379,7 @@ header:hover footer div.nombre p.s {
 /* VENTANAS */
 
 #windows .window {
-    position: absolute;
+    position: fixed;
     right: 0px;
     top: 0px;
     bottom: 0px;
