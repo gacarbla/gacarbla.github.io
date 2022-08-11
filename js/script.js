@@ -103,7 +103,8 @@ const navigation = {
         class: "pagina",
         onclick: "newWindow('devSettings')",
         title: "Herramientas avanzadas para desarrolladores",
-        disabled: false
+        disabled: false,
+        hidden: CookiesValue("devModeStatus")=="on"?false:true,
     }
 }
 
@@ -113,8 +114,8 @@ const windowsList = {
         content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
     },
     "settings": {
-        title: "Ajustes [BETA]",
-        content: `<div class="apartado"><p>Apariencia</p><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Oscuro</p><label class="switch centro"><input type="checkbox" id="modoColorCheck"><span class="slider round"></span></label><p class="etiqueta dereita">Claro</p></div></div></div></div>`
+        title: "Ajustes",
+        content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`
     },
     "cookies": {
         title: "Cookies",
@@ -148,11 +149,19 @@ function load() {
             document.getElementById("body").classList.remove("select");
         }
     }
+    if (CookiesValue("colorMode")=="claro") {
+        document.getElementById("body").className = "claro"
+    }
+    if (CookiesValue("colorMode")=="oscuro") {
+        document.getElementById("body").className = "oscuro"
+    }
 
     let headerMenu = [];
     var x = 0;
     for (x = 0; x < (Object.keys(navigation)).length; x++) {
-        if (navigation[`${x}`].class == "separador") {
+        if (navigation[`${x}`].hidden) {
+
+        } else if (navigation[`${x}`].class == "separador") {
 
             headerMenu[x] = `
             <div class="separador">
@@ -316,13 +325,31 @@ function newWindow(name) {
             }
         })
     } else if (name == "settings") {
-        const modo = document.getElementById("modoColorCheck")
-        modo.addEventListener("change", function(){
-            if(modo.checked){
+        const modoColor = document.getElementById("modoColorCheck")
+        if(document.getElementById("body").className == "claro"){
+            modoColor.checked = true
+        }
+        modoColor.addEventListener("change", function(){
+            if(modoColor.checked){
+                CookiesAdd("colorMode", "claro", "cookiesConfig")
                 document.getElementById("body").className = "claro"
             } else {
+                CookiesAdd("colorMode", "oscuro", "cookiesConfig")
                 document.getElementById("body").className = "oscuro"
             }
+        })
+        const modoDev = document.getElementById("devModeCheck")
+        if(CookiesValue("devModeStatus")=="on"){
+            modoDev.checked = true
+        }
+        modoDev.addEventListener("change", function(){
+            if(modoDev.checked){
+                CookiesAdd("devModeStatus", "on", "essential")
+            } else {
+                CookiesAdd("devModeStatus", "off", "essential")
+            }
+            window.alert("La página se recargará de forma automática con los nuevos ajustes.")
+            location.reload()
         })
     }
 }
