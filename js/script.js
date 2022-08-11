@@ -76,12 +76,55 @@ const navigation = {
         disabled: false
     },
     "10": {
+        name: "Redes",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M12 7v4"></path><path d="m6.7 17.797 2.8-2"></path><path d="m17.3 17.797-2.8-2"></path></svg>',
+        class: "separador",
+    },
+    "11": {
+        name: "Instagram",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 4H8a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4Z"></path><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M16.5 7.5v.001"></path></svg>',
+        class: "pagina",
+        onclick: "go('https://www.instagram.com/gacarbla/', true)",
+        title: "Instagram personal",
+        disabled: false
+    },
+    "12": {
+        name: "Twitter",
+        class: "pagina",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 4.009c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.322 12 7.999v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c-.002-.249 1.51-2.772 1.818-4.013v.001Z"></path></svg>',
+        onclick: "go('https://twitter.com/gacarbla', true)",
+        title: "Twitter personal",
+        disabled: false
+    },
+    "13": {
+        name: "LinkedIn",
+        class: "pagina",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path><path d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 0 0-4 0"></path></svg>',
+        onclick: "go('https://www.linkedin.com/in/gabriel-carro-blanco-866b99247/', true)",
+        title: "LinkedIn",
+        disabled: false
+    },
+    "14": {
+        name: "Spotify",
+        class: "pagina",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="M8 11.97c2.5-1.473 5.5-.973 7.5.527"></path><path d="M9 15.002c1.5-1 4-1 5 .5"></path><path d="M7 8.999c2-1 6-2 10 .5"></path></svg>',
+        onclick: "go('https://open.spotify.com/user/31k2xuzibkfcpzhuottq6kgpigpy?si=9a158eccac6f478c', true)",
+        title: "Spotify",
+        disabled: false
+    },
+    "15": {
+        name: "Tinder",
+        class: "pagina",
+        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.918 8.174c2.56 4.982.5 11.656-5.38 12.626C5.836 22.487.698 13.084 6.484 7.571 6.793 7.266 7.644 6.476 8 6.222c0 .528.27 3.475 1 3.167 3 0 4-4.222 3.587-7.389 2.7 1.411 4.987 3.376 6.33 6.174v0Z"></path></svg>',
+        onclick: "rickroleo()",
+        disabled: false
+    },
+    "16": {
         name: "Página",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"></path><path d="M6 8h.01"></path><path d="M9 8h.01"></path></svg>',
         class: "separador",
-        onclick: "",
     },
-    "11": {
+    "17": {
         name: "Ajustes",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 6h8"></path><path d="M16 6h4"></path><path d="M8 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 12h2"></path><path d="M10 12h10"></path><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 18h11"></path><path d="M19 18h1"></path></svg>',
         class: "pagina",
@@ -89,7 +132,7 @@ const navigation = {
         title: "Modifica el aspecto de la página a tu gusto",
         disabled: false
     },
-    "12": {
+    "18": {
         name: "Cookies",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 13v.01"></path><path d="M12 17v.01"></path><path d="M12 12v.01"></path><path d="M16 14v.01"></path><path d="M11 8v.01"></path><path d="m13.148 3.478 2.667 1.104a4 4 0 0 0 4.656 6.14l.053.132a3 3 0 0 1 0 2.296c-.497.786-.838 1.404-1.024 1.852-.189.456-.409 1.194-.66 2.216a3 3 0 0 1-1.624 1.623c-1.048.263-1.787.483-2.216.661-.475.197-1.092.538-1.852 1.024a3 3 0 0 1-2.296 0c-.802-.503-1.419-.844-1.852-1.024-.47-.195-1.21-.415-2.216-.66a3 3 0 0 1-1.623-1.624c-.265-1.052-.485-1.79-.66-2.216-.199-.479-.54-1.096-1.025-1.852a3 3 0 0 1 0-2.296c.48-.744.82-1.36 1.024-1.852.171-.413.391-1.152.66-2.216a3 3 0 0 1 1.624-1.623c1.032-.256 1.77-.476 2.216-.66.458-.19 1.075-.532 1.852-1.025a3 3 0 0 1 2.296 0v0Z"></path></svg>',
         class: "pagina",
@@ -97,14 +140,14 @@ const navigation = {
         title: "Modifica el uso de Cookies a tu gusto",
         disabled: false
     },
-    "13": {
+    "19": {
         name: "Ajustes dev",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12h6"></path><path d="M12 9v6"></path><path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1V7a2 2 0 0 1 2-2"></path><path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1V7a2 2 0 0 0-2-2"></path></svg>',
         class: "pagina",
         onclick: "newWindow('devSettings')",
         title: "Herramientas avanzadas para desarrolladores",
         disabled: false,
-        hidden: CookiesValue("devModeStatus")=="on"?false:true,
+        hidden: CookiesValue("devModeStatus") == "on" ? false : true,
     }
 }
 
@@ -125,34 +168,20 @@ const windowsList = {
 
 function load() {
 
-    if (!CookiesValue("rightClick")) {
-        CookiesAdd("rightClick", "false", "cookiesDev")
+    if (CookiesValue("rightClick") == "true") {
+        document.oncontextmenu = function () { }
     } else {
-        if (CookiesValue("rightClick") == "false") {
-            document.oncontextmenu = function () { return false }
-        } else if (CookiesValue("rightClick") == "true") {
-            document.oncontextmenu = function () { }
-        } else {
-            CookiesAdd("rightClick", "false", "cookiesDev");
-            document.oncontextmenu = function () { return false }
-        }
+        document.oncontextmenu = function () { return false }
     }
-    if (!CookiesValue("select")) {
-        CookiesAdd("select", "false", "cookiesDev")
+    if (CookiesValue("select") == "true") {
+        document.getElementById("body").classList.add("select");
     } else {
-        if (CookiesValue("select") == "false") {
-            document.getElementById("body").classList.remove("select");
-        } else if (CookiesValue("select") == "true") {
-            document.getElementById("body").classList.add("select");
-        } else {
-            CookiesAdd("select", "false", "cookiesDev");
-            document.getElementById("body").classList.remove("select");
-        }
+        document.getElementById("body").classList.remove("select");
     }
-    if (CookiesValue("colorMode")=="claro") {
+    if (CookiesValue("colorMode") == "claro") {
         document.getElementById("body").className = "claro"
     }
-    if (CookiesValue("colorMode")=="oscuro") {
+    if (CookiesValue("colorMode") == "oscuro") {
         document.getElementById("body").className = "oscuro"
     }
 
@@ -175,7 +204,7 @@ function load() {
             </div>`
 
         } else if (navigation[`${x}`].class == "pagina") {
-            if((navigation[`${x}`].name=="Cookies" || navigation[`${x}`].name=="Ajustes" || navigation[`${x}`].name=="Ajustes dev") && warned){
+            if ((navigation[`${x}`].name == "Cookies" || navigation[`${x}`].name == "Ajustes" || navigation[`${x}`].name == "Ajustes dev") && warned) {
                 headerMenu[x] = `
                     <div class="pagina disabled" title="El navegador no permite utilizar esta herramienta">
                         <div class="vector">
@@ -251,6 +280,11 @@ function go(page, newTabBoolean) {
     }
 }
 
+function rickroleo() {
+    const audio = new Audio("../media/audio/rickroll.mp3")
+    audio.play()
+}
+
 
 /* PAGE WINDOWS */
 
@@ -268,12 +302,12 @@ function newWindow(name) {
     if (name == "devSettings") {
         const rightClickCheck = document.getElementById("rightClickCheck")
         const selectCheck = document.getElementById("selectCheck")
-        if(CookiesValue("rightClick") == "true") {
+        if (CookiesValue("rightClick") == "true") {
             rightClickCheck.checked = true
         } else {
             rightClickCheck.checked = false
         }
-        if(CookiesValue("select") == "true") {
+        if (CookiesValue("select") == "true") {
             selectCheck.checked = true
         } else {
             selectCheck.checked = false
@@ -299,12 +333,12 @@ function newWindow(name) {
     } else if (name == "cookies") {
         const config = document.getElementById("cookiesConfig")
         const devConfig = document.getElementById("cookiesDev")
-        if(CookiesValue("cookiesConfig") == "true") {
+        if (CookiesValue("cookiesConfig") == "true") {
             config.checked = true
         } else {
             config.checked = false
         }
-        if(CookiesValue("cookiesDev") == "true") {
+        if (CookiesValue("cookiesDev") == "true") {
             devConfig.checked = true
         } else {
             devConfig.checked = false
@@ -326,11 +360,11 @@ function newWindow(name) {
         })
     } else if (name == "settings") {
         const modoColor = document.getElementById("modoColorCheck")
-        if(document.getElementById("body").className == "claro"){
+        if (document.getElementById("body").className == "claro") {
             modoColor.checked = true
         }
-        modoColor.addEventListener("change", function(){
-            if(modoColor.checked){
+        modoColor.addEventListener("change", function () {
+            if (modoColor.checked) {
                 CookiesAdd("colorMode", "claro", "cookiesConfig")
                 document.getElementById("body").className = "claro"
             } else {
@@ -339,11 +373,11 @@ function newWindow(name) {
             }
         })
         const modoDev = document.getElementById("devModeCheck")
-        if(CookiesValue("devModeStatus")=="on"){
+        if (CookiesValue("devModeStatus") == "on") {
             modoDev.checked = true
         }
-        modoDev.addEventListener("change", function(){
-            if(modoDev.checked){
+        modoDev.addEventListener("change", function () {
+            if (modoDev.checked) {
                 CookiesAdd("devModeStatus", "on", "essential")
             } else {
                 CookiesAdd("devModeStatus", "off", "essential")
@@ -381,9 +415,9 @@ function checkEssentialCookies() {
 
 function CookiesAdd(ruta, valor, type) {
     checkEssentialCookies();
-    if(Object.keys(CookiesComprobar())<1) {
-        if(!warned) {
-            warned=true
+    if (Object.keys(CookiesComprobar()) < 1) {
+        if (!warned) {
+            warned = true
             window.alert("Se ha detectado que su navegador no permite el almacenamiento de Cookies esenciales.\nDe forma automática, todas las funciones de almacenamiento de datos, cookies y otra información se ve paralizada y deshabilitada.")
         }
     } else if ((CookiesValue("cookiesDev") == "false" && type == "cookiesDev") || (CookiesValue("cookiesConfig") == "false" && type == "cookiesConfig")) {
