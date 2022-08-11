@@ -27,6 +27,7 @@
     --ventanas-sombra: #0002;
     --ventanas-texto-color: #000;
     --ventanas-boton-hover-rojo: #cd3235;
+    --ventanas-enlaces-color: #19585d;
 }
 
 .oscuro {
@@ -41,11 +42,12 @@
 
     --ventanas-fondo: #334756;
     --ventanas-titulo-color: #fff;
-    --ventanas-svg-cerrar-fondo: #fff;
-    --ventanas-svg-cerrar-linea: #000;
+    --ventanas-svg-cerrar-fondo: #334756;
+    --ventanas-svg-cerrar-linea: #ff4c29;
     --ventanas-sombra: #0002;
     --ventanas-texto-color: #fff;
     --ventanas-boton-hover-rojo: #ed3235;
+    --ventanas-enlaces-color: aqua;
 }
 
 header {
@@ -420,11 +422,11 @@ header:hover footer div.nombre p.s {
     z-index: 850;
     width: 40px;
     height: 40px;
-    stroke: var(--header-menu-pagina-svg-stroke);
+    stroke: var(--ventanas-svg-cerrar-linea);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    background-color: var(--header-menu-background);
+    background-color: var(--ventanas-svg-cerrar-fondo);
     border-radius: 5px;
     padding: 5px;
 }
@@ -463,25 +465,15 @@ header:hover footer div.nombre p.s {
         width: 100vw;
         background-color: var(--ventanas-fondo);
         box-shadow: none;
-        z-index: 800;
-        display: flex;
-        flex-direction: column;
     }
     
     #windows .window svg.close {
         position: absolute;
         top: 10px;
         right: 10px;
-        fill: none;
-        cursor: pointer;
         z-index: 850;
         width: 40px;
         height: 40px;
-        stroke: var(--header-menu-pagina-svg-stroke);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2px;
-        background-color: var(--header-menu-background);
         border-radius: 5px;
         padding: 5px;
     }
@@ -560,7 +552,8 @@ header:hover footer div.nombre p.s {
 }
 
 #devSettings .intro span {
-    color: aqua;
+    color: var(--ventanas-enlaces-color);
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -602,7 +595,8 @@ header:hover footer div.nombre p.s {
 }
 
 #cookies .intro span {
-    color: aqua;
+    color: var(--ventanas-enlaces-color);
+    font-weight: bold;
     cursor: pointer;
 }
 
