@@ -181,6 +181,11 @@ div.menu div.pagina {
     animation: goIn 0.5s linear;
 }
 
+div.menu div.pagina.disabled {
+    opacity: .3;
+    cursor: not-allowed
+}
+
 header div.menu div.pagina div.vector svg {
     width: 40px;
     height: 40px;
