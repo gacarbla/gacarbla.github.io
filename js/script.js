@@ -113,8 +113,8 @@ const windowsList = {
         content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
     },
     "settings": {
-        title: "Ajustes",
-        content: `<p>Estoy trabajando en esto</p>`
+        title: "Ajustes [BETA]",
+        content: `<div class="apartado"><p>Apariencia</p><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Oscuro</p><label class="switch centro"><input type="checkbox" id="modoColorCheck"><span class="slider round"></span></label><p class="etiqueta dereita">Claro</p></div></div></div></div>`
     },
     "cookies": {
         title: "Cookies",
@@ -313,6 +313,15 @@ function newWindow(name) {
             } else {
                 document.oncontextmenu = function () { return false }
                 CookiesAdd("cookiesConfig", "false", "essentials")
+            }
+        })
+    } else if (name == "settings") {
+        const modo = document.getElementById("modoColorCheck")
+        modo.addEventListener("change", function(){
+            if(modo.checked){
+                document.getElementById("body").className = "claro"
+            } else {
+                document.getElementById("body").className = "oscuro"
             }
         })
     }
