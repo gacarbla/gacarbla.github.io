@@ -68,14 +68,6 @@ const navigation = {
         disabled: false
     },
     "9": {
-        name: "discord.js v13 guide",
-        vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 4-2 14.5-6 2-6-2L4 4h16Z"></path><path d="M7.5 8h3v8l-2-1"></path><path d="M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5"></path></svg>',
-        class: "pagina",
-        onclick: "go('https://github.com/gacarbla/discordjsv13guide', true)",
-        title: "Accede al repositorio",
-        disabled: false
-    },
-    "10": {
         name: "Computer analyzer",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path><path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4"></path><path d="M11 6v.01"></path><path d="M13 18v.01"></path></svg>',
         class: "pagina",
@@ -83,13 +75,13 @@ const navigation = {
         title: "Accede al repositorio",
         disabled: false
     },
-    "11": {
+    "10": {
         name: "Página",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"></path><path d="M6 8h.01"></path><path d="M9 8h.01"></path></svg>',
         class: "separador",
         onclick: "",
     },
-    "12": {
+    "11": {
         name: "Ajustes",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 6h8"></path><path d="M16 6h4"></path><path d="M8 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 12h2"></path><path d="M10 12h10"></path><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 18h11"></path><path d="M19 18h1"></path></svg>',
         class: "pagina",
@@ -97,7 +89,7 @@ const navigation = {
         title: "Modifica el aspecto de la página a tu gusto",
         disabled: false
     },
-    "13": {
+    "12": {
         name: "Cookies",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 13v.01"></path><path d="M12 17v.01"></path><path d="M12 12v.01"></path><path d="M16 14v.01"></path><path d="M11 8v.01"></path><path d="m13.148 3.478 2.667 1.104a4 4 0 0 0 4.656 6.14l.053.132a3 3 0 0 1 0 2.296c-.497.786-.838 1.404-1.024 1.852-.189.456-.409 1.194-.66 2.216a3 3 0 0 1-1.624 1.623c-1.048.263-1.787.483-2.216.661-.475.197-1.092.538-1.852 1.024a3 3 0 0 1-2.296 0c-.802-.503-1.419-.844-1.852-1.024-.47-.195-1.21-.415-2.216-.66a3 3 0 0 1-1.623-1.624c-.265-1.052-.485-1.79-.66-2.216-.199-.479-.54-1.096-1.025-1.852a3 3 0 0 1 0-2.296c.48-.744.82-1.36 1.024-1.852.171-.413.391-1.152.66-2.216a3 3 0 0 1 1.624-1.623c1.032-.256 1.77-.476 2.216-.66.458-.19 1.075-.532 1.852-1.025a3 3 0 0 1 2.296 0v0Z"></path></svg>',
         class: "pagina",
@@ -105,7 +97,7 @@ const navigation = {
         title: "Modifica el uso de Cookies a tu gusto",
         disabled: false
     },
-    "14": {
+    "13": {
         name: "Ajustes dev",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12h6"></path><path d="M12 9v6"></path><path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1V7a2 2 0 0 1 2-2"></path><path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1V7a2 2 0 0 0-2-2"></path></svg>',
         class: "pagina",
@@ -126,7 +118,7 @@ const windowsList = {
     },
     "cookies": {
         title: "Cookies",
-        content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" disabled></div><div class="option"><label for="cookiesConfig">Ajustes generales</label><input type="checkbox" id="cookiesConfig"></div><div class="option"><label for="cookiesDev">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDev"></div><div class="option"><button onclick="CookiesRemove(true)">Reiniciar todas las cookies</button></div></div>`
+        content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" checked="true" disabled></div><div class="option"><label for="cookiesConfig">Ajustes generales</label><input type="checkbox" id="cookiesConfig"></div><div class="option"><label for="cookiesDev">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDev"></div><div class="option"><button onclick="CookiesRemove(true)">Reiniciar todas las cookies</button></div></div>`
     }
 }
 
@@ -356,7 +348,7 @@ function CookiesAdd(ruta, valor, type) {
     if(Object.keys(CookiesComprobar())<1) {
         if(!warned) {
             warned=true
-            window.alert("Se ha detectado que su buscador no permite el almacenamiento de Cookies esenciales.\nDe forma automática, todas las funciones de almacenamiento de datos, cookies y otra información se ve paralizada y deshabilitada.")
+            window.alert("Se ha detectado que su navegador no permite el almacenamiento de Cookies esenciales.\nDe forma automática, todas las funciones de almacenamiento de datos, cookies y otra información se ve paralizada y deshabilitada.")
         }
     } else if ((CookiesValue("cookiesDev") == "false" && type == "cookiesDev") || (CookiesValue("cookiesConfig") == "false" && type == "cookiesConfig")) {
         CookiesRemove(ruta)
