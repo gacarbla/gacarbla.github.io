@@ -304,7 +304,7 @@ const windows = {
     content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`,
     start() {
       const modoColor = document.getElementById("modoColorCheck")
-      if (document.getElementById("body").className == "claro") {
+      if (document.getElementById("body").classList.contains("claro")) {
         modoColor.checked = true
       }
       modoColor.addEventListener("change", function () {
