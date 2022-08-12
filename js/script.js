@@ -16,10 +16,12 @@ const cookies = {
   },
   activar(grupo) {
     this.establecer(`${grupo}`, "true")
+    window.alert("Es necesario reiniciar la página\nPresione \"Aceptar\" para continuar")
+    location.reload()
   },
   iniciar() {
     if (!this.obtener("cookiesAjustes")) { this.establecer(`cookiesAjustes`, "true") }
-    if (!this.obtener("cookiesDesarrollador")) { this.establecer(`cookiesDesarrollador`, "true")}
+    if (!this.obtener("cookiesDesarrollador")) { this.establecer(`cookiesDesarrollador`, "true") }
     let cookiesObject = {}
     let LocalCookies = (document.cookie).split(/;+/g)
     LocalCookies.forEach(cookie => {
@@ -36,7 +38,8 @@ const cookies = {
     try {
       this.establecer(`${grupo}`, "false")
       this.list[`${grupo}`].forEach(cookie => this.eliminar(`${cookie}`))
-      window.alert("Es necesario reiniciar la página\nPresione \"Aceptar para continuar\"")
+      window.alert("Es necesario reiniciar la página\nPresione \"Aceptar\" para continuar")
+      location.reload()
     } catch (e) {
       console.error(e)
       return false
@@ -259,29 +262,135 @@ const navigation = {
   },
 }
 
-const windowsList = {
+const windows = {
   "devSettings": {
     title: "Ajustes para desarrolladores",
-    content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`
+    content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.<br>Se recomienda mantener las <span onclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="options"><div class="option"><label for="selectCheck">Habilitar selección</label><input type="checkbox" id="selectCheck"></div><div class="option"><label for="rightClickCheck">Habilitar click derecho</label><input type="checkbox" id="rightClickCheck"></div><div class="option"><label for="commandGuideCheck">Habilitar guía de comandos</label><input type="checkbox" id="commandGuideCheck" disabled></div></div>`,
+    start() {
+      const rightClickCheck = document.getElementById("rightClickCheck")
+      const selectCheck = document.getElementById("selectCheck")
+      if (cookies.obtener("rightClick") == "true") {
+        rightClickCheck.checked = true
+      } else {
+        rightClickCheck.checked = false
+      }
+      if (cookies.obtener("select") == "true") {
+        selectCheck.checked = true
+      } else {
+        selectCheck.checked = false
+      }
+      selectCheck.addEventListener("change", function () {
+        if (selectCheck.checked) {
+          document.getElementById("body").classList.add("select");
+          cookies.establecer("select", "true")
+        } else {
+          document.getElementById("body").classList.remove("select");
+          cookies.establecer("select", "false")
+        }
+      })
+      rightClickCheck.addEventListener("change", function () {
+        if (rightClickCheck.checked) {
+          document.oncontextmenu = function () { }
+          cookies.establecer("rightClick", "true")
+        } else {
+          document.oncontextmenu = function () { return false }
+          cookies.establecer("rightClick", "false")
+        }
+      })
+    }
   },
   "settings": {
     title: "Ajustes",
-    content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`
+    content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`,
+    start() {
+      const modoColor = document.getElementById("modoColorCheck")
+      if (document.getElementById("body").className == "claro") {
+        modoColor.checked = true
+      }
+      modoColor.addEventListener("change", function () {
+        if (modoColor.checked) {
+          cookies.establecer("colorMode", "claro", "cookiesAjustes")
+          document.getElementById("body").classList.add("claro")
+          document.getElementById("body").classList.remove("oscuro")
+        } else {
+          cookies.establecer("colorMode", "oscuro", "cookiesAjustes")
+          document.getElementById("body").classList.remove("claro")
+          document.getElementById("body").classList.add("oscuro")
+        }
+      })
+      const modoDev = document.getElementById("devModeCheck")
+      if (cookies.obtener("devModeStatus") == "on") {
+        modoDev.checked = true
+      }
+      modoDev.addEventListener("change", function () {
+        if (modoDev.checked) {
+          cookies.establecer("devModeStatus", "on")
+        } else {
+          cookies.establecer("devModeStatus", "off")
+        }
+        window.alert("La página se recargará de forma automática con los nuevos ajustes.")
+        location.reload()
+      })
+      const easterEggs = document.getElementById("easterEggCheck")
+      if (cookies.obtener("easterEggs") == "on") {
+        easterEggs.checked = true
+      }
+      easterEggs.addEventListener("change", function () {
+        if (easterEggs.checked) {
+          cookies.establecer("easterEggs", "on")
+        } else {
+          cookies.establecer("easterEggs", "off")
+        }
+        window.alert("La página se recargará de forma automática con los nuevos ajustes.")
+        location.reload()
+      })
+    }
   },
   "cookies": {
     title: "Cookies",
-    content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" checked="true" disabled></div><div class="option"><label for="cookiesAjustes">Ajustes generales</label><input type="checkbox" id="cookiesAjustes"></div><div class="option"><label for="cookiesDesarrollador">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDesarrollador"></div><div class="option"><button onclick="cookies.reset()">Reiniciar todas las cookies</button></div></div>`
+    content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" checked="true" disabled></div><div class="option"><label for="cookiesAjustes">Ajustes generales</label><input type="checkbox" id="cookiesAjustes"></div><div class="option"><label for="cookiesDesarrollador">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDesarrollador"></div><div class="option"><button onclick="cookies.reset()">Reiniciar todas las cookies</button></div></div>`,
+    start() {
+      const config = document.getElementById("cookiesAjustes")
+      const devConfig = document.getElementById("cookiesDesarrollador")
+      if (cookies.obtener("cookiesAjustes") == "true") {
+        config.checked = true
+      } else {
+        config.checked = false
+      }
+      if (cookies.obtener("cookiesDesarrollador") == "true") {
+        devConfig.checked = true
+      } else {
+        devConfig.checked = false
+      }
+      devConfig.addEventListener("change", function () {
+        if (devConfig.checked) {
+          cookies.activar("cookiesDesarrollador", "true")
+        } else {
+          cookies.desactivar("cookiesDesarrollador")
+        }
+      })
+      config.addEventListener("change", function () {
+        if (config.checked) {
+          cookies.activar("cookiesAjustes", "true")
+        } else {
+          document.oncontextmenu = function () { return false }
+          cookies.desactivar("cookiesAjustes")
+        }
+      })
+    }
   },
   "rickroll": {
     title: "",
-    content: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`
+    content: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+    start() {
+
+    }
   }
 }
 
 function load() {
 
-  cookies.iniciar()
-
+  cookies.iniciar();
   if (cookies.obtener("rightClick") == "true") {
     document.oncontextmenu = function () { }
   } else {
@@ -317,7 +426,7 @@ function load() {
   }
   document.getElementById("header").innerHTML = `<div class="btn" id="mobilemenubutton"><svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16"></path>\n<path d="M4 12h16"></path><path d="M4 18h16"></path>\n</svg>\n<svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path>\n<path d="m6 6 12 12"></path></svg></div><div class="menu">${headerMenu.join("\n")}</div><footer><div class="vector"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg></div><div class="nombre"><p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel Carro Blanco</p></div></footer>`
   var mmb = document.getElementById("mobilemenubutton")
-  mmb.addEventListener("click", function () {document.getElementById("header").classList.toggle("active")})
+  mmb.addEventListener("click", function () { document.getElementById("header").classList.toggle("active") })
 }
 
 
@@ -338,26 +447,6 @@ function go(page, newTabBoolean) {
   } else {
     window.location = `${page}`
   }
-}
-
-
-function copy(elementId) {
-  var doc = document,
-    text = doc.getElementById(element),
-    range,
-    selection;
-    if(doc.body.createTextRange){ //ms
-        range = doc.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    }else if(window.getSelection){ //all others
-        selection = window.getSelection();
-        range = doc.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-     selection.addRange(range);
-    }
-  document.execCommand("copy");
 }
 
 
@@ -383,110 +472,12 @@ function newWindow(name) {
   if (!name) {
     return console.error("No se ha especificado el nombre de la ventana")
   }
+  const ventanaData = windows[`${name}`];
   if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
-  if (!windowsList[`${name}`]) return "No se ha encontrado ninguna ventana con este nombre"
-  var divVentanas = document.getElementById("windows")
-  divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${windowsList[`${name}`].title}</p></div><div class="caja">${windowsList[`${name}`].content}</div></div>`
-  if (name == "devSettings") {
-    const rightClickCheck = document.getElementById("rightClickCheck")
-    const selectCheck = document.getElementById("selectCheck")
-    if (cookies.obtener("rightClick") == "true") {
-      rightClickCheck.checked = true
-    } else {
-      rightClickCheck.checked = false
-    }
-    if (cookies.obtener("select") == "true") {
-      selectCheck.checked = true
-    } else {
-      selectCheck.checked = false
-    }
-    selectCheck.addEventListener("change", function () {
-      if (selectCheck.checked) {
-        document.getElementById("body").classList.add("select");
-        cookies.establecer("select", "true")
-      } else {
-        document.getElementById("body").classList.remove("select");
-        cookies.establecer("select", "false")
-      }
-    })
-    rightClickCheck.addEventListener("change", function () {
-      if (rightClickCheck.checked) {
-        document.oncontextmenu = function () { }
-        cookies.establecer("rightClick", "true")
-      } else {
-        document.oncontextmenu = function () { return false }
-        cookies.establecer("rightClick", "false")
-      }
-    })
-  } else if (name == "cookies") {
-    const config = document.getElementById("cookiesAjustes")
-    const devConfig = document.getElementById("cookiesDesarrollador")
-    if (cookies.obtener("cookiesAjustes") == "true") {
-      config.checked = true
-    } else {
-      config.checked = false
-    }
-    if (cookies.obtener("cookiesDesarrollador") == "true") {
-      devConfig.checked = true
-    } else {
-      devConfig.checked = false
-    }
-    devConfig.addEventListener("change", function () {
-      if (devConfig.checked) {
-        cookies.activar("cookiesDesarrollador", "true")
-      } else {
-        cookies.desactivar("cookiesDesarrollador")
-      }
-    })
-    config.addEventListener("change", function () {
-      if (config.checked) {
-        cookies.activar("cookiesAjustes", "true")
-      } else {
-        document.oncontextmenu = function () { return false }
-        cookies.desactivar("cookiesAjustes")
-      }
-    })
-  } else if (name == "settings") {
-    const modoColor = document.getElementById("modoColorCheck")
-    if (document.getElementById("body").className == "claro") {
-      modoColor.checked = true
-    }
-    modoColor.addEventListener("change", function () {
-      if (modoColor.checked) {
-        cookies.establecer("colorMode", "claro", "cookiesAjustes")
-        document.getElementById("body").className = "claro"
-      } else {
-        cookies.establecer("colorMode", "oscuro", "cookiesAjustes")
-        document.getElementById("body").className = "oscuro"
-      }
-    })
-    const modoDev = document.getElementById("devModeCheck")
-    if (cookies.obtener("devModeStatus") == "on") {
-      modoDev.checked = true
-    }
-    modoDev.addEventListener("change", function () {
-      if (modoDev.checked) {
-        cookies.establecer("devModeStatus", "on")
-      } else {
-        cookies.establecer("devModeStatus", "off")
-      }
-      window.alert("La página se recargará de forma automática con los nuevos ajustes.")
-      location.reload()
-    })
-    const easterEggs = document.getElementById("easterEggCheck")
-    if (cookies.obtener("easterEggs") == "on") {
-      easterEggs.checked = true
-    }
-    easterEggs.addEventListener("change", function () {
-      if (easterEggs.checked) {
-        cookies.establecer("easterEggs", "on")
-      } else {
-        cookies.establecer("easterEggs", "off")
-      }
-      window.alert("La página se recargará de forma automática con los nuevos ajustes.")
-      location.reload()
-    })
-  }
+  if (!windows[`${name}`]) return "No se ha encontrado ninguna ventana con este nombre"
+  const divVentanas = document.getElementById("windows")
+  divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div>`
+  ventanaData.start();
 }
 
 function closeWindow(name) {
