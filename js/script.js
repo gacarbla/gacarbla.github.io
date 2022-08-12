@@ -322,6 +322,13 @@ function load() {
 
 
 
+
+
+
+
+
+
+
 /* ELEMENTAL FUNCTIONS */
 
 function go(page, newTabBoolean) {
@@ -332,6 +339,26 @@ function go(page, newTabBoolean) {
     window.location = `${page}`
   }
 }
+
+
+function copy(elementId) {
+  var content = document.getElementById("elementId")
+  content.select();
+  document.execCommand("copy");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* PAGE WINDOWS */
