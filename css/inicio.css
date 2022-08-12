@@ -135,20 +135,23 @@
 
     #inicio p {
         position: absolute;
-        right: 20px;
+        right: 0px;
         color: #ff4c29;
         font-size: 60px;
         top: 200px;
         font-weight: bold;
+        width: 100%;
+        text-align: center;
         animation: fadeInDown .9s ease;
     }
     
     #inicio div {
-        width: 340px;
+        width: 100%;
+        padding: 0px 10%;
         display: flex;
         position: absolute;
-        right: 22.5px;
-        top: 325px;
+        right: 0px;
+        top: 380px;
         height: 130px;
         flex-direction: column-reverse;
     }
