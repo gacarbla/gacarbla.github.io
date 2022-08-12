@@ -647,7 +647,7 @@ header:hover footer div.nombre p.s {
 #settings .opcion .ajuste {
     border: 2px solid;
     position: relative;
-    border-radius: 20px;
+    border-radius: 5px;
     width: 100%;
     height: 40px;
     display: flex;

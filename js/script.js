@@ -116,9 +116,10 @@ const navigation = {
         name: "Tinder",
         class: "pagina",
         vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.918 8.174c2.56 4.982.5 11.656-5.38 12.626C5.836 22.487.698 13.084 6.484 7.571 6.793 7.266 7.644 6.476 8 6.222c0 .528.27 3.475 1 3.167 3 0 4-4.222 3.587-7.389 2.7 1.411 4.987 3.376 6.33 6.174v0Z"></path></svg>',
-        onclick: "rickroleo()",
+        onclick: "newWindow('rickroll')",
         disabled: false,
-        title: "No lo hagas, no entres, resiste"
+        title: "No lo hagas, no entres, resiste",
+        hidden: CookiesValue("easterEggs") == "on" ? false : true,
     },
     "16": {
         name: "Página",
@@ -159,15 +160,21 @@ const windowsList = {
     },
     "settings": {
         title: "Ajustes",
-        content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`
+        content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox"id="modoColorCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></div><div class="ajuste"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></div></div></div></div>`
     },
     "cookies": {
         title: "Cookies",
-        content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" checked="true" disabled></div><div class="option"><label for="cookiesConfig">Ajustes generales</label><input type="checkbox" id="cookiesConfig"></div><div class="option"><label for="cookiesDev">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDev"></div><div class="option"><button onclick="CookiesRemove(true)">Reiniciar todas las cookies</button></div></div>`
+        content: `<p class="intro">Esta página no almacena cookies con datos de carácter personal, privado o identificativo. Todas nuestras cookies son de configuración de la página.<br>Algunos buscadores no permiten el uso de Cookies.<br>Las cookies desactivadas no son eliminadas. Si desea eliminar cookies no esenciales, presione el botón de reiniciar Cookies.</p><div class="options"><div class="option"><label for="cookiesEsenciales">Cookies esenciales</label><input type="checkbox" id="cookiesEsenciales" checked="true" disabled></div><div class="option"><label for="cookiesConfig">Ajustes generales</label><input type="checkbox" id="cookiesConfig"></div><div class="option"><label for="cookiesDev">Ajustes de desarrollador</label><input type="checkbox" id="cookiesDev"></div><div class="option"><button onclick="CookiesRemove(true)">Reiniciar todas las cookies</button></div></div>`
+    },
+    "rickroll": {
+        title: "",
+        content: `<video width="300" height="200" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`
     }
 }
 
 function load() {
+
+    checkEssentialCookies()
 
     if (CookiesValue("rightClick") == "true") {
         document.oncontextmenu = function () { }
@@ -281,12 +288,6 @@ function go(page, newTabBoolean) {
     }
 }
 
-function rickroleo() {
-    const audio = new Audio("https://gacarbla.github.io/media/audio/rickroll.mp3")
-    audio.play()
-}
-
-
 /* PAGE WINDOWS */
 
 const checkWindowsStatus = () => { if (!document.getElementById("windows")) return location.reload() }
@@ -386,6 +387,19 @@ function newWindow(name) {
             window.alert("La página se recargará de forma automática con los nuevos ajustes.")
             location.reload()
         })
+        const easterEggs = document.getElementById("easterEggCheck")
+        if (CookiesValue("easterEggs") == "on") {
+            easterEggs.checked = true
+        }
+        easterEggs.addEventListener("change", function () {
+            if (easterEggs.checked) {
+                CookiesAdd("easterEggs", "on", "essential")
+            } else {
+                CookiesAdd("easterEggs", "off", "essential")
+            }
+            window.alert("La página se recargará de forma automática con los nuevos ajustes.")
+            location.reload()
+        })
     }
 }
 
@@ -412,16 +426,17 @@ function modifyWindow() {
 function checkEssentialCookies() {
     if (!CookiesValue("cookiesConfig")) { document.cookie = `cookiesConfig=true; secure; max-age=604800}` }
     if (!CookiesValue("cookiesDev")) { document.cookie = `cookiesDev=true; secure; max-age=604800}` }
-}
-
-function CookiesAdd(ruta, valor, type) {
-    checkEssentialCookies();
-    if (Object.keys(CookiesComprobar()) < 1) {
+    if (Object.keys(CookiesComprobar()) < 1) { 
         if (!warned) {
             warned = true
             window.alert("Se ha detectado que su navegador no permite el almacenamiento de Cookies esenciales.\nDe forma automática, todas las funciones de almacenamiento de datos, cookies y otra información se ve paralizada y deshabilitada.")
         }
-    } else if ((CookiesValue("cookiesDev") == "false" && type == "cookiesDev") || (CookiesValue("cookiesConfig") == "false" && type == "cookiesConfig")) {
+    }
+}
+
+function CookiesAdd(ruta, valor, type) {
+    checkEssentialCookies();
+    if ((CookiesValue("cookiesDev") == "false" && type == "cookiesDev") || (CookiesValue("cookiesConfig") == "false" && type == "cookiesConfig")) {
         CookiesRemove(ruta)
         return console.info(`No se ha guardado la cookie ${ruta} con valor ${valor} debido a la configuración de cookies`)
     } else {
@@ -459,7 +474,6 @@ function CookiesRemove(ruta) {
 }
 
 function CookiesComprobar() {
-    checkEssentialCookies()
     let cookies = {}
     let LocalCookies = (document.cookie).split(/;+/g)
     LocalCookies.forEach(cookie => {
