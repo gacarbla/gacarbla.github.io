@@ -168,7 +168,7 @@ const windowsList = {
     },
     "rickroll": {
         title: "",
-        content: `<video width="300" height="200" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`
+        content: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`
     }
 }
 
