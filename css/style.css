@@ -71,15 +71,16 @@ body {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    z-index: -1;
 }
 
 div.content {
     position: relative;
     left: 60px;
     width: calc(100vw - 60px);
-    z-index: -1;
+    z-index: 0;
     font-family: Arial;
-    padding: 20px;
+    padding: 0px;
 }
 
 header .btn {
