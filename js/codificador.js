@@ -1,3 +1,4 @@
+/*
 function copy() {
     var content = document.getElementById("textoSalida")
     content.select();
@@ -98,3 +99,4 @@ function codificar() {
     const final = textoProceso
     document.getElementById("textoSalida").value = final
 }
+*/
