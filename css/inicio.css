@@ -1,5 +1,16 @@
+.claro {
+    --inicio-fondo-imagen: url(../media/jpg/background_inicio_claro.jpg);
+    --inicio-color-principal: #f3fe39;
+}
+
+.oscuro {
+    --inicio-fondo-imagen: url(../media/jpg/background_inicio_oscuro.jpg);
+    --inicio-color-principal: #ff4c29;
+}
+
+
 #inicio {
-    background-image: url(../media/jpg/background_inicio.jpg);
+    background-image: var(--inicio-fondo-imagen);
     height: 100vh;
     min-height: 731px;
     width: 100%;
@@ -13,7 +24,7 @@
 #inicio p {
     position: absolute;
     right: 20px;
-    color: #ff4c29;
+    color: var(--inicio-color-principal);
     font-size: 150px;
     top: 150px;
     font-weight: bold;
@@ -53,22 +64,22 @@
     stroke-width: 2px;
 }
 
-#inicio button.oscuro svg {
-    stroke: #ff4c29;
+#inicio button.sin svg {
+    stroke: var(--inicio-color-principal);
 }
 
-#inicio button.oscuro {
+#inicio button.sin {
     background-color: #0005;
     border-radius: 10px;
-    border: 4px solid #ff4c29;
-    color: #ff4c29;
+    border: 4px solid var(--inicio-color-principal);
+    color: var(--inicio-color-principal);
     font-weight: bold;
     text-transform: uppercase;
     animation: fadeInDown 1.5s ease;
 }
 
 
-#inicio button.claro svg {
+#inicio button.con svg {
     stroke: #000;
     border: 3px solid #000;
     border-radius: 100%;
@@ -77,8 +88,8 @@
     padding: 2.5px;
 }
 
-#inicio button.claro {
-    background-color: #ff4c29;
+#inicio button.con {
+    background-color: var(--inicio-color-principal);
     border-radius: 10px;
     border: none;
     color: #000;
@@ -136,7 +147,6 @@
     #inicio p {
         position: absolute;
         right: 0px;
-        color: #ff4c29;
         font-size: 60px;
         top: 200px;
         font-weight: bold;
@@ -177,39 +187,5 @@
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 2px;
-    }
-    
-    #inicio button.oscuro svg {
-        stroke: #ff4c29;
-    }
-    
-    #inicio button.oscuro {
-        background-color: #0005;
-        border-radius: 10px;
-        border: 4px solid #ff4c29;
-        color: #ff4c29;
-        font-weight: bold;
-        text-transform: uppercase;
-        animation: fadeInDown 1.5s ease;
-    }
-    
-    
-    #inicio button.claro svg {
-        stroke: #000;
-        border: 2px solid #000;
-        border-radius: 100%;
-        height: 30px;
-        width: 30px;
-        padding: 2.5px;
-    }
-    
-    #inicio button.claro {
-        background-color: #ff4c29;
-        border-radius: 10px;
-        border: none;
-        color: #000;
-        font-weight: bold;
-        text-transform: uppercase;
-        animation: fadeInDown 1.2s ease;
     }
 }
