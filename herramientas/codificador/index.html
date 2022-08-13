@@ -34,15 +34,28 @@
 
 </head>
 
-<body onload="load()" class="oscuro" id="body">
+<body onload="load();start()" class="oscuro" id="body">
 
 
   <header id="header"></header>
   <div id="windows">
   </div>
   <div class="content">
-    <h1>¡Estoy trabajando en esto!</h1>
-    <p>Esta página se encuentra deshabilitada por trabajos de mantenimiento<br>¿Qué haces aquí?</p>
+    <div class="scroll" dir="ltr">
+        <div class="texto entrada">
+            <p>&gt;</p>
+            <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!" id="textoEntrada"></textarea>
+        </div>
+        <div class="texto ajustes">
+            <div id="opciones">
+                <input type="password" id="clave" placeholder="Clave" maxlength="60">
+            </div>
+            <div id="logs"></div>
+        </div>
+        <div class="texto salida">
+            <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
+        </div>
+      </div>
   </div>
 </body>
 
