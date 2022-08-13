@@ -101,7 +101,12 @@ function codificar() {
 }
 */
 
+function scrollToSection(number) {
+    document.getElementById("scroll").scrollTo(0, Math.floor(innerHeight * number))
+}
+
 function start() {
+    scrollToSection(0)
     printLog("Código iniciado", "success", true)
     printLog("Iniciando lector de texto...", "info")
     try {
