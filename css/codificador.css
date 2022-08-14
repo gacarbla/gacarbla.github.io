@@ -51,19 +51,35 @@
     color: #0f06;
 }
 
-.ajustes input {
+.ajustes input[type=password] {
     border: 2px solid #0f0a;
     outline: none;
     background-color: transparent;
     color: #0f0a;
     height: 45px;
-    width: calc(100% - 20px);
+    width: calc(100% - 85px);
     font-size: 20px;
     border-radius: 5px;
     padding: 5px;
 }
 
-.ajustes input::placeholder {
+.ajustes input[type=text] {
+    border: 2px solid #0f0a;
+    outline: none;
+    background-color: transparent;
+    color: #0f0a;
+    height: 45px;
+    width: calc(100% - 85px);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.ajustes input[type=text]::placeholder {
+    color: #0f06;
+}
+
+.ajustes input[type=password]::placeholder {
     color: #0f06;
 }
 
