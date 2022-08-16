@@ -95,6 +95,7 @@ const cookies = {
     document.getElementById("cookiesDesarrollador").checked = true
     document.getElementById("cookiesAjustes").checked = true
     document.getElementById("body").className = "oscuro"
+    document.oncontextmenu = function () { return false }
     refreshNavigationBar();
   },
   table() {
@@ -229,7 +230,7 @@ function refreshNavigationBar() {
       name: "Ajustes",
       vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 6h8"></path><path d="M16 6h4"></path><path d="M8 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 12h2"></path><path d="M10 12h10"></path><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M4 18h11"></path><path d="M19 18h1"></path></svg>',
       class: "pagina",
-      onclick: "newWindow('settings')",
+      onclick: "windows.new('settings')",
       title: "Modifica el aspecto de la página a tu gusto",
       disabled: false
     },
@@ -237,7 +238,7 @@ function refreshNavigationBar() {
       name: "Cookies",
       vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 13v.01"></path><path d="M12 17v.01"></path><path d="M12 12v.01"></path><path d="M16 14v.01"></path><path d="M11 8v.01"></path><path d="m13.148 3.478 2.667 1.104a4 4 0 0 0 4.656 6.14l.053.132a3 3 0 0 1 0 2.296c-.497.786-.838 1.404-1.024 1.852-.189.456-.409 1.194-.66 2.216a3 3 0 0 1-1.624 1.623c-1.048.263-1.787.483-2.216.661-.475.197-1.092.538-1.852 1.024a3 3 0 0 1-2.296 0c-.802-.503-1.419-.844-1.852-1.024-.47-.195-1.21-.415-2.216-.66a3 3 0 0 1-1.623-1.624c-.265-1.052-.485-1.79-.66-2.216-.199-.479-.54-1.096-1.025-1.852a3 3 0 0 1 0-2.296c.48-.744.82-1.36 1.024-1.852.171-.413.391-1.152.66-2.216a3 3 0 0 1 1.624-1.623c1.032-.256 1.77-.476 2.216-.66.458-.19 1.075-.532 1.852-1.025a3 3 0 0 1 2.296 0v0Z"></path></svg>',
       class: "pagina",
-      onclick: "newWindow('cookies')",
+      onclick: "windows.new('cookies')",
       title: "Modifica el uso de Cookies a tu gusto",
       disabled: false
     },
@@ -245,7 +246,7 @@ function refreshNavigationBar() {
       name: "Ajustes dev",
       vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12h6"></path><path d="M12 9v6"></path><path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1V7a2 2 0 0 1 2-2"></path><path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1V7a2 2 0 0 0-2-2"></path></svg>',
       class: "pagina",
-      onclick: "newWindow('devSettings')",
+      onclick: "windows.new('devSettings')",
       title: "Herramientas avanzadas para desarrolladores",
       disabled: false,
       hidden: cookies.obtener("devModeStatus") == "on" ? false : true,
@@ -254,7 +255,7 @@ function refreshNavigationBar() {
       name: "",
       class: "pagina",
       vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 8c0-.796.369-1.559 1.025-2.121C9.681 5.316 10.572 5 11.5 5h1c.928 0 1.819.316 2.475.879C15.63 6.44 16 7.204 16 8a3 3 0 0 1-2 3c-.614.288-1.14.833-1.501 1.555A5.04 5.04 0 0 0 12 15"></path><path d="M12 19v.01"></path></svg>',
-      onclick: "newWindow('rickroll')",
+      onclick: "windows.new('rickroll')",
       disabled: false,
       title: "",
       hidden: cookies.obtener("easterEggs") == "on" ? false : true,
@@ -283,7 +284,7 @@ function refreshNavigationBar() {
 const windows = {
   "devSettings": {
     title: "Ajustes para desarrolladores",
-    content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activartodas sus funciones como desarrollador web.<br>Se recomienda mantener las <spanonclick="newWindow('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar selección</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Habilitar click derecho</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guía de comandos</p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round"></span></label></label></div></div></div></div>`,
+    content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activartodas sus funciones como desarrollador web.<br>Se recomienda mantener las <spanonclick="windows.new('cookies')">cookies de ajustes de desarrollador</span> activadas.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar selección</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Habilitar click derecho</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guía de comandos</p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round"></span></label></label></div></div></div></div>`,
     start() {
       const rightClickCheck = document.getElementById("rightClickCheck")
       const selectCheck = document.getElementById("selectCheck")
@@ -360,7 +361,7 @@ const windows = {
         }
         refreshNavigationBar();
       })
-    }
+    },
   },
   "cookies": {
     title: "Cookies",
@@ -401,6 +402,29 @@ const windows = {
     start() {
 
     }
+  },
+  check() {
+    if (!document.getElementById("windows")) location.reload()
+  },
+  new(name) {
+    this.check();
+    if (!name) {
+      return console.error("No se ha especificado el nombre de la ventana")
+    }
+    const ventanaData = windows[`${name}`];
+    if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
+    if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")
+    const divVentanas = document.getElementById("windows")
+    divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div>`
+    ventanaData.start();
+  },
+  close(name) {
+    this.check();
+    const windows = document.getElementById("windows");
+    if (!name) return console.error("No se ha especificado el nombre de la ventana")
+    const window = document.getElementById(`${name}`)
+    if (!window) return console.error("Esta ventana no se encuentra abierta actualmente")
+    windows.removeChild(window)
   }
 }
 
@@ -446,49 +470,4 @@ function go(page, newTabBoolean) {
   } else {
     window.location = `${page}`
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* PAGE WINDOWS */
-
-const checkWindowsStatus = () => { if (!document.getElementById("windows")) return location.reload() }
-
-function newWindow(name) {
-  checkWindowsStatus();
-  if (!name) {
-    return console.error("No se ha especificado el nombre de la ventana")
-  }
-  const ventanaData = windows[`${name}`];
-  if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
-  if (!windows[`${name}`]) return "No se ha encontrado ninguna ventana con este nombre"
-  const divVentanas = document.getElementById("windows")
-  divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="closeWindow('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div>`
-  ventanaData.start();
-}
-
-function closeWindow(name) {
-  checkWindowsStatus();
-  const windows = document.getElementById("windows");
-  if (!name) return console.error("No se ha especificado el nombre de la ventana")
-  const window = document.getElementById(`${name}`)
-  if (!window) return console.error("Esta ventana no se encuentra abierta actualmente")
-  windows.removeChild(window)
-}
-
-function modifyWindow() {
-  checkWindowsStatus();
-  window.alert("Estoy trabajando en esto")
 }
