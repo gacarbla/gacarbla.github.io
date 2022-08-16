@@ -105,27 +105,42 @@ function scrollToSection(number) {
     document.getElementById("scroll").scrollTo(0, Math.floor(innerHeight * number))
 }
 
+var modoVariable
+
 function start() {
     scrollToSection(0)
     printLog("Código iniciado", "success", true)
-    printLog("Iniciando lector de texto...", "info")
     try {
-        const textoEntrada = document.getElementById("textoEntrada")
-        textoEntrada.addEventListener("input", codificar)
-        printLog("Lector de texto iniciado", "success", true)
-    } catch {
-        printLog("No ha sido posible iniciar el lector de texto", "error", true, false)
-    }
-    printLog("Iniciando lector de contraseña...", "info")
-    try {
-        const clave = document.getElementById("clave")
-        clave.addEventListener("input", function () { codificar() })
-        printLog("Lector de contraseña iniciado", "success", true)
-    } catch {
-        printLog("No ha sido posible iniciar el lector de contraseña", "error", true, false)
-    }
+        const modo = document.getElementById("modoCodificacion")
+        modoVariable = false
+        modo.addEventListener("click", function () {
+            if (modoVariable) {
+                modoVariable = false
+                document.getElementById("descodificarVector").classList = [""]
+                document.getElementById("codificarVector").classList = ["active"]
+                document.getElementById("modoCodificacionText").innerHTML = "Codificar"
+            } else {
+                modoVariable = true
+                document.getElementById("descodificarVector").classList = ["active"]
+                document.getElementById("codificarVector").classList = [""]
+                document.getElementById("modoCodificacionText").innerHTML = "Descodificar"
+            }
+        })
+    } catch {}
     printLog("Iniciando cifrado de contraseña...", "info")
     try {
+        const claveModo = document.getElementById("toggleVisibility")
+        claveModo.addEventListener("click", function () {
+            if (document.getElementById("clave").type == "text") {
+                document.getElementById("clave").type = "password"
+                document.getElementById("mostrarClave").classList = [""]
+                document.getElementById("ocultarClave").classList = ["active"]
+            } else {
+                document.getElementById("clave").type = "text"
+                document.getElementById("mostrarClave").classList = ["active"]
+                document.getElementById("ocultarClave").classList = [""]
+            }
+        })
         printLog("Cifrado de contraseña iniciado", "success", true)
     } catch {
         printLog("No ha sido posible iniciar el cifrado de contraseña", "error", true, false)
@@ -154,14 +169,14 @@ function codificar() {
         const texto = document.getElementById("textoEntrada").value
         if (!texto) return limpiar()
 
-        const deco = false //document.getElementById("check").checked
-        var correr = 0 //document.getElementById("correr").value
+        const deco = modoVariable
+        var correr = document.getElementById("correr").value
         const base = 1 //document.getElementById("base").value
         const salida = 2 //document.getElementById("salida").value
 
 
         if (correr > 1024) correr = 1024
-        if (correr < 1024) correr = 0
+        if (correr < 0) correr = 0
 
         var textoProceso = ''
         if (deco) {
@@ -220,13 +235,15 @@ function codificar() {
         try {
             const final = textoProceso
             document.getElementById("textoSalida").value = final
+            scrollToSection(2)
+            document.getElementById("textoEntrada").value = ""
         } catch {
             message = {
                 text: "Ha ocurrido un error en el proceso.<br>Revise los parámetros establecidos.<br>Si el error persiste constacte al desarrollador.",
                 type: "error"
             }
         }
-        printLog(message.text, message.type)
+        printLog(message.text, message.type, false, true)
     }
 }
 
@@ -247,7 +264,7 @@ function codificar() {
 
 function printLog(message, type, newLine, separador) {
     var logsDiv = document.getElementById("logs")
-    if (document.getElementById("logs").lastChild == null || document.getElementById("logs").lastChild.innerHTML !== message) {
+    //if (document.getElementById("logs").lastChild == null || document.getElementById("logs").lastChild.innerHTML !== message) {
         if (type == "error") {
             message = `<p style="color: #f00a">${message}</p>`
         } else if (type == "info") {
@@ -264,7 +281,7 @@ function printLog(message, type, newLine, separador) {
         }
     
         logsDiv.innerHTML = logsDiv.innerHTML + message
-    } else {
+    //} else {
         
-    }
+    //}
 }

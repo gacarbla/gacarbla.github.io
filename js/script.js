@@ -137,7 +137,7 @@ function refreshNavigationBar() {
       class: "pagina",
       onclick: "go(':herramientas/codificador', false)",
       title: "Codificador simple de textos",
-      disabled: true
+      disabled: false
     },
     "4": {
       name: "GitHub",
