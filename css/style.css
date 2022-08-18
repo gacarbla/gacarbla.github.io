@@ -402,7 +402,7 @@ header:hover footer div.nombre p.s {
 
 /* VENTANAS */
 
-#windows .window {
+#windows .window.lateral {
     position: fixed;
     right: 0px;
     top: 0px;
@@ -414,7 +414,7 @@ header:hover footer div.nombre p.s {
     transition: all 0.3s;
 }
 
-#windows .window svg.close {
+#windows .window.lateral svg.close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -432,7 +432,7 @@ header:hover footer div.nombre p.s {
     padding: 5px;
 }
 
-#windows .window .title {
+#windows .window.lateral .title {
     position: relative;
     font-family: monospace;
     width: 250px;
@@ -440,7 +440,7 @@ header:hover footer div.nombre p.s {
     color: var(--ventanas-titulo-color)
 }
 
-#windows .window .title p {
+#windows .window.lateral .title p {
     position: absolute;
     left: 10px;
     top: 10px;
@@ -450,7 +450,7 @@ header:hover footer div.nombre p.s {
     text-transform: uppercase;
 }
 
-#windows .window div.caja {
+#windows .window.lateral div.caja {
     position: absolute;
     overflow-y: scroll;
     width: 320px;
@@ -461,14 +461,64 @@ header:hover footer div.nombre p.s {
     font-family: Arial;
 }
 
+#windows .window.lateral .switch {
+    display: inline-block;
+}
+
+#windows .window.lateral .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#windows .window.lateral .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 17px;
+}
+
+#windows .window.lateral .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#windows .window.lateral input:checked+.slider {
+    background-color: #2196F3;
+}
+
+#windows .window.lateral input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+#windows .window.lateral input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
 @media only screen and (max-width: 800px) {
-    #windows .window {
+    #windows .window.lateral {
         width: 100vw;
         background-color: var(--ventanas-fondo);
         box-shadow: none;
     }
 
-    #windows .window svg.close {
+    #windows .window.lateral svg.close {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -479,7 +529,7 @@ header:hover footer div.nombre p.s {
         padding: 5px;
     }
 
-    #windows .window .title {
+    #windows .window.lateral .title {
         position: relative;
         font-family: monospace;
         width: 250px;
@@ -488,7 +538,7 @@ header:hover footer div.nombre p.s {
         color: var(--ventanas-titulo-color)
     }
 
-    #windows .window .title p {
+    #windows .window.lateral .title p {
         position: absolute;
         left: 10px;
         top: 10px;
@@ -498,7 +548,7 @@ header:hover footer div.nombre p.s {
         text-transform: uppercase;
     }
 
-    #windows .window div.caja {
+    #windows .window.lateral div.caja {
         position: absolute;
         overflow-y: scroll;
         width: 320px;
@@ -572,64 +622,9 @@ header:hover footer div.nombre p.s {
 
 #devSettings .switch {
     position: relative;
-    display: inline-block;
     top: 10px;
     width: 30px;
     height: 17px;
-}
-
-#devSettings .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-#devSettings .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 17px;
-}
-
-#devSettings .slider:before {
-    position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-#devSettings input:checked+.slider {
-    background-color: #2196F3;
-}
-
-#devSettings input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-#devSettings input:checked+.slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
-}
-
-#devSettings .oscuro {
-    color: #fff;
-}
-
-#devSettings .claro {
-    color: #334756
 }
 
 /* COOKIES SETTINGS */
@@ -697,56 +692,9 @@ header:hover footer div.nombre p.s {
 
 #cookies .switch {
     position: relative;
-    display: inline-block;
     top: 10px;
     width: 30px;
     height: 17px;
-}
-
-#cookies .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-#cookies .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 17px;
-}
-
-#cookies .slider:before {
-    position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-#cookies input:checked+.slider {
-    background-color: #2196F3;
-}
-
-#cookies input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-#cookies input:checked+.slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
 }
 
 

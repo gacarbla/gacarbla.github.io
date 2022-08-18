@@ -406,7 +406,7 @@ const windows = {
   check() {
     if (!document.getElementById("windows")) location.reload()
   },
-  new(name) {
+  new(name, type) {
     this.check();
     if (!name) {
       return console.error("No se ha especificado el nombre de la ventana")
@@ -415,7 +415,7 @@ const windows = {
     if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
     if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")
     const divVentanas = document.getElementById("windows")
-    divVentanas.innerHTML = `<div class="window" id="${name}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div>`
+    divVentanas.innerHTML = `<div class="window ${type?type:"lateral"}" id="${name}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div>`
     ventanaData.start();
   },
   close(name) {

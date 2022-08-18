@@ -22,11 +22,11 @@
 
     <!--  Enlaces  -->
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/codificador.css">
+    <link rel="stylesheet" href="../../css/games.css">
 
     <!--  Scripts  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../../js/codificador.js"></script>
+    <script src="../../js/games.js"></script>
     <script src="../../js/script.js"></script>
 
     <!--  Título  -->
@@ -40,7 +40,51 @@
     <header id="header"></header>
     <div id="windows"></div>
     <div class="content">
-        
+        <div class="slider" title="slider" id="functionSlider">
+            <div class="margen"></div>
+            <div class="card">
+                <h1>Clicks veloces</h1>
+                <hr>
+                <p>¡Pon a prueba cuán veloz eres haciendo click!</p>
+                <button id="startClickTest">Empezar</button>
+            </div>
+            <div class="card">
+                <h1>Escribiendo sin errores</h1>
+                <hr>
+                <p>Una carrera contrareloj para escribir, pero si te equivocas se acabó</p>
+                <button id="startEscribirTest">Empezar</button>
+            </div>
+            <div class="card">
+                <h1>Reflejos a entrenar</h1>
+                <hr>
+                <p>Haz click sobre el cuadrado que se ponga rojo, y hazlo rápido o explotará</p>
+                <button id="startReflejosTest">Empezar</button>
+            </div>
+            <div class="card">
+                <h1>Próximamente...</h1>
+                <hr>
+                <p>¡Estoy trabajando en esto!</p>
+                <button>Empezar</button>
+            </div>
+            <div class="margen"></div>
+        </div>
+        <div class="navegadores">
+            <div class="izquierda" id="slideLeft">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15h-8v3.586a1 1 0 0 1-1.707.707l-6.586-6.586a1 1 0 0 1 0-1.414l6.586-6.586A1 1 0 0 1 12 5.414V9h8a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1v0Z"></path>
+                </svg>
+            </div>
+            <div class="dereita" id="slideRight">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 9h8V5.414a1 1 0 0 1 1.707-.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586A.999.999 0 0 1 12 18.586V15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1v0Z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="avisolegal">
+            <div>
+                <p>Esta página usa cookies independientes y no es posible desactivarlas.<br>Al acceder a cualquiera de los tests acepta usted el almacenamiento de cookies sin datos de caracter personal, identificativo o confidencial.<br>Si desea usted eliminar las cookies, diríjase a la <a onclick="windows.new('cookies')">ventana de cookies</a> y reinicie las cookies.</p>
+            </div>
+        </div>
     </div>
 
 
