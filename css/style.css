@@ -20,6 +20,7 @@
     --header-menu-separador-p-color: #000;
     --header-menu-separador-line-color: #000;
 
+    --ventanas-pagina-fondo: #0006;
     --ventanas-fondo: #fff;
     --ventanas-titulo-color: #000;
     --ventanas-svg-cerrar-fondo: #000;
@@ -40,6 +41,7 @@
     --header-menu-separador-p-color: #fff;
     --header-menu-separador-line-color: #fff;
 
+    --ventanas-pagina-fondo: #000a;
     --ventanas-fondo: #334756;
     --ventanas-titulo-color: #fff;
     --ventanas-svg-cerrar-fondo: #334756;
@@ -402,16 +404,28 @@ header:hover footer div.nombre p.s {
 
 /* VENTANAS */
 
-#windows .window.lateral {
-    position: fixed;
-    right: 0px;
+#windows .back {
     top: 0px;
     bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: var(--ventanas-pagina-fondo);
+    position: fixed;
+    z-index: 790;
+}
+
+#windows .window.lateral {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
     width: 320px;
     background-color: var(--ventanas-fondo);
     box-shadow: -10px 0px 10px var(--ventanas-sombra);
     z-index: 800;
     transition: all 0.3s;
+    border-radius: 20px;
+    animation: slideFromRight 0.4s;
 }
 
 #windows .window.lateral svg.close {
@@ -513,9 +527,13 @@ header:hover footer div.nombre p.s {
 
 @media only screen and (max-width: 800px) {
     #windows .window.lateral {
-        width: 100vw;
+        width: calc(100vw - 20px);
         background-color: var(--ventanas-fondo);
         box-shadow: none;
+        bottom: 0px;
+        top: 100px;
+        border-radius: 20px 20px 0px 0px;
+        animation: slideFromBottom 0.4s ease;
     }
 
     #windows .window.lateral svg.close {
@@ -562,6 +580,23 @@ header:hover footer div.nombre p.s {
     }
 }
 
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes slideFromBottom {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(0vh);
+    }
+}
 
 
 
