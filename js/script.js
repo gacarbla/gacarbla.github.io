@@ -133,7 +133,7 @@ function refreshNavigationBar() {
       class: "pagina",
       onclick: "go(':herramientas/codificador', false)",
       title: "Codificador simple de textos",
-      disabled: false
+      disabled: true
     },
     "GitHub": {
       vector: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z"></path><path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path></svg>',
@@ -246,7 +246,6 @@ function refreshNavigationBar() {
   var x = 0;
   for (x = 0; x < (Object.keys(navigation)).length; x++) {
     var name = Object.keys(navigation)[x], e = navigation[`${Object.keys(navigation)[x]}`]
-    console.log(name,e)
 
     if(e.class == "separador") {
       headerMenu[x] = `<div class="separador"><div class="vector">${e.vector}</div><div class="nombre"><p>${name}</p></div><div class="line"></div></div>`
@@ -261,7 +260,6 @@ function refreshNavigationBar() {
     } else {
       console.error("No se ha reconocido la clase "+e.class+" como un valor válido en el menú de navegación")
     }
-    console.log(headerMenu)
   }
   document.getElementById("header").innerHTML = `<div class="btn" id="mobilemenubutton"><svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16"></path>\n<path d="M4 12h16"></path><path d="M4 18h16"></path>\n</svg>\n<svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path>\n<path d="m6 6 12 12"></path></svg></div><div class="menu">${headerMenu.join("\n")}</div><footer><div class="vector"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg></div><div class="nombre"><p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel Carro Blanco</p></div></footer>`
 }
