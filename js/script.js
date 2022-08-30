@@ -246,8 +246,7 @@ function refreshNavigationBar() {
   var x = 0;
   for (x = 0; x < (Object.keys(navigation)).length; x++) {
     var name = Object.keys(navigation)[x], e = navigation[`${Object.keys(navigation)[x]}`]
-
-    if(e.class == "separador") {
+    if(e.hidden) {} else if(e.class == "separador") {
       headerMenu[x] = `<div class="separador"><div class="vector">${e.vector}</div><div class="nombre"><p>${name}</p></div><div class="line"></div></div>`
     } else if (e.class = "pagina") {
       if ((name == "Cookies" || name == "Ajustes" || name == "Ajustes dev") && warned) {

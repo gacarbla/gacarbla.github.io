@@ -115,7 +115,6 @@ function scrollToSection(number) {
 var modoVariable
 
 function start() {
-    scrollToSection(0)
     document.getElementById("textoEntrada").value = ""
     document.getElementById("correr").value = "0"
     limpiar()
@@ -152,7 +151,8 @@ function start() {
         clickToCopy.addEventListener("click", copy)
         printLog("Código iniciado", "success", true)
     } catch (e) {
-        printLog("No ha sido posible iniciar el código\nError: " + e, "error", true, false)
+        printLog("No ha sido posible iniciar el código\nError: " + e, "error")
+        printLog("Dado el error detectado el codificador puede iniciarse pero no ser utilizado", "warning")
     }
     setTimeout(function () {
         printLog("CODIFICADOR INICIADO", "text", true)
@@ -284,25 +284,32 @@ function codificar() {
 function printLog(message, type, newLine, separador) {
     var logsDiv = document.getElementById("logs")
     const ahora = new Date(Date.now())
-    message = `<span style="font-size: 12px; color: #fff">[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]</span> ${message}`
+    date = `<p class="date">[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]</p>`
     //if (document.getElementById("logs").lastChild == null || document.getElementById("logs").lastChild.innerHTML !== message) {
     if (type == "error") {
-        message = `<p style="color: #f00a">${message}</p>`
+        message = `<div class="e">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m14 10-4 4m0-4 4 4-4-4Z"></path></svg></div><p>${message}</p></div>`
     } else if (type == "info") {
-        message = `<p style="color: #00b7ffbb">${message}</p>`
+        message = `<div class="i">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></svg></div><p>${message}</p></div>`
     } else if (type == "success") {
-        message = `<p style="color: #0f0a">${message}</p>`
+        message = `<div class="s">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m9 12 2 2 4-4"></path></svg></div><p>${message}</p></div>`
     } else if (type == "text") {
-        message = `<p style="color: #fffc">${message}</p>`
+        message = `<div class="t">${date}<p>${message}</p></div>`
+    } else if (type == "warning") {
+        message = `<div class="w">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 21V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8l-4 4Z"></path><path d="M12 8v3"></path><path d="M12 14v.01"></path></svg></div><p>${message}</p></div>`
     }
     if (newLine) {
-        message = message + "<br>"
+        message = "<br>" + message
     } else if (separador) {
-        message = message + "<hr>"
+        message = "<hr>" + message
     }
 
     logsDiv.innerHTML = message + logsDiv.innerHTML
     //} else {
 
     //}
+}
+
+function clearLogs() {
+    document.getElementById("logs").innerHTML = "";
+    printLog("Se ha limpiado el historial de logs", "info", false, true)
 }

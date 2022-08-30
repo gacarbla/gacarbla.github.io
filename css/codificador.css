@@ -1,314 +1,191 @@
-.scroll {
-    display: flex;
-    overflow: auto;
-    flex: none;
-    background: #000;
-    scroll-behavior: smooth;
-}
-
-.scroll {
-    width: 100%;
-    height: 100vh;
-    flex-flow: column nowrap;
-    scroll-snap-type: y mandatory;
-}
-
-.scroll > .texto {
-    scroll-snap-align: center;
-    flex: none;
-    width: 100%;
-    height: 100vh;
-}
-
-.texto {
-    padding: 20px;
-    position: relative;
-}
-
-.texto textarea {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    resize: none;
-    position: absolute;
-    width: calc(100% - 70px);
-    height: calc(100% - 40px);
-    font-size: 20px;
-    color: #0f0;
-    margin-left: 15px;
-}
-
-.entrada p {
-    color: #0f0;
-    position: absolute;
-    top: 3px;
-    left: 20px;
-    font-size: 20px;
-    font-family: monospace;
-}
-
-.texto textarea::placeholder {
-    color: #0f06;
-}
-
-.ajustes input[type=password] {
-    border: 2px solid #0f0;
-    outline: none;
-    background-color: transparent;
-    color: #0f0;
-    height: 60px;
-    width: calc(100% - 58px);
-    font-size: 20px;
-    border-radius: 5px 0px 0px 5px;
-    padding: 5px;
-}
-
-.ajustes input[type=text] {
-    border: 2px solid #0f0;
-    outline: none;
-    background-color: transparent;
-    color: #0f0;
-    height: 60px;
-    width: calc(100% - 58px);
-    font-size: 20px;
-    border-radius: 5px 0px 0px 5px;
-    padding: 5px;
-}
-
-.ajustes input[type=text]::placeholder {
-    color: #0f06;
-}
-
-.ajustes input[type=password]::placeholder {
-    color: #0f06;
-}
-
-.ajustes {
-    display: flex;
-    flex-direction: row;
-}
-
-.ajustes #opciones {
-    background-color: transparent;
-    height: 100%;
-    width: 50%;
+div.content {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 20px;
-    color: #0f0;
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.ajustes #opciones > div.fila {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    gap: 20px;
-    margin-right: 20px;
-}
-
-.ajustes #opciones > div.fila svg {
-    fill: none;
-    stroke: #0f0;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-#opciones .fila .modo svg{
-    width: 47.5px;
-    height: 47.5px;
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-#opciones .fila .modo{
-    width: 250px;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    border: 2px solid #0f0;
-    padding: 5px;
-    cursor: pointer;
-}
-
-#opciones .fila .modo p{
-    font-family: monospace;
-    color: #0f0;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-    bottom: 5px;
-    left: 10px;
-}
-
-
-#opciones .fila .modo svg.active {
-    background-color: #0f0;
-    stroke: #000;
-}
-
-#opciones .clave.fila svg{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    opacity: 0;
-    padding: 10px;
-    background-color: #000;
-    border-radius: 0px 5px 5px 0px;
-    border: 2px solid #0f0;
-    transition: all 0.3s;
-}
-
-#opciones .clave.fila svg.active{
-    opacity: 1;
-}
-
-#opciones .fila .correr {
-    width: calc( 100% - 250px );
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    border: 2px solid #0f0;
-    padding: 5px;
-    position: relative;
-}
-
-#opciones .fila .correr input {
-    -moz-appearance: textfield;
-    background-color: transparent;
-    color: #0f0;
-    font-size: 20px;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    text-align: right;
-    right: 10px;
-    position: absolute;
-    top: 12.5px;
-    width: auto;
-}
-
-#opciones .fila .correr p{
-    font-family: monospace;
-    color: #0f0;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-    bottom: 5px;
-    left: 10px;
-}
-
-#opciones .fila .correr input::-webkit-inner-spin-button,
-#opciones .fila .correr input::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-
-.ajustes #logs {
-    background-color: #fff1;
-    height: 100%;
-    width: 50%;
-    border-radius: 5px;
-    padding: 20px;
-    overflow: scroll;
-    color: #f5f5f5;
-    font-family: monospace;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.ajustes #logs hr{
     width: 100%;
+    padding: 20px;
 }
 
-#logs p {
+div.content > div {
+    width: calc(100% - 60px);
+}
+div.content div.input {
+    min-height: 100px;
+}
+
+div.content div.input textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    height: 150px;
+    max-height: 400px;
+}
+
+div.content div.output {
+    min-height: 100px;
+}
+
+div.content div.output textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    height: 150px;
+    max-height: 400px;
+}
+
+div.content div.settings {
+    display: flex;
+    flex-direction: row;
+    gap: calc(50% - 200px);
+    height: 50px;
+}
+
+div.settings div.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+div.settings div.fila {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    width: calc(50% + 400px);
+    justify-content: space-between;
+}
+
+div.settings label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.settings label.columna {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+div.settings label.columna p {
     margin: 0px;
 }
 
-#opciones button[type=submit] {
-    width: 100%;
-    height: 60px;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #0f0;
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
+label.small {
+    height: 25px;
 }
 
-.texto.salida div.hoverTextarea {
+input[type=number], input[type=text], input[type=password] {
+    width: 100%;
+}
+
+div.logsWindow {
+    position: fixed;
+    z-index: 700;
+    background-color: #000a;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow-y: hidden;
+    visibility: hidden;
+}
+div.logsWindow div.back {
+    background-color: #000;
+    border-radius: 8px;
     position: absolute;
+    width: 550px;
     top: 20px;
     bottom: 20px;
-    left: 20px;
-    right: 20px;
-    border-radius: 10px;
-    background-color: #fff1;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.1s;
-    cursor: pointer;
+    left: calc(50vw - 275px);
+    right: calc(50vw - 275px);
+    z-index: 710;
 }
 
-.texto.salida div.hoverTextarea > div {
-    position: relative;
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #0f0;
-    color: #000;
+div.logsWindow div.back #logs {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+div.logsWindow.visible {
+    visibility: visible;
+}
+
+div.logsWindow #logs hr {
+    width: 90%;
+}
+
+#logs > div {
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #fff5;
+    border-radius: 3px;
+    width: calc(100% - 10px);
+    scroll-snap-align: center;
+}
+
+#logs > div.i {
+    background-color: #00b7ff44;
+}
+
+#logs > div.e {
+    background-color: #f004;
+}
+
+#logs > div.w {
+    background-color: #fce62444;
+}
+
+#logs > div.s {
+    background-color: #0f04;
+}
+
+#logs > div.t {
+    background-color: #fff2;
+}
+
+#logs > div p {
+    color: #fffc;
+    font-size: 16px;
     font-family: monospace;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.texto.salida div.hoverTextarea > div p {
     margin: 0px;
-    text-transform: uppercase;
 }
 
-.texto.salida div.hoverTextarea:hover {
-    opacity: 1;
+#logs > div svg {
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    height: 20px;
+    width: 20px;
+    fill: none;
 }
 
-@media only screen and (max-width: 1200px) {
-    .content {
-        visibility: collapse;
-    }
-    .content::after {
-        content: "Página no disponible. Ancho de pantalla insuficiente para ejecutar las funciones. Es necesario una pantalla de mínimo 1200px de ancho.";
-        color: #000;
-        font-family: Arial;
-        font-size: 20px;
-        position: absolute;
-        top: 100px;
-        width: 70vw;
-        right: 15vw;
-        visibility: visible;
-    }
+#logs > div.e svg {
+    stroke: #f00a;
+}
+
+#logs > div.i svg {
+    stroke: #00b7ffbb;
+}
+
+#logs > div.w svg {
+    stroke: #fce624;
+}
+
+#logs > div.s svg {
+    stroke: #0f0;
+}
+
+
+#logs > div p.date {
+    font-size: 12px;
+    color: #fff;
+    opacity: .5;
 }

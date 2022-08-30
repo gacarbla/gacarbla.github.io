@@ -40,78 +40,46 @@
     <header id="header"></header>
     <div id="windows"></div>
     <div class="content">
-        <p>Lamentablemente esta página se encuentra inactiva por mantenimiento</p>
-        <!--
-        <div class="scroll" dir="ltr" id="scroll">
-            <div class="texto entrada">
-                <p>&gt;</p>
-                <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!"
-                    id="textoEntrada"></textarea>
-            </div>
-            <div class="texto ajustes">
-                <div onsubmit="codificar()" id="opciones">
-                    <div class="clave fila">
-                        <input type="password" id="clave" placeholder="Clave" maxlength="60">
-                        <div id="toggleVisibility">
-                            <svg id="ocultarClave" class="active" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-                                <path
-                                    d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7Z">
-                                </path>
-                            </svg>
-                            <svg id="mostrarClave" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m3 3 18 18"></path>
-                                <path d="M10.585 10.586a2 2 0 0 0 2.827 2.83"></path>
-                                <path
-                                    d="M17.357 17.35C15.726 18.45 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.34">
-                                </path>
-                                <path
-                                    d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <div class="modo" id="modoCodificacion">
-                            <svg id="codificarVector" class="active" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z">
-                                </path>
-                                <path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-                                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                            </svg>
-                            <svg id="descodificarVector" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z">
-                                </path>
-                                <path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-                                <path d="M8 11V6a4 4 0 0 1 8 0"></path>
-                            </svg>
-                            <p id="modoCodificacionText">Codificar</p>
-                        </div>
-                        <div class="correr">
-                            <label for="correr">
-                                <p>Correr letras:</p>
-                            </label>
-                            <input type="number" min="0" step="1" max="99999999999999999" value="0" id="correr">
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <button type="submit" id="submit">Transformar</button>
-                    </div>
+        <div class="input">
+            <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!" id="textoEntrada"></textarea>
+        </div>
+        <div class="settings">
+            <div class="columna">
+                <div class="contraseña">
+                    <input type="password" id="clave" placeholder="Clave" maxlength="60">
+                    <label class="mostrar small" for="visibilidadPssw">
+                        <input type="checkbox" id="visibilidadPssw">
+                        <p>Mostrar clave</p>
+                    </label>
                 </div>
-                <div id="logs"></div>
             </div>
-            <div class="texto salida">
-                <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
-                <div class="hoverTextarea" id="clickToCopy">
-                    <div>
-                        <p id="copytext">Haz click para copiar</p>
-                    </div>
+            <div class="fila">
+                <div class="estado">
+                    <label class="descodificar small">
+                        <input type="radio" name="Estado">
+                        <p>Descodificar</p>
+                    </label>
+                    <label class="codificar small">
+                        <input type="radio" name="Estado">
+                        <p>Codificar</p>
+                    </label>
+                </div>
+                <div class="correr">
+                    <label for="correr" class="columna">
+                        <p>Correr letras</p>
+                        <input type="number" min="0" step="1" max="9999" value="0" id="correr">
+                    </label>
                 </div>
             </div>
         </div>
-        -->
+        <div class="output">
+            <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
+        </div>
+    </div>
+    <div class="logsWindow visible">
+        <div class="back">
+            <div id="logs"></div>
+        </div>
     </div>
 </body>
 
