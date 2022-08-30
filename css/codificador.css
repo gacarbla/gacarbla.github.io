@@ -188,4 +188,5 @@ div.logsWindow #logs hr {
     font-size: 12px;
     color: #fff;
     opacity: .5;
+    text-align: center;
 }

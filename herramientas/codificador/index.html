@@ -55,13 +55,13 @@
             </div>
             <div class="fila">
                 <div class="estado">
-                    <label class="descodificar small">
-                        <input type="radio" name="Estado">
-                        <p>Descodificar</p>
-                    </label>
                     <label class="codificar small">
-                        <input type="radio" name="Estado">
+                        <input type="radio" name="Estado" id="codificar">
                         <p>Codificar</p>
+                    </label>
+                    <label class="descodificar small">
+                        <input type="radio" name="Estado" id="descodificar">
+                        <p>Descodificar</p>
                     </label>
                 </div>
                 <div class="correr">
@@ -76,7 +76,7 @@
             <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
         </div>
     </div>
-    <div class="logsWindow visible">
+    <div class="logsWindow">
         <div class="back">
             <div id="logs"></div>
         </div>

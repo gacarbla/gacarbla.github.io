@@ -120,43 +120,43 @@ function start() {
     limpiar()
     printLog("Iniciando código...", "info")
     try {
-        const modo = document.getElementById("modoCodificacion")
+
+        document.getElementById("codificar").checked = true
+        const deco = document.getElementById("descodificar")
         modoVariable = false
-        modo.addEventListener("click", function () {
-            if (modoVariable) {
-                modoVariable = false
-                document.getElementById("descodificarVector").classList = [""]
-                document.getElementById("codificarVector").classList = ["active"]
-                document.getElementById("modoCodificacionText").innerHTML = "Codificar"
-            } else {
-                modoVariable = true
-                document.getElementById("descodificarVector").classList = ["active"]
-                document.getElementById("codificarVector").classList = [""]
-                document.getElementById("modoCodificacionText").innerHTML = "Descodificar"
-            }
-        })
-        const claveModo = document.getElementById("toggleVisibility")
-        claveModo.addEventListener("click", function () {
-            if (document.getElementById("clave").type == "text") {
-                document.getElementById("clave").type = "password"
-                document.getElementById("mostrarClave").classList = [""]
-                document.getElementById("ocultarClave").classList = ["active"]
-            } else {
+        deco.addEventListener("change", function () { modoVariable = deco.checked; codificar() })
+        const co = document.getElementById("codificar")
+        co.addEventListener("change", function () { modoVariable = deco.checked; codificar() })
+        const claveModo = document.getElementById("visibilidadPssw")
+        claveModo.checked = false
+        claveModo.addEventListener("change", function () {
+            if (document.getElementById("visibilidadPssw").checked) {
                 document.getElementById("clave").type = "text"
-                document.getElementById("mostrarClave").classList = ["active"]
-                document.getElementById("ocultarClave").classList = [""]
+            } else {
+                document.getElementById("clave").type = "password"
             }
         })
+        const input = document.getElementById("textoEntrada")
+        input.value = ""
+        input.addEventListener("input", codificar)
+        const clave = document.getElementById("clave")
+        clave.value = ""
+        clave.addEventListener("input", codificar)
+        const correr = document.getElementById("correr")
+        correr.value = ""
+        correr.addEventListener("input", codificar)
+        /*
         const clickToCopy = document.getElementById("clickToCopy")
         clickToCopy.addEventListener("click", copy)
-        printLog("Código iniciado", "success", true)
+        */
+        printLog("Código iniciado", "success")
     } catch (e) {
         printLog("No ha sido posible iniciar el código\nError: " + e, "error")
         printLog("Dado el error detectado el codificador puede iniciarse pero no ser utilizado", "warning")
     }
     setTimeout(function () {
-        printLog("CODIFICADOR INICIADO", "text", true)
-        printLog("¿Algo no funciona como debería? Revisa aquí los errores.", "text", false, true)
+        printLog("CODIFICADOR INICIADO", "text")
+        printLog("¿Algo no funciona como debería? Revisa aquí los errores.", "text")
     }, 1000)
 
 }
@@ -194,7 +194,7 @@ function codificar() {
 
 
         if (correr > 1024) correr = 1024
-        if (correr < 0) correr = 0
+        if (!(correr > 0)) correr = 0
 
         var textoProceso = ''
         if (deco) {
@@ -262,7 +262,7 @@ function codificar() {
                 type: "error"
             }
         }
-        printLog(message.text, message.type, false, true)
+        printLog(message.text, message.type)
     }
 }
 
@@ -281,35 +281,35 @@ function codificar() {
 
 
 
-function printLog(message, type, newLine, separador) {
+function printLog(message, type) {
+    type = type.slice(0, 1);
     var logsDiv = document.getElementById("logs")
     const ahora = new Date(Date.now())
     date = `<p class="date">[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]</p>`
-    //if (document.getElementById("logs").lastChild == null || document.getElementById("logs").lastChild.innerHTML !== message) {
-    if (type == "error") {
-        message = `<div class="e">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m14 10-4 4m0-4 4 4-4-4Z"></path></svg></div><p>${message}</p></div>`
-    } else if (type == "info") {
-        message = `<div class="i">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></svg></div><p>${message}</p></div>`
-    } else if (type == "success") {
-        message = `<div class="s">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m9 12 2 2 4-4"></path></svg></div><p>${message}</p></div>`
-    } else if (type == "text") {
-        message = `<div class="t">${date}<p>${message}</p></div>`
-    } else if (type == "warning") {
-        message = `<div class="w">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 21V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8l-4 4Z"></path><path d="M12 8v3"></path><path d="M12 14v.01"></path></svg></div><p>${message}</p></div>`
+    var msg
+    if (type == "e") {
+        msg = `<div class="e">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m14 10-4 4m0-4 4 4-4-4Z"></path></svg></div><p>${message}</p></div>`
+    } else if (type == "i") {
+        msg = `<div class="i">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></svg></div><p>${message}</p></div>`
+    } else if (type == "s") {
+        msg = `<div class="s">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m9 12 2 2 4-4"></path></svg></div><p>${message}</p></div>`
+    } else if (type == "t") {
+        msg = `<div class="t">${date}<p>${message}</p></div>`
+    } else if (type == "w") {
+        msg = `<div class="w">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 21V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8l-4 4Z"></path><path d="M12 8v3"></path><path d="M12 14v.01"></path></svg></div><p>${message}</p></div>`
     }
-    if (newLine) {
-        message = "<br>" + message
-    } else if (separador) {
-        message = "<hr>" + message
+    if ( document.getElementById("logs").innerHTML == "" || !(document.getElementById("logs").firstChild.childNodes[Math.floor(document.getElementById("logs").firstChild.childNodes.length-1)].innerHTML == message && document.getElementById("logs").firstChild.className == type)) {
+        logsDiv.innerHTML = msg + logsDiv.innerHTML
+    } else {
+        var times = document.getElementById("logs").firstChild.firstChild.innerHTML.split("x")[1]
+        if (!times) {times = 1} else {times = parseInt(times)}
+        document.getElementById("logs").firstChild.firstChild.innerHTML = `[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]<br>x${Math.floor(times+1)}`
     }
-
-    logsDiv.innerHTML = message + logsDiv.innerHTML
-    //} else {
-
-    //}
 }
+
+function toggleLogs() {document.getElementsByClassName("logsWindow")[0].classList.toggle("visible")}
 
 function clearLogs() {
     document.getElementById("logs").innerHTML = "";
-    printLog("Se ha limpiado el historial de logs", "info", false, true)
+    printLog("Se ha limpiado el historial de logs", "info")
 }
