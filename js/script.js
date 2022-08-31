@@ -412,10 +412,6 @@ const windows = {
 
 function load() {
 
-  window.onresize = function () {
-    refreshNavigationBar()
-  }
-
   cookies.iniciar();
   if (cookies.obtener("rightClick") == "true") {
     document.oncontextmenu = function () { }
@@ -434,6 +430,9 @@ function load() {
     document.getElementById("body").className = "oscuro"
   }
   refreshNavigationBar();
+  window.onresize = function () {
+    refreshNavigationBar()
+  }
   var mmb = document.getElementById("mobilemenubutton")
   mmb.addEventListener("click", function () { document.getElementById("header").classList.toggle("active") })
 }
