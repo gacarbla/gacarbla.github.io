@@ -261,6 +261,9 @@ function refreshNavigationBar() {
     }
   }
   document.getElementById("header").innerHTML = `<div class="btn" id="mobilemenubutton"><svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16"></path>\n<path d="M4 12h16"></path><path d="M4 18h16"></path>\n</svg>\n<svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path>\n<path d="m6 6 12 12"></path></svg></div><div class="menu">${headerMenu.join("\n")}</div><footer><div class="vector"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg></div><div class="nombre"><p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel Carro Blanco</p></div></footer>`
+
+  var mmb = document.getElementById("mobilemenubutton")
+  mmb.addEventListener("click", function () { document.getElementById("header").classList.toggle("active") })
 }
 
 const windows = {
@@ -431,10 +434,8 @@ function load() {
   }
   refreshNavigationBar();
   window.onresize = function () {
-    refreshNavigationBar()
+    refreshNavigationBar();
   }
-  var mmb = document.getElementById("mobilemenubutton")
-  mmb.addEventListener("click", function () { document.getElementById("header").classList.toggle("active") })
 }
 
 
