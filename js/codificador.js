@@ -111,6 +111,10 @@ function copy() {
 var modoVariable
 
 function start() {
+    if (window.innerWidth<1024) go(":")
+    window.onresize = function(){
+        if (window.innerWidth<1024) go(":")
+    }
     document.getElementById("textoEntrada").value = ""
     document.getElementById("correr").value = "0"
     limpiar()
@@ -311,3 +315,12 @@ function clearLogs() {
     document.getElementById("logs").innerHTML = "";
     printLog("Se ha limpiado el historial de logs", "info")
 }
+
+function go(page, newTabBoolean) {
+    if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
+    if (newTabBoolean) {
+      window.open(`${page}`, "GΛCΛRBLΛ", "width=1080, height=440")
+    } else {
+      window.location = `${page}`
+    }
+  }
