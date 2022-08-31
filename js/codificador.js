@@ -108,10 +108,6 @@ function copy() {
     document.getElementById("copytext").innerHTML = "Copiado"
 }
 
-function scrollToSection(number) {
-    document.getElementById("scroll").scrollTo(0, Math.floor(innerHeight * number))
-}
-
 var modoVariable
 
 function start() {
@@ -145,6 +141,11 @@ function start() {
         const correr = document.getElementById("correr")
         correr.value = ""
         correr.addEventListener("input", codificar)
+        const logsButton = document.getElementById("logsbtn")
+        logsButton.addEventListener("click", function(){
+            toggleLogs();
+            logsButton.classList.toggle("active")
+        })
         /*
         const clickToCopy = document.getElementById("clickToCopy")
         clickToCopy.addEventListener("click", copy)
@@ -253,10 +254,7 @@ function codificar() {
         try {
             const final = textoProceso
             document.getElementById("textoSalida").value = final
-            document.getElementById("copytext").innerHTML = "Haz click para copiar"
-            scrollToSection(2)
-            document.getElementById("textoEntrada").value = ""
-        } catch {
+        } catch (e){
             message = {
                 text: "Ha ocurrido un error en el proceso.<br>Revise los parámetros establecidos.<br>Si el error persiste constacte al desarrollador.",
                 type: "error"

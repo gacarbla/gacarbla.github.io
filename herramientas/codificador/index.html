@@ -30,7 +30,7 @@
     <script src="../../js/script.js"></script>
 
     <!--  Título  -->
-    <title>GΛCΛRBLΛ</title>
+    <title>GΛCΛRBLΛ | Herramientas | codificador</title>
 
 </head>
 
@@ -41,7 +41,8 @@
     <div id="windows"></div>
     <div class="content">
         <div class="input">
-            <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!" id="textoEntrada"></textarea>
+            <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!"
+                id="textoEntrada"></textarea>
         </div>
         <div class="settings">
             <div class="columna">
@@ -75,10 +76,30 @@
         <div class="output">
             <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
         </div>
-    </div>
-    <div class="logsWindow">
-        <div class="back">
-            <div id="logs"></div>
+        <div class="logsWindow">
+            <div class="back">
+                <div id="logs"></div>
+            </div>
+        </div>
+        <div class="alignCenterBox">
+            <div class="logsButton" id="logsbtn">
+                <div class="enable">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 4v18M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1v0Z">
+                        </path>
+                        <path d="M13 8h2"></path>
+                        <path d="M13 12h2"></path>
+                    </svg>
+                    <p>Ver logs</p>
+                </div>
+                <div class="disable">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                    <p>Cerrar</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

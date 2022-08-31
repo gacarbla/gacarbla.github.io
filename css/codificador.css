@@ -1,3 +1,75 @@
+.claro {
+    --header-menu-background: #2dffcd;
+    --header-menu-pagina-svg-stroke: #f3fe39;
+    --header-menu-pagina-svg-bakground: #19585d;
+    --header-menu-pagina-p-color: #000;
+    --header-menu-separador-svg-stroke: #000;
+    --header-menu-separador-svg-bakground: transparent;
+    --header-menu-separador-p-color: #000;
+    --header-menu-separador-line-color: #000;
+
+    --ventanas-pagina-fondo: #0006;
+    --ventanas-fondo: #fff;
+    --ventanas-titulo-color: #000;
+    --ventanas-svg-cerrar-fondo: #000;
+    --ventanas-svg-cerrar-linea: #fff;
+    --ventanas-sombra: #0002;
+    --ventanas-texto-color: #000;
+    --ventanas-boton-hover-rojo: #cd3235;
+    --ventanas-enlaces-color: #19585d;
+
+    --body-background-1: hsl(166, 100%, 80%);
+    --body-background-2: hsl(166, 100%, 95%);
+
+    --text-label-color: #000;
+}
+
+.oscuro {
+    --header-menu-background: #334756;
+    --header-menu-pagina-svg-stroke: #ff4c29;
+    --header-menu-pagina-svg-bakground: #082032;
+    --header-menu-pagina-p-color: #fff;
+    --header-menu-separador-svg-stroke: #fff;
+    --header-menu-separador-svg-bakground: transparent;
+    --header-menu-separador-p-color: #fff;
+    --header-menu-separador-line-color: #fff;
+
+    --ventanas-pagina-fondo: #000a;
+    --ventanas-fondo: #334756;
+    --ventanas-titulo-color: #fff;
+    --ventanas-svg-cerrar-fondo: #334756;
+    --ventanas-svg-cerrar-linea: #ff4c29;
+    --ventanas-sombra: #0002;
+    --ventanas-texto-color: #fff;
+    --ventanas-boton-hover-rojo: #ed3235;
+    --ventanas-enlaces-color: aqua;
+
+    --body-background-1: #05141f;
+    --body-background-2: #0b2a42;
+
+    --text-label-color: #fff;
+}
+
+body {
+    background: linear-gradient(-45deg, var(--body-background-1), var(--body-background-2));
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 div.content {
     display: flex;
     flex-direction: column;
@@ -11,6 +83,10 @@ div.content > div {
 }
 div.content div.input {
     min-height: 100px;
+}
+
+div.content div textarea {
+    font-family: Arial;
 }
 
 div.content div.input textarea {
@@ -59,6 +135,7 @@ div.settings label {
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--text-label-color)
 }
 
 div.settings label.columna {
@@ -84,7 +161,6 @@ div.logsWindow {
     background-color: #000a;
     top: 0px;
     bottom: 0px;
-    left: 0px;
     right: 0px;
     overflow-y: hidden;
     visibility: hidden;
@@ -95,7 +171,7 @@ div.logsWindow div.back {
     position: absolute;
     width: 550px;
     top: 20px;
-    bottom: 20px;
+    bottom: 70px;
     left: calc(50vw - 275px);
     right: calc(50vw - 275px);
     z-index: 710;
@@ -189,4 +265,92 @@ div.logsWindow #logs hr {
     color: #fff;
     opacity: .5;
     text-align: center;
+}
+
+.alignCenterBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    z-index: 730;
+}
+
+.logsButton {
+    background-color: var(--body-background-1);
+    filter: invert(1);
+    height: 50px;
+    max-width: 300px;
+    min-width: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    z-index: 730;
+}
+
+.logsButton > div {
+    filter: invert(1);
+    position: relative;
+    display: flex;
+    width: 100%;
+    z-index: 740;
+}
+
+.logsButton > div > svg {
+    width: 40px;
+    height: 40px;
+    fill: none;
+    stroke-width: 2;
+    stroke: var(--body-background-1);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background-color: var(--body-background-1) invert(1);
+}
+
+.logsButton.active .enable {
+    position: absolute;
+    bottom: -500px;
+    visibility: hidden;
+    z-index: 750;
+}
+
+.logsButton .disable {
+    position: absolute;
+    bottom: -500px;
+    visibility: hidden;
+    z-index: 760;
+}
+
+.logsButton.active .disable{
+    position: unset;
+    visibility: visible;
+}
+
+.logsButton p {
+    opacity: 0;
+    margin: auto;
+    height: auto;
+    transition: all 0.3s;
+    font-size: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logsButton:hover p {
+    position: unset;
+    margin: auto auto auto 5px;
+    height: auto;
+    opacity: 1;
+    width: auto;
+    font-size: 18px;
+}
+
+.logsButton:hover {
+    padding: 5px 20px;
 }
