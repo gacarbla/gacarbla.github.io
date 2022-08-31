@@ -114,6 +114,7 @@ function start() {
     if (window.innerWidth<1024) go(":")
     window.onresize = function(){
         if (window.innerWidth<1024) go(":")
+        refreshNavigationBar()
     }
     document.getElementById("textoEntrada").value = ""
     document.getElementById("correr").value = "0"
