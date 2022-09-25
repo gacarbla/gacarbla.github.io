@@ -139,7 +139,56 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px ) {
+
+    #inicio p {
+        position: absolute;
+        right: 0px;
+        font-size: 120px;
+        top: 180px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        animation: fadeInDown .9s ease;
+    }
+    
+    #inicio div {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        right: 0px;
+        top: 425px;
+        height: 130px;
+        flex-direction: row;
+    }
+    
+    #inicio button {
+        width: 335px;
+        margin: 10px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height:55px;
+        justify-content: center;
+        gap: 20px;
+        cursor:pointer;
+    }
+    
+    #inicio button svg {
+        fill: none;
+        width: 25px;
+        height: 25px;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
     #inicio {
         height: 100vh;
     }
@@ -147,7 +196,7 @@
     #inicio p {
         position: absolute;
         right: 0px;
-        font-size: 60px;
+        font-size: 90px;
         top: 200px;
         font-weight: bold;
         width: 100%;
@@ -161,7 +210,7 @@
         display: flex;
         position: absolute;
         right: 0px;
-        top: 380px;
+        top: 400px;
         height: 130px;
         flex-direction: column-reverse;
     }
@@ -187,5 +236,15 @@
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #inicio p {
+        font-size: 60px;
+    }
+    
+    #inicio div {
+        top: 325px;
     }
 }

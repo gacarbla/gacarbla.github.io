@@ -116,7 +116,7 @@ div.menu {
     height: 100%;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     header {
         width: 100vw;
         position: fixed;
@@ -224,7 +224,7 @@ header:hover div.menu div.pagina div.nombre p {
     margin: 0px 10px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     header div.menu div.pagina div.vector svg {
         width: 40px;
         height: 40px;
@@ -314,7 +314,7 @@ header:hover div.menu div.separador div.line {
     height: 0px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     header div.menu div.separador div.nombre p {
         text-transform: uppercase;
         color: var(--header-menu-separador-p-color);
@@ -380,7 +380,7 @@ header:hover footer div.nombre p.s {
     margin: 0px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     footer div.nombre p {
         font-size: 0px;
         font-family: monospace;
@@ -525,7 +525,7 @@ header:hover footer div.nombre p.s {
     transform: translateX(13px);
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 799px) {
     #windows .window.lateral {
         width: calc(100vw - 20px);
         background-color: var(--ventanas-fondo);

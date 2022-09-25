@@ -18,15 +18,16 @@ body {
     animation: gradient 20s ease infinite;
     height: 100vh;
 }
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
- 
+
     50% {
         background-position: 100% 50%;
     }
- 
+
     100% {
         background-position: 0% 50%;
     }
@@ -40,9 +41,10 @@ div.content {
     padding: 20px;
 }
 
-div.content > div {
+div.content>div {
     width: calc(100% - 60px);
 }
+
 div.content div.input {
     min-height: 100px;
 }
@@ -74,7 +76,7 @@ div.content div.output textarea {
 div.content div.settings {
     display: flex;
     flex-direction: row;
-    gap: calc(50% - 200px);
+    gap: 20px;
     height: 50px;
 }
 
@@ -82,14 +84,14 @@ div.settings div.columna {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 200px;
+    width: 33%;
 }
 
 div.settings div.fila {
     gap: 20px;
     display: flex;
     flex-direction: row;
-    width: calc(50% + 400px);
+    width: 66%;
     justify-content: space-between;
 }
 
@@ -105,6 +107,7 @@ div.settings label.columna {
     align-items: flex-start;
     gap: 0px;
 }
+
 div.settings label.columna p {
     margin: 0px;
 }
@@ -113,7 +116,9 @@ label.small {
     height: 25px;
 }
 
-input[type=number], input[type=text], input[type=password] {
+input[type=number],
+input[type=text],
+input[type=password] {
     width: 100%;
 }
 
@@ -127,6 +132,7 @@ div.logsWindow {
     overflow-y: hidden;
     visibility: hidden;
 }
+
 div.logsWindow div.back {
     background-color: #000;
     border-radius: 8px;
@@ -156,7 +162,7 @@ div.logsWindow #logs hr {
     width: 90%;
 }
 
-#logs > div {
+#logs>div {
     margin: 5px 10px;
     display: flex;
     flex-direction: row;
@@ -169,34 +175,34 @@ div.logsWindow #logs hr {
     scroll-snap-align: center;
 }
 
-#logs > div.i {
+#logs>div.i {
     background-color: #00b7ff44;
 }
 
-#logs > div.e {
+#logs>div.e {
     background-color: #f004;
 }
 
-#logs > div.w {
+#logs>div.w {
     background-color: #fce62444;
 }
 
-#logs > div.s {
+#logs>div.s {
     background-color: #0f04;
 }
 
-#logs > div.t {
+#logs>div.t {
     background-color: #fff2;
 }
 
-#logs > div p {
+#logs>div p {
     color: #fffc;
     font-size: 16px;
     font-family: monospace;
     margin: 0px;
 }
 
-#logs > div svg {
+#logs>div svg {
     stroke-width: 3px;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -205,24 +211,24 @@ div.logsWindow #logs hr {
     fill: none;
 }
 
-#logs > div.e svg {
+#logs>div.e svg {
     stroke: #f00a;
 }
 
-#logs > div.i svg {
+#logs>div.i svg {
     stroke: #00b7ffbb;
 }
 
-#logs > div.w svg {
+#logs>div.w svg {
     stroke: #fce624;
 }
 
-#logs > div.s svg {
+#logs>div.s svg {
     stroke: #0f0;
 }
 
 
-#logs > div p.date {
+#logs>div p.date {
     font-size: 12px;
     color: #fff;
     opacity: .5;
@@ -256,7 +262,7 @@ div.logsWindow #logs hr {
     z-index: 730;
 }
 
-.logsButton > div {
+.logsButton>div {
     filter: invert(1);
     position: relative;
     display: flex;
@@ -264,7 +270,7 @@ div.logsWindow #logs hr {
     z-index: 740;
 }
 
-.logsButton > div > svg {
+.logsButton>div>svg {
     width: 40px;
     height: 40px;
     fill: none;
@@ -289,7 +295,7 @@ div.logsWindow #logs hr {
     z-index: 760;
 }
 
-.logsButton.active .disable{
+.logsButton.active .disable {
     position: unset;
     visibility: visible;
 }
@@ -315,4 +321,55 @@ div.logsWindow #logs hr {
 
 .logsButton:hover {
     padding: 5px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    div.content>div {
+        width: 100%;
+    }
+    div.content div.settings{
+        display: table-column;
+        height: 160px;
+        margin: 10px 0px 10px 0px;
+    }
+    div.settings div.columna{
+        width: 100%;
+        margin: 20px 0px 20px 0px;
+    }
+    div.settings div.fila {
+        width: 100%;
+        gap: 20px;
+    }
+    div.content div.input {
+        margin-top: 50px;
+    }
+    div.logsWindow div.back {
+        background-color: #000;
+        border-radius: 8px;
+        position: absolute;
+        width: 90%;
+        top: 57.5px;
+        bottom: 70px;
+        left: 5vw;
+        right: 5vw;
+        z-index: 710;
+    }
+    #logs {
+        width: 100%;
+    }
+    #logs>div {
+        width: calc(100% - 20px);
+    }
+    .logsButton {
+        padding: 5px 20px;
+    }
+    .logsButton p {
+        position: unset;
+        margin: auto auto auto 5px;
+        height: auto;
+        opacity: 1;
+        width: auto;
+        font-size: 18px;
+    }
 }
