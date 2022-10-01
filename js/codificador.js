@@ -84,7 +84,7 @@ function codificar() {
         printLog("No se ha transformado el texto porque la clave no es válida", "error")
         limpiar()
     } else {
-        var message = ""
+        var message = {}
 
         const texto = document.getElementById("textoEntrada").value
         if (!texto) return limpiar()
@@ -95,8 +95,20 @@ function codificar() {
         const salida = 2 //document.getElementById("salida").value
 
 
-        if (correr > 1024) correr = 1024
-        if (!(correr > 0)) correr = 0
+        if (correr > 1024) {
+            correr = 1024
+            message = {
+                text: "El número de letras a correr excede el límite permitido de 1024 por lo que se ha usado el valor máximo por defecto.",
+                type: "info"
+            }
+        }
+        if (!(correr >= 0)) {
+            correr = 0
+            message = {
+                text: "El número de letras a correr no alcanza el mínimo permitido de 0 por lo que se ha usado el valor mínimo por defecto.",
+                type: "info"
+            }
+        }
 
         var textoProceso = ''
         if (deco) {
@@ -147,9 +159,11 @@ function codificar() {
                 })
                 textoProceso = textoProcesoDos
             }
-            message = {
-                text: "Texto codificado con éxito",
-                type: "success"
+            if(!message.text){
+                message = {
+                    text: "Texto codificado con éxito",
+                    type: "success"
+                }
             }
         }
         try {

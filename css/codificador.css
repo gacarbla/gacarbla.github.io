@@ -3,6 +3,8 @@
     --body-background-2: hsl(166, 100%, 95%);
 
     --text-label-color: #000;
+    --logsbutton-background: #19585D;
+    --logsbutton-complementary: #F3FE39;
 }
 
 .oscuro {
@@ -10,6 +12,8 @@
     --body-background-2: #0b2a42;
 
     --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #334756;
 }
 
 body {
@@ -59,6 +63,10 @@ div.content div.input textarea {
     min-height: 100px;
     height: 150px;
     max-height: 400px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
 }
 
 div.content div.output {
@@ -71,13 +79,23 @@ div.content div.output textarea {
     min-height: 100px;
     height: 150px;
     max-height: 400px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
 }
 
 div.content div.settings {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    height: 50px;
+    height: 75px;
+}
+
+div.content div.settings div.estado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 div.settings div.columna {
@@ -120,6 +138,10 @@ input[type=number],
 input[type=text],
 input[type=password] {
     width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
 }
 
 div.logsWindow {
@@ -148,7 +170,7 @@ div.logsWindow div.back {
 div.logsWindow div.back #logs {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0px;
+    padding: 15px 20px;
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;
@@ -158,12 +180,8 @@ div.logsWindow.visible {
     visibility: visible;
 }
 
-div.logsWindow #logs hr {
-    width: 90%;
-}
-
 #logs>div {
-    margin: 5px 10px;
+    margin: 5px 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -171,7 +189,7 @@ div.logsWindow #logs hr {
     padding: 5px;
     border: 1px solid #fff5;
     border-radius: 3px;
-    width: calc(100% - 10px);
+    width: 100%;
     scroll-snap-align: center;
 }
 
@@ -247,8 +265,7 @@ div.logsWindow #logs hr {
 }
 
 .logsButton {
-    background-color: var(--body-background-1);
-    filter: invert(1);
+    background-color: var(--logsbutton-background);
     height: 50px;
     max-width: 300px;
     min-width: 50px;
@@ -263,7 +280,6 @@ div.logsWindow #logs hr {
 }
 
 .logsButton>div {
-    filter: invert(1);
     position: relative;
     display: flex;
     width: 100%;
@@ -275,10 +291,10 @@ div.logsWindow #logs hr {
     height: 40px;
     fill: none;
     stroke-width: 2;
-    stroke: var(--body-background-1);
+    stroke: var(--logsbutton-complementary);
     stroke-linecap: round;
     stroke-linejoin: round;
-    background-color: var(--body-background-1) invert(1);
+    background-color: transparent;
 }
 
 .logsButton.active .enable {
@@ -308,6 +324,7 @@ div.logsWindow #logs hr {
     font-size: 0px;
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--logsbutton-complementary)
 }
 
 .logsButton:hover p {
@@ -330,7 +347,7 @@ div.logsWindow #logs hr {
     }
     div.content div.settings{
         display: table-column;
-        height: 160px;
+        height: 210px;
         margin: 10px 0px 10px 0px;
     }
     div.settings div.columna{
@@ -357,9 +374,6 @@ div.logsWindow #logs hr {
     }
     #logs {
         width: 100%;
-    }
-    #logs>div {
-        width: calc(100% - 20px);
     }
     .logsButton {
         padding: 5px 20px;
