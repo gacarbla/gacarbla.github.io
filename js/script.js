@@ -286,9 +286,13 @@ const windows = {
       selectCheck.addEventListener("change", function () {
         if (selectCheck.checked) {
           document.getElementById("body").classList.add("select");
+          document.getElementById("body").ondragstart = function(){}
+          document.getElementById("body").onselectstart = function(){}
           cookies.establecer("select", "true")
         } else {
           document.getElementById("body").classList.remove("select");
+          document.getElementById("body").ondragstart = function(){return false}
+          document.getElementById("body").onselectstart = function(){return false}
           cookies.establecer("select", "false")
         }
       })
@@ -423,8 +427,12 @@ function load() {
   }
   if (cookies.obtener("select") == "true") {
     document.getElementById("body").classList.add("select");
+    document.getElementById("body").ondragstart = function(){return false}
+    document.getElementById("body").onselectstart = function(){return false}
   } else {
     document.getElementById("body").classList.remove("select");
+    document.getElementById("body").ondragstart = function(){}
+    document.getElementById("body").onselectstart = function(){}
   }
   if (cookies.obtener("colorMode") == "claro") {
     document.getElementById("body").className = "claro"

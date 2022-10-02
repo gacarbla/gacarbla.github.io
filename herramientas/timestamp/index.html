@@ -34,7 +34,7 @@
 
 </head>
 
-<body onload="load()" class="oscuro" id="body">
+<body onload="load(); start()" class="oscuro" id="body">
 
 
   <header id="header"></header>
@@ -55,6 +55,7 @@
           <option value="D">1 de enero de 1970</option>
           <option value="f">1 de enero de 1970 1:00</option>
           <option value="F">Jueves, 1 de enero de 1970 1:00</option>
+          <option value="R">Hace 70 años</option>
         </select>
       </label>
     </div>
@@ -72,7 +73,7 @@
           <p>Este formato se vería así: <span class="timestamp" id="preview"></span><br>¡Espero que te guste!</p>
         </div>
       </div>
-      <textarea id="output" readonly>Hola</textarea>
+      <textarea id="output" readonly></textarea>
     </div>
   </div>
 </body>
