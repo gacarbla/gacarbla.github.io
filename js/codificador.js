@@ -1,23 +1,19 @@
 function copy() {
-    var content = document.getElementById("textoSalida")
+    const content = document.getElementById("textoSalida")
+    if (content.value=="") return
     content.select();
     document.execCommand("copy");
-    document.getElementById("copytext").innerHTML = "Copiado"
+    //document.getElementById("copytext").innerHTML = "Copiado"
 }
 
 var modoVariable
 
 function start() {
-    //if (window.innerWidth<1024) go(":")
-    //window.onresize = function(){
-    //    if (window.innerWidth<1024) go(":")
-    //}
     document.getElementById("textoEntrada").value = ""
     document.getElementById("correr").value = "0"
     limpiar()
     printLog("Iniciando código...", "info")
     try {
-
         document.getElementById("codificar").checked = true
         const deco = document.getElementById("descodificar")
         modoVariable = false
@@ -36,6 +32,10 @@ function start() {
         const input = document.getElementById("textoEntrada")
         input.value = ""
         input.addEventListener("input", codificar)
+        const output = document.getElementById("textoSalida")
+        output.addEventListener("click", copy)
+        const copyText = document.getElementById("copyText")
+        copyText.addEventListener("click", copy)
         const clave = document.getElementById("clave")
         clave.value = ""
         clave.addEventListener("input", codificar)
@@ -47,10 +47,6 @@ function start() {
             toggleLogs();
             logsButton.classList.toggle("active")
         })
-        /*
-        const clickToCopy = document.getElementById("clickToCopy")
-        clickToCopy.addEventListener("click", copy)
-        */
         printLog("Código iniciado", "success")
     } catch (e) {
         printLog("No ha sido posible iniciar el código\nError: " + e, "error")

@@ -85,6 +85,17 @@ div.content div.output textarea {
     padding: 10px;
 }
 
+p#copyText {
+    position: absolute;
+    right: 100px;
+    width: 200px;
+    background-color: #0005;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 20px;
+}
+
 div.content div.settings {
     display: flex;
     flex-direction: row;
@@ -386,4 +397,8 @@ div.logsWindow.visible {
         width: auto;
         font-size: 18px;
     }
+    p#copyText {
+        right: 40px;
+    }
+    
 }
