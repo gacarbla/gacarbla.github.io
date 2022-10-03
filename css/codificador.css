@@ -94,6 +94,14 @@ p#copyText {
     border-radius: 5px;
     text-align: center;
     bottom: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+p#copyText.visible {
+    opacity: 1;
+    cursor: pointer;
 }
 
 div.content div.settings {

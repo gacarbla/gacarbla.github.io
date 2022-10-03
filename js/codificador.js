@@ -64,6 +64,7 @@ function start() {
 function limpiar() {
     const resultado = document.getElementById("textoSalida")
     resultado.value = ""
+    document.getElementById("copyText").classList.remove("visible")
 }
 
 function hex2a(hexx) {
@@ -164,6 +165,11 @@ function codificar() {
         }
         try {
             const final = textoProceso
+            if (final!=="") {
+                document.getElementById("copyText").classList.add("visible")
+            } else {
+                document.getElementById("copyText").classList.remove("visible")
+            }
             document.getElementById("textoSalida").value = final
         } catch (e){
             message = {
