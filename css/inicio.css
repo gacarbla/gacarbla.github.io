@@ -4,23 +4,25 @@
 }
 
 .oscuro {
-    --inicio-fondo-imagen: url(../media/jpg/background_inicio_oscuro.jpg);
-    --inicio-color-principal: #ff4c29;
+    /*--inicio-fondo-imagen: url(../media/jpg/background_inicio_oscuro.jpg);*/
+    --body-background-1: #010319;
+    --body-background-2: #000000;
+    --inicio-color-principal: #00b3a7;
 }
 
 
 #inicio {
-    background-image: var(--inicio-fondo-imagen);
+    background: linear-gradient(180deg, var(--body-background-1), var(--body-background-2));
     height: 100vh;
+    background-size: cover;
     min-height: 731px;
     width: 100%;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
+    filter: blur(1)
 }
-
 #inicio p {
     position: absolute;
     right: 20px;

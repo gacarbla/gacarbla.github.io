@@ -32,24 +32,24 @@
 }
 
 .oscuro {
-    --header-menu-background: #334756;
-    --header-menu-pagina-svg-stroke: #ff4c29;
-    --header-menu-pagina-svg-bakground: #082032;
-    --header-menu-pagina-p-color: #fff;
-    --header-menu-separador-svg-stroke: #fff;
+    --header-menu-background: #122844;
+    --header-menu-pagina-svg-stroke: #00b3a7;
+    --header-menu-pagina-svg-bakground: #010319;
+    --header-menu-pagina-p-color: #e5ebeb;
+    --header-menu-separador-svg-stroke: #e5ebeb;
     --header-menu-separador-svg-bakground: transparent;
-    --header-menu-separador-p-color: #fff;
-    --header-menu-separador-line-color: #fff;
+    --header-menu-separador-p-color: #e5ebeb;
+    --header-menu-separador-line-color: #e5ebeb;
 
     --ventanas-pagina-fondo: #000a;
-    --ventanas-fondo: #334756;
-    --ventanas-titulo-color: #fff;
-    --ventanas-svg-cerrar-fondo: #334756;
-    --ventanas-svg-cerrar-linea: #ff4c29;
+    --ventanas-fondo: #122844;
+    --ventanas-titulo-color: #e5ebeb;
+    --ventanas-svg-cerrar-fondo: #122844;
+    --ventanas-svg-cerrar-linea: #00b3a7;
     --ventanas-sombra: #0002;
-    --ventanas-texto-color: #fff;
-    --ventanas-boton-hover-rojo: #ed3235;
-    --ventanas-enlaces-color: aqua;
+    --ventanas-texto-color: #e5ebeb;
+    --ventanas-boton-hover-rojo: #00b3a7;
+    --ventanas-enlaces-color: #00b3a7;
 }
 
 header {

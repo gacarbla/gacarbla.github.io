@@ -105,9 +105,7 @@ function codificar() {
                 type: "info"
             }
         }
-        console.log(correr, document.getElementById("correr"), document.getElementById("correr").value)
-
-        correr =+1024
+        if(!correr) correr = 0
 
         var textoProceso = ''
         if (deco) {

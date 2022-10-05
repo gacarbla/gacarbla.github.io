@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!--  Etiquetas meta  -->
+    <meta charset="UTF-8">
+
+    <!--  SEO meta  -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gacarbla.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GΛCΛRBLΛ">
+    <meta property="og:keywords"
+        content="gacarbla, GΛCΛRBLΛ, documents, gacarbla documents, github, gacarbla github, gacarbla documents github, documentación, gacarbla documentación, gacarbla documentos, documentos">
+    <link rel="canonical" href="https://gacarbla.github.io/">
+
+    <!--  Ajustes meta  -->
+    <meta property="og:locale" content="es-ES">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  Enlaces  -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--  Scripts  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="../../js/script.js"></script>
+
+    <!--  Título  -->
+    <title>GΛCΛRBLΛ | Proyectos | Codificador</title>
+
+</head>
+
+<body onload="load();start()" class="oscuro" id="body">
+
+
+    <header id="header"></header>
+    <div id="windows"></div>
+    <div class="content">
+        <div class="input">
+            <textarea placeholder="¡Escribe aquí el texto que desees codificar (o descodificar)!"
+                id="textoEntrada"></textarea>
+        </div>
+        <div class="settings">
+            <div class="columna">
+                <div class="contraseña">
+                    <label for="clave">Clave</label>
+                    <input type="password" id="clave" maxlength="60">
+                    <label class="mostrar small" for="visibilidadPssw">
+                        <input type="checkbox" id="visibilidadPssw">
+                        <p>Mostrar clave</p>
+                    </label>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="estado">
+                    <label class="codificar small">
+                        <input type="radio" name="Estado" id="codificar">
+                        <p>Codificar</p>
+                    </label>
+                    <label class="descodificar small">
+                        <input type="radio" name="Estado" id="descodificar">
+                        <p>Descodificar</p>
+                    </label>
+                </div>
+                <div class="correr">
+                    <label for="correr" class="columna">
+                        <p>Correr letras</p>
+                        <input type="number" min="0" step="1" max="9999" value="0" id="correr">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="output">
+            <p id="copyText">Haz click para copiar</p>
+            <textarea readonly placeholder="Bello!" id="textoSalida"></textarea>
+        </div>
+        <div class="logsWindow">
+            <div class="back">
+                <div id="logs"></div>
+            </div>
+        </div>
+        <div class="alignCenterBox">
+            <div class="logsButton" id="logsbtn">
+                <div class="enable">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 4v18M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1v0Z">
+                        </path>
+                        <path d="M13 8h2"></path>
+                        <path d="M13 12h2"></path>
+                    </svg>
+                    <p>Ver logs</p>
+                </div>
+                <div class="disable">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                    <p>Cerrar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

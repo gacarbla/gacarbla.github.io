@@ -1,0 +1,430 @@
+.claro {
+    --body-background-1: hsl(166, 100%, 80%);
+    --body-background-2: hsl(166, 100%, 95%);
+
+    --text-label-color: #000;
+    --logsbutton-background: #19585D;
+    --logsbutton-complementary: #F3FE39;
+    
+    --input-background: #f5f5f5;
+    --input-background: #000;
+}
+
+.oscuro {
+    --body-background: #010319;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #334756;
+
+    --input-background: #122844;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #010319;
+    --copytext-text: #fff;
+
+}
+
+body {
+    background-color: var(--body-background);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+div.content>div {
+    width: calc(100% - 60px);
+}
+
+div.content div.input {
+    min-height: 100px;
+}
+
+div.content div textarea {
+    font-family: Arial;
+    background-color: var(--input-background);
+    color: var(--input-text);
+    outline: none;
+}
+
+div.content div.input textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    height: 150px;
+    max-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+div.content div.output {
+    min-height: 100px;
+}
+
+div.content div.output textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    height: 150px;
+    max-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+p#copyText {
+    position: absolute;
+    right: 100px;
+    width: 200px;
+    background-color: var(--copytext-back);
+    color: var(--copytext-text);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+p#copyText.visible {
+    opacity: 1;
+    cursor: pointer;
+}
+
+div.content div.settings {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 75px;
+}
+
+div.content div.settings div.estado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.settings div.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 33%;
+}
+
+div.settings div.fila {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    justify-content: space-between;
+}
+
+div.settings label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--text-label-color)
+}
+
+div.settings label.columna {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+div.settings label.columna p {
+    margin: 0px;
+}
+
+label.small {
+    height: 25px;
+}
+
+input[type=number],
+input[type=text],
+input[type=password] {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: var(--input-background);
+    color: var(--input-text);
+}
+
+body div.content input, body div.content textarea {
+    border: solid 2px transparent;
+}
+
+body div.content input:focus, body div.content textarea:focus {
+    border: solid 2px var(--input-outline);
+}
+
+div.logsWindow {
+    position: fixed;
+    z-index: 700;
+    background-color: #000a;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-y: hidden;
+    visibility: hidden;
+}
+
+div.logsWindow div.back {
+    background-color: #000;
+    border-radius: 8px;
+    position: absolute;
+    width: 550px;
+    top: 20px;
+    bottom: 70px;
+    left: calc(50vw - 275px);
+    right: calc(50vw - 275px);
+    z-index: 710;
+}
+
+div.logsWindow div.back #logs {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+div.logsWindow.visible {
+    visibility: visible;
+}
+
+#logs>div {
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #fff5;
+    border-radius: 3px;
+    width: 100%;
+    scroll-snap-align: center;
+}
+
+#logs>div.i {
+    background-color: #00b7ff44;
+}
+
+#logs>div.e {
+    background-color: #f004;
+}
+
+#logs>div.w {
+    background-color: #fce62444;
+}
+
+#logs>div.s {
+    background-color: #0f04;
+}
+
+#logs>div.t {
+    background-color: #fff2;
+}
+
+#logs>div p {
+    color: #fffc;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 0px;
+}
+
+#logs>div svg {
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    height: 20px;
+    width: 20px;
+    fill: none;
+}
+
+#logs>div.e svg {
+    stroke: #f00a;
+}
+
+#logs>div.i svg {
+    stroke: #00b7ffbb;
+}
+
+#logs>div.w svg {
+    stroke: #fce624;
+}
+
+#logs>div.s svg {
+    stroke: #0f0;
+}
+
+
+#logs>div p.date {
+    font-size: 12px;
+    color: #fff;
+    opacity: .5;
+    text-align: center;
+}
+
+.alignCenterBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    z-index: 730;
+}
+
+.logsButton {
+    background-color: var(--logsbutton-background);
+    height: 50px;
+    max-width: 300px;
+    min-width: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    z-index: 730;
+}
+
+.logsButton>div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    z-index: 740;
+}
+
+.logsButton>div>svg {
+    width: 40px;
+    height: 40px;
+    fill: none;
+    stroke-width: 2;
+    stroke: var(--logsbutton-complementary);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background-color: transparent;
+}
+
+.logsButton.active .enable {
+    position: absolute;
+    bottom: -500px;
+    visibility: hidden;
+    z-index: 750;
+}
+
+.logsButton .disable {
+    position: absolute;
+    bottom: -500px;
+    visibility: hidden;
+    z-index: 760;
+}
+
+.logsButton.active .disable {
+    position: unset;
+    visibility: visible;
+}
+
+.logsButton p {
+    opacity: 0;
+    margin: auto;
+    height: auto;
+    transition: all 0.3s;
+    font-size: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--logsbutton-complementary)
+}
+
+.logsButton:hover p {
+    position: unset;
+    margin: auto auto auto 5px;
+    height: auto;
+    opacity: 1;
+    width: auto;
+    font-size: 18px;
+}
+
+.logsButton:hover {
+    padding: 5px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    div.content>div {
+        width: 100%;
+    }
+    div.content div.settings{
+        display: table-column;
+        height: 210px;
+        margin: 10px 0px 10px 0px;
+    }
+    div.settings div.columna{
+        width: 100%;
+        margin: 20px 0px 20px 0px;
+    }
+    div.settings div.fila {
+        width: 100%;
+        gap: 20px;
+    }
+    div.content div.input {
+        margin-top: 50px;
+    }
+    div.logsWindow div.back {
+        background-color: #000;
+        border-radius: 8px;
+        position: absolute;
+        width: 90%;
+        top: 57.5px;
+        bottom: 70px;
+        left: 5vw;
+        right: 5vw;
+        z-index: 710;
+    }
+    #logs {
+        width: 100%;
+    }
+    .logsButton {
+        padding: 5px 20px;
+    }
+    .logsButton p {
+        position: unset;
+        margin: auto auto auto 5px;
+        height: auto;
+        opacity: 1;
+        width: auto;
+        font-size: 18px;
+    }
+    p#copyText {
+        right: 40px;
+    }
+    
+}
