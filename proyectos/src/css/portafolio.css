@@ -1,9 +1,9 @@
 .oscuro {
-    --fondo: #082032;
+    --fondo-inicio: #01010c;
     --texto-fondo-hover: #334756;
-    --contraste-default: #FF4C29;
+    --contraste-default: #00b3a7;
     --texto: #fff;
-    --fondo-inicio: #040e16;
+    --fondo: #010319;
 }
 
 .claro {
