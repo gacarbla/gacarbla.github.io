@@ -63,7 +63,7 @@ const cookies = {
       }
     }
     if (enabled) {
-      document.cookie = `${ruta.trimStart()}=${valor}; secure; max-age=604800;path="/"}`
+      document.cookie = `${ruta.trimStart()}=${valor}; secure; max-age=604800;path="../../../"}`
       return console.info(`La cookie ${ruta} tiene ahora el valor \"${valor}\"`)
     }
   },
