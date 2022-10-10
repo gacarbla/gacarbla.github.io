@@ -419,6 +419,8 @@ const windows = {
 
 function load() {
 
+  console.log(new XMLHttpRequest().open("GET", "https://gacarbla.github.io/js/texts.json"))
+
   cookies.iniciar();
   if (cookies.obtener("rightClick") == "true") {
     document.oncontextmenu = function () { }
