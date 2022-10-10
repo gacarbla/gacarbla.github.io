@@ -600,7 +600,7 @@ function load() {
 async function language() {
   const texts = await require(`json/${lang}.json`, true)
   for (const x in texts) {
-    document.getElementById(`${x}`).innerHTML = texts[x]
+    try { document.getElementById(`${x}`).innerHTML = texts[x] } catch {}
   }
 }
 
