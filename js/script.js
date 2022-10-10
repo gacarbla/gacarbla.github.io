@@ -1,6 +1,7 @@
 /* COOKIES */
 
 var warned = false;
+var texts = {}
 
 const cookies = {
   list: {
@@ -286,13 +287,13 @@ const windows = {
       selectCheck.addEventListener("change", function () {
         if (selectCheck.checked) {
           document.getElementById("body").classList.add("select");
-          document.getElementById("body").ondragstart = function(){}
-          document.getElementById("body").onselectstart = function(){}
+          document.getElementById("body").ondragstart = function () { }
+          document.getElementById("body").onselectstart = function () { }
           cookies.establecer("select", "true")
         } else {
           document.getElementById("body").classList.remove("select");
-          document.getElementById("body").ondragstart = function(){return false}
-          document.getElementById("body").onselectstart = function(){return false}
+          document.getElementById("body").ondragstart = function () { return false }
+          document.getElementById("body").onselectstart = function () { return false }
           cookies.establecer("select", "false")
         }
       })
@@ -419,8 +420,6 @@ const windows = {
 
 function load() {
 
-  console.log(new XMLHttpRequest().open("GET", "https://gacarbla.github.io/js/texts.json"))
-
   cookies.iniciar();
   if (cookies.obtener("rightClick") == "true") {
     document.oncontextmenu = function () { }
@@ -429,12 +428,12 @@ function load() {
   }
   if (cookies.obtener("select") == "true") {
     document.getElementById("body").classList.add("select");
-    document.getElementById("body").ondragstart = function(){return false}
-    document.getElementById("body").onselectstart = function(){return false}
+    document.getElementById("body").ondragstart = function () { return false }
+    document.getElementById("body").onselectstart = function () { return false }
   } else {
     document.getElementById("body").classList.remove("select");
-    document.getElementById("body").ondragstart = function(){}
-    document.getElementById("body").onselectstart = function(){}
+    document.getElementById("body").ondragstart = function () { }
+    document.getElementById("body").onselectstart = function () { }
   }
   if (cookies.obtener("colorMode") == "claro") {
     document.getElementById("body").className = "claro"
@@ -446,11 +445,16 @@ function load() {
   window.onresize = function () {
     refreshNavigationBar();
   }
+  language("gl")
 }
 
-
-
-
+async function language(lang) {
+  const texts = await require(`json/${lang}.json`, true)
+  for (const x in texts) {
+    document.getElementById(`${x}`).innerHTML = texts[x]
+    console.log(x, texts[x])
+  }
+}
 
 
 
@@ -459,6 +463,11 @@ function load() {
 
 /* ELEMENTAL FUNCTIONS */
 
+async function require(url, native) {
+  const response = await fetch(`${native ? `https://gacarbla.github.io/${url}` : `${url}`}`);
+  const json = await response.json();
+  return json
+}
 function go(page, newTabBoolean) {
   if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
   if (newTabBoolean) {
