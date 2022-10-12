@@ -1,6 +1,6 @@
 {
-    "verCodigo": "See the code",
-    "verPerfil": "See the profile",
+    "verCodigoText": "See the code",
+    "verPerfilText": "See the profile",
     "portafolioText": "Portfolio",
     "tresRayaText": "Tic tac toe",
     "wordleText": "Wordle",
