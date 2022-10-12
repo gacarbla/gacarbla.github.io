@@ -1,4 +1,11 @@
 {
     "verCodigo": "Ver o código",
-    "verPerfil": "Ver o perfil"
+    "verPerfil": "Ver o perfil",
+    "portafolioText": "Portafolio",
+    "tresRayaText": "3 en liña",
+    "wordleText": "Wordle",
+    "quizText": "Quiz",
+    "ahorcadoText": "Aforcado",
+    "listaCompraText": "Lista da compra",
+    "buscadorFiltrosText": "Buscador con filtros"
 }

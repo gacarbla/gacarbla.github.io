@@ -1,4 +1,11 @@
 {
-    "verCodigo": "Ver el código",
-    "verPerfil": "Ver el perfil"
+    "verCodigoText": "Ver el código",
+    "verPerfilText": "Ver el perfil",
+    "portafolioText": "Portfolio",
+    "tresRayaText": "3 en raya",
+    "wordleText": "Wordle",
+    "quizText": "Quiz",
+    "ahorcadoText": "Ahorcado",
+    "listaCompraText": "Lista de la compra",
+    "buscadorFiltrosText": "Motor de busqueda con filtros"
 }

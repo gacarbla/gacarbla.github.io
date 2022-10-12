@@ -1,4 +1,11 @@
 {
     "verCodigo": "See the code",
-    "verPerfil": "See the profile"
+    "verPerfil": "See the profile",
+    "portafolioText": "Portfolio",
+    "tresRayaText": "Tic tac toe",
+    "wordleText": "Wordle",
+    "quizText": "Quiz",
+    "ahorcadoText": "hanged man",
+    "listaCompraText": "Shopping list",
+    "buscadorFiltrosText": "Search engine with filters"
 }
