@@ -91,15 +91,17 @@ function refreshNavigationBar() {
       name: {
         es: "Inicio",
         gl: "Inicio",
-        pt: "Inicio",
-        en: "Inicio"
+        pt: "Início",
+        en: "Home"
       },
       vector: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H3l9-9 9 9h-2"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path></svg>`,
       class: "pagina",
       onclick: "go(':', false)",
       title: {
         es: "Vuelve a la página de inicio",
-        gl: "Volta á pantalla de inicio"
+        gl: "Volta á pantalla de inicio",
+        pt: "Voltar para a página inicial",
+        en: "Go back to the home page"
       },
       disabled: false
     },
@@ -125,7 +127,9 @@ function refreshNavigationBar() {
       onclick: "go(':proyectos/discord/timestamp', false)",
       title: {
         es: "Discord Timestamp Generator",
-        gl: "Discord Timestamp Generator"
+        gl: "Discord Timestamp Generator",
+        pt: "Discord Timestamp Generator",
+        en: "Discord Timestamp Generator"
       },
       disabled: false
     },
@@ -141,7 +145,9 @@ function refreshNavigationBar() {
       onclick: "go(':proyectos/codificador', false)",
       title: {
         es: "Codificador simple de textos",
-        gl: "Codificador simple de textos"
+        gl: "Codificador simple de textos",
+        pt: "Codificador de texto simple",
+        en: "Simple text encoder"
       },
       disabled: false
     },
@@ -167,7 +173,9 @@ function refreshNavigationBar() {
       onclick: "go('https://github.com/gacarbla', true)",
       title: {
         es: "Accede al perfil de GitHub de gacarbla",
-        gl: "Accede ó perfil de GitHub de gacarbla"
+        gl: "Accede ó perfil de GitHub de gacarbla",
+        pt: "Acesse o perfil do GitHub do gacarbla",
+        en: "Access gacarbla's GitHub profile"
       },
       disabled: false
     },
@@ -183,7 +191,9 @@ function refreshNavigationBar() {
       onclick: "go('https://github.com/gacarbla/gacarbla.github.io', true)",
       title: {
         es: "Accede al repositorio",
-        gl: "Accede ó repositorio"
+        gl: "Accede ó repositorio",
+        pt: "Acesse o repositório",
+        en: "Access the repository"
       },
       disabled: false
     },
@@ -199,7 +209,9 @@ function refreshNavigationBar() {
       onclick: "go('https://github.com/gacarbla/Dori', true)",
       title: {
         es: "Accede al repositorio",
-        gl: "Accede ó repositorio"
+        gl: "Accede ó repositorio",
+        pt: "Acesse o repositório",
+        en: "Access the repository"
       },
       disabled: false
     },
@@ -215,7 +227,9 @@ function refreshNavigationBar() {
       onclick: "go('https://github.com/gacarbla/NewsBot', true)",
       title: {
         es: "Accede al repositorio",
-        gl: "Accede ó repositorio"
+        gl: "Accede ó repositorio",
+        pt: "Acesse o repositório",
+        en: "Access the repository"
       },
       disabled: false
     },
@@ -231,7 +245,9 @@ function refreshNavigationBar() {
       onclick: "go('https://github.com/gacarbla/computerAnalyzer', true)",
       title: {
         es: "Accede al repositorio",
-        gl: "Accede ó repositorio"
+        gl: "Accede ó repositorio",
+        pt: "Acesse o repositório",
+        en: "Access the repository"
       },
       disabled: false
     },
@@ -257,7 +273,9 @@ function refreshNavigationBar() {
       onclick: "go('https://www.instagram.com/gacarbla/', true)",
       title: {
         es: "Instagram personal",
-        gl: "Instagram persoal"
+        gl: "Instagram persoal",
+        pt: "Instagram pessoal",
+        en: "Personal Instagram"
       },
       disabled: false
     },
@@ -289,7 +307,9 @@ function refreshNavigationBar() {
       onclick: "go('https://www.linkedin.com/in/gabriel-carro-blanco-866b99247/', true)",
       title: {
         es: "LinkedIn",
-        gl: "LinkedIn"
+        gl: "LinkedIn",
+        pt: "LinkedIn",
+        en: "LinkedIn"
       },
       disabled: true
     },
@@ -305,7 +325,9 @@ function refreshNavigationBar() {
       onclick: "go('https://open.spotify.com/user/31k2xuzibkfcpzhuottq6kgpigpy?si=9a158eccac6f478c', true)",
       title: {
         es: "Spotify",
-        gl: "Spotify"
+        gl: "Spotify",
+        pt: "Spotify",
+        en: "Spotify"
       },
       disabled: false
     },
@@ -331,7 +353,9 @@ function refreshNavigationBar() {
       onclick: "windows.new('settings')",
       title: {
         es: "Modifica el aspecto de la página a tu gusto",
-        gl: "Modifica o aspeto da páxina como che pete"
+        gl: "Modifica o aspeto da páxina como che pete",
+        pt: "Modifique a aparência da página ao seu gosto",
+        en: "Modify the appearance of the page to your liking"
       },
       disabled: false
     },
@@ -347,7 +371,9 @@ function refreshNavigationBar() {
       onclick: "windows.new('devSettings')",
       title: {
         es: "Herramientas avanzadas para desarrolladores",
-        gl: "Ferramentas avanzadas para desenvolvedores"
+        gl: "Ferramentas avanzadas para desenvolvedores",
+        pt: "Ferramentas avançadas de desenvolvedor",
+        en: "Advanced developer tools"
       },
       disabled: false,
       hidden: data.obtener("devModeStatus") == "on" ? false : true,
@@ -516,7 +542,11 @@ const windows = {
 function load() {
 
   if (!data.existe("idioma")) data.establecer("idioma", "es")
-  lang = data.obtener("idioma")
+  if(read("lang")) {
+    lang = read("lang")
+  } else {
+    lang = data.obtener("idioma")
+  }
 
   data.iniciar();
   if (data.obtener("rightClick") == "true") {
@@ -560,13 +590,23 @@ async function language() {
 
 /* ELEMENTAL FUNCTIONS */
 
-async function require(url, native) {
-  const response = await fetch(`${native ? `https://gacarbla.github.io/${url}` : `${url}`}`);
+async function require(url, canonical) {
+  const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
   const json = await response.json();
   return json
 }
+function read(value) {
+  if (!window.location.href.split("?")[1]) return
+  const values = window.location.href.split("?")[1].split(";")
+  var devolver = ""
+  values.forEach(element => {
+    if (element.split("=")[0]==value) devolver = element.split("=")[1]
+  })
+  return devolver
+}
 function go(page, newTabBoolean) {
   if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
+  if (window.location.href.split("?")[1]) page = `${page}?${window.location.href.split("?")[1]}`
   if (newTabBoolean) {
     window.open(`${page}`, "GΛCΛRBLΛ", "width=1080, height=440")
   } else {
