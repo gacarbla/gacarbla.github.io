@@ -547,7 +547,7 @@ const windows = {
       return console.error("No se ha especificado el nombre de la ventana")
     }
     if (name = "devSettings") {
-      const windowJSON = require(`${name}`, true)
+      const windowJSON = require(`json/windows/devSettings.json`, true)
       console.log(windowJSON)
     } else {
       const ventanaData = windows[`${name}`];
