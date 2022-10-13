@@ -2,7 +2,7 @@
     "intro": {
         "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web."
     },
-    "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
+    "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
         "selectCheck": {
             "text": {
