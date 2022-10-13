@@ -573,7 +573,7 @@ const windows = {
 function load() {
 
   if (!data.existe("idioma")) data.establecer("idioma", "es")
-  if(read("lang")) {
+  if (read("lang")) {
     lang = read("lang")
   } else {
     lang = data.obtener("idioma")
@@ -623,7 +623,7 @@ function read(value) {
   const values = window.location.href.split("?")[1].split(";")
   var devolver = ""
   values.forEach(element => {
-    if (element.split("=")[0]==value) devolver = element.split("=")[1]
+    if (element.split("=")[0] == value) devolver = element.split("=")[1]
   })
   return devolver
 }
@@ -639,6 +639,6 @@ function go(page, newTabBoolean) {
 async function language() {
   const texts = await require(`json/${lang}.json`, true)
   for (const x in texts) {
-    try { document.getElementById(`${x}`).innerHTML = texts[x] } catch {}
+    try { document.getElementById(`${x}`).innerHTML = texts[x] } catch { }
   }
 }
