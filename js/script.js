@@ -547,12 +547,14 @@ const windows = {
       return console.error("No se ha especificado el nombre de la ventana")
     }
     const ventanaData = windows[`${name}`];
-    if (name = "devSettings") {
-      const windowJSON = await require(`json/windows/devSettings.json`, true)
-      const structuresJSON = await require(`json/repo/structures.json`, true)
-      var window = structuresJSON["windows"]
-      window = window.replace("%%intro%%", windowJSON.intro[lang]).replace("%%campos%%", windowJSON.campos)
-      console.log(window)
+    if (name == "devSettings") {
+      const windowJSON = await require(`json/windows/${name}.json`, true), structuresJSON = await require(`json/repo/structures.json`, true), camposJSON = await require(`json/repo/campos.json`, true)
+      var window = structuresJSON["windows"], campos = []
+      for (const x in windowJSON.textos) {
+        if(windowJSON.textos[x].tipo == "radio") { campos.push(windowJSON.campos.replace("%%text%%", windowJSON.textos[x].text[lang]).replace("%%campo%%", camposJSON.windows.radio).replace(/%%id%%+/g, x)) }
+      }
+      window = window.replace("%%intro%%", windowJSON.intro[lang]).replace("%%campos%%", campos.join(""))
+      document.getElementById("windows").innerHTML = `<div class="back" id="${name}"><div class="window ${type ? type : "lateral"}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title[lang]}</p></div><div class="caja">${window}</div></div></div>`
     } else {
       if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
       if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")

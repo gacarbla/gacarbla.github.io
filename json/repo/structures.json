@@ -1,3 +1,3 @@
 {
-    "windows": "<p> class=\"intro\">%%intro%%<div class=\"apartado\"><div class=\"opciones\"><div class=\"opcion\">%%campos%%</div></div></div>"
+    "windows": "<p class=\"intro\">%%intro%%</p><div class=\"apartado\"><div class=\"opciones\"><div class=\"opcion\">%%campos%%</div></div></div>"
 }
