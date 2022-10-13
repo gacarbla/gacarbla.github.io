@@ -1,28 +1,40 @@
 {
     "intro": {
-        "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web."
+        "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.",
+        "gl": "Aquí terás múltiples ferramentas útiles para explorar o código da páxina e activar todas as súas funcións como desenvolvedor web.",
+        "en": "Here you will have multiple useful tools to explore the code of the page and activate all its functions as a web developer.",
+        "pt": "Aqui você terá várias ferramentas úteis para explorar o código da página e ativar todas as suas funções como desenvolvedor web."
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
         "selectCheck": {
             "text": {
-                "es": "Habilitar selección"
+                "es": "Habilitar selección",
+                "gl": "Habilitar selexción",
+                "en": "Enable selection",
+                "pt": "Habilitar seleção"
             },
-            "dipo": true,
+            "dispo": true,
             "tipo": "radio"
         },
         "rightClickCheck": {
             "text": {
-                "es": "Habilitar click derecho"
+                "es": "Habilitar click derecho",
+                "gl": "Habilitar click dereito",
+                "en": "Ativar clique direito",
+                "pt": "Enable right click"
             },
-            "dipo": true,
+            "dispo": true,
             "tipo": "radio"
         },
         "commandGuideCheck": {
             "text": {
-                "es": "Guía de comandos"
+                "es": "Guía de comandos",
+                "gl": "Guía de comandos",
+                "en": "Command guide",
+                "pt": "Guia de comando"
             },
-            "dipo": false,
+            "dispo": false,
             "tipo": "radio"
         }
     }

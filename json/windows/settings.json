@@ -1,27 +1,40 @@
 {
     "intro": {
-        "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web."
+        "es": "",
+        "en": "",
+        "gl": "",
+        "pt": ""
     },
-    "campos": {
-        "campo1": {
+    "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
+    "textos": {
+        "modoColorCheck": {
             "text": {
-                "es": "Habilitar selección"
+                "es": "Modo claro",
+                "gl": "Modo claro",
+                "en": "Light mode",
+                "pt": "Modo de luz"
             },
-            "dipo": true,
+            "dispo": true,
             "tipo": "radio"
         },
-        "campo2": {
+        "easterEggCheck": {
             "text": {
-                "es": "Habilitar click derecho"
+                "es": "Easter Eggs",
+                "gl": "Easter Eggs",
+                "en": "Easter Eggs",
+                "pt": "Easter Eggs"
             },
-            "dipo": true,
+            "dispo": true,
             "tipo": "radio"
         },
-        "campo3": {
+        "devModeCheck": {
             "text": {
-                "es": "Guía de comandos"
+                "es": "Modo desarrollador",
+                "gl": "Modo desenvolvedor",
+                "en": "Developer mode",
+                "pt": "Modo de desenvolvedor"
             },
-            "dipo": false,
+            "dispo": true,
             "tipo": "radio"
         }
     }
