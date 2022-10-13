@@ -1,5 +1,6 @@
-/* DATA */
+import { draw } from "./inicio";
 
+/* VARIABLES */
 var warned = false;
 var lang = "es"
 
@@ -613,7 +614,7 @@ function load() {
 
 /* ELEMENTAL FUNCTIONS */
 
-async function require(url, canonical) {
+async function require(url, canonical, type) {
   const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
   const json = await response.json();
   return json
@@ -642,3 +643,5 @@ async function language() {
     try { document.getElementById(`${x}`).innerHTML = texts[x] } catch { }
   }
 }
+
+export {load, go}
