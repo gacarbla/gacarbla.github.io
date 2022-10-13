@@ -484,7 +484,7 @@ const windows = {
       es: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="modoColorCheck"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="modoColorCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="easterEggCheck"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="devModeCheck"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></label></div></div></div></div>`,
       en: "Not availiable in this language",
       pt: "Não disponível neste idioma",
-      gl: "Non disñoble neste idioma"
+      gl: "Non dispoñible neste idioma"
     },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
