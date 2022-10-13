@@ -2,22 +2,23 @@
     "intro": {
         "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web."
     },
-    "campos": {
-        "campo1": {
+    "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
+    "textos": {
+        "selectCheck": {
             "text": {
                 "es": "Habilitar selección"
             },
             "dipo": true,
             "tipo": "radio"
         },
-        "campo2": {
+        "rightClickCheck": {
             "text": {
                 "es": "Habilitar click derecho"
             },
             "dipo": true,
             "tipo": "radio"
         },
-        "campo3": {
+        "commandGuideCheck": {
             "text": {
                 "es": "Guía de comandos"
             },

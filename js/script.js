@@ -541,16 +541,19 @@ const windows = {
   check() {
     if (!document.getElementById("windows")) location.reload()
   },
-  new(name, type) {
+  async new(name, type) {
     this.check();
     if (!name) {
       return console.error("No se ha especificado el nombre de la ventana")
     }
+    const ventanaData = windows[`${name}`];
     if (name = "devSettings") {
-      const windowJSON = require(`json/windows/devSettings.json`, true)
-      console.log(windowJSON)
+      const windowJSON = await require(`json/windows/devSettings.json`, true)
+      const structuresJSON = await require(`json/repo/structures.json`, true)
+      var window = structuresJSON["windows"]
+      window = window.replace("%%intro%%", windowJSON.intro[lang]).replace("%%campos%%", windowJSON.campos)
+      console.log(window)
     } else {
-      const ventanaData = windows[`${name}`];
       if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
       if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")
       const divVentanas = document.getElementById("windows")
