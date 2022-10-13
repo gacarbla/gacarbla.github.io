@@ -1,0 +1,28 @@
+{
+    "intro": {
+        "es": "Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web."
+    },
+    "campos": {
+        "campo1": {
+            "text": {
+                "es": "Habilitar selección"
+            },
+            "dipo": true,
+            "tipo": "radio"
+        },
+        "campo2": {
+            "text": {
+                "es": "Habilitar click derecho"
+            },
+            "dipo": true,
+            "tipo": "radio"
+        },
+        "campo3": {
+            "text": {
+                "es": "Guía de comandos"
+            },
+            "dipo": false,
+            "tipo": "radio"
+        }
+    }
+}

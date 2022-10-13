@@ -1,0 +1,7 @@
+{
+    "windows": {
+        "radio": "<label class=\"switch dereita\"><input type=\"checkbox\" id=\"%%id%%\"><span class=\"slider round\"></span></label>",
+        "input": "",
+        "select": ""
+    }
+}
