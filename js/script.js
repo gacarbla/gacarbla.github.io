@@ -13,7 +13,8 @@ const data = {
       "colorMode",
       "devModeStatus",
       "easterEggs",
-      "idioma"
+      "idioma",
+      "recordarIdioma"
     ]
   },
   activar(grupo) {
@@ -423,8 +424,18 @@ function refreshNavigationBar() {
 
 const windows = {
   "devSettings": {
-    title: "Ajustes para desarrolladores",
-    content: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar selección</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Habilitar click derecho</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guía de comandos <span style="font-size: 12px; opacity: .5;">NO DISPONIBLE</span></p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round" hidden="true"></span></label></label></div></div></div></div>`,
+    title: {
+      es: "Ajustes para desarrolladores",
+      en: "Developers tools",
+      gl: "Axustes para desenvolvedores",
+      pt: "Configurações do desenvolvedor"
+    },
+    content: {
+      es: `<p class="intro">Aquí dispondrás de múltiples herramientas útiles para explorar el código de la página y activar todas sus funciones como desarrollador web.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar selección</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Habilitar click derecho</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guía de comandos <span style="font-size: 12px; opacity: .5;">NO DISPONIBLE</span></p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round" hidden="true"></span></label></label></div></div></div></div>`,
+      en: `<p class="intro">Aquí atoparás multitude de ferramentas para explorar o código da páxina e activar tódalas súas funcións como desenvolvedor web.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar seleción</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Habilitar click dereito</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guía de comandos <span style="font-size: 12px; opacity: .5;">NON DISPOÑIBLE</span></p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round" hidden="true"></span></label></label></div></div></div></div>`,
+      gl: `<p class="intro">Here you will have multiple useful tools to explore the code of the page and activate all its functions as a web developer.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Enable selection</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Enable right click</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Command guide <span style="font-size: 12px; opacity: .5;">NOT AVAILABLE</span></p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round" hidden="true"></span></label></label></div></div></div></div>`,
+      pt: `<p class="intro">Aqui você terá várias ferramentas úteis para explorar o código da página e ativar todas as suas funções como desenvolvedor web.</p><div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="selectCheck"><p class="etiqueta izquierda">Habilitar seleção</span></p><label class="switch dereita"><input type="checkbox" id="selectCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="rightClickCheck"><p class="etiqueta izquierda">Ativar clique direito</p><label class="switch dereita"><input type="checkbox" id="rightClickCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="commandGuideCheck"><p class="etiqueta izquierda">Guia de comando <span style="font-size: 12px; opacity: .5;">NÃO DISPONÍVEL</span></p><label class="switch dereita"><input type="checkbox" id="commandGuideCheck" disabled><span class="slider round" hidden="true"></span></label></label></div></div></div></div>`,
+    },
     start() {
       const rightClickCheck = document.getElementById("rightClickCheck")
       const selectCheck = document.getElementById("selectCheck")
@@ -463,8 +474,18 @@ const windows = {
     }
   },
   "settings": {
-    title: "Ajustes",
-    content: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="modoColorCheck"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="modoColorCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="easterEggCheck"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="devModeCheck"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></label></div></div></div></div>`,
+    title: {
+      es: "Ajustes",
+      en: "Settings",
+      gl: "Axustes",
+      pt: "Configurações"
+    },
+    content: {
+      es: `<div class="apartado"><div class="opciones"><div class="opcion"><div class="ajuste"><label for="modoColorCheck"><p class="etiqueta izquierda">Modo claro <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="modoColorCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="easterEggCheck"><p class="etiqueta izquierda">Easter Eggs <span style="font-size: 12px; opacity: .5;">BETA</span></p><label class="switch dereita"><input type="checkbox" id="easterEggCheck"><span class="slider round"></span></label></label></div><div class="ajuste"><label for="devModeCheck"><p class="etiqueta izquierda">Modo desarrollador</p><label class="switch dereita"><input type="checkbox" id="devModeCheck"><span class="slider round"></span></label></label></div></div></div></div>`,
+      en: "Not availiable in this language",
+      pt: "Não disponível neste idioma",
+      gl: "Non disñoble neste idioma"
+    },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
       if (document.getElementById("body").classList.contains("claro")) {
@@ -508,8 +529,18 @@ const windows = {
     },
   },
   "rickroll": {
-    title: "",
-    content: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+    title: {
+      es: "",
+      en: "",
+      pt: "",
+      gl: ""
+    },
+    content: {
+      es: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+      en: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+      gl: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+      pt: `<video width="280" height="250" autoplay><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`
+    },
     start() {
 
     }
@@ -526,7 +557,7 @@ const windows = {
     if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
     if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")
     const divVentanas = document.getElementById("windows")
-    divVentanas.innerHTML = `<div class="back" id="${name}"><div class="window ${type ? type : "lateral"}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title}</p></div><div class="caja">${ventanaData.content}</div></div></div>`
+    divVentanas.innerHTML = `<div class="back" id="${name}"><div class="window ${type ? type : "lateral"}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title[lang]}</p></div><div class="caja">${ventanaData.content[lang]}</div></div></div>`
     ventanaData.start();
   },
   close(name) {
@@ -576,14 +607,6 @@ function load() {
   language()
 }
 
-async function language() {
-  const texts = await require(`json/${lang}.json`, true)
-  for (const x in texts) {
-    try { document.getElementById(`${x}`).innerHTML = texts[x] } catch {}
-  }
-}
-
-
 
 
 
@@ -611,5 +634,11 @@ function go(page, newTabBoolean) {
     window.open(`${page}`, "GΛCΛRBLΛ", "width=1080, height=440")
   } else {
     window.location = `${page}`
+  }
+}
+async function language() {
+  const texts = await require(`json/${lang}.json`, true)
+  for (const x in texts) {
+    try { document.getElementById(`${x}`).innerHTML = texts[x] } catch {}
   }
 }
