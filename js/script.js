@@ -86,7 +86,7 @@ const data = {
 }
 
 async function refreshNavigationBar() {
-  const navigation = await require("json/repo/navPages.json")
+  const navigation = await require("json/repo/navPages.json", true)
   let headerMenu = [];
   var x = 0;
   for (x = 0; x < (Object.keys(navigation)).length; x++) {
@@ -333,6 +333,7 @@ async function language() {
     try { document.getElementById(`${x}`).innerHTML = texts[x] } catch { }
   }
 }
+
 function go(page, newTabBoolean) {
   if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
   if (window.location.href.split("?")[1]) page = `${page}?${window.location.href.split("?")[1]}`
