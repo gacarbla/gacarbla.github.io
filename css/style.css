@@ -412,6 +412,7 @@ header:hover footer div.nombre p.s {
     background-color: var(--ventanas-pagina-fondo);
     position: fixed;
     z-index: 790;
+    transition: all 0.3s;
 }
 
 #windows .window.lateral {
