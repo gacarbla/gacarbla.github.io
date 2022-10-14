@@ -85,8 +85,8 @@ const data = {
   }
 }
 
-function refreshNavigationBar() {
-  const navigation = require("json/repo/navPages.json")
+async function refreshNavigationBar() {
+  const navigation = await require("json/repo/navPages.json")
   let headerMenu = [];
   var x = 0;
   for (x = 0; x < (Object.keys(navigation)).length; x++) {
@@ -313,7 +313,8 @@ function load() {
 /* ELEMENTAL FUNCTIONS */
 
 async function require(url, canonical) {
-  const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
+  //const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
+  const response = await fetch(`${canonical ? `https://gacarbla.github.io/${url}` : `${url}`}`);
   const json = await response.json();
   return json
 }
