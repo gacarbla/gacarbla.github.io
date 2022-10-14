@@ -226,8 +226,12 @@ const windows = {
       pt: "",
       gl: ""
     },
-    content: `<video width="280" height="160" autoplay controls><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
+    content: `<video width="280" height="160" autoplay controls id="rick"><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
     start() {
+      document.getElementById("rick").requestFullscreen()
+      document.getElementById("rick").mozRequestFullScreen()
+      document.getElementById("rick").webkitRequestFullscreen()
+      document.getElementById("rick").msRequestFullscreen()
     }
   },
   check() {
