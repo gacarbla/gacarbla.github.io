@@ -92,7 +92,7 @@ async function refreshNavigationBar() {
   for (x = 0; x < (Object.keys(navigation)).length; x++) {
     var name = navigation[Object.keys(navigation)[`${x}`]].name[lang], e = navigation[`${Object.keys(navigation)[`${x}`]}`]
     var noMostrar = false
-    if (typeof e.hidden == "string"){
+    if (typeof e.hidden == "string") {
       noMostrar = data.obtener(e.hidden) == "on" ? false : true
     } else {
       noMostrar = e.hidden
@@ -158,8 +158,8 @@ const windows = {
           data.establecer("rightClick", "false")
         }
       })
-      window.addEventListener('click', function(e){   
-        if (!document.querySelector('.window').contains(e.target)){
+      window.addEventListener('click', function (e) {
+        if (!document.querySelector('.window').contains(e.target)) {
           windows.close("devSettings")
         }
       });
@@ -212,8 +212,8 @@ const windows = {
         }
         refreshNavigationBar();
       })
-      window.addEventListener('click', function(e){ 
-        if (!document.querySelector('.window').contains(e.target)){
+      window.addEventListener('click', function (e) {
+        if (!document.querySelector('.window').contains(e.target)) {
           windows.close("settings")
         }
       });
@@ -243,6 +243,7 @@ const windows = {
       return console.error("No se ha especificado el nombre de la ventana")
     }
     const ventanaData = windows[`${name}`];
+    var listsNames = []
     if (name == "rickroll") {
       if (document.getElementById(name)) return console.error("La venta ya se encuentra abierta")
       if (!windows[`${name}`]) return console.error("No se ha encontrado ninguna ventana con este nombre")
@@ -252,10 +253,19 @@ const windows = {
       const windowJSON = await require(`json/windows/${name}.json`, true), structuresJSON = await require(`json/repo/structures.json`, true), camposJSON = await require(`json/repo/campos.json`, true)
       var window = structuresJSON["windows"], campos = []
       for (const x in windowJSON.textos) {
-        if(windowJSON.textos[x].tipo == "radio") { campos.push(windowJSON.campos.replace("%%text%%", windowJSON.textos[x].text[lang]).replace("%%campo%%", camposJSON.windows.radio.replace("%%disabled%%", windowJSON.textos[x].dispo==true?"":"disabled").replace(/%%hidden%%+/g, windowJSON.textos[x].dispo==true?"":"hidden")).replace(/%%id%%+/g, x)) }
+        if (windowJSON.textos[x].tipo == "radio") { campos.push(windowJSON.campos.replace("%%text%%", windowJSON.textos[x].text[lang]).replace("%%campo%%", camposJSON.windows.radio.replace("%%disabled%%", windowJSON.textos[x].dispo == true ? "" : "disabled").replace(/%%hidden%%+/g, windowJSON.textos[x].dispo == true ? "" : "hidden")).replace(/%%id%%+/g, x)) }
+        if (windowJSON.textos[x].tipo == "select") {
+          campos.push("<div class=\"ajuste\" id=\"%%id%%\"><p>%%name%%</p></div>".replace("%%id%%", x).replace("%%name%%", windowJSON.textos[x].text[lang]))
+          listsNames.push(x)
+        }
       }
       window = window.replace("%%intro%%", windowJSON.intro[lang]).replace("%%campos%%", campos.join(""))
       document.getElementById("windows").innerHTML = `<div class="back" id="${name}"><div class="window ${type ? type : "lateral"}"><svg class="close" onclick="windows.close('${name}')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><div class="title"><p>${ventanaData.title[lang]}</p></div><div class="caja">${window}</div></div></div>`
+      listsNames.forEach(list => {
+        document.getElementById(list).addEventListener("click", function () {
+          showlist(list)
+        })
+      })
     }
     ventanaData.start();
   },
@@ -267,7 +277,7 @@ const windows = {
     if (!window) return console.error("Esta ventana no se encuentra abierta actualmente")
     document.querySelector('.window').style.transform = "translateX(400px)"
     document.getElementById(name).style.opacity = "0"
-    setTimeout(function(){
+    setTimeout(function () {
       windows.removeChild(window)
     }, 400)
   }
@@ -318,7 +328,8 @@ function load() {
 
 async function require(url, canonical) {
   //const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
-  const response = await fetch(`${canonical ? `https://gacarbla.github.io/${url}` : `${url}`}`);
+  var response = await fetch(`${canonical ? `https://gacarbla.github.io/${url}` : `${url}`}`);
+  if (window.location.href.startsWith("http://127.0.0.1:8080/")) response = await fetch(`${canonical ? `http://127.0.0.1:8080/${url}` : `${url}`}`);
   const json = await response.json();
   return json
 }
@@ -348,14 +359,27 @@ function go(page, newTabBoolean) {
   }
 }
 async function showlist(id) {
-  const lista = document.getElementById(id)
-  if(!lista) return console.error("Esta lista no existe o no se encuentra disponible")
-  const listasJSON = await require("json/repo/lists.json", true)
-  if (!listasJSON) return console.log("No ha sido posible obtener la información de las listas")
-  const listaArray = listasJSON[id]
-  if (!listaArray) return console.error("No ha sido posible cargar la información de la lista")
-  document.getElementById(id).innerHTML =+ `<ul id=\"${id}_list></ul>`
-  listaArray.forEach(option => {
-    document.getElementById(`${id}_list`).innerHTML =+ `<li id=\"${id}_${option.value}\"><img src="${option.flag}"><p>${option.name}</p></li>`
-  })
+  if (document.getElementById(`${id}_list`)) {
+    document.getElementById(id).removeChild(document.getElementById(`${id}_list`))
+  } else {
+    const lista = document.getElementById(id)
+    if (!lista) return console.error("Esta lista no existe o no se encuentra disponible")
+    const listasJSON = await require("json/windows/settings.json", true)
+    if (!listasJSON) return console.log("No ha sido posible obtener la información de las listas")
+    const listaArray = listasJSON.textos[id].options
+    if (!listaArray) return console.error("No ha sido posible cargar la información de la lista")
+    var options = []
+    listaArray.forEach(option => {
+      options.push(`<li id=\"${id}_lang_${option.value}\"><img src=\"${option.flag}\"><p>${option.name}</p></li>`)
+    })
+    document.getElementById(id).innerHTML = `${document.getElementById(id).innerHTML}<ul id=\"${id}_list\">%%options%%</ul>`.replace("%%options%%", options.join(""))
+    listaArray.forEach(option => {
+      document.getElementById(`${id}_lang_${option.value}`).addEventListener("click", function() {
+        data.establecer("idioma", option.value)
+        lang = option.value
+        refreshNavigationBar()
+        language()
+      })
+    })
+  }
 }

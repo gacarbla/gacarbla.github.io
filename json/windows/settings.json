@@ -39,7 +39,35 @@
         },
         "langSelector": {
             "dispo": true,
-            "tipo": "lista"
+            "tipo": "select",
+            "text": {
+                "es": "Idioma",
+                "gl": "Lingua",
+                "pt": "Idioma",
+                "en": "Language"
+            },
+            "options": [
+                {
+                    "name": "Español",
+                    "value": "es",
+                    "flag": "https://gacarbla.github.io/media/flags/es.png"
+                },
+                {
+                    "name": "Galego",
+                    "value": "gl",
+                    "flag": "https://gacarbla.github.io/media/flags/gl.png"
+                },
+                {
+                    "name": "English",
+                    "value": "en",
+                    "flag": "https://gacarbla.github.io/media/flags/en.png"
+                },
+                {
+                    "name": "Português",
+                    "value": "pt",
+                    "flag": "https://gacarbla.github.io/media/flags/pt.png"
+                }
+            ]
         }
     }
 }

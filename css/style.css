@@ -850,3 +850,59 @@ header:hover footer div.nombre p.s {
 #settings .claro {
     color: #334756
 }
+
+div#langSelector.ajuste {
+    position: relative;
+}
+
+div#langSelector.ajuste > p {
+    position: absolute;
+    left: 30px;
+}
+
+#langSelector_list {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    gap: 0px;
+    flex-direction: column;
+    top: 18px;
+    height: 180px;
+    background-color: var(--ventanas-fondo);
+    border:solid 2px;
+    border-top: 0px;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    width: 280px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#langSelector_list li {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#langSelector_list li:hover {
+    background-color: #fff2;
+    border-radius: 5px;
+}
+
+#langSelector_list img {
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 0px;
+    flex-direction: column;
+}
+
+#langSelector_list img {
+    height: 30px;
+}
+
+#langSelector_list p {
+    margin: 0px;
+}
