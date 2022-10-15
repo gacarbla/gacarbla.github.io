@@ -109,7 +109,7 @@ async function refreshNavigationBar() {
       console.error("No se ha reconocido la clase " + e.class + " como un valor válido en el menú de navegación")
     }
   }
-  document.getElementById("header").innerHTML = `<div class="btn" id="mobilemenubutton"><svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16"></path>\n<path d="M4 12h16"></path><path d="M4 18h16"></path>\n</svg>\n<svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path>\n<path d="m6 6 12 12"></path></svg></div><div class="menu">${headerMenu.join("\n")}</div><footer><div class="vector"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg></div><div class="nombre"><p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel Carro Blanco</p></div></footer>`
+  document.getElementById("header").innerHTML = `<div class="btn" id="mobilemenubutton"><svg id="off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16"></path>\n<path d="M4 12h16"></path><path d="M4 18h16"></path>\n</svg>\n<svg id="on" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path>\n<path d="m6 6 12 12"></path></svg></div><div class="menu">${headerMenu.join("\n")}</div><footer><div class="vector"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg></div><div class="nombre"><p class="p">GΛCΛRBLΛ</p><p class="s">Gabriel CB</p></div></footer>`
 
   var mmb = document.getElementById("mobilemenubutton")
   mmb.addEventListener("click", function () { document.getElementById("header").classList.toggle("active") })
@@ -327,8 +327,7 @@ function load() {
 /* ELEMENTAL FUNCTIONS */
 
 async function require(url, canonical) {
-  //const response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
-  var response = await fetch(`${canonical ? `https://gacarbla.github.io/${url}` : `${url}`}`);
+  var response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
   if (window.location.href.startsWith("http://127.0.0.1:8080/")) response = await fetch(`${canonical ? `http://127.0.0.1:8080/${url}` : `${url}`}`);
   const json = await response.json();
   return json
