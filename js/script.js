@@ -347,3 +347,15 @@ function go(page, newTabBoolean) {
     window.location = `${page}`
   }
 }
+async function showlist(id) {
+  const lista = document.getElementById(id)
+  if(!lista) return console.error("Esta lista no existe o no se encuentra disponible")
+  const listasJSON = await require("json/repo/lists.json", true)
+  if (!listasJSON) return console.log("No ha sido posible obtener la información de las listas")
+  const listaArray = listasJSON[id]
+  if (!listaArray) return console.error("No ha sido posible cargar la información de la lista")
+  document.getElementById(id).innerHTML =+ `<ul id=\"${id}_list></ul>`
+  listaArray.forEach(option => {
+    document.getElementById(`${id}_list`).innerHTML =+ `<li id=\"${id}_${option.value}\"><img src="${option.flag}"><p>${option.name}</p></li>`
+  })
+}
