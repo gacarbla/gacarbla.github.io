@@ -8,5 +8,10 @@
     "ahorcadoText": "hanged man",
     "listaCompraText": "Shopping list",
     "buscadorFiltrosText": "Search engine with filters",
-    "listaDeProyectosText": "Proyects list"
+    "listaDeProyectosText": "Proyects list",
+    "fechaText": "Date:",
+    "formatoText": "Format:",
+    "usuarioText": "User",
+    "ejemploTimestampText1": "This format would look like this:",
+    "ejemploTimestampText2": "I hope you like it!"
 }

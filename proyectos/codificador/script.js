@@ -46,9 +46,6 @@ function start() {
             toggleLogs();
             logsButton.classList.toggle("active")
         })
-        window.onbeforeunload = function() {
-            return "Si abandona la página los datos serán eliminados. ¿Desea continuar?";
-          };
         printLog("Código iniciado", "success")
     } catch (e) {
         printLog("No ha sido posible iniciar el código\nError: " + e, "error")
@@ -180,12 +177,12 @@ function codificar() {
                 type: "error"
             }
         }
+        window.onbeforeunload = function() {
+            return "Si abandona la página los datos serán eliminados. ¿Desea continuar?";
+        };
         printLog(message.text, message.type)
     }
 }
-
-
-
 
 
 

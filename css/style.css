@@ -860,6 +860,17 @@ div#langSelector.ajuste > p {
     left: 30px;
 }
 
+div#langSelector.ajuste > svg {
+    width: 30px;
+    height: 30px;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    position: absolute;
+    right: 30px;
+}
+
 #langSelector_list {
     position: absolute;
     display: flex;

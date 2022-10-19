@@ -8,5 +8,10 @@
     "ahorcadoText": "Aforcado",
     "listaCompraText": "Lista da compra",
     "buscadorFiltrosText": "Buscador con filtros",
-    "listaDeProyectosText": "Listaxe de proxectos"
+    "listaDeProyectosText": "Listaxe de proxectos",
+    "fechaText": "Data:",
+    "formatoText": "Formato:",
+    "usuarioText": "Usuario:",
+    "ejemploTimestampText1": "Este formato veríase así:",
+    "ejemploTimestampText2": "Agardo que che guste!"
 }

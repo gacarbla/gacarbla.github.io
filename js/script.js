@@ -255,7 +255,7 @@ const windows = {
       for (const x in windowJSON.textos) {
         if (windowJSON.textos[x].tipo == "radio") { campos.push(windowJSON.campos.replace("%%text%%", windowJSON.textos[x].text[lang]).replace("%%campo%%", camposJSON.windows.radio.replace("%%disabled%%", windowJSON.textos[x].dispo == true ? "" : "disabled").replace(/%%hidden%%+/g, windowJSON.textos[x].dispo == true ? "" : "hidden")).replace(/%%id%%+/g, x)) }
         if (windowJSON.textos[x].tipo == "select") {
-          campos.push("<div class=\"ajuste\" id=\"%%id%%\"><p>%%name%%</p></div>".replace("%%id%%", x).replace("%%name%%", windowJSON.textos[x].text[lang]))
+          campos.push("<div class=\"ajuste\" id=\"%%id%%\"><p>%%name%%</p><svg xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m6 9 6 6 6-6\"></path></svg></div>".replace("%%id%%", x).replace("%%name%%", windowJSON.textos[x].text[lang]))
           listsNames.push(x)
         }
       }
