@@ -869,6 +869,7 @@ div#langSelector.ajuste > svg {
     stroke-width: 2;
     position: absolute;
     right: 30px;
+    fill: none;
 }
 
 #langSelector_list {

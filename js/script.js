@@ -1,6 +1,6 @@
 /* VARIABLES */
 var warned = false;
-var lang = "es"
+var lang = "es_ES"
 
 const data = {
   list: {
@@ -74,8 +74,6 @@ const data = {
   reset() {
     localStorage.clear();
     this.iniciar();
-    document.getElementById("dataDesarrollador").checked = true
-    document.getElementById("dataAjustes").checked = true
     document.getElementById("body").className = "oscuro"
     document.oncontextmenu = function () { return false }
     refreshNavigationBar();
@@ -118,10 +116,10 @@ async function refreshNavigationBar() {
 const windows = {
   "devSettings": {
     title: {
-      es: "Ajustes para desarrolladores",
-      en: "Developers tools",
-      gl: "Axustes para desenvolvedores",
-      pt: "Configurações do desenvolvedor"
+      es_ES: "Ajustes para desarrolladores",
+      en_GB: "Developers tools",
+      gl_ES: "Axustes para desenvolvedores",
+      pt_PT: "Configurações do desenvolvedor"
     },
     start() {
       const rightClickCheck = document.getElementById("rightClickCheck")
@@ -167,10 +165,10 @@ const windows = {
   },
   "settings": {
     title: {
-      es: "Ajustes",
-      en: "Settings",
-      gl: "Axustes",
-      pt: "Configurações"
+      es_ES: "Ajustes",
+      en_GB: "Settings",
+      gl_ES: "Axustes",
+      pt_PT: "Configurações"
     },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
@@ -221,10 +219,10 @@ const windows = {
   },
   "rickroll": {
     title: {
-      es: "",
-      en: "",
-      pt: "",
-      gl: ""
+      es_ES: "",
+      en_GB: "",
+      pt_PT: "",
+      gl_ES: ""
     },
     content: `<video width="280" height="160" autoplay controls id="rick"><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
     start() {
@@ -349,6 +347,7 @@ async function language() {
 }
 
 function go(page, newTabBoolean) {
+  if (page.startsWith(":") && window.location.href.startsWith("http://127.0.0.1:8080/")) page = page.replace(":", "http://127.0.0.1:8080/")
   if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
   if (window.location.href.split("?")[1]) page = `${page}?${window.location.href.split("?")[1]}`
   if (newTabBoolean) {

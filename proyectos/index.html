@@ -36,57 +36,62 @@
 
 <style>
   .oscuro {
-    --fondo: #082032;
-    --texto-fondo-hover: #334756; 
-    --texto-hover: #FF4C29; 
     --texto: #fff;
+    --body-background-1: #010319;
+    --body-background-2: #000000;
   }
-  .claro {
-    --fondo: #f5f5f5;
-    --texto-fondo-hover: #19585D; 
-    --texto-hover: #F3FE39; 
+  .claro { 
     --texto: #000;
   }
+  #listaDeProyectosText {
+    position: absolute;
+    top: 0px;
+    left: calc( 50vw - 180px);
+    width: 300px;
+    text-align: center;
+  }
   body {
-    background-color: var(--fondo);
     padding-left: 20px;
     color: var(--texto);
+    background-color: var(--body-background-2);
+    height: 20px;
   }
-  .content ul {
-    list-style:upper-roman;
-    font-family: Arial;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-  }
-  .content p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .content ul > li {
-    cursor: pointer;
-    padding: 7.5px;
-    transition: all 0.1s;
-    border-radius: 5px;
-    font-size: 20px;
-    width: fit-content;
-  }
-  .content ul > li p {
-    width: fit-content;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 40px;
+    width: auto;
+    padding: 0px;
     margin: 0px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: center;
   }
-  .content ul > li:not(.disabled):hover {
-    background-color: var(--texto-fondo-hover);
-    color: var(--texto-fondo-hover);
+  ul > li {
+    display: flex;
+    flex-direction: row;
+    display: 20px;
+    background-color: var(--body-background-1);
+    border-radius: 20px;
+    width: 100%;
+    gap: 20px;
+    cursor: pointer;
   }
-  .content ul > li:not(.disabled):hover p {
-    color: var(--texto-hover);
+  ul > li.disabled {
+    opacity: .3;
+    filter: blur(2px);
+    cursor: default;
   }
-  .content ul > li.disabled {
-    cursor: not-allowed;
-    opacity: 0.3;
+  ul > li > img {
+    border-radius: 20px 0px 0px 20px;
+    height: 100px;
+    width: 100px;
+    border: none;
+    outline: none;
+    object-fit:cover;
   }
 </style>
 
@@ -98,13 +103,13 @@
   <div class="content">
     <p id="listaDeProyectosText">Lista de proyectos</p>
     <ul>
-      <li onclick="go(':proyectos/portfolio')"><p id="portafolioText">Portfolio</p></li>
-      <li class="disabled"><p id="tresRayaText">3 en raya</p></li>
-      <li class="disabled"><p id="wordleText">Wordle</p></li>
-      <li class="disabled"><p id="quizText">Quiz</p></li>
-      <li class="disabled"><p id="ahorcadoText">Ahorcado</p></li>
-      <li class="disabled"><p id="listaCompraText">Lista de la compra</p></li>
-      <li class="disabled"><p id="buscadorFiltrosText">Motor de búsqueda con filtros</p></li>
+      <li onclick="go(':proyectos/portfolio')"><img src="https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=85,format=auto/uploads/2020/06/SOC101_Portfolio_Guide.png"><p id="portafolioText">Portfolio</p></li>
+      <li class="disabled"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXyKKi5uzK7rq_q8JnFw3zXnhcvtq84Msgyg&usqp=CAU"><p id="tresRayaText">3 en raya</p></li>
+      <li class="disabled"><img src="https://www.cuentasseguras.com/wp-content/uploads/2022/04/Install-and-Play-Wordle-on-iPhone-.png"><p id="wordleText">Wordle</p></li>
+      <li class="disabled"><img src="https://kinsta.com/es/wp-content/uploads/sites/8/2017/10/wordpress-quiz-plugin1-1024x512.png"><p id="quizText">Quiz</p></li>
+      <li class="disabled"><img src="https://image.winudf.com/v2/image/YXBwaW52ZW50b3IuYWlfbWF0aWFzcGFyLkFob3JjYWRvX2F1ZGl0aXZvX3NjcmVlbnNob3RzXzBfNGNkZGNlZTI/screen-0.jpg?fakeurl=1&type=.webp"><p id="ahorcadoText">Ahorcado</p></li>
+      <li class="disabled"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-L_Zqds7AoeS7sEx6gmb0E6X_xn7kGnbeA&usqp=CAU"><p id="listaCompraText">Lista de la compra</p></li>
+      <li class="disabled"><img src="data:image/png;base64,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"><p id="buscadorFiltrosText">Motor de búsqueda con filtros</p></li>
     </ul>
   </div>
 

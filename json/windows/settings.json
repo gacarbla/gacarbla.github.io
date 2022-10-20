@@ -1,38 +1,38 @@
 {
     "intro": {
-        "es": "",
-        "en": "",
-        "gl": "",
-        "pt": ""
+        "es_ES": "",
+        "en_GB": "",
+        "gl_ES": "",
+        "pt_PT": ""
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
         "modoColorCheck": {
             "text": {
-                "es": "Modo claro",
-                "gl": "Modo claro",
-                "en": "Light mode",
-                "pt": "Modo de luz"
+                "es_ES": "Modo claro",
+                "gl_ES": "Modo claro",
+                "en_GB": "Light mode",
+                "pt_PT": "Modo de luz"
             },
             "dispo": true,
             "tipo": "radio"
         },
         "easterEggCheck": {
             "text": {
-                "es": "Easter Eggs",
-                "gl": "Easter Eggs",
-                "en": "Easter Eggs",
-                "pt": "Easter Eggs"
+                "es_ES": "Easter Eggs",
+                "gl_ES": "Easter Eggs",
+                "en_GB": "Easter Eggs",
+                "pt_PT": "Easter Eggs"
             },
             "dispo": true,
             "tipo": "radio"
         },
         "devModeCheck": {
             "text": {
-                "es": "Modo desarrollador",
-                "gl": "Modo desenvolvedor",
-                "en": "Developer mode",
-                "pt": "Modo de desenvolvedor"
+                "es_ES": "Modo desarrollador",
+                "gl_ES": "Modo desenvolvedor",
+                "en_GB": "Developer mode",
+                "pt_PT": "Modo de desenvolvedor"
             },
             "dispo": true,
             "tipo": "radio"
@@ -41,31 +41,31 @@
             "dispo": true,
             "tipo": "select",
             "text": {
-                "es": "Idioma",
-                "gl": "Lingua",
-                "pt": "Idioma",
-                "en": "Language"
+                "es_ES": "Idioma",
+                "gl_ES": "Lingua",
+                "pt_PT": "Idioma",
+                "en_GB": "Language"
             },
             "options": [
                 {
                     "name": "Español",
-                    "value": "es",
-                    "flag": "https://gacarbla.github.io/media/flags/es.png"
+                    "value": "es_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/es_ES.png"
                 },
                 {
                     "name": "Galego",
-                    "value": "gl",
-                    "flag": "https://gacarbla.github.io/media/flags/gl.png"
+                    "value": "gl_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/gl_ES.png"
                 },
                 {
                     "name": "English",
-                    "value": "en",
-                    "flag": "https://gacarbla.github.io/media/flags/en.png"
+                    "value": "en_GB",
+                    "flag": "https://gacarbla.github.io/media/flags/en_GB.png"
                 },
                 {
                     "name": "Português",
-                    "value": "pt",
-                    "flag": "https://gacarbla.github.io/media/flags/pt.png"
+                    "value": "pt_PT",
+                    "flag": "https://gacarbla.github.io/media/flags/pt_PT.png"
                 }
             ]
         }
