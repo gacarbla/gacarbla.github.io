@@ -4,7 +4,8 @@
           "es_ES": "Inicio",
           "gl_ES": "Inicio",
           "pt_PT": "Início",
-          "en_GB": "Home"
+          "en_GB": "Home",
+          "vl_ES": "Inici"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 12H3l9-9 9 9h-2\"></path><path d=\"M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7\"></path><path d=\"M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6\"></path></svg>",
         "class": "pagina",
@@ -13,7 +14,8 @@
           "es_ES": "Volver a la página de inicio",
           "gl_ES": "Volta á pantalla de inicio",
           "pt_PT": "Voltar para a página inicial",
-          "en_GB": "Go back to the home page"
+          "en_GB": "Go back to the home page",
+          "vl_ES": "Tornar a la pagina d'inici"
         },
         "disabled": false
     },
@@ -22,7 +24,8 @@
           "es_ES": "Proyectos",
           "gl_ES": "Proxectos",
           "pt_PT": "Projetos",
-          "en_GB": "Projects"
+          "en_GB": "Projects",
+          "vl_ES": "Projectes"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 21h4L20 8a2.829 2.829 0 0 0-4-4L3 17v4Z\"></path><path d=\"m14.5 5.5 4 4\"></path><path d=\"M12 8 7 3 3 7l5 5\"></path><path d=\"M7 8 5.5 9.5\"></path><path d=\"m16 12 5 5-4 4-5-5\"></path><path d=\"m16 17-1.5 1.5\"></path></svg>",
         "class": "separador"
@@ -32,7 +35,8 @@
           "es_ES": "Portfolio",
           "gl_ES": "Portfolio",
           "pt_PT": "Portfolio",
-          "en_GB": "Portfolio"
+          "en_GB": "Portfolio",
+          "vl_ES": "Portfolio"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2\"></path><path d=\"M13 3h-2a2 2 0 1 0 0 4h2a2 2 0 1 0 0-4Z\"></path></svg>",
         "class": "pagina",
@@ -50,7 +54,8 @@
           "es_ES": "Codificador",
           "gl_ES": "Codificador",
           "pt_PT": "Codificador",
-          "en_GB": "Encoder"
+          "en_GB": "Encoder",
+          "vl_ES": "Codificador"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z\"></path><path d=\"M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z\"></path><path d=\"M8 11V7a4 4 0 0 1 8 0v4\"></path></svg>",
         "class": "pagina",
@@ -59,7 +64,8 @@
           "es_ES": "Codificador simple de textos",
           "gl_ES": "Codificador simple de textos",
           "pt_PT": "Codificador de texto simple",
-          "en_GB": "Simple text encoder"
+          "en_GB": "Simple text encoder",
+          "vl_ES": "Codificador simple de textos"
         },
         "disabled": false
     },
@@ -68,7 +74,8 @@
           "es_ES": "Timestamp",
           "gl_ES": "Timestamp",
           "pt_PT": "Timestamp",
-          "en_GB": "Timestamp"
+          "en_GB": "Timestamp",
+          "vl_ES": "Timestamp"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z\"></path><path d=\"M12 7v5l3 3\"></path></svg>",
         "class": "pagina",
@@ -77,7 +84,8 @@
           "es_ES": "Discord Timestamp Generator",
           "gl_ES": "Discord Timestamp Generator",
           "pt_PT": "Discord Timestamp Generator",
-          "en_GB": "Discord Timestamp Generator"
+          "en_GB": "Discord Timestamp Generator",
+          "vl_ES": "Discord Timestamp Generator"
         },
         "disabled": false
     },
@@ -86,7 +94,8 @@
           "es_ES": "Ver más...",
           "gl_ES": "Ver máis...",
           "pt_PT": "Ver mais...",
-          "en_GB": "See more..."
+          "en_GB": "See more...",
+          "vl_ES": "Vore més..."
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 5v14\"></path><path d=\"M5 12h14\"></path></svg>",
         "class": "pagina",
@@ -95,7 +104,8 @@
           "es_ES": "Lista completa de proyectos",
           "gl_ES": "Listaxe completa de proxectos",
           "pt_PT": "Lista completa de projetos",
-          "en_GB": "Complete list of projects"
+          "en_GB": "Complete list of projects",
+          "vl_ES": "Llista completa de projectes"
         },
         "disabled": false
     },
@@ -104,7 +114,8 @@
           "es_ES": "GitHub",
           "gl_ES": "GitHub",
           "pt_PT": "GitHub",
-          "en_GB": "GitHub"
+          "en_GB": "GitHub",
+          "vl_ES": "GitHub"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z\"></path><path d=\"M9 19c-4.3 1.4-4.3-2.5-6-3\"></path></svg>",
         "class": "separador"
@@ -114,7 +125,8 @@
           "es_ES": "Perfil",
           "gl_ES": "Perfil",
           "pt_PT": "Perfil",
-          "en_GB": "Profile"
+          "en_GB": "Profile",
+          "vl_ES": "Perfil"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 8V6a2 2 0 0 1 2-2h2\"></path><path d=\"M4 16v2a2 2 0 0 0 2 2h2\"></path><path d=\"M16 4h2a2 2 0 0 1 2 2v2\"></path><path d=\"M16 20h2a2 2 0 0 0 2-2v-2\"></path><path d=\"M9 10h.01\"></path><path d=\"M15 10h.01\"></path><path d=\"M9.5 15a3.5 3.5 0 0 0 5 0\"></path></svg>",
         "class": "pagina",
@@ -123,7 +135,8 @@
           "es_ES": "Accede al perfil de GitHub de gacarbla",
           "gl_ES": "Accede ó perfil de GitHub de gacarbla",
           "pt_PT": "Acesse o perfil do GitHub do gacarbla",
-          "en_GB": "Access gacarbla's GitHub profile"
+          "en_GB": "Access gacarbla's GitHub profile",
+          "vl_ES": "Accedir al perfil de GitHub de gacarbla"
         },
         "disabled": false
     },
@@ -132,7 +145,8 @@
           "es_ES": "gacarbla.github.io",
           "gl_ES": "gacarbla.github.io",
           "pt_PT": "gacarbla.github.io",
-          "en_GB": "gacarbla.github.io"
+          "en_GB": "gacarbla.github.io",
+          "vl_ES": "gacarbla.github.io"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m20 4-2 14.5-6 2-6-2L4 4h16Z\"></path><path d=\"M15.5 8h-7l.5 4h6l-.5 3.5-2.5.75-2.5-.75-.1-.5\"></path></svg>",
         "class": "pagina",
@@ -141,7 +155,8 @@
           "es_ES": "Accede al repositorio",
           "gl_ES": "Accede ó repositorio",
           "pt_PT": "Acesse o repositório",
-          "en_GB": "Access the repository"
+          "en_GB": "Access the repository",
+          "vl_ES": "Accedeix al repositori"
         },
         "disabled": false
     },
@@ -150,7 +165,8 @@
           "es_ES": "Dori",
           "gl_ES": "Dori",
           "pt_PT": "Dori",
-          "en_GB": "Dori"
+          "en_GB": "Dori",
+          "vl_ES": "Dori"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m20 4-2 14.5-6 2-6-2L4 4h16Z\"></path><path d=\"M7.5 8h3v8l-2-1\"></path><path d=\"M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5\"></path></svg>",
         "class": "pagina",
@@ -159,7 +175,8 @@
           "es_ES": "Accede al repositorio",
           "gl_ES": "Accede ó repositorio",
           "pt_PT": "Acesse o repositório",
-          "en_GB": "Access the repository"
+          "en_GB": "Access the repository",
+          "vl_ES": "Accedeix al repositori"
         },
         "disabled": false
     },
@@ -168,7 +185,8 @@
           "es_ES": "NewsBot",
           "gl_ES": "NewsBot",
           "pt_PT": "NewsBot",
-          "en_GB": "NewsBot"
+          "en_GB": "NewsBot",
+          "vl_ES": "NewsBot"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m20 4-2 14.5-6 2-6-2L4 4h16Z\"></path><path d=\"M7.5 8h3v8l-2-1\"></path><path d=\"M16.5 8H14a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.423a.5.5 0 0 1 .495.57L15.5 15.5l-2 .5\"></path></svg>",
         "class": "pagina",
@@ -177,7 +195,8 @@
           "es_ES": "Accede al repositorio",
           "gl_ES": "Accede ó repositorio",
           "pt_PT": "Acesse o repositório",
-          "en_GB": "Access the repository"
+          "en_GB": "Access the repository",
+          "vl_ES": "Accedeix al repositori"
         },
         "disabled": true
     },
@@ -186,7 +205,8 @@
           "es_ES": "Computer analyzer",
           "gl_ES": "Computer analyzer",
           "pt_PT": "Computer analyzer",
-          "en_GB": "Computer analyzer"
+          "en_GB": "Computer analyzer",
+          "vl_ES": "Computer analyzer"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3\"></path><path d=\"M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3\"></path><path d=\"M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4\"></path><path d=\"M11 6v.01\"></path><path d=\"M13 18v.01\"></path></svg>",
         "class": "pagina",
@@ -195,16 +215,18 @@
           "es_ES": "Accede al repositorio",
           "gl_ES": "Accede ó repositorio",
           "pt_PT": "Acesse o repositório",
-          "en_GB": "Access the repository"
+          "en_GB": "Access the repository",
+          "vl_ES": "Accedeix al repositori"
         },
         "disabled": false
     },
     "13": {
         "name": {
-          "es_ES": "Redes",
-          "gl_ES": "Redes",
+          "es_ES": "Redes sociales",
+          "gl_ES": "Redes sociais",
           "pt_PT": "Redes",
-          "en_GB": "Redes"
+          "en_GB": "Social networks",
+          "vl_ES": "Xarxes socials"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M12 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z\"></path><path d=\"M12 7v4\"></path><path d=\"m6.7 17.797 2.8-2\"></path><path d=\"m17.3 17.797-2.8-2\"></path></svg>",
         "class": "separador"
@@ -214,7 +236,8 @@
           "es_ES": "Instagram",
           "gl_ES": "Instagram",
           "pt_PT": "Instagram",
-          "en_GB": "Instagram"
+          "en_GB": "Instagram",
+          "vl_ES": "Instagram"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16 4H8a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4Z\"></path><path d=\"M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z\"></path><path d=\"M16.5 7.5v.001\"></path></svg>",
         "class": "pagina",
@@ -223,7 +246,8 @@
           "es_ES": "Instagram personal",
           "gl_ES": "Instagram persoal",
           "pt_PT": "Instagram pessoal",
-          "en_GB": "Personal Instagram"
+          "en_GB": "Personal Instagram",
+          "vl_ES": "Instagram personal"
         },
         "disabled": false
     },
@@ -232,14 +256,18 @@
           "es_ES": "Twitter",
           "gl_ES": "Twitter",
           "pt_PT": "Twitter",
-          "en_GB": "Twitter"
+          "en_GB": "Twitter",
+          "vl_ES": "Twitter"
         },
         "class": "pagina",
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M22 4.009c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.322 12 7.999v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c-.002-.249 1.51-2.772 1.818-4.013v.001Z\"></path></svg>",
         "onclick": "go('https://twitter.com/gacarbla', true)",
         "title": {
           "es_ES": "Twitter personal",
-          "gl_ES": "Twitter persoal"
+          "gl_ES": "Twitter persoal",
+          "pt_PT": "Twitter pessoal",
+          "en_GB": "Personal Twitter",
+          "vl_ES": "Twitter personal"
         },
         "disabled": false
     },
@@ -248,7 +276,8 @@
           "es_ES": "Página",
           "gl_ES": "Páxina",
           "pt_PT": "Página",
-          "en_GB": "Page"
+          "en_GB": "Page",
+          "vl_ES": "Pàgina"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z\"></path><path d=\"M6 8h.01\"></path><path d=\"M9 8h.01\"></path></svg>",
         "class": "separador"
@@ -258,7 +287,8 @@
           "es_ES": "Ajustes",
           "gl_ES": "Axustes",
           "pt_PT": "Configurações",
-          "en_GB": "Settings"
+          "en_GB": "Settings",
+          "vl_ES": "Adjustos"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M4 6h8\"></path><path d=\"M16 6h4\"></path><path d=\"M8 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M4 12h2\"></path><path d=\"M10 12h10\"></path><path d=\"M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\"></path><path d=\"M4 18h11\"></path><path d=\"M19 18h1\"></path></svg>",
         "class": "pagina",
@@ -267,7 +297,8 @@
           "es_ES": "Modifica el aspecto de la página a tu gusto",
           "gl_ES": "Modifica o aspeto da páxina como che pete",
           "pt_PT": "Modifique a aparência da página ao seu gosto",
-          "en_GB": "Modify the appearance of the page to your liking"
+          "en_GB": "Modify the appearance of the page to your liking",
+          "vl_ES": ""
         },
         "disabled": false
     },
@@ -276,7 +307,8 @@
           "es_ES": "Ajustes para desarrolladores",
           "gl_ES": "Axustes para desenvolvedores",
           "pt_PT": "Configurações dev",
-          "en_GB": "Dev settings"
+          "en_GB": "Dev settings",
+          "vl_ES": "Ajustos per a desenvolupadors"
         },
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 12h6\"></path><path d=\"M12 9v6\"></path><path d=\"M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1V7a2 2 0 0 1 2-2\"></path><path d=\"M18 19a2 2 0 0 0 2-2v-4l1-1-1-1V7a2 2 0 0 0-2-2\"></path></svg>",
         "class": "pagina",
@@ -285,7 +317,8 @@
           "es_ES": "Herramientas avanzadas para desarrolladores",
           "gl_ES": "Ferramentas avanzadas para desenvolvedores",
           "pt_PT": "Ferramentas avançadas de desenvolvedor",
-          "en_GB": "Advanced developer tools"
+          "en_GB": "Advanced developer tools",
+          "vl_ES": "Ferramentes advançades per a desenvolupadors"
         },
         "disabled": false,
         "hidden": "devModeStatus"
@@ -295,7 +328,8 @@
           "es_ES": "",
           "gl_ES": "",
           "pt_PT": "",
-          "en_GB": ""
+          "en_GB": "",
+          "vl_ES": ""
         },
         "class": "pagina",
         "vector": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 8c0-.796.369-1.559 1.025-2.121C9.681 5.316 10.572 5 11.5 5h1c.928 0 1.819.316 2.475.879C15.63 6.44 16 7.204 16 8a3 3 0 0 1-2 3c-.614.288-1.14.833-1.501 1.555A5.04 5.04 0 0 0 12 15\"></path><path d=\"M12 19v.01\"></path></svg>",
@@ -305,7 +339,8 @@
           "es_ES": "",
           "gl_ES": "",
           "en_GB": "",
-          "pt_PT": ""
+          "pt_PT": "",
+          "vl_ES": ""
         },
         "hidden": "easterEggs"
     }
