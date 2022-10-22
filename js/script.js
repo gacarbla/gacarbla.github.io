@@ -340,6 +340,19 @@ function read(value) {
   return devolver
 }
 async function language() {
+  /*
+  dispoLangs = [
+    "es_ES",
+    "pt_PT",
+    "en_GB",
+    "gl_ES",
+    "vl_ES"
+  ]
+  if (!dispoLangs.includes(lang)) {
+    window.alert("El idioma especificado no se encuentra disponible.\nO idioma indicado non se atopa dispoñible.\nL'idioma especificat no està disponible.\nZehaztutako hizkuntza ez dago erabilgarri.\nThe selected language isn't currently availiable.\nO idioma especificado não está disponível.\nLa langue spécifiée n'est pas disponible.")
+    window.location = "https://gacarbla.github.io/?lang=es_ES"
+  }
+  */
   const texts = await require(`json/lang/${lang}.json`, true)
   for (const x in texts) {
     try { document.getElementById(`${x}`).innerHTML = texts[x] } catch { }
@@ -369,12 +382,12 @@ async function showlist(id) {
     var options = []
     var finalList = []
     listaArray.forEach(option => {
-      options.push(`<li id=\"${id}_lang_${option.value}\" ${option.enabled?"":"class=\"disabled\""}>${option.flag?`<img src=\"${option.flag}\">`:""}${option.name?`<p>${option.name}</p>`:""}</li>`)
+      options.push(`<li id=\"${id}_lang_${option.value}\" ${option.enabled ? "" : "class=\"disabled\""}>${option.flag ? `<img src=\"${option.flag}\">` : ""}${option.name ? `<p>${option.name}</p>` : ""}</li>`)
       if(option.enabled) finalList.push(option)
     })
     document.getElementById(id).innerHTML = `${document.getElementById(id).innerHTML}<ul id=\"${id}_list\">%%options%%</ul>`.replace("%%options%%", options.join(""))
     finalList.forEach(option => {
-      document.getElementById(`${id}_lang_${option.value}`).addEventListener("click", function() {
+      document.getElementById(`${id}_lang_${option.value}`).addEventListener("click", function () {
         data.establecer("idioma", option.value)
         lang = option.value
         refreshNavigationBar()
