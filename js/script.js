@@ -367,11 +367,13 @@ async function showlist(id) {
     const listaArray = listasJSON.textos[id].options
     if (!listaArray) return console.error("No ha sido posible cargar la información de la lista")
     var options = []
+    var finalList = []
     listaArray.forEach(option => {
-      options.push(`<li id=\"${id}_lang_${option.value}\"><img src=\"${option.flag}\"><p>${option.name}</p></li>`)
+      options.push(`<li id=\"${id}_lang_${option.value}\" ${option.enabled?"":"class=\"disabled\""}>${option.flag?`<img src=\"${option.flag}\">`:""}${option.name?`<p>${option.name}</p>`:""}</li>`)
+      if(option.enabled) finalList.push(option)
     })
     document.getElementById(id).innerHTML = `${document.getElementById(id).innerHTML}<ul id=\"${id}_list\">%%options%%</ul>`.replace("%%options%%", options.join(""))
-    listaArray.forEach(option => {
+    finalList.forEach(option => {
       document.getElementById(`${id}_lang_${option.value}`).addEventListener("click", function() {
         data.establecer("idioma", option.value)
         lang = option.value

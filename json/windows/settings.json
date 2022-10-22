@@ -42,7 +42,7 @@
             "tipo": "radio"
         },
         "langSelector": {
-            "dispo": true,
+            "enabled": true,
             "tipo": "select",
             "text": {
                 "es_ES": "Idioma",
@@ -53,29 +53,82 @@
             },
             "options": [
                 {
-                    "name": "Español",
+                    "name": "Español (Castellano)",
                     "value": "es_ES",
-                    "flag": "https://gacarbla.github.io/media/flags/es_ES.png"
+                    "flag": "https://gacarbla.github.io/media/flags/es_ES.png",
+                    "enabled": true
+                },
+                {
+                    "name": "Español (LatAm)",
+                    "value": "es_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/es_LA.png",
+                    "enabled": false
                 },
                 {
                     "name": "Galego",
                     "value": "gl_ES",
-                    "flag": "https://gacarbla.github.io/media/flags/gl_ES.png"
+                    "flag": "https://gacarbla.github.io/media/flags/gl_ES.png",
+                    "enabled": true
                 },
                 {
                     "name": "Valencià",
                     "value": "vl_ES",
-                    "flag": "https://gacarbla.github.io/media/flags/vl_ES.png"
+                    "flag": "https://gacarbla.github.io/media/flags/vl_ES.png",
+                    "enabled": true
                 },
                 {
-                    "name": "English",
+                    "name": "Català",
+                    "value": "ca_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/ca_ES.png",
+                    "enabled": false
+                },
+                {
+                    "name": "Euskara",
+                    "value": "eu_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/eu_ES.png",
+                    "enabled": false
+                },
+                {
+                    "name": "English (Great Britain)",
                     "value": "en_GB",
-                    "flag": "https://gacarbla.github.io/media/flags/en_GB.png"
+                    "flag": "https://gacarbla.github.io/media/flags/en_GB.png",
+                    "enabled": true
                 },
                 {
-                    "name": "Português",
+                    "name": "English (United States)",
+                    "value": "en_GB",
+                    "flag": "https://gacarbla.github.io/media/flags/en_US.png",
+                    "enabled": false
+                },
+                {
+                    "name": "Português (Portugal)",
                     "value": "pt_PT",
-                    "flag": "https://gacarbla.github.io/media/flags/pt_PT.png"
+                    "flag": "https://gacarbla.github.io/media/flags/pt_PT.png",
+                    "enabled": true
+                },
+                {
+                    "name": "Português (Brasil)",
+                    "value": "pt_BR",
+                    "flag": "https://gacarbla.github.io/media/flags/pt_BR.png",
+                    "enabled": false
+                },
+                {
+                    "name": "Français",
+                    "value": "fr_FR",
+                    "flag": "https://gacarbla.github.io/media/flags/fr_FR.png",
+                    "enabled": false
+                },
+                {
+                    "name": "Romaneste",
+                    "value": "ro_RO",
+                    "flag": "https://gacarbla.github.io/media/flags/ro_RO.png",
+                    "enabled": false
+                },
+                {
+                    "name": "Pусски",
+                    "value": "ru_RU",
+                    "flag": "https://gacarbla.github.io/media/flags/ru_RU.png",
+                    "enabled": false
                 }
             ]
         }

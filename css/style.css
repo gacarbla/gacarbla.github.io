@@ -879,7 +879,7 @@ div#langSelector.ajuste > svg {
     gap: 0px;
     flex-direction: column;
     top: 18px;
-    height: 180px;
+    height: 190px;
     background-color: var(--ventanas-fondo);
     border:solid 2px;
     border-top: 0px;
@@ -896,11 +896,17 @@ div#langSelector.ajuste > svg {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 #langSelector_list li:hover {
     background-color: #fff2;
     border-radius: 5px;
+}
+
+#langSelector_list li.disabled {
+    opacity: .2;
+    cursor: default;
 }
 
 #langSelector_list img {
