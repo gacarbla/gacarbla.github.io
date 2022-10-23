@@ -266,7 +266,7 @@ const windows = {
           })
         })
       }
-    } else if (type=="loader"){
+    } else if (type == "loader") {
       document.getElementById("windows").innerHTML = `<div class="back" id="loader"><div class="window"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>`
     }
     ventanaData.start();
@@ -290,8 +290,8 @@ function load() {
   if (read("lang")) {
     data.establecer("idioma", read("lang"))
     queris = window.location.href.split("?")[1].split(/;+/g)
-    
-    window.location = window.location.href.split("?")[0]
+    for (var x = 0; x < queris.length; x++) if (queris[x].startsWith("lang")) queris.splice(x, 1)
+    window.location = `${window.location.href.split("?")[0]}${queris.length > 0 ? `?${queris.join(";")}` : ""}`
   }
   lang = data.obtener("idioma")
 
@@ -321,7 +321,7 @@ function load() {
     refreshNavigationBar();
   }
   language()
-  setTimeout(function(){
+  setTimeout(function () {
     unlock()
   }, 750)
 }
