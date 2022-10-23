@@ -286,7 +286,7 @@ const windows = {
 }
 
 function load() {
-  if (!data.existe("idioma")) data.establecer("idioma", "es")
+  if (!data.existe("idioma")) data.establecer("idioma", "es_ES")
   if (read("lang")) {
     lang = read("lang")
   } else {
