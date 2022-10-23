@@ -123,12 +123,6 @@
                     "value": "ro_RO",
                     "flag": "https://gacarbla.github.io/media/flags/ro_RO.png",
                     "enabled": false
-                },
-                {
-                    "name": "Pусски",
-                    "value": "ru_RU",
-                    "flag": "https://gacarbla.github.io/media/flags/ru_RU.png",
-                    "enabled": false
                 }
             ]
         }
