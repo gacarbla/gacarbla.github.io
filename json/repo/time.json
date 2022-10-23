@@ -1,0 +1,306 @@
+{
+    "segundo": {
+        "es_ES": "segundo",
+        "gl_ES": "segundo",
+        "en_GB": "second",
+        "pt_PT": "segundo",
+        "pt_BR": "segundo",
+        "vl_ES": "segon",
+        "ca_ES": "segon"
+    },
+    "segundos": {
+        "es_ES": "segundos",
+        "gl_ES": "segundos",
+        "en_GB": "seconds",
+        "pt_PT": "segundos",
+        "pt_BR": "segundos",
+        "vl_ES": "segons",
+        "ca_ES": "segons"
+    },
+    "minuto": {
+        "es_ES": "minuto",
+        "gl_ES": "minuto",
+        "en_GB": "minute",
+        "pt_PT": "minuto",
+        "pt_BR": "minuto",
+        "vl_ES": "minut",
+        "ca_ES": "minut"
+    },
+    "minutos": {
+        "es_ES": "minutos",
+        "gl_ES": "minutos",
+        "en_GB": "minutes",
+        "pt_PT": "minutos",
+        "pt_BR": "minutos",
+        "vl_ES": "minuts",
+        "ca_ES": "minuts"
+    },
+    "hora": {
+        "es_ES": "hora",
+        "gl_ES": "hora",
+        "en_GB": "hour",
+        "pt_PT": "hora",
+        "pt_BR": "hora",
+        "vl_ES": "hora",
+        "ca_ES": "hora"
+    },
+    "horas": {
+        "es_ES": "horas",
+        "gl_ES": "horas",
+        "en_GB": "hours",
+        "pt_PT": "horas",
+        "pt_BR": "horas",
+        "vl_ES": "hores",
+        "ca_ES": "hores"
+    },
+    "dia": {
+        "es_ES": "día",
+        "gl_ES": "día",
+        "en_GB": "day",
+        "pt_PT": "dia",
+        "pt_BR": "dia",
+        "vl_ES": "dia",
+        "ca_ES": "dia"
+    },
+    "dias": {
+        "es_ES": "días",
+        "gl_ES": "días",
+        "en_GB": "days",
+        "pt_PT": "dias",
+        "pt_BR": "dias",
+        "vl_ES": "dies",
+        "ca_ES": "dies"
+    },
+    "mes": {
+        "es_ES": "mes",
+        "gl_ES": "mes",
+        "en_GB": "month",
+        "pt_PT": "mês",
+        "pt_BR": "mês",
+        "vl_ES": "mes",
+        "ca_ES": "mes"
+    },
+    "meses": {
+        "es_ES": "meses",
+        "gl_ES": "meses",
+        "en_GB": "months",
+        "pt_PT": "meses",
+        "pt_BR": "meses",
+        "vl_ES": "mesos",
+        "ca_ES": "mesos"
+    },
+    "año": {
+        "es_ES": "año",
+        "gl_ES": "ano",
+        "en_GB": "year",
+        "pt_PT": "ano",
+        "pt_BR": "ano",
+        "vl_ES": "any",
+        "ca_ES": "any"
+    },
+    "años": {
+        "es_ES": "años",
+        "gl_ES": "anos",
+        "en_GB": "years",
+        "pt_PT": "anos",
+        "pt_BR": "anos",
+        "vl_ES": "anys",
+        "ca_ES": "anys"
+    },
+    "listas": {
+        "semana": {
+            "es_ES": [
+                "Domingo",
+                "Lunes",
+                "Martes",
+                "Miércoles",
+                "Jueves",
+                "Viernes",
+                "Sábado"
+            ],
+            "gl_ES": [
+                "Domingo",
+                "Luns",
+                "Martes",
+                "Mércores",
+                "Xoves",
+                "Venres",
+                "Sábado"
+            ],
+            "vl_ES": [
+                "Diumenge",
+                "Dilluns",
+                "Dimarts",
+                "Dimecres",
+                "Dijous",
+                "Divendres",
+                "Dissabte"
+            ],
+            "ca_ES": [
+                "Diumenge",
+                "Dilluns",
+                "Dimarts",
+                "Dimecres",
+                "Dijous",
+                "Divendres",
+                "Dissabte"
+            ],
+            "en_GB": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "pt_PT": [
+                "Domingo",
+                "Segunda",
+                "Terça",
+                "Quarta",
+                "Quinta",
+                "Sexta",
+                "Sábado"
+            ],
+            "pt_BR": [
+                "Domingo",
+                "Segunda",
+                "Terça",
+                "Quarta",
+                "Quinta",
+                "Sexta",
+                "Sábado"
+            ]
+        },
+        "meses": {
+            "es_ES": [
+                "Enero",
+                "Febrero",
+                "Marzo",
+                "Abril",
+                "Mayo",
+                "Junio",
+                "Julio",
+                "Agosto",
+                "Septiembre",
+                "Octubre",
+                "Noviembre",
+                "Diciembre"
+            ],
+            "gl_ES": [
+                "Xaneiro",
+                "Febreiro",
+                "Marzo",
+                "Abril",
+                "Maio",
+                "Xuño",
+                "Xullo",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Decembro"
+            ],
+            "vl_ES": [
+                "Gener",
+                "Febrer",
+                "Març",
+                "Abril",
+                "Maig",
+                "Juny",
+                "Juliol",
+                "Agost",
+                "Setembre",
+                "Octubre",
+                "Novembre",
+                "Desembre"
+            ],
+            "ca_ES": [
+                "Gener",
+                "Febrer",
+                "Març",
+                "Abril",
+                "Maig",
+                "Juny",
+                "Juliol",
+                "Agost",
+                "Setembre",
+                "Octubre",
+                "Novembre",
+                "Desembre"
+            ],
+            "en_GB": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            "pt_PT": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+            ],
+            "pt_BR": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+            ]
+        }
+    },
+    "relativo": {
+        "hace": {
+            "es_ES": "Hace %%time%%",
+            "gl_ES": "Fai %%time%%",
+            "vl_ES": "Fa %%time%%",
+            "ca_ES": "Fa %%time%%",
+            "en_GB": "%%time%% ago",
+            "pt_PT": "Faz %%time%%",
+            "pt_BR": "Faz %%time%%"
+        },
+        "en": {
+            "es_ES": "En %%time%%",
+            "gl_ES": "En %%time%%",
+            "vl_ES": "En %%time%%",
+            "ca_ES": "En %%time%%",
+            "en_GB": "In %%time%%",
+            "pt_PT": "Em %%time%%",
+            "pt_BR": "Em %%time%%"
+        },
+        "ahora": {
+            "es_ES": "Ahora",
+            "gl_ES": "Agora",
+            "vl_ES": "Ara",
+            "ca_ES": "Ara",
+            "en_GB": "Now",
+            "pt_PT": "Agora",
+            "pt_BR": "Agora"
+        }
+    }
+}

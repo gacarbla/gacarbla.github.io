@@ -1,6 +1,7 @@
 var timeFormatVariable = "t"
 
 function recalcular() {
+    const timeJSON = require("json/repo/time.json", true)
     const time = document.getElementById("time")
     var timestamp = new Date(time.value)
     var tiempo = `t:${Math.floor(timestamp.getTime() / 1000)}:${timeFormatVariable}`
