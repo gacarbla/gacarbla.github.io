@@ -1,7 +1,7 @@
 var timeFormatVariable = "t"
 
-function recalcular() {
-    const timeJSON = require("json/repo/time.json", true)
+async function recalcular() {
+    const timeJSON = await require("json/repo/time.json", true)
     const time = document.getElementById("time")
     var timestamp = new Date(time.value)
     var tiempo = `t:${Math.floor(timestamp.getTime() / 1000)}:${timeFormatVariable}`
@@ -14,53 +14,49 @@ function recalcular() {
     } else if (timeFormatVariable == "d") {
         vista = `${timestamp.getDate() > 9 ? timestamp.getDate() : `0${timestamp.getDate()}`}/${Math.floor(timestamp.getMonth() + 1) > 9 ? Math.floor(timestamp.getMonth() + 1) : `0${Math.floor(timestamp.getMonth() + 1)}`}/${timestamp.getFullYear()}`
     } else if (timeFormatVariable == "D") {
-        const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-        vista = `${timestamp.getDate()} de ${meses[timestamp.getMonth()]} de ${timestamp.getFullYear()}`
+        vista = `${timestamp.getDate()} de ${timeJSON.listas.meses[lang][timestamp.getMonth()]} de ${timestamp.getFullYear()}`
     } else if (timeFormatVariable == "f") {
-        const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-        vista = `${timestamp.getDate()} de ${meses[timestamp.getMonth()]} de ${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes() > 9 ? timestamp.getMinutes() : `0${timestamp.getMinutes()}`}`
+        vista = `${timestamp.getDate()} de ${timeJSON.listas.meses[lang][timestamp.getMonth()]} de ${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes() > 9 ? timestamp.getMinutes() : `0${timestamp.getMinutes()}`}`
     } else if (timeFormatVariable == "F") {
-        const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-        const dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]
-        vista = `${dias[timestamp.getDay()]}, ${timestamp.getDate()} de ${meses[timestamp.getMonth()]} de ${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes() > 9 ? timestamp.getMinutes() : `0${timestamp.getMinutes()}`}`
+        vista = `${timeJSON.listas.semana[lang][timestamp.getDay()]}, ${timestamp.getDate()} de ${timeJSON.listas.meses[lang][timestamp.getMonth()]} de ${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes() > 9 ? timestamp.getMinutes() : `0${timestamp.getMinutes()}`}`
     } else if (timeFormatVariable == "R") {
         const diferencia = Math.floor((Date.now() - timestamp.getTime()) / 1000)
         if (diferencia == 0) {
-            vista = "ahora"
+            vista = `${timeJSON.relativo.ahora[lang]}`
         } else {
             var num = 0
             var format = ""
             num = Math.abs(diferencia)
             if (num < 60) {
-                format = `${num == 1 ? "segundo" : "segundos"}`
+                format = `${num == 1 ? `${timeJSON.segundo[lang]}` : `${timeJSON.segundos[lang]}`}`
             } else {
                 num = Math.floor(num / 60)
                 if (num < 60) {
-                    format = `${num == 1 ? "minuto" : "minutos"}`
+                    format = `${num == 1 ? `${timeJSON.minuto[lang]}` : `${timeJSON.minutos[lang]}`}`
                 } else {
                     num = Math.floor(num / 60)
                     if (num < 24) {
-                        format = `${num == 1 ? "hora" : "horas"}`
+                        format = `${num == 1 ? `${timeJSON.hora[lang]}` : `${timeJSON.horas[lang]}`}`
                     } else {
                         num = Math.floor(num / 24)
                         if (num < 30) {
-                            format = `${num == 1 ? "día" : "días"}`
+                            format = `${num == 1 ? `${timeJSON.dia[lang]}` : `${timeJSON.dias[lang]}`}`
                         } else {
                             num = Math.floor(num / 30)
                             if (num < 12) {
-                                format = `${num == 1 ? "mes" : "meses"}`
+                                format = `${num == 1 ? `${timeJSON.mes[lang]}` : `${timeJSON.meses[lang]}`}`
                             } else {
                                 num = Math.floor(num / 12)
-                                format = `${num == 1 ? "año" : "años"}`
+                                format = `${num == 1 ? `${timeJSON.año[lang]}` : `${timeJSON.años[lang]}`}`
                             }
                         }
                     }
                 }
             }
             if (diferencia < 0) {
-                vista = `en ${num} ${format}`
+                vista = `${timeJSON.relativo.en[lang]}`.replace("%%time%%", `${num} ${format}`)
             } else {
-                vista = `hace ${num} ${format}`
+                vista = `${timeJSON.relativo.hace[lang]}`.replace("%%time%%", `${num} ${format}`)
             }
         }
     }
@@ -82,7 +78,7 @@ function start() {
     output.addEventListener("click", copy)
     setInterval(function () {
         recalcular()
-    }, 100)
+    }, 75)
 }
 
 function copy() {
