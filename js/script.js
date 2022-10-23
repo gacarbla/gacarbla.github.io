@@ -119,7 +119,8 @@ const windows = {
       es_ES: "Ajustes para desarrolladores",
       en_GB: "Developers tools",
       gl_ES: "Axustes para desenvolvedores",
-      pt_PT: "Configurações do desenvolvedor"
+      pt_PT: "Configurações do desenvolvedor",
+      vl_ES: "Ajustos per a desenvolupadors"
     },
     start() {
       const rightClickCheck = document.getElementById("rightClickCheck")
@@ -168,7 +169,8 @@ const windows = {
       es_ES: "Ajustes",
       en_GB: "Settings",
       gl_ES: "Axustes",
-      pt_PT: "Configurações"
+      pt_PT: "Configurações",
+      vl_ES: "Adjustos"
     },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
@@ -222,7 +224,8 @@ const windows = {
       es_ES: "",
       en_GB: "",
       pt_PT: "",
-      gl_ES: ""
+      gl_ES: "",
+      vl_ES: ""
     },
     content: `<video width="280" height="160" autoplay controls id="rick"><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
     start() {
@@ -266,10 +269,10 @@ const windows = {
           })
         })
       }
+      ventanaData.start();
     } else if (type == "loader") {
-      document.getElementById("windows").innerHTML = `<div class="back" id="loader"><div class="window"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>`
+      document.getElementById("windows").innerHTML = `${document.getElementById("windows").innerHTML}<div class="back" id="loader"><div class="window"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>`
     }
-    ventanaData.start();
   },
   close(name) {
     this.check();
