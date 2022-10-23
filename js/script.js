@@ -288,10 +288,12 @@ const windows = {
 function load() {
   if (!data.existe("idioma")) data.establecer("idioma", "es_ES")
   if (read("lang")) {
-    lang = read("lang")
-  } else {
-    lang = data.obtener("idioma")
+    data.establecer("idioma", read("lang"))
+    queris = window.location.href.split("?")[1].split(/;+/g)
+    
+    window.location = window.location.href.split("?")[0]
   }
+  lang = data.obtener("idioma")
 
   data.iniciar();
   if (data.obtener("rightClick") == "true") {
@@ -338,7 +340,7 @@ async function require(url, canonical) {
 }
 function read(value) {
   if (!window.location.href.split("?")[1]) return
-  const values = window.location.href.split("?")[1].split(";")
+  const values = window.location.href.split("?")[1].split(/;+/g)
   var devolver = ""
   values.forEach(element => {
     if (element.split("=")[0] == value) devolver = element.split("=")[1]
