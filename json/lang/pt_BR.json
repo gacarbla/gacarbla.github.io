@@ -1,0 +1,20 @@
+{
+    "verify": true,
+    "verCodigoText": "Veja o código",
+    "verPerfilText": "Ver o perfil",
+    "portafolioText": "Portfolio",
+    "tresRayaText": "3 em linha",
+    "wordleText": "Wordle",
+    "codificadorText": "Codificador",
+    "timestampText": "Discord Timestamp",
+    "quizText": "Questionário",
+    "ahorcadoText": "Enforcado",
+    "listaCompraText": "Lista da compra",
+    "buscadorFiltrosText": "Motor de busca com filtros",
+    "listaDeProyectosText": "Lista de projetos",
+    "fechaText": "Data:",
+    "formatoText": "Formato:",
+    "usuarioText": "Usuário",
+    "ejemploTimestampText1": "Este formato ficaria assim:",
+    "ejemploTimestampText2": "Espero que você goste!"
+}

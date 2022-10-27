@@ -4,7 +4,8 @@
         "gl_ES": "Aquí terás múltiples ferramentas útiles para explorar o código da páxina e activar todas as súas funcións como desenvolvedor web.",
         "en_GB": "Here you will have multiple useful tools to explore the code of the page and activate all its functions as a web developer.",
         "pt_PT": "Aqui você terá várias ferramentas úteis para explorar o código da página e ativar todas as suas funções como desenvolvedor web.",
-        "vl_ES": "Ací disposaras de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seues funcions com desenvolupador web."
+        "vl_ES": "Ací disposaras de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seues funcions com desenvolupador web.",
+        "ca_ES": "Aquí disposarás de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seves funcions com a desenvolupador web."
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
@@ -14,7 +15,9 @@
                 "gl_ES": "Habilitar selección",
                 "en_GB": "Enable selection",
                 "pt_PT": "Habilitar seleção",
-                "vl_ES": "Habilitar selecció"
+                "pt_BR": "Habilitar seleção",
+                "vl_ES": "Habilitar selecció",
+                "ca_ES": "Habilitar selecció"
             },
             "dispo": true,
             "tipo": "radio"
@@ -23,9 +26,11 @@
             "text": {
                 "es_ES": "Habilitar click derecho",
                 "gl_ES": "Habilitar click dereito",
-                "en_GB": "Ativar clique direito",
-                "pt_PT": "Enable right click",
-                "vl_ES": "Habilitar clic dret"
+                "pt_PT": "Ativar clique direito",
+                "en_GB": "Enable right click",
+                "pt_BR": "Ativar clique direito",
+                "vl_ES": "Habilitar clic dret",
+                "ca_ES": "Habilitar clic dret"
             },
             "dispo": true,
             "tipo": "radio"
@@ -36,7 +41,9 @@
                 "gl_ES": "Guía de comandos",
                 "en_GB": "Command guide",
                 "pt_PT": "Guia de comando",
-                "vl_ES": "Guia de comandos"
+                "pt_BR": "Guia de comando",
+                "vl_ES": "Guia de comandos",
+                "ca_ES": "Guia de comandos"
             },
             "dispo": false,
             "tipo": "button"

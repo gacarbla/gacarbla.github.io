@@ -4,6 +4,7 @@
         "en_GB": "",
         "gl_ES": "",
         "pt_PT": "",
+        "pt_BR": "",
         "vl_ES": ""
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
@@ -14,7 +15,9 @@
                 "gl_ES": "Modo claro",
                 "en_GB": "Light mode",
                 "pt_PT": "Modo de luz",
-                "vl_ES": "Mode clar"
+                "pt_BR": "Modo de luz",
+                "vl_ES": "Mode clar",
+                "ca_ES": "Mode clar"
             },
             "dispo": true,
             "tipo": "radio"
@@ -25,7 +28,9 @@
                 "gl_ES": "Easter Eggs",
                 "en_GB": "Easter Eggs",
                 "pt_PT": "Easter Eggs",
-                "vl_ES": "Easter Eggs"
+                "pt_BR": "Easter Eggs",
+                "vl_ES": "Easter Eggs",
+                "ca_ES": "Easter Eggs"
             },
             "dispo": true,
             "tipo": "radio"
@@ -35,8 +40,10 @@
                 "es_ES": "Modo desarrollador",
                 "gl_ES": "Modo desenvolvedor",
                 "en_GB": "Developer mode",
-                "pt_PT": "Modo de desenvolvedor",
-                "vl_ES": "Mode desenvolupador"
+                "pt_PT": "Modo de programador",
+                "pt_BR": "Modo de desenvolvedor",
+                "vl_ES": "Mode desenvolupador",
+                "ca_ES": "Mode desenvolupador"
             },
             "dispo": true,
             "tipo": "radio"
@@ -48,8 +55,10 @@
                 "es_ES": "Idioma",
                 "gl_ES": "Lingua",
                 "pt_PT": "Idioma",
+                "pt_BR": "Idioma",
                 "en_GB": "Language",
-                "vl_ES": "Idioma"
+                "vl_ES": "Idioma",
+                "ca_ES": "Idioma"
             },
             "options": [
                 {
@@ -71,16 +80,16 @@
                     "enabled": true
                 },
                 {
+                    "name": "Català",
+                    "value": "ca_ES",
+                    "flag": "https://gacarbla.github.io/media/flags/ca_ES.png",
+                    "enabled": true
+                },
+                {
                     "name": "Valencià",
                     "value": "vl_ES",
                     "flag": "https://gacarbla.github.io/media/flags/vl_ES.png",
                     "enabled": true
-                },
-                {
-                    "name": "Català",
-                    "value": "ca_ES",
-                    "flag": "https://gacarbla.github.io/media/flags/ca_ES.png",
-                    "enabled": false
                 },
                 {
                     "name": "Euskara",
@@ -110,18 +119,12 @@
                     "name": "Português (Brasil)",
                     "value": "pt_BR",
                     "flag": "https://gacarbla.github.io/media/flags/pt_BR.png",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "name": "Français",
                     "value": "fr_FR",
                     "flag": "https://gacarbla.github.io/media/flags/fr_FR.png",
-                    "enabled": false
-                },
-                {
-                    "name": "Romaneste",
-                    "value": "ro_RO",
-                    "flag": "https://gacarbla.github.io/media/flags/ro_RO.png",
                     "enabled": false
                 }
             ]

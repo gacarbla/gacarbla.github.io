@@ -351,19 +351,6 @@ function read(value) {
   return devolver
 }
 async function language() {
-  /*
-  dispoLangs = [
-    "es_ES",
-    "pt_PT",
-    "en_GB",
-    "gl_ES",
-    "vl_ES"
-  ]
-  if (!dispoLangs.includes(lang)) {
-    window.alert("El idioma especificado no se encuentra disponible.\nO idioma indicado non se atopa dispoñible.\nL'idioma especificat no està disponible.\nZehaztutako hizkuntza ez dago erabilgarri.\nThe selected language isn't currently availiable.\nO idioma especificado não está disponível.\nLa langue spécifiée n'est pas disponible.")
-    window.location = "https://gacarbla.github.io/?lang=es_ES"
-  }
-  */
   const texts = await require(`json/lang/${lang}.json`, true)
   for (const x in texts) {
     try { document.getElementById(`${x}`).innerHTML = texts[x] } catch { }

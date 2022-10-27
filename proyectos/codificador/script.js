@@ -1,6 +1,6 @@
 function copy() {
     const content = document.getElementById("textoSalida")
-    if (content.value=="") return
+    if (content.value == "") return
     content.select();
     document.execCommand("copy");
 }
@@ -42,7 +42,7 @@ function start() {
         correr.value = ""
         correr.addEventListener("input", codificar)
         const logsButton = document.getElementById("logsbtn")
-        logsButton.addEventListener("click", function(){
+        logsButton.addEventListener("click", function () {
             toggleLogs();
             logsButton.classList.toggle("active")
         })
@@ -105,7 +105,7 @@ function codificar() {
                 type: "info"
             }
         }
-        if(!correr) correr = 0
+        if (!correr) correr = 0
 
         var textoProceso = ''
         if (deco) {
@@ -156,7 +156,7 @@ function codificar() {
                 })
                 textoProceso = textoProcesoDos
             }
-            if(!message.text){
+            if (!message.text) {
                 message = {
                     text: "Texto codificado con éxito",
                     type: "success"
@@ -165,19 +165,19 @@ function codificar() {
         }
         try {
             const final = textoProceso
-            if (final!=="") {
+            if (final !== "") {
                 document.getElementById("copyText").classList.add("visible")
             } else {
                 document.getElementById("copyText").classList.remove("visible")
             }
             document.getElementById("textoSalida").value = final
-        } catch (e){
+        } catch (e) {
             message = {
                 text: "Ha ocurrido un error en el proceso.<br>Revise los parámetros establecidos.<br>Si el error persiste constacte al desarrollador.",
                 type: "error"
             }
         }
-        window.onbeforeunload = function() {
+        window.onbeforeunload = function () {
             return "Si abandona la página los datos serán eliminados. ¿Desea continuar?";
         };
         printLog(message.text, message.type)
@@ -213,16 +213,16 @@ function printLog(message, type) {
     } else if (type == "w") {
         msg = `<div class="w">${date}<div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 21V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8l-4 4Z"></path><path d="M12 8v3"></path><path d="M12 14v.01"></path></svg></div><p>${message}</p></div>`
     }
-    if ( document.getElementById("logs").innerHTML == "" || !(document.getElementById("logs").firstChild.childNodes[Math.floor(document.getElementById("logs").firstChild.childNodes.length-1)].innerHTML == message && document.getElementById("logs").firstChild.className == type)) {
+    if (document.getElementById("logs").innerHTML == "" || !(document.getElementById("logs").firstChild.childNodes[Math.floor(document.getElementById("logs").firstChild.childNodes.length - 1)].innerHTML == message && document.getElementById("logs").firstChild.className == type)) {
         logsDiv.innerHTML = msg + logsDiv.innerHTML
     } else {
         var times = document.getElementById("logs").firstChild.firstChild.innerHTML.split("x")[1]
-        if (!times) {times = 1} else {times = parseInt(times)}
-        document.getElementById("logs").firstChild.firstChild.innerHTML = `[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]<br>x${Math.floor(times+1)}`
+        if (!times) { times = 1 } else { times = parseInt(times) }
+        document.getElementById("logs").firstChild.firstChild.innerHTML = `[${ahora.getHours() < 10 ? `0${ahora.getHours()}` : `${ahora.getHours()}`}:${ahora.getMinutes() < 10 ? `0${ahora.getMinutes()}` : `${ahora.getMinutes()}`}:${ahora.getSeconds() < 10 ? `0${ahora.getSeconds()}` : `${ahora.getSeconds()}`}]<br>x${Math.floor(times + 1)}`
     }
 }
 
-function toggleLogs() {document.getElementsByClassName("logsWindow")[0].classList.toggle("visible")}
+function toggleLogs() { document.getElementsByClassName("logsWindow")[0].classList.toggle("visible") }
 
 function clearLogs() {
     document.getElementById("logs").innerHTML = "";
@@ -232,8 +232,8 @@ function clearLogs() {
 function go(page, newTabBoolean) {
     if (page.startsWith(":")) page = page.replace(":", "https://gacarbla.github.io/")
     if (newTabBoolean) {
-      window.open(`${page}`, "GΛCΛRBLΛ", "width=1080, height=440")
+        window.open(`${page}`, "GΛCΛRBLΛ", "width=1080, height=440")
     } else {
-      window.location = `${page}`
+        window.location = `${page}`
     }
-  }
+}
