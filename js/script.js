@@ -120,7 +120,9 @@ const windows = {
       en_GB: "Developers tools",
       gl_ES: "Axustes para desenvolvedores",
       pt_PT: "Configurações do desenvolvedor",
-      vl_ES: "Ajustos per a desenvolupadors"
+      pt_BR: "Configurações do desenvolvedor",
+      vl_ES: "Ajustos per a desenvolupadors",
+      fr_BL: "Paramètres du développeur"
     },
     start() {
       const rightClickCheck = document.getElementById("rightClickCheck")
@@ -170,7 +172,9 @@ const windows = {
       en_GB: "Settings",
       gl_ES: "Axustes",
       pt_PT: "Configurações",
-      vl_ES: "Adjustos"
+      pt_BR: "Configurações",
+      vl_ES: "Adjustos",
+      fr_BL: "Paramètres"
     },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
@@ -224,8 +228,10 @@ const windows = {
       es_ES: "",
       en_GB: "",
       pt_PT: "",
+      pt_BR: "",
       gl_ES: "",
-      vl_ES: ""
+      vl_ES: "",
+      fr_BL: ""
     },
     content: `<video width="280" height="160" autoplay controls id="rick"><source src="https://gacarbla.github.io/media/video/rickroll.mp4" type="video/mp4"></video>`,
     start() {

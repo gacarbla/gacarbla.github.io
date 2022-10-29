@@ -6,7 +6,8 @@
         "pt_PT": "segundo",
         "pt_BR": "segundo",
         "vl_ES": "segon",
-        "ca_ES": "segon"
+        "ca_ES": "segon",
+        "fr_BL": "seconde"
     },
     "segundos": {
         "es_ES": "segundos",
@@ -15,7 +16,8 @@
         "pt_PT": "segundos",
         "pt_BR": "segundos",
         "vl_ES": "segons",
-        "ca_ES": "segons"
+        "ca_ES": "segons",
+        "fr_BL": "secondes"
     },
     "minuto": {
         "es_ES": "minuto",
@@ -24,7 +26,8 @@
         "pt_PT": "minuto",
         "pt_BR": "minuto",
         "vl_ES": "minut",
-        "ca_ES": "minut"
+        "ca_ES": "minut",
+        "fr_BL": "minute"
     },
     "minutos": {
         "es_ES": "minutos",
@@ -33,7 +36,8 @@
         "pt_PT": "minutos",
         "pt_BR": "minutos",
         "vl_ES": "minuts",
-        "ca_ES": "minuts"
+        "ca_ES": "minuts",
+        "fr_BL": "minutes "
     },
     "hora": {
         "es_ES": "hora",
@@ -42,7 +46,8 @@
         "pt_PT": "hora",
         "pt_BR": "hora",
         "vl_ES": "hora",
-        "ca_ES": "hora"
+        "ca_ES": "hora",
+        "fr_BL": "heure"
     },
     "horas": {
         "es_ES": "horas",
@@ -51,7 +56,8 @@
         "pt_PT": "horas",
         "pt_BR": "horas",
         "vl_ES": "hores",
-        "ca_ES": "hores"
+        "ca_ES": "hores",
+        "fr_BL": "heures"
     },
     "dia": {
         "es_ES": "día",
@@ -60,7 +66,8 @@
         "pt_PT": "dia",
         "pt_BR": "dia",
         "vl_ES": "dia",
-        "ca_ES": "dia"
+        "ca_ES": "dia",
+        "fr_BL": "jour"
     },
     "dias": {
         "es_ES": "días",
@@ -69,7 +76,8 @@
         "pt_PT": "dias",
         "pt_BR": "dias",
         "vl_ES": "dies",
-        "ca_ES": "dies"
+        "ca_ES": "dies",
+        "fr_BL": "jours"
     },
     "mes": {
         "es_ES": "mes",
@@ -78,7 +86,8 @@
         "pt_PT": "mês",
         "pt_BR": "mês",
         "vl_ES": "mes",
-        "ca_ES": "mes"
+        "ca_ES": "mes",
+        "fr_BL": "mois"
     },
     "meses": {
         "es_ES": "meses",
@@ -87,7 +96,8 @@
         "pt_PT": "meses",
         "pt_BR": "meses",
         "vl_ES": "mesos",
-        "ca_ES": "mesos"
+        "ca_ES": "mesos",
+        "fr_BL": "mois"
     },
     "año": {
         "es_ES": "año",
@@ -96,7 +106,8 @@
         "pt_PT": "ano",
         "pt_BR": "ano",
         "vl_ES": "any",
-        "ca_ES": "any"
+        "ca_ES": "any",
+        "fr_BL": "an"
     },
     "años": {
         "es_ES": "años",
@@ -105,7 +116,8 @@
         "pt_PT": "anos",
         "pt_BR": "anos",
         "vl_ES": "anys",
-        "ca_ES": "anys"
+        "ca_ES": "anys",
+        "fr_BL": "années"
     },
     "listas": {
         "semana": {
@@ -171,6 +183,15 @@
                 "Quinta",
                 "Sexta",
                 "Sábado"
+            ],
+            "fr_BL": [
+                "Dimanche",
+                "Lundi",
+                "Mardi",
+                "Mercredi",
+                "Jeudi",
+                "Vendredi",
+                "Samedi"
             ]
         },
         "meses": {
@@ -271,6 +292,20 @@
                 "Outubro",
                 "Novembro",
                 "Dezembro"
+            ],
+            "fr_BL": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "April",
+                "Mai",
+                "Juin",
+                "Julliet",
+                "Août",
+                "Septembre",
+                "Ostobre",
+                "Novembre",
+                "Décembre"
             ]
         }
     },
@@ -282,7 +317,8 @@
             "ca_ES": "Fa %%time%%",
             "en_GB": "%%time%% ago",
             "pt_PT": "Faz %%time%%",
-            "pt_BR": "Faz %%time%%"
+            "pt_BR": "Faz %%time%%",
+            "fr_BL": "Il y a %%time%%"
         },
         "en": {
             "es_ES": "En %%time%%",
@@ -291,7 +327,8 @@
             "ca_ES": "En %%time%%",
             "en_GB": "In %%time%%",
             "pt_PT": "Em %%time%%",
-            "pt_BR": "Em %%time%%"
+            "pt_BR": "Em %%time%%",
+            "fr_BL": "Dans %%time%%"
         },
         "ahora": {
             "es_ES": "Ahora",

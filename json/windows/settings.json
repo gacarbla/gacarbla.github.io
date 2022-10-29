@@ -5,7 +5,8 @@
         "gl_ES": "",
         "pt_PT": "",
         "pt_BR": "",
-        "vl_ES": ""
+        "vl_ES": "",
+        "fr_BL": ""
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
@@ -17,7 +18,8 @@
                 "pt_PT": "Modo de luz",
                 "pt_BR": "Modo de luz",
                 "vl_ES": "Mode clar",
-                "ca_ES": "Mode clar"
+                "ca_ES": "Mode clar",
+                "fr_BL": "mode claire "
             },
             "dispo": true,
             "tipo": "radio"
@@ -30,7 +32,8 @@
                 "pt_PT": "Easter Eggs",
                 "pt_BR": "Easter Eggs",
                 "vl_ES": "Easter Eggs",
-                "ca_ES": "Easter Eggs"
+                "ca_ES": "Easter Eggs",
+                "fr_BL": "Easter Eggs"
             },
             "dispo": true,
             "tipo": "radio"
@@ -43,7 +46,8 @@
                 "pt_PT": "Modo de programador",
                 "pt_BR": "Modo de desenvolvedor",
                 "vl_ES": "Mode desenvolupador",
-                "ca_ES": "Mode desenvolupador"
+                "ca_ES": "Mode desenvolupador",
+                "fr_BL": "mode développeur"
             },
             "dispo": true,
             "tipo": "radio"
@@ -58,7 +62,8 @@
                 "pt_BR": "Idioma",
                 "en_GB": "Language",
                 "vl_ES": "Idioma",
-                "ca_ES": "Idioma"
+                "ca_ES": "Idioma",
+                "fr_BL": "Langue"
             },
             "options": [
                 {
@@ -126,6 +131,12 @@
                     "value": "fr_FR",
                     "flag": "https://gacarbla.github.io/media/flags/fr_FR.png",
                     "enabled": false
+                },
+                {
+                    "name": "Français (Belgique)",
+                    "value": "fr_BL",
+                    "flag": "https://gacarbla.github.io/media/flags/fr_BL.png",
+                    "enabled": true
                 }
             ]
         }

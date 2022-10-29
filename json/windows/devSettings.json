@@ -5,7 +5,8 @@
         "en_GB": "Here you will have multiple useful tools to explore the code of the page and activate all its functions as a web developer.",
         "pt_PT": "Aqui você terá várias ferramentas úteis para explorar o código da página e ativar todas as suas funções como desenvolvedor web.",
         "vl_ES": "Ací disposaras de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seues funcions com desenvolupador web.",
-        "ca_ES": "Aquí disposarás de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seves funcions com a desenvolupador web."
+        "ca_ES": "Aquí disposarás de múltiples ferramentes útils per a explorar el codi de la pàgina i activar totes les seves funcions com a desenvolupador web.",
+        "fr_BL": "Ici, vous aurez plusieurs outils utiles pour explorer le code de la page et activer toutes ses fonctions en tant que développeur Web."
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
@@ -17,7 +18,8 @@
                 "pt_PT": "Habilitar seleção",
                 "pt_BR": "Habilitar seleção",
                 "vl_ES": "Habilitar selecció",
-                "ca_ES": "Habilitar selecció"
+                "ca_ES": "Habilitar selecció",
+                "fr_BL": "Sctiver la sélection"
             },
             "dispo": true,
             "tipo": "radio"
@@ -30,7 +32,8 @@
                 "en_GB": "Enable right click",
                 "pt_BR": "Ativar clique direito",
                 "vl_ES": "Habilitar clic dret",
-                "ca_ES": "Habilitar clic dret"
+                "ca_ES": "Habilitar clic dret",
+                "fr_BL": "Activer le clic droit"
             },
             "dispo": true,
             "tipo": "radio"
@@ -43,7 +46,8 @@
                 "pt_PT": "Guia de comando",
                 "pt_BR": "Guia de comando",
                 "vl_ES": "Guia de comandos",
-                "ca_ES": "Guia de comandos"
+                "ca_ES": "Guia de comandos",
+                "fr_BL": "Guide de commande"
             },
             "dispo": false,
             "tipo": "button"
