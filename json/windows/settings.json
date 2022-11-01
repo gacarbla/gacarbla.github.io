@@ -19,7 +19,7 @@
                 "pt_BR": "Modo de luz",
                 "vl_ES": "Mode clar",
                 "ca_ES": "Mode clar",
-                "fr_BL": "mode claire "
+                "fr_BL": "Mode claire "
             },
             "dispo": true,
             "tipo": "radio"
@@ -47,7 +47,7 @@
                 "pt_BR": "Modo de desenvolvedor",
                 "vl_ES": "Mode desenvolupador",
                 "ca_ES": "Mode desenvolupador",
-                "fr_BL": "mode développeur"
+                "fr_BL": "Mode développeur"
             },
             "dispo": true,
             "tipo": "radio"

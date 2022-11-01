@@ -69,7 +69,7 @@ function start() {
     const time = document.getElementById("time")
     const formato = document.getElementById("formato")
     const now = new Date(Date.now())
-    time.value = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}T${now.getHours()>9?now.getHours():`0${now.getHours()}`}:${now.getMinutes()>9?now.getMinutes():`0${now.getMinutes()}`}`;
+    time.value = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()>9?`${now.getDate()}`:`0${now.getDate()}`}T${now.getHours()>9?now.getHours():`0${now.getHours()}`}:${now.getMinutes()>9?now.getMinutes():`0${now.getMinutes()}`}`;
     formato.value = "t";
     formato.addEventListener('change', function () {
         timeFormatVariable = this.options[formato.selectedIndex].value;
@@ -78,7 +78,7 @@ function start() {
     output.addEventListener("click", copy)
     setInterval(function () {
         recalcular()
-    }, 75)
+    }, 150)
 }
 
 function copy() {
