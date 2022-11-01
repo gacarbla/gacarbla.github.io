@@ -1,0 +1,227 @@
+:root {
+    --claro: #424549;
+    --oscuro: #1e2124;
+}
+
+.content {
+    padding: 20px;
+    background-color: var(--claro);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+div.time {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    align-self: center;
+}
+
+div.select {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    width: 280px;
+    height: 50px;
+    padding-top: 22.5px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+div.select label {
+    width: 100%;
+}
+
+div.select label p {
+    color: #fff;
+    margin: 0px;
+    position: relative;
+    left: 15px;
+    top: -5px;
+}
+
+div.select input,
+div.select textarea,
+select {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: var(--oscuro);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    resize: none;
+}
+
+div.result {
+    width: 700px;
+    left: 20px;
+    top: -25px;
+    position: relative;
+    margin: 50px;
+    height: 200px;
+    filter: drop-shadow(4px 4px 12px #000);
+    border-radius: 20px;
+}
+
+div.result textarea {
+    width: 100%;
+    resize: none;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Arial;
+    font-size: 20px;
+    height: 40px;
+    padding-top: 7px;
+    outline: none;
+    border: none;
+    background-color: #2F3136;
+    color: #fff
+}
+
+div.preview div.userprofile {
+    position: relative;
+}
+
+div.userprofile div.foto {
+    position: relative;
+    top: 0px;
+}
+
+div.userprofile div.name {
+    position: relative;
+    top: -2.5px;
+    left: 90px;
+}
+
+div.foto>img {
+    position: absolute;
+    top: 5px;
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+}
+
+div.name>p {
+    color: #F4F4F4;
+    font-weight: bold;
+    font-size: 27px;
+    margin: 0px;
+    top: 8px;
+    position: absolute;
+}
+
+div.preview {
+    padding: 20px;
+    height: 150px;
+    top: 20px;
+    left: 25px;
+    position: relative;
+    background-color: var(--claro);
+    border-radius: 20px;
+}
+
+div.preview>div.text {
+    position: relative;
+    left: 90px;
+    top: 45px;
+}
+
+div.preview>div.text p {
+    position: absolute;
+    color: #F4F4F4;
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0px;
+}
+
+div.preview>div.text p>span.timestamp {
+    padding: 2px;
+    background-color: var(--oscuro);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+div.preview>div.text p>span.bold {
+    font-weight: bold;
+}
+
+div.preview>div.text p>span.italic {
+    font-style: italic;
+}
+
+div.content p.section {
+    color: #fff;
+    font-size: 25px;
+    opacity: .5;
+    margin: 20px;
+    align-self: center;
+}
+
+div.content hr {
+    width: 90%;
+    color: #fff5;
+    box-shadow: 0px 0px 2px #fff5;
+}
+
+div.emoji {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-self: center;
+    gap: 20px;
+    width: calc( 60% - 40px);
+}
+
+div.emoji div.entry {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+div.emoji .resultado {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+
+div.emoji img {
+    align-self: center;
+    width: 180px;
+    height: 180px;
+}
+
+div.emoji input {
+    background-color: var(--oscuro);
+    border: none;
+    border-radius: 7.5px 0px 0px 7.5px;
+    outline: none;
+    color: #fff;
+    height: 50px;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+}
+
+div.emoji button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #5865f2;
+    border-radius: 0px 7.5px 7.5px 0px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+div.emoji button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
