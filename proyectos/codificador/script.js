@@ -9,7 +9,11 @@ var modoVariable
 
 function start() {
     document.getElementById("textoEntrada").value = ""
-    document.getElementById("correr").value = "0"
+    if(read("correr")==undefined || read("correr")==""){
+        document.getElementById("correr").value = "0"
+    } else {
+        document.getElementById("correr").value = read("correr")
+    }
     limpiar()
     printLog("Iniciando código...", "info")
     try {
@@ -43,7 +47,6 @@ function start() {
         }
         clave.addEventListener("input", codificar)
         const correr = document.getElementById("correr")
-        correr.value = ""
         correr.addEventListener("input", codificar)
         const logsButton = document.getElementById("logsbtn")
         logsButton.addEventListener("click", function () {
