@@ -36,7 +36,11 @@ function start() {
         const copyText = document.getElementById("copyText")
         copyText.addEventListener("click", copy)
         const clave = document.getElementById("clave")
-        clave.value = ""
+        if(read("pssw")==undefined || read("pssw")==""){
+            clave.value = ""
+        } else {
+            clave.value = read("pssw")
+        }
         clave.addEventListener("input", codificar)
         const correr = document.getElementById("correr")
         correr.value = ""
@@ -237,3 +241,13 @@ function go(page, newTabBoolean) {
         window.location = `${page}`
     }
 }
+
+function read(value) {
+    if (!window.location.href.split("?")[1]) return
+    const values = window.location.href.split("?")[1].split(/;+/g)
+    var devolver = ""
+    values.forEach(element => {
+      if (element.split("=")[0] == value) devolver = element.split("=")[1]
+    })
+    return devolver
+  }
