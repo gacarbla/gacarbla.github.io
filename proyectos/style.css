@@ -1,0 +1,92 @@
+
+  .oscuro {
+    --titulo: #fff;
+    --texto: #fff;
+    --body-background-1: #010319;
+    --body-background-2: #000000;
+  }
+  .claro { 
+    --titulo: #000;
+    --texto: #fff;
+    --body-background-1: #165054;
+    --body-background-2: #fff;
+  }
+  #listaDeProyectosText {
+    position: absolute;
+    top: 0px;
+    left: calc( 50vw - 180px);
+    width: 300px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--titulo)
+  }
+  body {
+    padding-left: 20px;
+    color: var(--texto);
+    background-color: var(--body-background-2);
+    height: 20px;
+  }
+  .content ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    right: 80px;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  .content ul > li {
+    display: flex;
+    flex-direction: row;
+    display: 20px;
+    background-color: var(--body-background-1);
+    border-radius: 20px;
+    width: 100%;
+    gap: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .content ul > li > p {
+    text-transform: uppercase;
+    width: calc(100% - 130px);
+  }
+  .content ul > li.disabled {
+    opacity: .075;
+    filter: blur(2px);
+    cursor: default;
+  }
+  .content ul > li.disabled:hover {
+    opacity: .15;
+    cursor: default;
+    filter: blur(1.5px);
+    transform: scale(0.99);
+  }
+  .content ul > li.disabled:hover > div.image > img{
+    transform: scale(1.05);
+  }
+  .content ul > li > div.image {
+    overflow: hidden;
+    border-radius: 20px 0px 0px 20px;
+    height: 100px;
+    width: 100px;
+  }
+  .content ul > li > div.image > img {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    object-fit:cover;
+    transition: all 0.3s;
+  }
+  .content ul > li:hover:not(.disabled) > div.image > img {
+    transform: scale(1.1);
+  }

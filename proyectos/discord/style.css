@@ -24,7 +24,6 @@ div.select {
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
-    width: 280px;
     height: 50px;
     padding-top: 22.5px;
     position: relative;
@@ -60,33 +59,20 @@ select {
 }
 
 div.result {
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
     left: 20px;
     top: -25px;
     position: relative;
-    margin: 50px;
-    height: 200px;
-    filter: drop-shadow(4px 4px 12px #000);
-    border-radius: 20px;
-}
-
-div.result textarea {
-    width: 100%;
-    resize: none;
-    text-align: center;
-    border-radius: 20px;
-    font-family: Arial;
-    font-size: 20px;
-    height: 40px;
-    padding-top: 7px;
-    outline: none;
-    border: none;
-    background-color: #2F3136;
-    color: #fff
+    height: 100%;
+    transform: scale(.8);
 }
 
 div.preview div.userprofile {
     position: relative;
+    height: 6.8vw;
 }
 
 div.userprofile div.foto {
@@ -97,47 +83,51 @@ div.userprofile div.foto {
 div.userprofile div.name {
     position: relative;
     top: -2.5px;
-    left: 90px;
+    left: 8vw;
 }
 
 div.foto>img {
     position: absolute;
-    top: 5px;
-    height: 75px;
-    width: 75px;
+    top: 0.8vw;
+    height: 6.8vw;
+    width: 6.8vw;
     border-radius: 100%;
 }
 
 div.name>p {
     color: #F4F4F4;
     font-weight: bold;
-    font-size: 27px;
+    font-size: 2.4vw;
     margin: 0px;
-    top: 8px;
-    position: absolute;
+    top: 0.8vw;
+    position: relative;
 }
 
 div.preview {
-    padding: 20px;
-    height: 150px;
+    display: flex;
+    padding: 20px 15px;
+    padding-bottom: 6vw;
     top: 20px;
-    left: 25px;
+    left: 2.5px;
     position: relative;
     background-color: var(--claro);
+    border-radius: 20px;
+    filter: drop-shadow(4px 4px 12px #000);
     border-radius: 20px;
 }
 
 div.preview>div.text {
     position: relative;
-    left: 90px;
-    top: 45px;
+    left: -0.8vw;
+    top: 4vw;
+    width: calc( 100% - 85px);
 }
 
 div.preview>div.text p {
     position: absolute;
     color: #F4F4F4;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 1.75vw;
+    line-height: 2.5vw;
     margin: 0px;
 }
 
@@ -224,4 +214,64 @@ div.emoji button {
 div.emoji button:disabled {
     opacity: .5;
     cursor: not-allowed;
+}
+
+
+@media only screen and (max-width: 799px) {
+    div.time {
+        flex-direction: column;
+        height: 75vmax;
+    }
+    div.result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+        left: 0px;
+        top: 20vmin;
+        position: relative;
+        height: 100%;
+        transform: scale(1);
+    }
+
+    div.userprofile div.name {
+        position: relative;
+        top: -2.5px;
+        left: 8vw;
+    }
+    
+    div.foto>img {
+        position: absolute;
+        top: 0.8vw;
+        height: 6.8vw;
+        width: 6.8vw;
+        border-radius: 100%;
+    }
+    
+    div.name>p {
+        color: #F4F4F4;
+        font-weight: bold;
+        font-size: 2.4vw;
+        margin: 0px;
+        top: 0.8vw;
+        position: relative;
+    }
+    
+    div.preview {
+        padding-bottom: 6vw;
+        height: 30vw;
+    }
+    
+    div.preview>div.text {
+        width: calc( 100% - 5vw);
+    }
+    
+    div.preview>div.text p {
+        font-size: 3vw;
+        line-height: 4.7vw;
+    }
+    div .emoji {
+        width: 80vw;
+        left: 0px;
+    }
 }
