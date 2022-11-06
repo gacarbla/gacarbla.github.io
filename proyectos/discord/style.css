@@ -275,3 +275,56 @@ div.emoji button:disabled {
         left: 0px;
     }
 }
+
+@media only screen and (min-width: 1399px) {
+    div.userprofile div.name {
+        position: relative;
+        top: -2.5px;
+        left: 120px;
+    }
+    
+    div.foto>img {
+        position: absolute;
+        top: 10px;
+        height: 94px;
+        width: 94px;
+        border-radius: 100%;
+    }
+    
+    div.name>p {
+        color: #F4F4F4;
+        font-weight: bold;
+        font-size: 35px;
+        margin: 0px;
+        top: 10px;
+        position: relative;
+    }
+    
+    div.preview {
+        display: flex;
+        padding: 20px 15px;
+        padding-bottom: 70px;
+        top: 20px;
+        left: 2.5px;
+        position: relative;
+        background-color: var(--claro);
+        border-radius: 20px;
+        filter: drop-shadow(4px 4px 12px #000);
+        border-radius: 20px;
+    }
+    
+    div.preview>div.text {
+        position: relative;
+        left: -8px;
+        top: 55px;
+        width: calc( 100% - 85px);
+    }
+    
+    div.preview>div.text p {
+        position: absolute;
+        color: #F4F4F4;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0px;
+    }
+}

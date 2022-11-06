@@ -88,7 +88,6 @@ function start() {
     setInterval(function () {
         recalcular()
     }, 150)
-    window.alert("Versión para teléfono no disponible")
 }
 
 function copy() {
