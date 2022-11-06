@@ -341,6 +341,15 @@ function load() {
 
 /* ELEMENTAL FUNCTIONS */
 
+function debug() {
+  if(window.prompt("Introduzca \"CONFIRMAR\" para declarar que es consciente de que los datos serán reiniciados y no será posible recuperarlos.").toLowerCase() == "confirmar"){
+    data.reset()
+    window.location.reload()
+  } else {
+    window.alert("La operación fue cancelada dado que la clave de activación no era correcta.")
+  }
+}
+
 async function require(url, canonical) {
   var response = await fetch(`${canonical ? `${document.querySelector("link[rel='canonical']").getAttribute("href")}${url}` : `${url}`}`);
   if (window.location.href.startsWith("http://127.0.0.1:8080/")) response = await fetch(`${canonical ? `http://127.0.0.1:8080/${url}` : `${url}`}`);
