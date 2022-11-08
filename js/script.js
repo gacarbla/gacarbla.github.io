@@ -331,6 +331,9 @@ function load() {
   }
   language()
   setTimeout(function () {
+    if(!window.confirm("La página se encuentra en mantenimiento.\n¿Desea acceder aunque pueda encontrarse múltiples fallos de diseño y/o funcionamiento?")) {
+      go("https://google.com")
+    }
     unlock()
   }, 750)
 }
