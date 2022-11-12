@@ -302,6 +302,12 @@ function load() {
     for (var x = 0; x < queris.length; x++) if (queris[x].startsWith("lang")) queris.splice(x, 1)
     window.location = `${window.location.href.split("?")[0]}${queris.length > 0 ? `?${queris.join(";")}` : ""}`
   }
+  if (read("color")) {
+    data.establecer("colorMode", read("color"))
+    queris = window.location.href.split("?")[1].split(/;+/g)
+    for (var x = 0; x < queris.length; x++) if (queris[x].startsWith("color")) queris.splice(x, 1)
+    window.location = `${window.location.href.split("?")[0]}${queris.length > 0 ? `?${queris.join(";")}` : ""}`
+  }
   lang = data.obtener("idioma")
 
   data.iniciar();
@@ -319,11 +325,8 @@ function load() {
     document.getElementById("body").ondragstart = function () { }
     document.getElementById("body").onselectstart = function () { }
   }
-  if (data.obtener("colorMode") == "claro") {
-    document.getElementById("body").className = "claro"
-  }
-  if (data.obtener("colorMode") == "negro") {
-    document.getElementById("body").className = "negro"
+  if (data.obtener("colorMode") !== "") {
+    document.getElementById("body").className = data.obtener("colorMode")
   }
   refreshNavigationBar();
   window.onresize = function () {
