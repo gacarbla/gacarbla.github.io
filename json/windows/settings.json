@@ -10,7 +10,7 @@
     },
     "campos": "<div class=\"ajuste\"><label for=\"%%id%%\"><p class=\"etiqueta izquierda\">%%text%%</p>%%campo%%</label></div>",
     "textos": {
-        "modoColorCheck": {
+        "modoColorSelector": {
             "text": {
                 "es_ES": "Modo claro",
                 "gl_ES": "Modo claro",
@@ -19,10 +19,18 @@
                 "pt_BR": "Modo de luz",
                 "vl_ES": "Mode clar",
                 "ca_ES": "Mode clar",
-                "fr_BL": "Mode claire "
+                "fr_BL": "Mode claire"
             },
             "dispo": true,
-            "tipo": "radio"
+            "tipo": "select",
+            "options": [
+                {
+                    "name": "",
+                    "value": "negro",
+                    "flag": "https://gacarbla.github.io/media/flags/es_ES.png",
+                    "enabled": true
+                }
+            ]
         },
         "easterEggCheck": {
             "text": {

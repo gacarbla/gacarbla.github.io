@@ -89,7 +89,7 @@
           "ca_ES": "Codificador simple de textos",
           "fr_BL": "Encodeur de texte simple"
         },
-        "disabled": false
+        "disabled": true
     },
     "5": {
         "name": {
@@ -141,7 +141,7 @@
           "ca_ES": "Llista completa de projectes",
           "fr_BL": "Liste complète des projets"
         },
-        "disabled": false
+        "disabled": true
     },
     "7": {
         "name": {
@@ -390,7 +390,7 @@
           "ca_ES": "Modifica l'aspecte de la pàgina al teu gust",
           "fr_BL": "Modifiez l'aspet de la page à votre convenance."
         },
-        "disabled": false
+        "disabled": true
     },
     "20": {
         "name": {
@@ -416,7 +416,7 @@
           "ca_ES": "Ferramentas avançadas de desenvolvedores",
           "fr_BL": "Outils de développement avancés"
         },
-        "disabled": false,
+        "disabled": true,
         "hidden": "devModeStatus"
     },
     "21": {

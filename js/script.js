@@ -74,7 +74,7 @@ const data = {
   reset() {
     localStorage.clear();
     this.iniciar();
-    document.getElementById("body").className = "oscuro"
+    document.getElementById("body").className = "negro"
     document.oncontextmenu = function () { return false }
     refreshNavigationBar();
   },
@@ -185,11 +185,11 @@ const windows = {
         if (modoColor.checked) {
           data.establecer("colorMode", "claro", "dataAjustes")
           document.getElementById("body").classList.add("claro")
-          document.getElementById("body").classList.remove("oscuro")
+          document.getElementById("body").classList.remove("negro")
         } else {
-          data.establecer("colorMode", "oscuro", "dataAjustes")
+          data.establecer("colorMode", "negro", "dataAjustes")
           document.getElementById("body").classList.remove("claro")
-          document.getElementById("body").classList.add("oscuro")
+          document.getElementById("body").classList.add("negro")
         }
       })
       const modoDev = document.getElementById("devModeCheck")
@@ -322,8 +322,8 @@ function load() {
   if (data.obtener("colorMode") == "claro") {
     document.getElementById("body").className = "claro"
   }
-  if (data.obtener("colorMode") == "oscuro") {
-    document.getElementById("body").className = "oscuro"
+  if (data.obtener("colorMode") == "negro") {
+    document.getElementById("body").className = "negro"
   }
   refreshNavigationBar();
   window.onresize = function () {

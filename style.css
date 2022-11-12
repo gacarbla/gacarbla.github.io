@@ -1,3 +1,170 @@
+.negro {
+    --title-color: #fff;
+    --header-background: rgba(255, 255, 255, .5);
+    --header-background-solid: rgba(31, 31, 31);
+    --nav-color: rgb(31,31,31);
+    --nav-sep: rgba(255, 255, 255);
+    --nav-hover: #fff;
+}
+
+.blanco {
+    --title-color: #050505;
+    --header-background: #050505;
+    --header-background-solid: #050505;
+    --nav-color: #fff;
+    --nav-sep: #050505;
+    --nav-hover: #050505;
+}
+
+.amarillo {
+    --title-color: #050505;
+    --header-background: #050505;
+    --header-background-solid: #050505;
+    --nav-color: #fff;
+    --nav-sep: #050505;
+    --nav-hover: #050505;
+}
+
+.azul {
+    --title-color: #050505;
+    --header-background: #050505;
+    --header-background-solid: #050505;
+    --nav-color: #fff;
+    --nav-sep: #050505;
+    --nav-hover: #050505;
+}
+
+.rosa {
+    --title-color: #fff;
+    --header-background: rgba(255, 145, 175, 0.48);
+    --header-background-solid: rgba(255, 145, 175);
+    --nav-color: #fff;
+    --nav-sep: #fff;
+    --nav-hover: #fff;
+}
+
+.rojo {
+    --title-color: #050505;
+    --header-background: #050505;
+    --header-background-solid: #050505;
+    --nav-color: #fff;
+    --nav-sep: #050505;
+    --nav-hover: #050505;
+}
+
+.verde {
+    --title-color: #050505;
+    --header-background: #050505;
+    --header-background-solid: #050505;
+    --nav-color: #fff;
+    --nav-sep: #050505;
+    --nav-hover: #050505;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #343a40;
+}
+
+body.negro {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #000000);
+}
+
+body.amarillo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='black' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #726711, #dfc925);
+}
+
+body.rosa {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='pink' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #a32949, #cc6681);
+}
+
+body.rojo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='white' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #a02f31, #cf0003);
+}
+
+body.blanco {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='grey' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #fafafa, #eaeaea);
+}
+
+body.verde {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='black' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #2d9c4f, #218840);
+}
+
+body.azul {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='147' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='grey' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #3f4588, #1a216b);
+}
+
+#inicio {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 70px;
+}
+
+#inicio>p {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0px;
+    color: var(--title-color)
+}
+
+#inicio>div {
+    margin: 0px 30px;
+}
+
+#inicio button {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#inicio button>svg {
+    stroke: #1f1f1f;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    stroke-width: 1.5;
+    height: 40px;
+    width: 40px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 25px 75px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#menu div.caja {
+    scroll-snap-align: start;
+    box-shadow: 0px 0px 22px 0px #0005;
+    background-color: #2e2e2e;
+    border-radius: 20px;
+    border: none;
+    min-width: 350px;
+    width: 350px;
+    height: 400px;
+}
+
+#menu div.caja:nth-child(3) {
+    min-width: 600px;
+    max-width: 600px;
+}
+
+#menu div.caja div.subcaja {
+    background-color: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,34 +177,21 @@
     -ms-user-select: auto;
 }
 
-.negro {
-    --header-background: #1f1f1f;
-    --nav-color: #fff;
-    --nav-hover: #1083D6;
-}
-
-.blanco {
-    /* REPASAR */
-    --header-background: #1f1f1f;
-    --nav-color: #fff;
-}
-
-.rosa {
-    --header-background: #ff91af;
-    --nav-color: #fff;
-    --nav-hover: #000;
-}
-
 header {
-    background-color: var(--header-background);
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    right: 60px;
     transition: all 0.3s;
     display: flex;
-    flex-direction: column;
-    z-index: 700;
+    padding: 5px;
+    height: 140px;
 }
 
 body {
@@ -54,14 +208,15 @@ body {
 
 div.content {
     position: relative;
-    left: 60px;
-    width: calc(100vw - 60px);
+    left: 0px;
+    width: 100vw;
     z-index: 0;
     font-family: Arial;
     padding: 0px;
 }
 
 header .btn {
+    visibility: hidden;
     height: 40px;
     width: 40px;
     position: fixed;
@@ -80,16 +235,20 @@ header .btn svg {
     background-color: transparent;
     border-radius: 5px;
     padding: 5px;
+    gap: 5px;
+    visibility: hidden;
 }
 
 div.menu {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     height: 100%;
+    width: 100%;
+    padding: 30px 20px;
 }
 
 @media only screen and (max-width: 799px) {
@@ -149,16 +308,27 @@ div.menu {
     }
 }
 
+
+
 /* PÁGINAS DE MENÚ */
 
-div.menu div.pagina {
+div.menu > div.pagina {
     scroll-snap-align: start;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     cursor: pointer;
     height: 45px;
     animation: goIn 0.5s linear;
+    min-width: 150px;
+    border-radius: 50px;
+    background-color: var(--header-background);
+    height: 100%;
+    transition: all 0.3s;
+}
+
+div.menu > div.pagina:hover:not(.disabled) {
+    transform: translateY(-5px);
 }
 
 div.menu div.pagina.disabled {
@@ -180,27 +350,13 @@ header div.menu div.pagina div.vector svg {
     transition: all 0.2s;
 }
 
-header div.menu div.pagina:hover div.vector svg {
-    border-radius: 5px;
-    stroke: var(--nav-hover);
-    background-color: transparent;
-}
-
 header div.menu div.pagina div.nombre p {
     text-transform: uppercase;
     color: var(--nav-color);
     font-family: monospace;
     font-weight: bold;
-    font-size: 0px;
+    font-size: 13px;
     transition: all 0.3s;
-}
-
-header div.menu div.pagina:hover div.nombre p {
-    color: var(--nav-hover);
-}
-
-header:hover div.menu div.pagina div.nombre p {
-    font-size: 18px;
     margin: 0px 10px;
 }
 
@@ -244,15 +400,16 @@ div.menu div.separador {
     flex-direction: row;
     align-items: center;
     cursor: default;
-    height: 50px;
+    height: 100%;
     opacity: .5;
+    min-width: 80px;
 }
 
 header div.menu div.separador div.vector svg {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     fill: none;
-    stroke: var(--nav-color);
+    stroke: var(--nav-hover);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
@@ -260,38 +417,43 @@ header div.menu div.separador div.vector svg {
     padding: 7.5px;
     transform: translateY(10px);
     transition: all 0.3s;
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    z-index: 795;
 }
 
 header div.menu div.separador div.nombre p {
     text-transform: uppercase;
-    color: var(--nav-color);
+    color: #0000;
+    color: var(--nav-sep);
     font-family: monospace;
     font-weight: bold;
-    font-size: 0px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    transform: translateY(10px);
+    font-size: 15px;
+    align-self: center;
+    height: 120px;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 22.5px;
+    transform: translateY(10px) rotateZ(180deg);
     transition: all 0.3s;
-}
-
-header:hover div.menu div.separador div.nombre p {
-    font-size: 14px;
+    writing-mode: vertical-lr;
+    height: 100px;
+    text-align: center;
 }
 
 div.menu div.separador div.line {
     position: absolute;
-    background-color: var(--header-background);
     left: 0px;
+    top: 0px;
     bottom: 0px;
-    width: 100%;
-    border-top: 1px solid var(--nav-color);
+    width: 0px;
+    border-left: 3px solid var(--nav-sep);
     transition: all 0.3s;
-    height: 50%;
-}
-
-header:hover div.menu div.separador div.line {
-    bottom: 0px;
-    height: 0px;
+    height: 100%;
+    z-index: 790;
+    border-radius: 2px;
 }
 
 @media only screen and (max-width: 799px) {
@@ -322,6 +484,8 @@ header:hover div.menu div.separador div.line {
 /* FOOTER */
 
 footer {
+    position: absolute;
+    visibility: hidden;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -906,7 +1070,6 @@ div#langSelector.ajuste>svg {
 #langSelector_list p {
     margin: 0px;
 }
-
 div#modoColorSelector.ajuste {
     position: relative;
 }
