@@ -178,17 +178,15 @@ const windows = {
     },
     start() {
       const modoColor = document.getElementById("modoColorCheck")
-      if (document.getElementById("body").classList.contains("claro")) {
+      if (document.getElementById("body").classList.contains("blanco")) {
         modoColor.checked = true
       }
       modoColor.addEventListener("change", function () {
+        document.getElementById("body").classList.remove(data.obtener("colorMode"))
         if (modoColor.checked) {
-          data.establecer("colorMode", "claro", "dataAjustes")
-          document.getElementById("body").classList.add("claro")
-          document.getElementById("body").classList.remove("negro")
+          data.establecer("colorMode", "blanco", "dataAjustes")
+          document.getElementById("body").classList.add("blanco")
         } else {
-          data.establecer("colorMode", "negro", "dataAjustes")
-          document.getElementById("body").classList.remove("claro")
           document.getElementById("body").classList.add("negro")
         }
       })
@@ -401,17 +399,25 @@ async function showlist(id) {
     var options = []
     var finalList = []
     listaArray.forEach(option => {
-      options.push(`<li id=\"${id}_lang_${option.value}\" ${option.enabled ? "" : "class=\"disabled\""}>${option.flag ? `<img src=\"${option.flag}\">` : ""}${option.name ? `<p>${option.name}</p>` : ""}</li>`)
+      options.push(`<li id=\"${id}_opt_${option.value}\" ${option.enabled ? "" : "class=\"disabled\""}>${option.flag ? `<img src=\"${option.flag}\">` : ""}${option.name ? `<p>${option.name}</p>` : ""}</li>`)
       if (option.enabled) finalList.push(option)
     })
     document.getElementById(id).innerHTML = `${document.getElementById(id).innerHTML}<ul id=\"${id}_list\">%%options%%</ul>`.replace("%%options%%", options.join(""))
     finalList.forEach(option => {
-      document.getElementById(`${id}_lang_${option.value}`).addEventListener("click", function () {
-        data.establecer("idioma", option.value)
-        lang = option.value
-        refreshNavigationBar()
-        language()
-      })
+      if (id == "langSelector") {
+        document.getElementById(`${id}_opt_${option.value}`).addEventListener("click", function () {
+          data.establecer("idioma", option.value)
+          lang = option.value
+          refreshNavigationBar()
+          language()
+        })
+      } else if (id=="modoColorSelector") {
+        document.getElementById(`${id}_opt_${option.value}`).addEventListener("click", function () {
+          document.getElementById("body").classList.remove(data.obtener("colorMode"))
+          data.establecer("colorMode", option.value)
+          document.getElementById("body").classList.add(option.value)
+        })
+      }
     })
   }
 }

@@ -14,18 +14,91 @@
     --header-background: #1f1f1f;
     --nav-color: #fff;
     --nav-hover: #1083D6;
+    --win-pagina-fondo: #0009;
+    --win-fondo: #000000;
+    --win-sombra: #0002;
+    --win-svg-cerrar-fondo: #000;
+    --win-svg-cerrar-linea: #fff;
+    --win-texto-color: #fff;
+    --win-titulo-color: #fff;
 }
 
 .blanco {
-    /* REPASAR */
+    --header-background: #f5f5f5;
+    --nav-color: #000;
+    --nav-hover: #1083D6;
+    --win-pagina-fondo: #fff3;
+    --win-fondo: #f5f5f5;
+    --win-sombra: #0002;
+    --win-svg-cerrar-fondo: #f5f5f5;
+    --win-svg-cerrar-linea: #000;
+    --win-texto-color: #000;
+    --win-titulo-color: #000;
+}
+
+.azul {
+    --header-background: #5865f2;
+    --nav-color: #fff;
+    --nav-hover: #000;
+    --win-pagina-fondo: #09090c77;
+    --win-fondo: #5865f2;
+    --win-sombra: #0002;
+    --win-svg-cerrar-fondo: #5865f2;
+    --win-svg-cerrar-linea: #fff;
+    --win-texto-color: #fff;
+    --win-titulo-color: #fff;
+}
+
+.amarillo {
+    --header-background: #fee528;
+    --nav-color: #000;
+    --nav-hover: #1083D6;
+    --win-pagina-fondo: #0009;
+    --win-fondo: #fee528;
+    --win-sombra: #fee52810;
+    --win-svg-cerrar-fondo: #000;
+    --win-svg-cerrar-linea: #fee528;
+    --win-texto-color: #000;
+    --win-titulo-color: #000;
+}
+
+.rojo {
+    --header-background: #ed4245;
+    --nav-color: #fff;
+    --nav-hover: #000;
+    --win-pagina-fondo: #0009;
+    --win-fondo: #ed4245;
+    --win-sombra: #ed424510;
+    --win-svg-cerrar-fondo: #ed4245;
+    --win-svg-cerrar-linea: #fff;
+    --win-texto-color: #fff;
+    --win-titulo-color: #fff;
+}
+
+.verde {
     --header-background: #1f1f1f;
     --nav-color: #fff;
+    --nav-hover: #1083D6;
+    --win-pagina-fondo: #0009;
+    --win-fondo: #000000;
+    --win-sombra: #0002;
+    --win-svg-cerrar-fondo: #000;
+    --win-svg-cerrar-linea: #fff;
+    --win-texto-color: #fff;
+    --win-titulo-color: #fff;
 }
 
 .rosa {
     --header-background: #ff91af;
-    --nav-color: #fff;
+    --nav-color: #000;
     --nav-hover: #000;
+    --win-pagina-fondo: #0009;
+    --win-fondo: #ff91af;
+    --win-sombra: #ff91af10;
+    --win-svg-cerrar-fondo: #000;
+    --win-svg-cerrar-linea: #ff91af;
+    --win-texto-color: #000;
+    --win-titulo-color: #000;
 }
 
 header {
@@ -389,7 +462,7 @@ header:hover footer div.nombre p.s {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: var(--ventanas-pagina-fondo);
+    background-color: var(--win-pagina-fondo);
     position: fixed;
     z-index: 790;
     transition: all 0.3s;
@@ -401,8 +474,8 @@ header:hover footer div.nombre p.s {
     top: 10px;
     bottom: 10px;
     width: 320px;
-    background-color: var(--ventanas-fondo);
-    box-shadow: -10px 0px 10px var(--ventanas-sombra);
+    background-color: var(--win-fondo);
+    box-shadow: -10px 0px 10px var(--win-sombra);
     z-index: 800;
     transition: all 0.3s;
     border-radius: 20px;
@@ -418,11 +491,11 @@ header:hover footer div.nombre p.s {
     z-index: 850;
     width: 40px;
     height: 40px;
-    stroke: var(--ventanas-svg-cerrar-linea);
+    stroke: var(--win-svg-cerrar-linea);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    background-color: var(--ventanas-svg-cerrar-fondo);
+    background-color: var(--win-svg-cerrar-fondo);
     border-radius: 5px;
     padding: 5px;
 }
@@ -432,7 +505,7 @@ header:hover footer div.nombre p.s {
     font-family: monospace;
     width: 250px;
     height: 120px;
-    color: var(--ventanas-titulo-color)
+    color: var(--win-titulo-color)
 }
 
 #windows .window.lateral .title p {
@@ -452,7 +525,7 @@ header:hover footer div.nombre p.s {
     top: 120px;
     height: calc(100vh - 150px);
     padding: 20px;
-    color: var(--ventanas-texto-color);
+    color: var(--win-texto-color);
     font-family: Arial;
 }
 
@@ -509,7 +582,7 @@ header:hover footer div.nombre p.s {
 @media only screen and (max-width: 799px) {
     #windows .window.lateral {
         width: calc(100vw - 20px);
-        background-color: var(--ventanas-fondo);
+        background-color: var(--win-fondo);
         box-shadow: none;
         bottom: 0px;
         top: 100px;
@@ -534,7 +607,7 @@ header:hover footer div.nombre p.s {
         width: 250px;
         height: 120px;
         left: calc(50vw - 160px);
-        color: var(--ventanas-titulo-color)
+        color: var(--win-titulo-color)
     }
 
     #windows .window.lateral .title p {
@@ -556,7 +629,7 @@ header:hover footer div.nombre p.s {
         height: calc(100vh - 150px);
         margin: 10px 0px;
         padding: 20px;
-        color: var(--ventanas-texto-color);
+        color: var(--win-texto-color);
         font-family: Arial;
     }
 }
@@ -683,7 +756,7 @@ header:hover footer div.nombre p.s {
 }
 
 #cookies .intro span {
-    color: var(--ventanas-enlaces-color);
+    color: var(--win-enlaces-color);
     font-weight: bold;
     cursor: pointer;
 }
@@ -692,8 +765,8 @@ header:hover footer div.nombre p.s {
     border-radius: 5px;
     position: absolute;
     outline: none;
-    border: 2px solid var(--ventanas-texto-color);
-    color: var(--ventanas-texto-color);
+    border: 2px solid var(--win-texto-color);
+    color: var(--win-texto-color);
     background-color: transparent;
     width: 250px;
     height: 30px;
@@ -704,8 +777,8 @@ header:hover footer div.nombre p.s {
 }
 
 #cookies .option button:hover {
-    border: 2px solid var(--ventanas-boton-hover-rojo);
-    color: var(--ventanas-boton-hover-rojo);
+    border: 2px solid var(--win-boton-hover-rojo);
+    color: var(--win-boton-hover-rojo);
 }
 
 #cookies .switch {
@@ -862,7 +935,7 @@ div#langSelector.ajuste>svg {
     flex-direction: column;
     top: 18px;
     height: 190px;
-    background-color: var(--ventanas-fondo);
+    background-color: var(--win-fondo);
     border: solid 2px;
     border-top: 0px;
     padding: 10px;
@@ -936,7 +1009,7 @@ div#modoColorSelector.ajuste>svg {
     flex-direction: column;
     top: 18px;
     height: 190px;
-    background-color: var(--ventanas-fondo);
+    background-color: var(--win-fondo);
     border: solid 2px;
     border-top: 0px;
     padding: 10px;
