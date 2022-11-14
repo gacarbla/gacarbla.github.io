@@ -319,6 +319,7 @@ div.menu {
     height: 100%;
     width: 100%;
     padding: 30px 20px;
+    scroll-behavior: smooth;
 }
 
 
@@ -369,7 +370,15 @@ header div.menu div.pagina div.nombre p {
     font-weight: bold;
     font-size: 13px;
     transition: all 0.3s;
-    margin: 0px 10px;
+    margin: -7.5px 12.5px;
+    height: 32px;
+    padding: 0px 0px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* SEPARADORES DE MENÚ */
@@ -1000,4 +1009,35 @@ div#modoColorSelector.ajuste>svg {
 
 #modoColorSelector_list p {
     margin: 0px;
+}
+
+section:not(#inicio) {
+    position: relative;
+    top: 160px;
+    width: calc(100vw - 120px);
+    right: 60px;
+    left: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+section .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+section .settings {
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    padding: 20px;
+}
+
+section .settings label{
+    display: flex;
+    flex-direction: row;
 }

@@ -187,6 +187,7 @@ const windows = {
           data.establecer("colorMode", "blanco", "dataAjustes")
           document.getElementById("body").classList.add("blanco")
         } else {
+          data.establecer("colorMode", "negro", "dataAjustes")
           document.getElementById("body").classList.add("negro")
         }
       })
