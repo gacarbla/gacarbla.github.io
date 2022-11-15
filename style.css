@@ -593,14 +593,6 @@ header:hover footer div.nombre p.s {
     margin: 0px;
 }
 
-@media only screen and (max-width: 799px){
-    
-}
-
-@media only screen and (max-width: 999px){
-    
-}
-
 /* VENTANAS */
 
 #windows .back {
@@ -1194,10 +1186,35 @@ section input:checked+.slider:before {
     transform: translateX(13px);
 }
 
-@media only screen and (max-width: 799px){
-    
+@media only screen and (max-width: 999px){
+    section:not(#inicio) {
+        position: absolute;
+        top: 280px;
+        width: calc(100vw - 60px);
+        right: 30px;
+        left: 30px;
+    }
+    section > .column.settings {
+        max-width: 100%;
+    }
+    section > .column .box label{
+        font-size: 15px;
+    }
 }
 
-@media only screen and (max-width: 999px){
-    
+@media only screen and (max-width: 799px){
+    section:not(#inicio) {
+        position: absolute;
+        top: 250px;
+        width: calc(100vw - 30px);
+        right: 15px;
+        left: 15px;
+        flex-direction: column;
+    }
+    section > .column.settings {
+        max-width: 100%;
+    }
+    section > .column .box label{
+        font-size: 18px;
+    }
 }
