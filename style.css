@@ -179,7 +179,7 @@ body.azul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px 70px;
+    padding: 10px 50px;
 }
 
 #inicio>p {
@@ -213,38 +213,46 @@ body.azul {
     width: 40px;
 }
 
-#menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 25px 75px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+@media only screen and (max-width: 999px){
+    #inicio {
+        height: 170px;
+        padding: 0px 30px;
+    }
+    #inicio>p {
+        font-size: 50px;
+    }
+    #inicio button {
+        height: 50px;
+        width: 50px;
+    }
+    #inicio button>svg {
+        height: 30px;
+        width: 30px;
+    }
 }
 
-#menu div.caja {
-    scroll-snap-align: start;
-    box-shadow: 0px 0px 22px 0px #0005;
-    background-color: #2e2e2e;
-    border-radius: 20px;
-    border: none;
-    min-width: 350px;
-    width: 350px;
-    height: 400px;
+@media only screen and (max-width: 799px){
+    #inicio {
+        height: 120px;
+        padding: 0px 20px;
+    }
+    #inicio>p {
+        font-size: 40px;
+    }
+    #inicio button {
+        height: 40px;
+        width: 40px;
+    }
+    #inicio button>svg {
+        height: 25px;
+        width: 25px;
+    }
 }
 
-#menu div.caja:nth-child(3) {
-    min-width: 600px;
-    max-width: 600px;
-}
-
-#menu div.caja div.subcaja {
-    background-color: #fff;
-}
 
 * {
     box-sizing: border-box;
+    transition: all 0.3;
 }
 
 .select {
@@ -318,6 +326,39 @@ div.menu {
     scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 999px){
+    header {
+        top: 150px;
+        left: 30px;
+        right: 30px;
+        padding: 0px;
+        height: 110px;
+    }
+    div.menu {
+        padding: 10px;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        padding: 20px 15px;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    header {
+        top: 120px;
+        left: 15px;
+        right: 15px;
+        padding: 0px;
+        height: 110px;
+    }
+    div.menu {
+        padding: 10px;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        padding: 15px 15px;
+    }
+}
 
 /* PÁGINAS DE MENÚ */
 
@@ -327,7 +368,6 @@ div.menu > div.pagina {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    height: 45px;
     animation: goIn 0.5s linear;
     min-width: 150px;
     border-radius: 50px;
@@ -377,6 +417,23 @@ header div.menu div.pagina div.nombre p {
     justify-content: center;
 }
 
+@media only screen and (max-width: 999px){
+    div.menu > div.pagina {
+        min-width: 120px;
+        border-radius: 35px;
+    }
+    header div.menu div.pagina div.nombre p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    div.menu > div.pagina {
+        min-width: 100px;
+        border-radius: 25px;
+    }
+}
+
 /* SEPARADORES DE MENÚ */
 
 div.menu div.separador {
@@ -418,7 +475,6 @@ header div.menu div.separador div.nombre p {
     font-weight: bold;
     font-size: 15px;
     align-self: center;
-    height: 120px;
     text-align: center;
     margin-left: 5px;
     margin-bottom: 22.5px;
@@ -440,6 +496,58 @@ div.menu div.separador div.line {
     height: 100%;
     z-index: 790;
     border-radius: 2px;
+}
+
+@media only screen and (max-width: 999px){
+    div.menu div.separador {
+        height: 100%;
+        min-width: 50px;
+    }
+    header div.menu div.separador div.vector svg {
+        width: 35px;
+        height: 35px;
+        padding: 7.5px;
+        top: 7.5px;
+        left: 20px;
+    }
+    header div.menu div.separador div.nombre p {
+        font-size: 10px;
+        align-self: center;
+        text-align: center;
+        margin-left: 5px;
+        margin-bottom: 22.5px;
+        transform: translateY(10px) rotateZ(180deg);
+        transition: all 0.3s;
+        writing-mode: vertical-lr;
+        height: 85px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    div.menu div.separador {
+        height: 90%;
+        min-width: 50px;
+    }
+    header div.menu div.separador div.vector svg {
+        width: 35px;
+        height: 35px;
+        padding: 7.5px;
+        top: 10px;
+        left: 20px;
+    }
+    header div.menu div.separador div.nombre p {
+        font-size: 10px;
+        align-self: center;
+        text-align: center;
+        margin-left: 5px;
+        margin-bottom: 22.5px;
+        transform: translateY(10px) rotateZ(180deg);
+        transition: all 0.3s;
+        writing-mode: vertical-lr;
+        height: 85px;
+        text-align: center;
+    }
 }
 
 /* FOOTER */
@@ -485,6 +593,13 @@ header:hover footer div.nombre p.s {
     margin: 0px;
 }
 
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
+}
 
 /* VENTANAS */
 
@@ -610,6 +725,14 @@ header:hover footer div.nombre p.s {
     transform: translateX(13px);
 }
 
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
+}
+
 /* DEV SETTINGS */
 
 #devSettings .apartado {
@@ -670,6 +793,14 @@ header:hover footer div.nombre p.s {
     top: 10px;
     width: 30px;
     height: 17px;
+}
+
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
 }
 
 /* COOKIES SETTINGS */
@@ -742,6 +873,13 @@ header:hover footer div.nombre p.s {
     height: 17px;
 }
 
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
+}
 
 /* VENTANA AJUSTES */
 
@@ -933,78 +1071,13 @@ div#langSelector.ajuste>svg {
 #langSelector_list p {
     margin: 0px;
 }
-div#modoColorSelector.ajuste {
-    position: relative;
+
+@media only screen and (max-width: 799px){
+    
 }
 
-div#modoColorSelector.ajuste>p {
-    position: absolute;
-    left: 30px;
-}
-
-div#modoColorSelector.ajuste>svg {
-    width: 30px;
-    height: 30px;
-    stroke: #fff;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2;
-    position: absolute;
-    right: 30px;
-    fill: none;
-}
-
-#modoColorSelector_list {
-    position: absolute;
-    display: flex;
-    list-style: none;
-    gap: 0px;
-    flex-direction: column;
-    top: 18px;
-    height: 190px;
-    background-color: var(--win-fondo);
-    border: solid 2px;
-    border-top: 0px;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    width: 280px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#modoColorSelector_list li {
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-#modoColorSelector_list li:hover {
-    background-color: #fff2;
-    border-radius: 5px;
-}
-
-#modoColorSelector_list li.disabled {
-    opacity: .2;
-    cursor: default;
-}
-
-#modoColorSelector_list img {
-    position: relative;
-    display: flex;
-    list-style: none;
-    gap: 0px;
-    flex-direction: column;
-}
-
-#modoColorSelector_list img {
-    height: 30px;
-}
-
-#modoColorSelector_list p {
-    margin: 0px;
+@media only screen and (max-width: 999px){
+    
 }
 
 section:not(#inicio) {
@@ -1119,4 +1192,12 @@ section input:checked+.slider:before {
     -webkit-transform: translateX(13px);
     -ms-transform: translateX(13px);
     transform: translateX(13px);
+}
+
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
 }
