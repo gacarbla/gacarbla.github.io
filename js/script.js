@@ -191,6 +191,11 @@ const windows = {
           document.getElementById("body").classList.add("negro")
         }
       })
+      if (window.location.href == "https://gacarbla.github.io/" || window.location.href == "http://127.0.0.1:8080/") {
+        modoColor.addEventListener("change", function () {
+          document.getElementById("modoColorPrincipal").checked = modoColor.checked
+        })
+      }
       const modoDev = document.getElementById("devModeCheck")
       if (data.obtener("devModeStatus") == "on") {
         modoDev.checked = true
@@ -203,6 +208,11 @@ const windows = {
         }
         refreshNavigationBar();
       })
+      if (window.location.href == "https://gacarbla.github.io/" || window.location.href == "http://127.0.0.1:8080/") {
+        modoDev.addEventListener("change", function () {
+          document.getElementById("modoDevPrincipal").checked = modoDev.checked
+        })
+      }
       const easterEggs = document.getElementById("easterEggCheck")
       if (data.obtener("easterEggs") == "on") {
         easterEggs.checked = true
@@ -215,6 +225,11 @@ const windows = {
         }
         refreshNavigationBar();
       })
+      if (window.location.href == "https://gacarbla.github.io/" || window.location.href == "http://127.0.0.1:8080/") {
+        easterEggs.addEventListener("change", function () {
+          document.getElementById("easterEggsPrincipal").checked = easterEggs.checked
+        })
+      }
       window.addEventListener('click', function (e) {
         if (!document.querySelector('.window').contains(e.target)) {
           windows.close("settings")
@@ -331,23 +346,64 @@ function load() {
   window.onresize = function () {
     refreshNavigationBar();
   }
+
+  if (window.location.href == "https://gacarbla.github.io/" || window.location.href == "http://127.0.0.1:8080/") settingsSync()
   language()
   setTimeout(function () {
-    if(!window.confirm("La página se encuentra en mantenimiento.\n¿Desea acceder aunque pueda encontrarse múltiples fallos de diseño y/o funcionamiento?")) {
+    if (!window.confirm("La página se encuentra en mantenimiento.\n¿Desea acceder aunque pueda encontrarse múltiples fallos de diseño y/o funcionamiento?")) {
       go("https://google.com")
     }
     unlock()
   }, 750)
 }
 
-
+function settingsSync() {
+  const modoColor = document.getElementById("modoColorPrincipal")
+  if (document.getElementById("body").classList.contains("blanco")) {
+    modoColor.checked = true
+  }
+  modoColor.addEventListener("change", function () {
+    document.getElementById("body").classList.remove(data.obtener("colorMode"))
+    if (modoColor.checked) {
+      data.establecer("colorMode", "blanco", "dataAjustes")
+      document.getElementById("body").classList.add("blanco")
+    } else {
+      data.establecer("colorMode", "negro", "dataAjustes")
+      document.getElementById("body").classList.add("negro")
+    }
+  })
+  const easterEggs = document.getElementById("easterEggsPrincipal")
+  if (data.obtener("easterEggs") == "on") {
+    easterEggs.checked = true
+  }
+  easterEggs.addEventListener("change", function () {
+    if (easterEggs.checked) {
+      data.establecer("easterEggs", "on")
+    } else {
+      data.establecer("easterEggs", "off")
+    }
+    refreshNavigationBar();
+  })
+  const modoDev = document.getElementById("modoDevPrincipal")
+  if (data.obtener("devModeStatus") == "on") {
+    modoDev.checked = true
+  }
+  modoDev.addEventListener("change", function () {
+    if (modoDev.checked) {
+      data.establecer("devModeStatus", "on")
+    } else {
+      data.establecer("devModeStatus", "off")
+    }
+    refreshNavigationBar();
+  })
+}
 
 
 
 /* ELEMENTAL FUNCTIONS */
 
 function debug() {
-  if(window.prompt("Introduzca \"CONFIRMAR\" para declarar que es consciente de que los datos serán reiniciados y no será posible recuperarlos.").toLowerCase() == "confirmar"){
+  if (window.prompt("Introduzca \"CONFIRMAR\" para declarar que es consciente de que los datos serán reiniciados y no será posible recuperarlos.").toLowerCase() == "confirmar") {
     data.reset()
     window.location.reload()
   } else {
@@ -412,7 +468,7 @@ async function showlist(id) {
           refreshNavigationBar()
           language()
         })
-      } else if (id=="modoColorSelector") {
+      } else if (id == "modoColorSelector") {
         document.getElementById(`${id}_opt_${option.value}`).addEventListener("click", function () {
           document.getElementById("body").classList.remove(data.obtener("colorMode"))
           data.establecer("colorMode", option.value)
