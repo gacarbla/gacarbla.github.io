@@ -31,17 +31,17 @@
 }
 
 .rosa {
-    --body-background: #141414;
+    --body-background: #ffbfcf;
 
-    --text-label-color: #fff;
-    --logsbutton-complementary: #fff;
-    --logsbutton-background: #272727;
+    --text-label-color: #000;
+    --logsbutton-complementary: #000;
+    --logsbutton-background: #FF91AF;
 
-    --input-background: #272727;
-    --input-text: #fff;
+    --input-background: #ffffff;
+    --input-text: #000;
     --input-outline: #00b3a7;
-    --copytext-back: #141414;
-    --copytext-text: #fff;
+    --copytext-back: #ffbfcf;
+    --copytext-text: #000;
 
 }
 
