@@ -23,13 +23,15 @@
     --win-titulo-color: #fff;
     --header-menu-pagina-p-color: #fff;
     --header-menu-separador-svg-stroke: #fff;
+    --header-menu-separador-p-color: #fff;
+    --header-menu-pagina-svg-stroke: #fff;
 }
 
 .blanco {
     --header-background: #f5f5f5;
     --nav-color: #000;
     --nav-hover: #1083D6;
-    --win-pagina-fondo: #fff3;
+    --win-pagina-fondo: #0003;
     --win-fondo: #f5f5f5;
     --win-sombra: #0002;
     --win-svg-cerrar-fondo: transparent;
@@ -38,6 +40,8 @@
     --win-titulo-color: #000;
     --header-menu-pagina-p-color: #000;
     --header-menu-separador-svg-stroke: #000;
+    --header-menu-separador-p-color: #000;
+    --header-menu-pagina-svg-stroke: #000;
 }
 
 .azul {
@@ -53,6 +57,8 @@
     --win-titulo-color: #fff;
     --header-menu-pagina-p-color: #fff;
     --header-menu-separador-svg-stroke: #fff;
+    --header-menu-separador-p-color: #fff;
+    --header-menu-pagina-svg-stroke: #fff;
 }
 
 .amarillo {
@@ -68,6 +74,8 @@
     --win-titulo-color: #000;
     --header-menu-pagina-p-color: #000;
     --header-menu-separador-svg-stroke: #000;
+    --header-menu-separador-p-color: #000;
+    --header-menu-pagina-svg-stroke: #000;
 }
 
 .rojo {
@@ -83,6 +91,8 @@
     --win-titulo-color: #fff;
     --header-menu-pagina-p-color: #fff;
     --header-menu-separador-svg-stroke: #fff;
+    --header-menu-separador-p-color: #fff;
+    --header-menu-pagina-svg-stroke: #fff;
 }
 
 .verde {
@@ -98,6 +108,8 @@
     --win-titulo-color: #fff;
     --header-menu-pagina-p-color: #fff;
     --header-menu-separador-svg-stroke: #fff;
+    --header-menu-separador-p-color: #fff;
+    --header-menu-pagina-svg-stroke: #fff;
 }
 
 .rosa {
@@ -113,6 +125,7 @@
     --win-titulo-color: #000;
     --header-menu-pagina-p-color: #000;
     --header-menu-separador-svg-stroke: #000;
+    --header-menu-pagina-svg-stroke: #000;
 }
 
 header {
@@ -300,15 +313,9 @@ header:hover div.menu div.pagina div.nombre p {
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 2px;
-        background-color: var(--header-menu-pagina-svg-bakground);
         padding: 7.5px;
         border-radius: 5px;
         transition: all 0.2s;
-    }
-
-    header div.menu div.pagina:hover div.vector svg {
-        stroke: var(--header-menu-pagina-svg-bakground);
-        background-color: var(--header-menu-pagina-svg-stroke);
     }
 
     header div.menu div.pagina div.nombre p {
