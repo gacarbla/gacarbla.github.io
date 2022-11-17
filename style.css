@@ -1,21 +1,20 @@
 .negro {
     --title-color: #fff;
-    --header-background: rgba(255, 255, 255, .5);
-    --header-background-solid: rgba(31, 31, 31);
-    --nav-color: rgb(31,31,31);
-    --nav-sep: rgba(255, 255, 255);
+    --header-background: #ffffff80;
+    --header-background-solid: #1f1f1f;
+    --nav-color: #1f1f1f;
+    --nav-sep: #ffffff;
     --nav-hover: #fff;
     --win-pagina-fondo: #0009;
     --win-fondo: #000000;
     --win-sombra: #0002;
-    --win-svg-cerrar-fondo: #000;
+    --win-svg-cerrar-fondo: transparent;
     --win-svg-cerrar-linea: #fff;
     --win-texto-color: #fff;
     --win-titulo-color: #fff;
     --win-pagina-fondo: #0009;
-    --win-fondo: #000000;
+    --win-fondo: #1f1f1f;
     --win-sombra: #0002;
-    --win-svg-cerrar-fondo: #000;
     --win-svg-cerrar-linea: #fff;
     --win-texto-color: #fff;
     --win-titulo-color: #fff;
@@ -113,7 +112,6 @@
     --nav-color: #fff;
     --nav-sep: #050505;
     --nav-hover: #050505;
-    --win-pagina-fondo: #0005;
     --win-pagina-fondo: #0009;
     --win-fondo: #000000;
     --win-sombra: #0002;
@@ -1113,6 +1111,10 @@ section > .column .box label{
     justify-content: space-between;
 }
 
+section > .column .box h1 {
+    margin: 5px 10px;
+}
+
 section > .column .box label p {
     margin: 7.5px;
 }
@@ -1157,6 +1159,12 @@ section .slider {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 17px;
+}
+
+section hr {
+    height: 3px;
+    background-color: var(--title-color);
+    color: var(--title-color);
 }
 
 section .slider:before {

@@ -3,9 +3,107 @@
     --oscuro: #1e2124;
 }
 
+.blanco {
+    --body-background: #c0c0c0; 
+
+    --text-label-color: #000;
+    --logsbutton-background: #f0f0f0;
+    --logsbutton-complementary: #000;
+    --input-outline: #00b3a7;
+    --copytext-back: #c0c0c0;
+    --copytext-text: #000;
+    
+    --input-background: #f0f0f0;
+}
+
+.negro {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #272727;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+}
+
+.rosa {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #272727;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+
+}
+
+.azul {
+    --body-background: #000435;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #bbc0ff;
+    --input-text: #000;
+    --input-outline: #fff;
+    --copytext-back: #000435;
+    --copytext-text: #fff;
+}
+
+.amarillo {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #272727;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+}
+
+.verde {
+    --body-background: #a9ffc4;
+
+    --text-label-color: #000;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #001b08;
+
+    --input-background: #001b08;
+    --input-text: #fff;
+    --input-outline: #fff;
+    --copytext-back: #a9ffc4;
+    --copytext-text: #000;
+}
+
+.rojo {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #141414;
+    --logsbutton-background: #fff;
+
+    --input-background: #fff;
+    --input-text: #000;
+    --input-outline: #000;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+}
+
 .content {
     padding: 20px;
-    background-color: var(--claro);
+    background-color: var(--body-background);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -36,7 +134,7 @@ div.select label {
 }
 
 div.select label p {
-    color: #fff;
+    color: var(--text-label-color);
     margin: 0px;
     position: relative;
     left: 15px;
@@ -49,13 +147,19 @@ select {
     width: 100%;
     height: 30px;
     text-align: center;
-    background-color: var(--oscuro);
+    background-color: var(--input-background);
     border: none;
-    outline: none;
-    color: #fff;
+    outline: non;
+    color: var(--input-text);
     font-size: 16px;
     border-radius: 5px;
     resize: none;
+}
+
+div.select input:focus,
+div.select textarea:focus,
+select:focus {
+    outline: 1px solid var(--input-outline);
 }
 
 div.result {
@@ -147,7 +251,7 @@ div.preview>div.text p>span.italic {
 }
 
 div.content p.section {
-    color: #fff;
+    color: var(--text-label-color);
     font-size: 25px;
     opacity: .5;
     margin: 20px;
@@ -189,7 +293,7 @@ div.emoji img {
 }
 
 div.emoji input {
-    background-color: var(--oscuro);
+    background-color: var(--input-background);
     border: none;
     border-radius: 7.5px 0px 0px 7.5px;
     outline: none;

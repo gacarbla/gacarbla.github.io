@@ -1,16 +1,17 @@
 
-  .oscuro {
+  .negro {
     --titulo: #fff;
     --texto: #fff;
-    --body-background-1: #010319;
-    --body-background-2: #000000;
+    --body-background-1: #272727;
+    --body-background-2: #141414;
   }
-  .claro { 
+  .blanco { 
     --titulo: #000;
     --texto: #fff;
     --body-background-1: #165054;
     --body-background-2: #fff;
   }
+  
   #listaDeProyectosText {
     position: absolute;
     top: 0px;
@@ -49,15 +50,24 @@
     background-color: var(--body-background-1);
     border-radius: 20px;
     width: 100%;
-    gap: 20px;
     cursor: pointer;
     overflow: hidden;
     align-items: center;
     transition: all 0.3s;
+    overflow: hidden;
   }
   .content ul > li > p {
     text-transform: uppercase;
-    width: calc(100% - 130px);
+    width: calc(100% - 100px);
+    transition: all 0.3s;
+    position: relative;
+    left: -30px
+  }
+  .content ul > li:hover:not(.disabled) > p {
+    text-transform: uppercase;
+    width: calc(100% - 100px);
+    transition: all 0.3s;
+    left: 0px;
   }
   .content ul > li.disabled {
     opacity: .075;
@@ -68,16 +78,23 @@
     opacity: .15;
     cursor: default;
     filter: blur(1.5px);
-    transform: scale(0.99);
-  }
-  .content ul > li.disabled:hover > div.image > img{
-    transform: scale(1.05);
   }
   .content ul > li > div.image {
     overflow: hidden;
-    border-radius: 20px 0px 0px 20px;
-    height: 100px;
-    width: 100px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    position: relative;
+    left: -30px;
+    opacity: 0.3;
+    transition: all 0.3s;
+    transform: rotateZ(30deg);
+  }
+  .content ul > li:hover:not(.disabled) > div.image {
+    left: 0px;
+    opacity: 1;
+    transform: rotateZ(0deg);
   }
   .content ul > li > div.image > img {
     height: 100%;
@@ -86,7 +103,4 @@
     outline: none;
     object-fit:cover;
     transition: all 0.3s;
-  }
-  .content ul > li:hover:not(.disabled) > div.image > img {
-    transform: scale(1.1);
   }

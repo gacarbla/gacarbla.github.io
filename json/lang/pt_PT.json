@@ -16,5 +16,9 @@
     "formatoText": "Formato:",
     "usuarioText": "Usuário",
     "ejemploTimestampText1": "Este formato ficaria assim:",
-    "ejemploTimestampText2": "Espero que você goste!"
+    "ejemploTimestampText2": "Espero que você goste!",
+    "devModeText": "Modo de programador",
+    "easterEggsText": "Easter Eggs",
+    "colorModeText": "Modo de luz",
+    "ajustesTitleText": "Configurações"
 }

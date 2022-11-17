@@ -16,5 +16,9 @@
     "formatoText": "Format:",
     "usuarioText": "User",
     "ejemploTimestampText1": "This format would look like this:",
-    "ejemploTimestampText2": "I hope you like it!"
+    "ejemploTimestampText2": "I hope you like it!",
+    "devModeText": "Developer mode",
+    "easterEggsText": "Easter Eggs",
+    "colorModeText": "Light mode",
+    "ajustesTitleText": "Settings"
 }

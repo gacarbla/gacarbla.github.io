@@ -350,9 +350,6 @@ function load() {
   if (window.location.href == "https://gacarbla.github.io/" || window.location.href == "http://127.0.0.1:8080/") settingsSync()
   language()
   setTimeout(function () {
-    if (!window.confirm("La página se encuentra en mantenimiento.\n¿Desea acceder aunque pueda encontrarse múltiples fallos de diseño y/o funcionamiento?")) {
-      go("https://google.com")
-    }
     unlock()
   }, 750)
 }

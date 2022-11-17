@@ -1,28 +1,99 @@
-.claro {
-    --body-background-1: hsl(166, 100%, 80%);
-    --body-background-2: hsl(166, 100%, 95%);
+.blanco {
+    --body-background: #c0c0c0; 
 
     --text-label-color: #000;
-    --logsbutton-background: #19585D;
-    --logsbutton-complementary: #F3FE39;
+    --logsbutton-background: #f0f0f0;
+    --logsbutton-complementary: #000;
+    --input-outline: #00b3a7;
+    --copytext-back: #c0c0c0;
+    --copytext-text: #000;
     
-    --input-background: #f5f5f5;
-    --input-background: #000;
+    --input-background: #f0f0f0;
 }
 
-.oscuro {
-    --body-background: #010319;
+.negro {
+    --body-background: #141414;
 
     --text-label-color: #fff;
     --logsbutton-complementary: #fff;
-    --logsbutton-background: #334756;
+    --logsbutton-background: #272727;
 
-    --input-background: #122844;
+    --input-background: #272727;
     --input-text: #fff;
     --input-outline: #00b3a7;
-    --copytext-back: #010319;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+}
+
+.rosa {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #272727;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #141414;
     --copytext-text: #fff;
 
+}
+
+.azul {
+    --body-background: #000435;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #bbc0ff;
+    --input-text: #000;
+    --input-outline: #fff;
+    --copytext-back: #000435;
+    --copytext-text: #fff;
+}
+
+.amarillo {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #272727;
+
+    --input-background: #272727;
+    --input-text: #fff;
+    --input-outline: #00b3a7;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
+}
+
+.verde {
+    --body-background: #a9ffc4;
+
+    --text-label-color: #000;
+    --logsbutton-complementary: #fff;
+    --logsbutton-background: #001b08;
+
+    --input-background: #001b08;
+    --input-text: #fff;
+    --input-outline: #fff;
+    --copytext-back: #a9ffc4;
+    --copytext-text: #000;
+}
+
+.rojo {
+    --body-background: #141414;
+
+    --text-label-color: #fff;
+    --logsbutton-complementary: #141414;
+    --logsbutton-background: #fff;
+
+    --input-background: #fff;
+    --input-text: #000;
+    --input-outline: #000;
+    --copytext-back: #141414;
+    --copytext-text: #fff;
 }
 
 body {
