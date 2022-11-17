@@ -7,9 +7,39 @@
   }
   .blanco { 
     --titulo: #000;
+    --texto: #000;
+    --body-background-1: #fff;
+    --body-background-2: #ddd;
+  }
+  .rojo {
+    --titulo: #fff;
+    --texto: #000;
+    --body-background-1: #fff;
+    --body-background-2: #5d090a;
+  }
+  .verde {
+    --titulo: #000;
     --texto: #fff;
-    --body-background-1: #165054;
-    --body-background-2: #fff;
+    --body-background-1: #299049;
+    --body-background-2: #a9ffc4;
+  }
+  .amarillo {
+    --titulo: #000;
+    --texto: #000;
+    --body-background-1: #fff;
+    --body-background-2: #ccbc46;
+  }
+  .azul {
+    --titulo: #fff;
+    --texto: #000;
+    --body-background-1: #5565f2;
+    --body-background-2: #000435;
+  }
+  .rosa {
+    --titulo: #000;
+    --texto: #000;
+    --body-background-1: #fff;
+    --body-background-2: #ffbfcf;
   }
   
   #listaDeProyectosText {

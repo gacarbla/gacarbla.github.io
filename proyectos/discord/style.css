@@ -60,17 +60,17 @@
 }
 
 .amarillo {
-    --body-background: #141414;
+    --body-background: #ccbc46;
 
-    --text-label-color: #fff;
-    --logsbutton-complementary: #fff;
-    --logsbutton-background: #272727;
+    --text-label-color: #000;
+    --logsbutton-complementary: #ccbc46;
+    --logsbutton-background: #000;
 
-    --input-background: #272727;
-    --input-text: #fff;
+    --input-background: #fff;
+    --input-text: #000;
     --input-outline: #00b3a7;
-    --copytext-back: #141414;
-    --copytext-text: #fff;
+    --copytext-back: #ccbc46;
+    --copytext-text: #000;
 }
 
 .verde {
@@ -83,21 +83,21 @@
     --input-background: #001b08;
     --input-text: #fff;
     --input-outline: #fff;
-    --copytext-back: #a9ffc4;
+    --copytext-back: #00b3a7;
     --copytext-text: #000;
 }
 
 .rojo {
-    --body-background: #141414;
+    --body-background: #5d090a;
 
     --text-label-color: #fff;
-    --logsbutton-complementary: #141414;
+    --logsbutton-complementary: #5d090a;
     --logsbutton-background: #fff;
 
     --input-background: #fff;
     --input-text: #000;
-    --input-outline: #000;
-    --copytext-back: #141414;
+    --input-outline: #a9ffc4;
+    --copytext-back: #5d090a;
     --copytext-text: #fff;
 }
 
