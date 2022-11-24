@@ -85,6 +85,9 @@ function start() {
     boton.addEventListener("click", function(){
         if(!boton.disabled) downloadImage()
     })
+    setTimeout(function(){
+        if(!window.confirm("Existe un error de previsualización.\n¿Desea acceder de todas formas?")) go(":")
+    }, 200)
     setInterval(function () {
         recalcular()
     }, 150)

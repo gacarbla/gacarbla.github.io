@@ -8,4 +8,5 @@ function start() {
             }
         }
     })
+    if(!window.confirm("Esta página se encuentra bajo mantenimiento. ¿Desea acceder aunque los elementos puedan moverse o salirse de la pantalla?")) window.location.href = "https://google.com"
 }

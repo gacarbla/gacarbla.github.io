@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+
 :root {
     --claro: #424549;
     --oscuro: #1e2124;
@@ -187,7 +189,6 @@ div.userprofile div.foto {
 div.userprofile div.name {
     position: relative;
     top: -2.5px;
-    left: 8vw;
 }
 
 div.foto>img {
@@ -204,10 +205,12 @@ div.name>p {
     font-size: 2.4vw;
     margin: 0px;
     top: 0.8vw;
+    left: -10px;
     position: relative;
 }
 
 div.preview {
+    font-family: whitney;
     display: flex;
     padding: 20px 15px;
     padding-bottom: 6vw;
@@ -222,7 +225,7 @@ div.preview {
 
 div.preview>div.text {
     position: relative;
-    left: -0.8vw;
+    left: 0;
     top: 4vw;
     width: calc( 100% - 85px);
 }
@@ -321,70 +324,10 @@ div.emoji button:disabled {
 }
 
 
-@media only screen and (max-width: 799px) {
-    div.time {
-        flex-direction: column;
-        height: 75vmax;
-    }
-    div.result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 80vw;
-        left: 0px;
-        top: 20vmin;
-        position: relative;
-        height: 100%;
-        transform: scale(1);
-    }
-
-    div.userprofile div.name {
-        position: relative;
-        top: -2.5px;
-        left: 8vw;
-    }
-    
-    div.foto>img {
-        position: absolute;
-        top: 0.8vw;
-        height: 6.8vw;
-        width: 6.8vw;
-        border-radius: 100%;
-    }
-    
-    div.name>p {
-        color: #F4F4F4;
-        font-weight: bold;
-        font-size: 2.4vw;
-        margin: 0px;
-        top: 0.8vw;
-        position: relative;
-    }
-    
-    div.preview {
-        padding-bottom: 6vw;
-        height: 30vw;
-    }
-    
-    div.preview>div.text {
-        width: calc( 100% - 5vw);
-    }
-    
-    div.preview>div.text p {
-        font-size: 3vw;
-        line-height: 4.7vw;
-    }
-    div .emoji {
-        width: 80vw;
-        left: 0px;
-    }
-}
-
 @media only screen and (min-width: 1399px) {
     div.userprofile div.name {
         position: relative;
         top: -2.5px;
-        left: 120px;
     }
     
     div.foto>img {
@@ -409,7 +352,6 @@ div.emoji button:disabled {
         padding: 20px 15px;
         padding-bottom: 70px;
         top: 20px;
-        left: 2.5px;
         position: relative;
         background-color: var(--claro);
         border-radius: 20px;
@@ -419,7 +361,6 @@ div.emoji button:disabled {
     
     div.preview>div.text {
         position: relative;
-        left: -8px;
         top: 55px;
         width: calc( 100% - 85px);
     }
@@ -430,5 +371,64 @@ div.emoji button:disabled {
         font-size: 25px;
         line-height: 30px;
         margin: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 799px) {
+    div.time {
+        flex-direction: column;
+        height: 75vmax;
+    }
+    div.result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+        top: 20vmin;
+        position: relative;
+        height: 100%;
+        transform: scale(1);
+    }
+
+    div.userprofile div.name {
+        position: relative;
+        top: -2.5px;
+    }
+    
+    div.foto>img {
+        position: absolute;
+        top: 0.8vw;
+        height: 6.8vw;
+        width: 6.8vw;
+        border-radius: 100%;
+    }
+    
+    div.name>p {
+        color: #F4F4F4;
+        font-weight: bold;
+        font-size: 2.4vw;
+        margin: 0px;
+        top: 0.8vw;
+        left: 80px;
+        position: relative;
+    }
+    
+    div.preview {
+        padding-bottom: 6vw;
+        height: 30vw;
+    }
+    
+    div.preview>div.text {
+        width: calc( 100% - 5vw);
+    }
+    
+    div.preview>div.text p {
+        font-size: 3vw;
+        line-height: 4.7vw;
+    }
+    div .emoji {
+        width: 80vw;
+        left: 0px;
     }
 }

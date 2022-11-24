@@ -3,6 +3,15 @@
 
 <head>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-99715444-2');
+  </script>
+
   <!--  Etiquetas meta  -->
   <meta charset="UTF-8">
   <!--meta http-equiv="refresh" content="url=http://gacarbla.github.io/404" /-->
@@ -17,6 +26,7 @@
   <link rel="canonical" href="https://gacarbla.github.io/">
   <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
+  <link rel="icon" type="x-icon" href="icon.png">
 
   <!--  Ajustes meta  -->
   <meta property="og:locale" content="es-ES">
@@ -36,12 +46,29 @@
 
 </head>
 
-<body onload="load();start()" class="negro" id="body" >
+<body onload="load();start()" class="negro" id="body">
 
 
   <header id="header"></header>
   <div id="windows">
-    <div class="back" id="loader"><div class="window"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
+    <div class="back" id="loader">
+      <div class="window">
+        <div class="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="content">
     <section name="" id="inicio">
@@ -64,15 +91,18 @@
           <hr>
           <label for="modoColorPrincipal">
             <p id="colorModeText">Modo claro</p>
-            <label class="switch dereita"><input type="checkbox" id="modoColorPrincipal"><span class="slider round"></span></label>
+            <label class="switch dereita"><input type="checkbox" id="modoColorPrincipal"><span
+                class="slider round"></span></label>
           </label>
           <label for="easterEggsPrincipal">
             <p id="easterEggsText">Easter Eggs</p>
-            <label class="switch dereita"><input type="checkbox" id="easterEggsPrincipal"><span class="slider round"></span></label>
+            <label class="switch dereita"><input type="checkbox" id="easterEggsPrincipal"><span
+                class="slider round"></span></label>
           </label>
           <label for="modoDevPrincipal">
             <p id="devModeText">Modo Desarrollador</p>
-            <label class="switch dereita"><input type="checkbox" id="modoDevPrincipal"><span class="slider round"></span></label>
+            <label class="switch dereita"><input type="checkbox" id="modoDevPrincipal"><span
+                class="slider round"></span></label>
           </label>
         </div>
       </div>
@@ -83,20 +113,27 @@
         </div>
         <div class="box elements">
           <div class="box profile">
-            <img src="https://cdn.discordapp.com/avatars/643575943289634836/d40eec03f94d6949ab9a96e447c11ead.webp?size=100">
-            <h2>gacarbla<span>#2975</span></h2>  
+            <img
+              src="https://cdn.discordapp.com/avatars/643575943289634836/d40eec03f94d6949ab9a96e447c11ead.webp?size=100">
+            <h2>gacarbla<span>#2975</span></h2>
           </div>
           <div class="box servers">
-            <img src="https://cdn.discordapp.com/icons/790289803219566633/30371b274b92376173562d68a6f8ba00.webp?size=96" alt="GatitosWorld" title="Gatitos World" onclick="go('https://discord.com/invite/gatitos', true)">
-            <img src="https://cdn.discordapp.com/icons/867330269593600000/ba10c950cbeec058083b1e5629d8a759.webp?size=96" alt="Syntax Error" title="Syntax Error" onclick="go('https://discord.com/invite/e9dQyFakjp', true)">
+            <img src="https://cdn.discordapp.com/icons/790289803219566633/30371b274b92376173562d68a6f8ba00.webp?size=96"
+              alt="GatitosWorld" title="Gatitos World" onclick="go('https://discord.com/invite/gatitos', true)">
+            <img src="https://cdn.discordapp.com/icons/867330269593600000/ba10c950cbeec058083b1e5629d8a759.webp?size=96"
+              alt="Syntax Error" title="Syntax Error" onclick="go('https://discord.com/invite/e9dQyFakjp', true)">
           </div>
         </div>
       </div>
-        <div class="anuncio info">
-          <p class="title">¡Actualización!</p>
-          <hr>
-          <p class="text">La página está siendo sometida a una actualización general y muy pronto dispondrá de un nuevo estilo propio. Avanzando lento pero constante, esto poco a poco va agarrando forma. Por el momento el objetivo es el mantenimiento de las páginas que estaban activas anteriormente y la solución de errores de diseño. En las próximas semanas se solucionará la traducción del codificador y el funcionamiento de las ventanas en la página de inicio.</p>
-        </div>
+      <div class="anuncio info">
+        <p class="title">¡Actualización!</p>
+        <hr>
+        <p class="text">La página está siendo sometida a una actualización general y muy pronto dispondrá de un nuevo
+          estilo propio. Avanzando lento pero constante, esto poco a poco va agarrando forma. Por el momento el objetivo
+          es el mantenimiento de las páginas que estaban activas anteriormente y la solución de errores de diseño. En
+          las próximas semanas se solucionará la traducción del codificador y el funcionamiento de las ventanas en la
+          página de inicio.</p>
+      </div>
     </section>
   </div>
 </body>
