@@ -34,17 +34,15 @@
   <!--  Enlaces -->
   <link rel="stylesheet" href="./style.css">
 
-  <!--  Scripts  
-  <script src="./js/script.js"></script>
+  <!--  Scripts -->
   <script src="./script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 
   <!--  Título  -->
   <title>GΛCΛRBLΛ</title>
 
 </head>
 
-<body onload="load();start()" class="negro" id="body">
+<body class="negro" id="body">
     <div class="sections">
         <section id="inicio">
             <h1>PRÁCTICA LABORATORIO DIFRACCIÓN</h1>
@@ -53,9 +51,25 @@
         <section id="difraccion">
             <div>
                 <h1>Difractando la luz</h1>
+                <p> Durante la práctica de laboratorio hemos experimentado cómo ante la variación de la distancia entre el obstáculo
+                    y la pantalla, se aprecia el efecto de difracción, que nos permitió ver diferentes puntos a distintas distancias
+                    unos de otros.
+                    Gracias a la fórmula dada de la longitud de onda, hemos realizado 6 mediciones diferentes y calculado en cada una
+                    de ellas la longitud de onda correspondiente para luego, hacer una media y poder determinar de forma aproximada
+                    la longitud de onda real.
+                </p>
+                <p>Puede seleccionar una de las siguientes distancias para observar el resultado del experimento:</p>
+                <ul>
+                    <li id="nav5"><a href="#5">5 cm</a></li>
+                    <li id="nav10"><a href="#10">10 cm</a></li>
+                    <li id="nav15"><a href="#15">15 cm</a></li>
+                    <li id="nav20"><a href="#20">20 cm</a></li>
+                    <li id="nav25"><a href="#25">25 cm</a></li>
+                    <li id="nav30"><a href="#30">30 cm</a></li>
+                </ul>
             </div>
             <div class="simulador">
-                <div>
+                <div id="5">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="380" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -76,12 +90,12 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>5 &plusmn; 0.1 cm</th>
-                            <th>2.40 &plusmn; 0.1 cm</th>
+                            <th>5 <span>&plusmn; 0.1 cm</span></th>
+                            <th>2.40 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div id="10">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="360" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -102,12 +116,12 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>10 &plusmn; 0.1 cm</th>
-                            <th>4.60 &plusmn; 0.1 cm</th>
+                            <th>10 <span>&plusmn; 0.1 cm</span></th>
+                            <th>4.60 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div id="15">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="340" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -128,12 +142,12 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>15 &plusmn; 0.1 cm</th>
-                            <th>7.00 &plusmn; 0.1 cm</th>
+                            <th>15 <span>&plusmn; 0.1 cm</span></th>
+                            <th>7.00 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div id="20">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="320" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -154,12 +168,12 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>20 &plusmn; 0.1 cm</th>
-                            <th>8.75 &plusmn; 0.1 cm</th>
+                            <th>20 <span>&plusmn; 0.1 cm</span></th>
+                            <th>8.75 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div id="25">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="300" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -180,12 +194,12 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>25 &plusmn; 0.1 cm</th>
-                            <th>10.90 &plusmn; 0.1 cm</th>
+                            <th>25 <span>&plusmn; 0.1 cm</span></th>
+                            <th>10.90 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div id="30">
                     <svg>
                         <rect y="90" width="100" height="20" style="fill:rgb(0, 0, 0);"/>
                         <rect y="75" x="280" width="5" height="50" style="fill:rgb(156, 156, 156)"></rect>
@@ -206,8 +220,8 @@
                             <th>Distancia entre puntos</th>
                         </tr>
                         <tr>
-                            <th>30 &plusmn; 0.1 cm</th>
-                            <th>12.80 &plusmn; 0.1 cm</th>
+                            <th>30 <span>&plusmn; 0.1 cm</span></th>
+                            <th>12.80 <span>&plusmn; 0.1 cm</span></th>
                         </tr>
                     </table>
                 </div>
@@ -221,5 +235,7 @@
         </section>
     </div>
 </body>
-
+<script>
+    start()
+</script>
 </html>
