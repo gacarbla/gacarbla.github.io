@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://gacarbla.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GΛCΛRBLΛ">
-    <meta property="og:keywords" content="gacarbla, GΛCΛRBLΛ, github, gacarbla github,">
+    <meta property="og:keywords" content="gacarbla, GΛCΛRBLΛ, github, gacarbla github">
     <link rel="canonical" href="https://gacarbla.github.io/">
     <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -48,29 +48,20 @@
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Lenguaje', 'Porcentaje'],
                 ['JavaScript', 46.8],
                 ['HTML5', 27.5],
                 ['CSS', 25.7]
             ]);
-
             var options = {
                 is3D: false,
-                backgroundColor: {
-                    fill: "#222"
-                },
+                backgroundColor: {fill: "#222"},
                 tooltip: { text: "percentage" },
                 pieSliceText: "none",
-                legend: {
-                    textStyle: {
-                        color: "#fff"
-                    },
-                    position: "bottom"
-                },
+                legend: {textStyle: {color: "#fff"},position: "bottom"},
                 pieHole: 0.7,
                 enableInteractivity: true
             };
-
             var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
             chart.draw(data, options);
         }
@@ -86,24 +77,22 @@
             <li><a href=".">gacarbla.github.io</a></li>
         </ul>
     </header>
-    <h1><a href="https://github.io/gacarbla">gacarbla</a> / <a
-            href="https://github.com/gacarbla/gacarbla.github.io">gacarbla.github.io</a></h1>
-    <p><i>Estamos trabajando en esto</i></p>
+    <h1><a href="https://github.com/gacarbla" target="_blank">gacarbla</a> / <a
+            href="https://github.com/gacarbla/gacarbla.github.io" target="_blank">gacarbla.github.io</a></h1>
     <div id="maincontainer">
         <div id="codeinfo">
             <h3>INFORMACIÓN</h3>
             <img src="./image.jpg" alt="">
             <div>
-                <div>Autor:<p><a href="https://github.com/gacarbla">gacarbla</a></p></div>
                 <div>Visibilidad: <p>Público</p></div>
                 <div>Lenguaje principal: <p>JavaScript</p></div>
                 <div id="piechart_3d" style="width: 210px; height: 200px;"></div>
-                <div><a href="https://gacarbla.github.io">Ver publicado</a></div>
+                <div class="center"><p><a href="https://gacarbla.github.io" target="_blank">Ver publicado</a> | <a href="https://github.com/gacarbla/gacarbla.github.io" target="_blank">Ver repositorio</a></p></div>
             </div>
         </div>
         <div id="codeStats">
-            <div>
-                
+            <div class="errormsg">
+                <h3>Parece que esto aún no está disponible...</h3>
             </div>
         </div>
     </div>
