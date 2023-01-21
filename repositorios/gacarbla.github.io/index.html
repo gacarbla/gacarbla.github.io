@@ -44,8 +44,12 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
+        recalculaGrafica()
+        window.addEventListener("resize", recalculaGrafica)
+        function recalculaGrafica(){
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+        }
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Lenguaje', 'Porcentaje'],
@@ -86,7 +90,7 @@
             <div>
                 <div>Visibilidad: <p>Público</p></div>
                 <div>Lenguaje principal: <p>HTML 5</p></div>
-                <div id="piechart_3d" style="width: 210px; height: 200px;"></div>
+                <div class="grafica"><div id="piechart_3d" style="width: 100%; height: 200px;"></div></div>
                 <div class="center"><p><a href="https://gacarbla.github.io" target="_blank">Ver publicado</a> | <a href="https://github.com/gacarbla/gacarbla.github.io" target="_blank">Ver repositorio</a></p></div>
             </div>
         </div>

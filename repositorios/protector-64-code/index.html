@@ -43,8 +43,12 @@
     <!--  Gráficas  -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
+        recalculaGrafica()
+        window.addEventListener("resize", recalculaGrafica)
+        function recalculaGrafica(){
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+        }
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Lenguaje', 'Porcentaje'],
@@ -83,7 +87,7 @@
             <div>
                 <div>Visibilidad: <p>Privado</p></div>
                 <div>Lenguaje principal: <p>Python</p></div>
-                <div id="piechart_3d" style="width: 210px; height: 200px;"></div>
+                <div class="grafica"><div id="piechart_3d" style="width: 100%; height: 200px;"></div></div>
             </div>
         </div>
         <div id="codeStats">
