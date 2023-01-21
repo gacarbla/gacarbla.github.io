@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99715444-2');
+    </script>
+
+    <!--  Etiquetas meta  -->
+    <meta charset="UTF-8">
+
+    <!--  SEO meta  -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gacarbla.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GΛCΛRBLΛ">
+    <meta property="og:keywords" content="gacarbla, GΛCΛRBLΛ, github, gacarbla github">
+    <link rel="canonical" href="https://gacarbla.github.io/">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="x-icon" href="icon.png">
+
+    <!--  Ajustes meta  -->
+    <meta property="og:locale" content="es-ES">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  Enlaces  -->
+    <link rel="stylesheet" href="../general.css">
+
+    <!--  Scripts  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!--  Título  -->
+    <title>GΛCΛRBLΛ</title>
+
+
+    <!--  Gráficas  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Lenguaje', 'Porcentaje'],
+                ['JavaScript', 100]
+            ]);
+            var options = {
+                is3D: false,
+                backgroundColor: {fill: "#222"},
+                tooltip: { text: "percentage" },
+                pieSliceText: "none",
+                legend: {textStyle: {color: "#fff"},position: "bottom"},
+                pieHole: 0.7,
+                enableInteractivity: true
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body onload="" id="body">
+    <header>
+        <ul>
+            <li><a href="../../">Inicio</a></li>
+            <li>Repositorios</li>
+            <li><a href=".">NewsBot</a></li>
+        </ul>
+    </header>
+    <h1><a href="https://github.com/gatitosworld" target="_blank">gatitosworld</a> / <a
+            href="https://github.com/gatitosworld/NewsBot" target="_blank">NewsBot</a></h1>
+    <div id="maincontainer">
+        <div id="codeinfo">
+            <h3>INFORMACIÓN</h3>
+            <img src="./image.jpg" alt="">
+            <div>
+                <div>Visibilidad: <p>Privado</p></div>
+                <div>Lenguaje principal: <p>JavaScript</p></div>
+                <div id="piechart_3d" style="width: 210px; height: 200px;"></div>
+            </div>
+        </div>
+        <div id="codeStats">
+            <div class="errormsg">
+                <h3>Parece que esto aún no está disponible...</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
