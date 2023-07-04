@@ -32,7 +32,7 @@ h1 {
     color: #fff;
 }
 
-body > p {
+body>p {
     margin-top: 0px;
     margin-bottom: 20px;
     color: #f00;
@@ -41,15 +41,15 @@ body > p {
 .folders {
     display: grid;
     gap: 10px;
-     --grid-layout-gap: 10px;
-     --grid-column-count: 4;
-     --grid-item--min-width: 350px;
-     --gap-count: calc(var(--grid-column-count) - 1);
-     --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
-     --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
-     display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
-     grid-gap: var(--grid-layout-gap);
+    --grid-layout-gap: 10px;
+    --grid-column-count: 4;
+    --grid-item--min-width: 350px;
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
 }
 
 .folder {
@@ -74,9 +74,13 @@ body > p {
     height: 30px;
 }
 
-a, a:link, a:active, a:visited {
+a,
+a:link,
+a:active,
+a:visited {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline 2px #0063a5;
 }
@@ -97,6 +101,7 @@ header ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    padding: 0px;
 }
 
 header li::before {
@@ -107,18 +112,22 @@ header li::before {
 a {
     text-decoration: none;
 }
+
 a:link {
     color: #0076c5;
     text-decoration: none;
 }
+
 a:visited {
     color: #3ab0ff;
     text-decoration: none;
 }
+
 a:hover {
     color: #0077c7;
     text-decoration: underline 2px #0063a5;
 }
+
 a:active {
     color: #0076c5;
     text-decoration: none;
