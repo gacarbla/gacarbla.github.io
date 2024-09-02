@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <script src="./scripts/main.js" defer></script>
+</head>
+<body onload="">
+
+  <button onclick="openLanguagePopup()">Seleccionar idioma y aceptar políticas</button>
+
+  <!-- Pop-Up para seleccionar idioma y aceptar políticas -->
+  <div id="language-popup" style="display: none;">
+    <label for="language-select">Seleccione su idioma:</label>
+    <select id="language-select" onchange="enableContinueButton()">
+      <option value="" selected disabled>Seleccione un idioma</option>
+      <option value="es">Español</option>
+      <option value="en">Inglés</option>
+      <!-- Más opciones de idioma aquí -->
+    </select>
+    <button id="continue-button" onclick="showPolicies()" disabled>Continuar</button>
+
+    <!-- Políticas en un textarea de solo lectura -->
+    <textarea id="policies-text" style="display: none;" readonly onscroll="checkScroll()">
+      [Inserte aquí las políticas de la página...]
+    </textarea>
+
+    <!-- Botones que se desbloquean después de leer las políticas -->
+    <button id="settings-button" onclick="goToSettings()" style="display: none;">Configuración</button>
+    <button id="finalize-button" onclick="acceptPolicies()" style="display: none;">Finalizar</button>
+  </div>
+
+</body>
+</html>
